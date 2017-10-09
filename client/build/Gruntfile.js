@@ -61,7 +61,7 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       files: {
-        src: ['client/static/dist/*']
+        src: ['client/static/dist/*.@(js|css)']
       }
     },
 
