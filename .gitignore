@@ -57,15 +57,15 @@ typings/
 # dotenv environment variables file
 .env
 
-#Mac file
+# Mac file
 .DS_Store
 
-#Dist file
+# Dist file
 client/static/dist/*
 client/static/assets/*
 
 # Icon fonts assets
 client/static/iconfonts/fonts
 
-#cache hash file
-client/.hash
+# static html files
+client/static/html
