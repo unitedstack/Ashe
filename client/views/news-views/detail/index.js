@@ -1,8 +1,8 @@
 require('./style/index.less');
 
 function subString(str, len) {
-  let newLength = 0, newStr = '', singleChar, length;
-  let m = encodeURIComponent(str).match(/%[89ABab]/g);
+  var newLength = 0, newStr = '', singleChar, length;
+  var m = encodeURIComponent(str).match(/%[89ABab]/g);
   length = str.length + (m ? m.length / 2 : 0);
   for(var i = 0; i < str.length; i ++) {
     singleChar = str.charAt(i).toString();
@@ -23,11 +23,11 @@ function subString(str, len) {
 }
 
 window.onload = window.onresize = function(){
-  let prev = $('.prev a').attr('prev');
-  let next = $('.next a').attr('next');
-  let wordLength = Math.floor($('.left-content').width() * .44 / 12 - 8);
-  let prevWord = prev && subString(prev, wordLength * 2);
-  let nextWord = next && subString(next, wordLength * 2);
+  var prev = $('.prev a').attr('prev');
+  var next = $('.next a').attr('next');
+  var wordLength = Math.floor($('.left-content').width() * .44 / 12 - 8);
+  var prevWord = prev && subString(prev, wordLength * 2);
+  var nextWord = next && subString(next, wordLength * 2);
   prev && $('.prev a').html(prevWord);
   next && $('.next a').html(nextWord);
   var text = $('.wangEditor-txt').attr('content');

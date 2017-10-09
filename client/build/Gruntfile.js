@@ -57,6 +57,7 @@ module.exports = function(grunt) {
 
     clean: {
       assets: [assetsFolder],
+      dist: 'client/static/dist',
       fonts: 'client/static/iconfonts/fonts',
       html: 'client/static/html'
     },
@@ -139,5 +140,7 @@ module.exports = function(grunt) {
 
   // i18n html file
   grunt.registerTask('html', 'Generate i18n html', ['clean:html', 'ejs2html:zh', 'ejs2html:en']);
+
+  grunt.registerTask('build', ['copy_assets', 'clean:dist', 'webpack:build', 'html']);
 
 };
