@@ -4,7 +4,8 @@
   "description": "Public cloud official website",
   "main": "index.js",
   "scripts": {
-    "build": "cd client/build && grunt build"
+    "build": "cd client/build && grunt build",
+    "dev": "cd client/build && grunt watch"
   },
   "repository": {
     "type": "git",

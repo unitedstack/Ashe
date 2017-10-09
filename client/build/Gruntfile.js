@@ -9,9 +9,9 @@ const assetsFolder = 'client/static/assets';
 const getPages = require('./getPages.js');
 const ejs = require('ejs');
 const mkdirp = require('mkdirp');
-require('colors');
-const buildConfig = require('./webpack.config.js');
+const childProcess = require('child_process');
 const devConfig = require('./dev.webpack.config.js');
+require('colors');
 /**
  *
  * Generate static html (en / zh)
@@ -55,6 +55,16 @@ module.exports = function(grunt) {
       ' * Powered by UNITEDSTACK Inc.\n' +
       ' */\n',
 
+    usebanner: {
+      options: {
+        position: 'top',
+        banner: '<%= banner %>'
+      },
+      files: {
+        src: ['client/static/dist/*']
+      }
+    },
+
     clean: {
       assets: [assetsFolder],
       dist: 'client/static/dist',
@@ -63,7 +73,7 @@ module.exports = function(grunt) {
     },
 
     webpack: {
-      build: buildConfig,
+      build: require('./webpack.config.js'),
       dev: devConfig
     },
 
@@ -108,13 +118,20 @@ module.exports = function(grunt) {
       }
     },
 
-    usebanner: {
-      options: {
-        position: 'top',
-        banner: '<%= banner %>'
-      },
-      files: {
-        src: ['client/static/dist/*']
+    watch: {
+      dev: {
+        files: [
+          'client/views/**/*.@(js|ejs|less|json)',
+          'client/components/*.@(ejs|less)',
+          'client/static/common/*',
+          'client/static/theme/**/*.less'
+        ],
+        tasks: ['dev', 'html'],
+        options: {
+          debounceDelay: 250,
+          forever: false,
+          spawn: false
+        }
       }
     }
 
@@ -141,6 +158,42 @@ module.exports = function(grunt) {
   // i18n html file
   grunt.registerTask('html', 'Generate i18n html', ['clean:html', 'ejs2html:zh', 'ejs2html:en']);
 
-  grunt.registerTask('build', ['copy_assets', 'clean:dist', 'webpack:build', 'html']);
+  grunt.registerTask('build', ['copy_assets', 'clean:dist', 'webpack:build', 'html', 'usebanner']);
+
+  /**
+   * npm run dev --pages=XXX,XXX
+   * make build faster
+   * eg. npm run dev --pages=home,page-views/about/compony
+   *
+   * do not use => arrow function
+   * because () => {} will auto bind this.
+   * equal to function() {}.bind(this)
+   */
+  grunt.registerTask('dev', 'for watch mode', function() {
+    const pages = process.env.npm_config_pages && process.env.npm_config_pages.split(',');
+    let entry = {};
+    if(pages && pages.length > 0) {
+      try {
+        pages.forEach(function(p, i) {
+          if(p === 'home') {
+            entry['home'] = path.join(__dirname, '../views', 'home-views', 'index.js');
+            childProcess.execSync(`rm client/static/dist/*home.min.*`);
+          } else {
+            var name = p.replace(/\//g, '_').replace('-views', '');
+            entry[name] = path.join(__dirname, '../views', pages[i], 'index.js');
+            childProcess.execSync(`rm client/static/dist/*${name}.min.*`);
+          }
+        });
+        devConfig.entry = entry;
+      } catch(e) {
+        console.log(e);
+        return;
+      }
+    } else {
+      childProcess.execSync('rm -rf client/static/dist/*');
+    }
+
+    grunt.task.run(['webpack:dev']);
+  });
 
 };
