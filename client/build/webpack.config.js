@@ -51,6 +51,23 @@ var webpackConfig = {
     filename: '[chunkhash:6].[name].min.js'
   },
 
+  // only show valid/invalid and errors
+  // deal with verbose output
+  stats: {
+    assets: true,
+    colors: true,
+    warnings: true,
+    errors: true,
+    errorDetails: true,
+    entrypoints: true,
+    version: true,
+    hash: false,
+    timings: true,
+    chunks: false,
+    chunkModules: false,
+    children: false
+  },
+
   module: {
     rules: [{
       test: /\.less$/,

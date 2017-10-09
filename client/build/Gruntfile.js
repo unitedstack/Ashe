@@ -10,7 +10,9 @@ const getPages = require('./getPages.js');
 const ejs = require('ejs');
 const mkdirp = require('mkdirp');
 const childProcess = require('child_process');
-const devConfig = require('./dev.webpack.config.js');
+const glob = require('glob');
+let webpackConfig = require('./webpack.config.js');
+let devConfig = webpackConfig;
 require('colors');
 /**
  *
@@ -73,7 +75,7 @@ module.exports = function(grunt) {
     },
 
     webpack: {
-      build: require('./webpack.config.js'),
+      build: webpackConfig,
       dev: devConfig
     },
 
@@ -170,6 +172,7 @@ module.exports = function(grunt) {
    * equal to function() {}.bind(this)
    */
   grunt.registerTask('dev', 'for watch mode', function() {
+    devConfig = require('./dev.webpack.config.js');
     const pages = process.env.npm_config_pages && process.env.npm_config_pages.split(',');
     let entry = {};
     if(pages && pages.length > 0) {
@@ -177,11 +180,11 @@ module.exports = function(grunt) {
         pages.forEach(function(p, i) {
           if(p === 'home') {
             entry['home'] = path.join(__dirname, '../views', 'home-views', 'index.js');
-            childProcess.execSync(`rm client/static/dist/*home.min.*`);
+            glob.sync('client/static/dist/*home.min.*').length > 0 && childProcess.execSync(`rm client/static/dist/*home.min.*`);
           } else {
             var name = p.replace(/\//g, '_').replace('-views', '');
             entry[name] = path.join(__dirname, '../views', pages[i], 'index.js');
-            childProcess.execSync(`rm client/static/dist/*${name}.min.*`);
+            glob.sync(`client/static/dist/*${name}.min.*`).length > 0 && childProcess.execSync(`rm client/static/dist/*${name}.min.*`);
           }
         });
         devConfig.entry = entry;
