@@ -1,0 +1,48 @@
+<%- include('../../../components/header.ejs') %>
+<div class="volcano-login">
+  <div class="login-wrapper">
+    <div class="title"><%= register %></div>
+    <div class="content" method="post" action="/account/register">
+      <input autofocus="autofocus" class="email" type="text" placeholder="<%= email %>" />
+      <div class="error-tip"></div>
+      <div class="pwd-wrapper">
+        <input class="password" type="password" placeholder="<%= password %>" />
+        <i class="icon-eye"></i>
+      </div>
+      <div class="error-tip"></div>
+      <div class="re-pwd-wrapper">
+        <input id="repassword" class="password" type="password" placeholder="<%= password_again %>" />
+        <i class="icon-eye"></i>
+      </div>
+      <div class="error-tip"></div>
+      <div class="captcha-wrapper">
+        <input class="phone" type="text" name="phone" placeholder="<%= tel %>" />
+        <input class="captcha" type="text" name="captcha" placeholder="<%= verification %>" />
+        <div id="sendCaptcha" class="send"><%= send_code %></div>
+      </div>
+      <div id="captcha-tip" class="error-tip"></div>
+      <!-- <div class="eula-wrapper">
+        <input type="checkbox" checked="checked" />
+        &nbsp;<%= consent %>&nbsp;
+        <a href="#"><%= service_agreement %></a>
+      </div> -->
+      <input class="submit submit-register" type="submit" value="<%= register_immadiately %>" />
+    </div>
+    <div class="bottom">
+      <%= have %><a href="/account/login"><%= login %></a>
+    </div>
+  </div>
+</div>
+<div class="volcano-global-footer">
+  <div class="row-1">
+    ©2017 UnitedStack Inc. All Rights Reserved. <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备13015821号</a>
+  </div>
+  <div class="row-2">
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020347">京公网安备 11010802020347号</a>
+  </div>
+</div>
+</body>
+<script src="/static/third-party/jquery-3.2.1.min.js"></script>
+<script src="/static/common/js/global.js"></script>
+<script src="<%=jsFile %>"></script>
+</html>

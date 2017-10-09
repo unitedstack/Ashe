@@ -1,0 +1,54 @@
+.pagination {
+  width: 60%;
+  .pn {
+    float: right;
+  }
+  .pn a {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    line-height: 40px;
+    text-align: center;
+    margin: 40px 0 110px 10px;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+    border: 1px solid #CCCCCC;
+    &:hover, &.cur {
+      border-radius: 2px;
+      color: #fff;
+      background-color: #42B9E5;
+      border: 1px solid #42B9E5;
+    }
+    &.cur {
+      cursor: default !important;
+    }
+  }
+  .pn a.ellipsis {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0;
+    color: #666666;
+    position: relative;
+    top: 40px;
+    border: none;
+    cursor: not-allowed;
+    &:hover {
+      background-color: #fff !important;
+    }
+  }
+}
+@media screen and (max-width: @mobile_width) {
+  .pagination {
+    width: 100%;
+    .pn {
+      margin-right: 5%;
+      a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+}

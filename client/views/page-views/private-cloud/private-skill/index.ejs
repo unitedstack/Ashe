@@ -1,0 +1,180 @@
+<%- include('../../../../components/header.ejs') %>
+  <div class="volcano-private-skill">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="wraper">
+          <div class="volcano-common-content">
+          <img src="/static/assets/page-views/private-cloud/private-skill/bannerpic@v2.0.png">
+            <div class="word">
+              <div class="word-title"><%= banner_title %></div>
+              <div class="word-brief"><%= banner_brief %></div>
+              <div class="word-describe"><%= banner_describe %></div>
+            </div>
+            <ul class="breadcrumb">
+              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_three %></a>&nbsp;/&nbsp;</li>
+              <li class="third"><%= breadcrumb_four %></li>
+            </ul>
+            </div>
+        </div>
+      </section>
+      <!-- end for banner -->
+      <!-- content -->
+      <section class="content-main">
+        <!-- part1 framework -->
+        <div class="framework">
+          <div class="inner">
+            <div class="title" alt="UOS架构图"><%= framework %></div>
+            <img class="uosimg" src="/static/assets/page-views/private-cloud/private-skill/uos.png">
+            <div class="intro"><%= framework_intro %></div>
+            <div class="introduction"><%= framework_introduction %></div>
+          </div>
+        </div>
+        <!-- picture -->
+        <div class="picture">
+            <div class="inner">
+              <div class="shell">
+                <p><%= shell_one %></p>
+                <p><%= shell_two %></p>
+              </div>
+            </div>
+        </div>
+        <div class="summary">
+          <div class="inner">
+            <div class="title"><%= summary_title %></div>
+            <div class="list engine">
+              <div class="left">
+                <p class="headline"><%= engine_title %></p>
+                <p class="detail"><%= engine_detail %></p>
+              </div>
+              <div class="right">
+                <img src="/static/assets/page-views/private-cloud/private-skill/list1.jpg">
+              </div>
+            </div>
+            <div class="list network">
+              <div class="left">
+                <p class="headline"><%= network_title %></p>
+                <p class="detail"><%= network_detail %></p>
+              </div>
+              <div class="right">
+                <img src="/static/assets/page-views/private-cloud/private-skill/list2.jpg">
+              </div>
+            </div>
+            <div class="list storage">
+              <div class="left">
+                <p class="headline"><%= storage_title %></p>
+                <p class="detail"><%= storage_detail %></p>
+              </div>
+              <div class="right">
+                <img src="/static/assets/page-views/private-cloud/private-skill/list3.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lightspot">
+          <div class="inner">
+            <div class="title"><%= lightspot_title %></div>
+            <ul>
+              <li>
+                <img src="/static/assets/page-views/private-cloud/private-skill/support1.png">
+                <p class="headline"><%= lightspot_one_title %></p>
+                <p class="content"><%= lightspot_one_detail %></p>
+              </li>
+              <li>
+                <img src="/static/assets/page-views/private-cloud/private-skill/support2.png">
+                <p class="headline"><%= lightspot_two_title %></p>
+                <p class="content"><%= lightspot_two_detail %></p>
+              </li>
+              <li>
+                <img src="/static/assets/page-views/private-cloud/private-skill/support3.png">
+                <p class="headline"><%= lightspot_three_title %></p>
+                <p class="content"><%= lightspot_three_detail %></p>
+              </li>
+              <li>
+                <img src="/static/assets/page-views/private-cloud/private-skill/support4.png">
+                <p class="headline"><%= lightspot_four_title %></p>
+                <p class="content"><%= lightspot_four_detail %></p>
+              </li>
+              <li>
+                <img src="/static/assets/page-views/private-cloud/private-skill/support5.png">
+                <p class="headline"><%= lightspot_five_title %></p>
+                <p class="content"><%= lightspot_five_detail %></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="openstack">
+          <div class="inner">
+            <div class="title">OpenStack VS UOS</div>
+            <div class="headline">
+              <p></p>
+              <p><%= thead_one %></p>
+              <p><%= thead_two %></p>
+              <p>UOS</p>
+            </div>
+            <table>
+              <tbody>
+                <tr class="first selected">
+                  <td><%= first_title %></td>
+                  <td><%= first_detail_one %></td>
+                  <td><%= first_detail_two %></td>
+                  <td><%= first_detail_three %></td>
+                </tr>
+                <tr>
+                  <td><%= second_title %></td>
+                  <td><%= second_detail_one %></td>
+                  <td><%= second_detail_one %></td>
+                  <td><%= second_detail_three %></td>
+                </tr>
+                <tr style="height: 182px; line-height: 182px;">
+                  <td><%= third_title %></td>
+                  <td><%= third_detail_one %></td>
+                  <td><%= third_detail_two %></td>
+                  <td><%= third_detail_three %></td>
+                </tr>
+                <tr>
+                  <td><%= fourth_title %></td>
+                  <td><%= none %>,&nbsp;<%= fourth_detail %></td>
+                  <td><%= none %>,&nbsp;<%= fourth_detail %></td>
+                  <td><%= yes %>,&nbsp;<%= fourth_detail_two %></td>
+                </tr>
+                <tr>
+                  <td><%= fifth_title %></td>
+                  <td><%= none %></td>
+                  <td><%= none %></td>
+                  <td><%= yes %>,&nbsp;<%= fifth_detail %></td>
+                </tr>
+                <tr>
+                  <td><%= sixth_title %></td>
+                  <td><%= none %></td>
+                  <td><%= none %></td>
+                  <td><%= yes %>,&nbsp;<%= sixth_detail %></td>
+                </tr>
+                <tr>
+                  <td><%= seventh_title %></td>
+                  <td><%= unsure %>,&nbsp;<%= seventh_detail_one %></td>
+                  <td><%= unsure %>,&nbsp;<%= seventh_detail_two %></td>
+                  <td><%= sure %>,&nbsp;<%= seventh_detail_three %></td>
+                </tr>
+                <tr style="height: 210px; line-height: 210px;">
+                  <td><span class="icon-arrow-left"></span><%= eigth_title %></span></td>
+                  <td><%= up %>,&nbsp;<%= eigth_detail_one %></td>
+                  <td><%= upper %>,&nbsp;<%= eigth_detail_two %></td>
+                  <td><%= low %>,&nbsp;<%= eigth_detail_three %></td>
+                </tr>
+                <tr class="last">
+                  <td><%= ninth_title %></td>
+                  <td><%= up %></td>
+                  <td><%= up %></td>
+                  <td><%= low %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- end for content -->
+    </article>
+<%- include('../../../../components/footer.ejs') %>

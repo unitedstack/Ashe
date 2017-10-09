@@ -1,0 +1,28 @@
+{
+  "en": {
+    "cssFile": "/static/dist/account_login.min.css",
+    "jsFile": "/static/dist/account_login.min.js",
+    "forget_one": "Remember",
+    "forget_two": "Forget?",
+    "login": "Login",
+    "login_immediately": "Sign in",
+    "no_regist": "No account?",
+    "pwd": "Password",
+    "regist": "Register account",
+    "title": "UnitedStack - Login",
+    "us": "Email"
+  },
+  "zh": {
+    "cssFile": "/static/dist/account_login.min.css",
+    "jsFile": "/static/dist/account_login.min.js",
+    "forget_one": "记住密码",
+    "forget_two": "忘记密码?",
+    "login": "登录",
+    "login_immediately": "立即登录",
+    "no_regist": "没有账号？",
+    "pwd": "密码",
+    "regist": "注册账户",
+    "title": "UnitedStack - 登录",
+    "us": "邮箱"
+  }
+}

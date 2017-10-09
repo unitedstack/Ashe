@@ -1,0 +1,83 @@
+<%- include('../../../components/header.ejs') %>
+  <div class="volcano-blog-views">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="wraper" logined="<%= commonField.logined %>">
+          <div class="volcano-common-content">
+            <img src="/static/assets/blog-views/list/bannerpic@v2.0.png">
+            <div class="word">
+              <div class="word-title"><%= banner_title %></div>
+              <div class="word-brief"><%= banner_brief %></div>
+              <div class="word-describe"><%= banner_describe %></div>
+            </div>
+            <ul class="breadcrumb">
+              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/blog?page=1"><%= breadcrumb_three %></a>&nbsp;/&nbsp;</li>
+              <li class="third">&nbsp;<%= breadcrumb_four %></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- main content -->
+      <section class="content-main" id="content-main" count="<%= Math.ceil(count / limit) %>" page="<%= page %>">
+        <div class="inner">
+          <div class="left-content">
+            <div class="search">
+              <div class="input"><input placeholder="<%= search %>" /></div>
+              <div class="icon_srch"><i class="icon-search"></i></div>
+            </div>
+            <div class="news">
+              <% for(var i = 0; i < articles.length; i ++) { %>
+                <div class="item">
+                  <a class="title" href="/blog/<%= articles[i].url %>" status="<%= articles[i].status %>"><%=articles[i].title%></a>
+                  <div>
+                    <div class="img"></div>
+                    <p class="brief"><span class="author"><%= articles[i].authorName %></span><span class="date">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= new Date(articles[i].createdAt).getFullYear() + '. ' + (new Date(articles[i].createdAt).getMonth() + 1) + '. ' + new Date(articles[i].createdAt).getDate() %></span><span class="page-num"><%= articles[i].view_count %><%= num %></span></p>
+                  </div>
+                  <div class="detail"><%= articles[i].introduction %></div>
+                </div>
+              <% } %>
+            </div>
+            <div class="scroll"></div>
+          </div>
+          <div class="right-content">
+            <div class="down hidden">
+              <i class="icon-arrow-down"></i>
+            </div>
+            <div class="tags">
+              <div class="tags-title"><%= hot_tags %></div>
+              <div class="tags-content">
+                <% for(var i = 0; i < blog_tags.length; i ++) { %>
+                  <a class="tags-item" tag="<%= blog_tags[i].tag %>"><%= blog_tags[i].tag %></a>
+                <% } %>
+              </div>
+            </div>
+            <div class="head-line">
+              <div class="title head-title"><%= head_line %></div>
+              <div class="head-content">
+                <ul>
+                  <% for(var i = 0; i < blog_tops.length; i ++) { %>
+                    <li class="head-li">
+                      <% if (blog_tops[i].dataValues.cover) { %>
+                        <img class="head-img" src="<%= blog_tops[i].dataValues.cover %>" />
+                      <% } else { %>
+                         <img class="head-img" src="/static/assets/blog-views/list/holder.png" />
+                      <% } %>
+                      <a class="head-a" href="/blog/<%= blog_tops[i].dataValues.url %>"><%= blog_tops[i].dataValues.title %></a>
+                    </li>
+                   <% } %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="pagination">
+        <div id="pn" class="pn">
+        </div>
+      </div>
+    </article>
+  </div>
+<%- include('../../../components/footer.ejs') %>

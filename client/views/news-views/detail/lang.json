@@ -1,0 +1,36 @@
+{
+  "en": {
+    "banner_brief": "Walk in the front of the cloud",
+    "banner_describe": "Cloud services refer to services that are available on-demand, easily scalable. This service can be any services.",
+    "banner_title": "UnitedStack news",
+    "breadcrumb_one": "Home",
+    "breadcrumb_three": "UnitedStack news",
+    "breadcrumb_two": "About UnitedStack",
+    "cssFile": "/static/dist/news_detail.min.css",
+    "head_line": "Head Line",
+    "hot_tags": "Hot Tags",
+    "jsFile": "/static/dist/news_detail.min.js",
+    "prev": "Prev",
+    "next": "Next",
+    "search": "Search",
+    "title": "UnitedStack - news",
+    "list": "List"
+  },
+  "zh": {
+    "banner_brief": "我们永远走在云的前端",
+    "banner_describe": "云服务指通过网络以按需、易扩展的方式获得所需服务。这种服务可以是IT和软件、互联网相关，也可是其他服务。",
+    "banner_title": "有云新闻",
+    "breadcrumb_one": "首页",
+    "breadcrumb_three": "有云新闻",
+    "breadcrumb_two": "关于有云",
+    "cssFile": "/static/dist/news_detail.min.css",
+    "head_line": "有云头条",
+    "hot_tags": "热门标签",
+    "jsFile": "/static/dist/news_detail.min.js",
+    "prev": "上一篇",
+    "next": "下一篇",
+    "search": "搜索新闻",
+    "title": "UnitedStack - 有云新闻",
+    "list": "列表"
+  }
+}

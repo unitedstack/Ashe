@@ -1,0 +1,68 @@
+<%- include('../../../components/header.ejs') %>
+<div class="volcano-profile">
+  <div class="profile-wrapper">
+  <div class="person-info">
+    <span class="back"><i class="icon-arrow-left"></i><%= back %></span>
+    <span class="person"><%= title %></span>
+    <span class="edit"><%= edit %></span>
+  </div>
+    <div class="info">
+      <div class="title"><%= basic_info %></div>
+      <div class="information">
+        <div class="left">
+          <div class="img"></div>
+          <span class="amendimg"><%= modify_head %></span>
+          <span class="amendimgm"><%= click_modify %></span>
+          <%if (user.company){%>
+            <span class="company"><i class="icon-icon-profile-company"></i><%= company_info %></span>
+          <% }%>
+        </div>
+        <div class="right">
+          <span class="name"><%= user.nickname || user.email %></span>
+          <span class='tel'><%= user.phone %></span>
+          <span class="amendname"><%= modify_name %></span>
+          <%if (user.company){%>
+          <span class="company-info"><%= user.company.name %></span>
+          <%}%>
+        </div>
+      </div>
+    </div>
+    <div class="account">
+      <div class="title"><%= account_security %></div>
+      <div class="message">
+        <div class="password">
+        <div class="one"><span class="profile-password"></span><%= password %></div>
+          <span class="profile-password-mobile"></span>
+          <span class="cont">************************</span>
+          <span class="btn"><%= modify_pwd %></span>
+        </div>
+        <div class="email">
+        <div class="one"><span class="profile-email"></span><%= email %></div>
+          <span class="profile-email-mobile"></span>
+          <span class="cont"><%= user.email %></span>
+          <span class="btn"><%= modify_email %></span>
+        </div>
+        <div class="phone">
+        <div class="one"><span class="profile-phone"></span><%= phone %></div>
+        <span class="profile-phone-mobile"></span>
+          <span class="cont"><%= user.phone%></span>
+          <span class="btn"><%= modify_phone %></span>
+        </div>
+      </div>
+    </div>
+    <div class="out"><%= logout %></div>
+  </div>
+</div>
+<div class="volcano-global-footer">
+  <div class="row-1">
+    ©2017 UnitedStack Inc. All Rights Reserved. <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备13015821号</a>
+  </div>
+  <div class="row-2">
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020347">京公网安备 11010802020347号</a>
+  </div>
+</div>
+</body>
+<script src="/static/third-party/jquery-3.2.1.min.js"></script>
+<script src="/static/common/js/global.js"></script>
+<script src="<%=jsFile %>"></script>
+</html>

@@ -1,0 +1,42 @@
+{
+  "en": {
+    "banner_brief": "Open source cloud",
+    "banner_describe": "UnitedStack in the acquisition of capital at the same time more access to the industry's trust and recognition",
+    "banner_title": "Investors",
+    "breadcrumb_one": "Home",
+    "breadcrumb_three": "Investors",
+    "breadcrumb_two": "About UnitedStack",
+    "chinarock_brief": "HuaYan (capital) limited company, the predecessor of constant - international investment limited company, fuhua investment management co., LTD., on December 1, 2006 registered in Hong Kong.Investment fields including enterprise services, education and training, marketing, tourism and other fields, focusing on start-up, provide an angel round and A round of investment.",
+    "chinarock_company": "ChinaRock",
+    "cisco_brief": "Cisco is the world's leading supplier of network solutions.Meanwhile the cisco is committed to numerous companies to build network unimpeded, bridge between, with his keen insight, rich industry experience, advanced technology, help enterprises to apply network into a strategic asset, tap the network energy, gain a competitive advantage.",
+    "cisco_company": "Cisco",
+    "cssFile": "/static/dist/page_about_investor.min.css",
+    "idg_brief": "IDG capital focus on VC/PE investment projects related to the Chinese market, focus on consumer goods, chain services, Internet and wireless applications, new media, education, health care, and in the field of new energy, advanced manufacturing and other leading enterprises with first-class brand, covering the initial, growth, maturation and pre-ipo stage, investment scale from millions of dollars to tens of millions of dollars.",
+    "idg_company": "IDG",
+    "jsFile": "/static/dist/page_about_investor.min.js",
+    "sequoia_briefone": "Sequoia capital in the United States in 1972 was founded in silicon valley.In the 30 years since its founding, sequoia as the first institutional investors have invested in such as Apple, Google, Cisco, Oracle, Yahoo, Linkedin, innovative tide of the leadership of the company.",
+    "sequoia_brieftwo": "In China, sequoia capital China team currently has about $2 billion in overseas funds and domestic fund of nearly 4 billion yuan, to invest in China's high-growth enterprises.Sequoia China partners and investment team with international vision and local business enterprise economic development experience, from September 2005 since its establishment, in science, technology, consumer services, health care and new energy/clean technology investment and the many representative high-growth companies.",
+    "sequoia_company": "Sequoia",
+    "title": "UnitedStack - Investor"
+  },
+  "zh": {
+    "banner_brief": "有云，全国最专业的开源云",
+    "banner_describe": "有云在获得资本的同时更获得业界的信任与认可，使我们的产品与服务更加丰富，这一切都是促进我们不断前进的动力。",
+    "banner_title": "投资人",
+    "breadcrumb_one": "首页",
+    "breadcrumb_three": "投资人",
+    "breadcrumb_two": "关于有云",
+    "chinarock_brief": "华岩（资本）有限公司，前身为恒胜国际投资有限公司、富华投资管理有限公司，于2006年12月1日在香港注册成立。投资领域包括企业服务、教育培训、营销、旅游等多个领域，主要关注初创企业，提供天使轮和A轮投资。",
+    "chinarock_company": "ChinaRock",
+    "cisco_brief": "思科公司是全球领先的网络解决方案供应商。与此同时思科正在致力于为无数的企业构筑网络间畅通无阻的“桥梁”，并用自己敏锐的洞察力、丰富的行业经验、先进的技术，帮助企业把网络应用转化为战略性的资产，充分挖掘网络的能量，获得竞争的优势。",
+    "cisco_company": "Cisco",
+    "cssFile": "/static/dist/page_about_investor.min.css",
+    "idg_brief": "IDG资本专注于与中国市场有关的VC/PE投资项目，重点关注消费品、连锁服务、互联网及无线应用、新媒体、教育、医疗健康、新能源、先进制造等领域的拥有一流品牌的领先企业，覆盖初创期、成长期、成熟期、Pre-IPO 各个阶段，投资规模从上百万美元到上千万美元不等。",
+    "idg_company": "IDG资本",
+    "jsFile": "/static/dist/page_about_investor.min.js",
+    "sequoia_briefone": "红杉资本于1972年在美国硅谷成立。在成立之后的30多年之中，红杉作为第一家机构投资人投资了如 Apple, Google, Cisco, Oracle, Yahoo, Linkedin 等众多创新型的领导潮流的公司。",
+    "sequoia_brieftwo": "在中国，红杉资本中国团队目前管理约20亿美元的海外基金和近40亿人民币的国内基金，用于投资中国的高成长企业。红杉中国的合伙人及投资团队兼备国际经济发展视野和本土创业企业经验，从2005年9月成立至今，在科技、消费服务业、医疗健康和新能源/清洁技术等投资了众多具有代表意义的高成长公司。",
+    "sequoia_company": "红杉资本",
+    "title": "UnitedStack - 投资人"
+  }
+}

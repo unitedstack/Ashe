@@ -1,0 +1,171 @@
+<%- include('../../../../components/header.ejs') %>
+  <div class="volcano-private-start">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="wraper">
+          <div class="volcano-common-content">
+          <img src="/static/assets/page-views/private-cloud/private-start/bannerpic@v2.0.png">
+            <div class="word">
+              <div class="word-title"><%= banner_title %></div>
+              <div class="word-brief"><%= banner_brief %></div>
+              <div class="word-describe"><%= banner_describe %></div>
+            </div>
+            <ul class="breadcrumb">
+              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_three %></a>&nbsp;/&nbsp;</li>
+              <li class="third"><%= breadcrumb_four %></li>
+            </ul>
+            </div>
+        </div>
+      </section>
+      <!-- end for banner -->
+      <!-- content -->
+      <section class="content-main">
+        <div class="innerc">
+          <div class="inner">
+          <div class="title"><%= start_title %></div>
+          <ul class="list">
+            <li>
+              <p class="headline"><%= start_one_title %></p>
+              <p class="detail"><%= start_one_detail %></p>
+            </li>
+            <li>
+              <p class="headline"><%= start_two_title %></p>
+              <p class="detail"><%= start_two_detail %></p>
+            </li>
+            <hr>
+            <li class="center">
+              <p class="headline"><%= start_three_title %></p>
+              <p class="detail"><%= start_three_detail %></p>
+            </li>
+            <li class="center">
+              <p class="headline"><%= start_four_title %></p>
+              <p class="detail"><%= start_four_detail %></p>
+            </li>
+            <hr>
+            <li class="last">
+              <p class="headline"><%= start_five_title %></p>
+              <p class="detail"><%= start_five_detail %></p>
+              <p class="detail"><%= start_five_detail_one %></p>
+              <p class="detail"><%= start_five_detail_two %></p>
+            </li>
+            <li class="last">
+              <p class="headline"><%= start_six_title %></p>
+              <p class="detail"><%= start_six_detail %></p>
+              <p class="detail"><%= start_six_detail_one %></p>
+            </li>
+            <hr>
+          </ul>
+        </div>
+        </div>
+        <div class="picture">
+            <div class="inner">
+              <div class="shell">
+                <p><%= shell_one %></p>
+                <p><%= shell_two %></p>
+              </div>
+            </div>
+        </div>
+        <div class="question">
+          <div class="inner">
+            <div class="title"><%= question_title %></div>
+            <ul class="quiz">
+              <li>
+                <p class="ask"><%= question_one %></p>
+                <p class="answer"><%= answer_one_a %><br><%= answer_one_b %></p>
+              </li>
+              <li>
+                <p class="ask"><%= question_two %></p>
+                <p class="answer"><%= answer_two %></p>
+              </li>
+              <li>
+                <p class="ask"><%= question_three %></p>
+                <p class="answer"><%= answer_three %></p>
+              </li>
+              <li>
+                <p class="ask"><%= question_four %></p>
+                <p class="answer"><%= answer_four_a %><br><%= answer_four_b %></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+<!--         <div class="source">
+          <div class="inner">
+            <div class="title"><%= source_title %></div>
+            <div class="describe"><%= source_describe %></div>
+            <ul class="alignment">
+              <li>
+                <img src="/static/assets/page-views/private-cloud/private-start/start1.png">
+                <div class="gland"><span><%= alignment_one %></span></div>
+              </li>
+              <li>
+                <img src="/static/assets/page-views/private-cloud/private-start/start2.png">
+                <div class="gland"><span><%= alignment_two %></span></div>
+              </li>
+              <li>
+                <img src="/static/assets/page-views/private-cloud/private-start/start3.png">
+                <div class="gland"><span><%= alignment_three %></span></div>
+              </li>
+              <li>
+                <img src="/static/assets/page-views/private-cloud/private-start/start4.png">
+                <div class="gland"><span><%= alignment_four %></span></div>
+              </li>
+            </ul>
+            <div class="application"><a href="/private-cloud/private-apply"><%= private_apply %></a></div>
+          </div>
+        </div>
+        <div class="paper">
+          <div class="tip"></div>
+          <div class="cloth-content">
+            <div class="close">
+              <div class="x"></div>
+            </div>
+            <div class="mobilex icon-arrow-left"></div>
+            <div class="content">
+              <div class="name">
+                <span class="pre"><%= paper_title_one%></span>
+                《
+                <span class="pree"><%= paper_title_two%></span>
+                》
+                <span class="down"><%= paper_title_three%></span>
+              </div>
+              <div class="detail">
+                <form>
+                  <div class="line">
+                    <label for="name"><%= paper_name %><span class="required icon-user">*</span><em><%= paper_name_detail %></em></label>
+                    <input type="text" name="name" class="regname">
+                  </div>
+                  <div class="line">
+                    <label for="phone"><%= paper_phone %><span class="required icon-tel">*</span><em><%= paper_phone_detail %></em></label>
+                    <input type="text" name="phone" class="regtel">
+                  </div>
+                  <div class="line">
+                    <label for="company"><%= paper_company %><span class="required icon-myhome">*</span><em><%= paper_company_detail %></em></label>
+                    <input type="text" name="company" class="reghome">
+                  </div>
+                  <div class="line">
+                    <label for="email"><%= paper_email %><span class="required icon-eemail">*</span><em><%= paper_email_detail %></em></label>
+                    <input type="text" name="email" class="regemail ">
+                  </div>
+                  <div class="line">
+                    <input class="style-link-blue" type="submit" value="<%= submit %>">
+                  </div>
+                  <div class="line">
+                    <div class="m"><%= preview %></div>
+                  </div>
+                  <div class="line" id="mention">
+                  <ul>
+                      <li data-type="yes">您的申请已提交，我们会尽快和您联系。页面将在2秒后自动刷新，在此之前无法再次提交表格！</li>
+                      <li data-type="no">服务器连接错误，请稍后再试</li>
+                  </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </article>
+<%- include('../../../../components/footer.ejs') %>

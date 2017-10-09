@@ -1,0 +1,12 @@
+{
+  "i18n": true,
+  "defaultLang": "zh",
+  "articleUrl": {},
+  "file": {
+    "indexFile": "index.ejs",
+    "indexJsFile": "index.js",
+    "i18nFile": "lang.json",
+    "styleFolder": "style",
+    "assetsFolder": "assets"
+  }
+}

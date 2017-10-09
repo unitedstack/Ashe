@@ -1,0 +1,59 @@
+{
+  "name": "ashe",
+  "version": "0.0.1",
+  "description": "Public cloud official website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unitedstack/Ashe.git"
+  },
+  "keywords": [
+    "official",
+    "website"
+  ],
+  "authors": [
+    "PengJiyuan <731401082@qq.com>"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/unitedstack/Ashe/issues"
+  },
+  "homepage": "https://github.com/unitedstack/Ashe#readme",
+  "engines": {
+    "node": ">= 8"
+  },
+  "browserslist": [
+    "ie >= 9",
+    "Firefox >= 15",
+    "Chrome >= 20",
+    "Safari >= 5"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "colors": "^1.1.2",
+    "css-loader": "^0.28.7",
+    "ejs": "^2.5.7",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "glob": "^7.1.2",
+    "grunt": "^1.0.1",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-webfont": "^1.6.0",
+    "grunt-webpack": "^3.0.2",
+    "less": "^3.0.0-alpha.3",
+    "less-loader": "^4.0.5",
+    "load-grunt-tasks": "^3.5.2",
+    "postcss-loader": "^2.0.6",
+    "time-grunt": "^1.4.0",
+    "webpack": "^3.6.0"
+  },
+  "dependencies": {
+    "fs-async-await": "0.0.3",
+    "lodash": "^4.17.4"
+  }
+}

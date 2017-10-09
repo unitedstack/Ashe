@@ -1,0 +1,38 @@
+{
+  "en": {
+    "banner_brief": "Deep violent collision",
+    "banner_describe": "Community precipitated the wisdom of UnitedStack engineers, impact mutual learning and progress",
+    "banner_title": "Technical community",
+    "breadcrumb_four": "Technical community",
+    "breadcrumb_one": "Home",
+    "breadcrumb_three": "Technical support",
+    "breadcrumb_two": "Service and support",
+    "cssFile": "/static/dist/blog_detail.min.css",
+    "head_line": "Head Line",
+    "hot_tags": "Hot Tags",
+    "jsFile": "/static/dist/blog_detail.min.js",
+    "prev": "Prev",
+    "next": "Next",
+    "search": "Search",
+    "title": "blog_detail",
+    "list": "blog detail"
+  },
+  "zh": {
+    "banner_brief": "深度博文的激烈碰撞",
+    "banner_describe": "技术社区沉淀了有云工程师们的智慧，碰撞着相互学习进步，感受不一样的有云文化，展示不一样的有云风采",
+    "banner_title": "技术社区",
+    "breadcrumb_four": "技术社区",
+    "breadcrumb_one": "首页",
+    "breadcrumb_three": "技术支持",
+    "breadcrumb_two": "服务与支持",
+    "cssFile": "/static/dist/blog_detail.min.css",
+    "head_line": "热门博文",
+    "hot_tags": "热门标签",
+    "jsFile": "/static/dist/blog_detail.min.js",
+    "prev": "上一篇",
+    "next": "下一篇",
+    "search": "搜索博文",
+    "title": "技术社区",
+    "list": "列表"
+  }
+}

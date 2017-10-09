@@ -1,0 +1,411 @@
+<%- include('../../../../components/header.ejs') %>
+  <div class="volcano-train-list">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="wraper">
+          <div class="volcano-common-content">
+          <img src="/static/assets/page-views/training/train-list/bannerpic@v2.0.png">
+            <div class="word">
+              <div class="word-title"><%= banner_title %></div>
+              <div class="word-brief"><%= banner_brief %></div>
+              <div class="word-describe"><%= banner_describe %></div>
+            </div>
+             <ul class="breadcrumb">
+              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/training/train"><%= breadcrumb_three %></a>&nbsp;/&nbsp;</li>
+              <li class="third"><%= breadcrumb_four %></li>
+            </ul>
+            </div>
+        </div>
+      </section>
+      <!-- end for banner -->
+      <!-- content -->
+      <section class="content-main">
+        <div class="inner">
+          <div class="trainlist">
+            <div class="wrapper">
+              <div class="cover">
+                <div data-course-type="all" class="all per selected"><%= all_course %>
+                  <span class="icon">
+                    <span class="icon-plus"></span>
+                    <span class="icon-minus"></span>
+                  </span>
+                </div>
+                <div class="mobiletable mobiletable-all">
+                  <div class="tbody">
+                    <div class="info selected" data-course-type="course-solution-architect">
+                    <div class="number">UOS101</div>
+                      <div class="title">OpenStack Fundamental</div>
+                      <div class="intro"><%= fundamental_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= fundamental_detail_one %></p>
+                        <p><%= fundamental_detail_two %></p>
+                        <p><%= fundamental_detail_three %></p>
+                        <p><%= fundamental_detail_four %></p> 
+                      </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-solution-architect">
+                      <div class="number">UOS201</div>
+                      <div class="title">OpenStack Certificated Expert</div>
+                      <div class="intro">
+                        <p><%= expert_intro_one %></p>
+                        <p><%= expert_intro_two %></p>
+                        <p><%= expert_intro_three %></p>
+                        <p><%= expert_intro_four %></p>
+                      </div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= expert_detail_one %></p>
+                        <p><%= expert_detail_two %></p>
+                        <p><%= expert_detail_three %></p>
+                        <p><%= expert_detail_four %></p> 
+                      </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                    <div class="number">UOS301</div>
+                      <div class="title">Messaging In OpenStack (RabbitMQ)</div>
+                      <div class="intro"><%= messaging_intro %></div>
+                    <div class="course"><%= course %></div>
+                    <div class="detail">
+                      <p><%= messaging_detail_one %></p>
+                      <p><%= messaging_detail_two %></p>
+                      <p><%= messaging_detail_three %></p>
+                      <p><%= messaging_detail_four %></p> 
+                    </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                    <div class="number">UOS302</div>
+                      <div class="title">OpenStack Monitoring</div>
+                       <div class="intro"><%= monitoring_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= monitoring_detail_one %></p>
+                        <p><%= monitoring_detail_two %></p>
+                        <p><%= monitoring_detail_three %></p>
+                      </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                    <div class="number">UOS303</div>
+                      <div class="title">High Availability in OpenStack</div>
+                      <div class="intro"><%= availability_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= availability_detail_one %></p>
+                        <p><%= availability_detail_two %></p>
+                        <p><%= availability_detail_three %></p>
+                        <p><%= availability_detail_four %></p>
+                        <p><%= availability_detail_five %></p>
+                        <p><%= availability_detail_six %></p>
+                        <p><%= availability_detail_seven %></p>
+                      </div>
+                      </div>
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                    <div class="number">UOS304</div>
+                      <div class="title">OpenStack Deployment</div>
+                      <div class="intro"><%= deployment_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= deployment_detail_one %></p>
+                        <p><%= deployment_detail_two %></p>
+                        <p><%= deployment_detail_three %></p>
+                        <p><%= deployment_detail_four %></p>
+                        <p><%= deployment_detail_five %></p>
+                        <p><%= deployment_detail_six %></p>
+                        <p><%= deployment_detail_seven %></p>
+                      </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                    <div class="number">UOS401</div>
+                      <div class="title">OpenStack Certificated Operation</div>
+                      <div class="intro"><%= certificated_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= certificated_detail_one %></p>
+                        <p><%= certificated_detail_two %></p>
+                        <p><%= certificated_detail_three %></p>
+                        <p><%= certificated_detail_four %></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-course-type="course-openstack-ops" class="course-openstack-ops per"><%= ops_course %>
+                  <span class="icon">
+                    <span class="icon-plus"></span>
+                    <span class="icon-minus"></span>
+                  </span>
+                </div>
+                <div class="mobiletable mobiletable-ops">
+                  <div class="tbody">
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                      <div class="number">UOS301</div>
+                      <div class="title">Messaging In OpenStack (RabbitMQ)</div>
+                      <div class="intro"><%= messaging_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= messaging_detail_one %></p>
+                        <p><%= messaging_detail_two %></p>
+                        <p><%= messaging_detail_three %></p>
+                        <p><%= messaging_detail_four %></p> 
+                      </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                    <div class="number">UOS302</div>
+                      <div class="title">OpenStack Monitoring</div>
+                      <div class="intro"><%= monitoring_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= monitoring_detail_one %></p>
+                        <p><%= monitoring_detail_two %></p>
+                        <p><%= monitoring_detail_three %></p>
+                      </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                    <div class="number">UOS303</div>
+                      <div class="title">High Availability in OpenStack</div>
+                      <div class="intro"><%= availability_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= availability_detail_one %></p>
+                        <p><%= availability_detail_two %></p>
+                        <p><%= availability_detail_three %></p>
+                        <p><%= availability_detail_four %></p>
+                        <p><%= availability_detail_five %></p>
+                        <p><%= availability_detail_six %></p>
+                        <p><%= availability_detail_seven %></p>
+                      </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                    <div class="number">UOS304</div>
+                      <div class="title">OpenStack Deployment</div>
+                      <div class="intro"><%= deployment_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= deployment_detail_one %></p>
+                        <p><%= deployment_detail_two %></p>
+                        <p><%= deployment_detail_three %></p>
+                        <p><%= deployment_detail_four %></p>
+                        <p><%= deployment_detail_five %></p>
+                        <p><%= deployment_detail_six %></p>
+                        <p><%= deployment_detail_seven %></p>
+                      </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-openstack-ops">
+                    <div class="number">UOS401</div>
+                      <div class="title">OpenStack Certificated Operation</div>
+                      <div class="intro"><%= certificated_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= certificated_detail_one %></p>
+                        <p><%= certificated_detail_two %></p>
+                        <p><%= certificated_detail_three %></p>
+                        <p><%= certificated_detail_four %></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-course-type="course-solution-architect" class="course-solution-architect per"><%= architect_course %>
+                  <span class="icon">
+                    <span class="icon-plus"></span>
+                    <span class="icon-minus"></span>
+                  </span>
+                </div>
+                <div class="mobiletable mobiletable-arch">
+                  <div class="tbody">
+                    <div class="info selected" data-course-type="course-solution-architect">
+                      <div class="number">UOS101</div>
+                      <div class="title">OpenStack Fundamental</div>
+                      <div class="intro"><%= fundamental_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= fundamental_detail_one %></p>
+                        <p><%= fundamental_detail_two %></p>
+                        <p><%= fundamental_detail_three %></p>
+                        <p><%= fundamental_detail_four %></p> 
+                      </div>
+                    </div>
+                    <div class="info selected" data-course-type="course-solution-architect">
+                    <div class="number">UOS201</div>
+                      <div class="title">OpenStack Certificated Expert</div>
+                      <div class="intro">
+                        <p><%= expert_intro_one %></p>
+                        <p><%= expert_intro_two %></p>
+                        <p><%= expert_intro_three %></p>
+                        <p><%= expert_intro_four %></p>
+                      </div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= expert_detail_one %></p>
+                        <p><%= expert_detail_two %></p>
+                        <p><%= expert_detail_three %></p>
+                        <p><%= expert_detail_four %></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="apply-too" href="/training/train-apply"><%= apply %></a>
+              <div class="pctable">
+                <div class="tbody">
+                  <div class="tr selected" data-course-type="course-solution-architect">
+                    <span class="tem">USO101</span>
+                    <span>OpenStack Fundamental</span>
+                    <span class="icon">
+                      <span class="icon-plus"></span>
+                      <span class="icon-minus"></span>
+                    </span>
+                  </div>
+                  <div class="info selected architect" data-course-type="course-solution-architect">
+                    <div class="title">OpenStack Fundamental</div>
+                    <div class="intro"><%= fundamental_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= fundamental_detail_one %></p>
+                        <p><%= fundamental_detail_two %></p>
+                        <p><%= fundamental_detail_three %></p>
+                        <p><%= fundamental_detail_four %></p> 
+                      </div>
+                    <a href="/training/train-apply"><%= apply %></a>
+                  </div>
+                  <div class="tr selected" data-course-type="course-solution-architect">
+                    <span class="tem">USO201</span>
+                    <span> OpenStack Certificated Expert</span>
+                    <span class="icon">
+                      <span class="icon-plus"></span>
+                      <span class="icon-minus"></span>
+                    </span>
+                  </div>
+                  <div class="info selected architect" data-course-type="course-solution-architect">
+                    <div class="title">OpenStack Certificated Expert</div>
+                    <div class="intro">
+                      <p><%= expert_intro_one %></p>
+                      <p><%= expert_intro_two %></p>
+                      <p><%= expert_intro_three %></p>
+                      <p><%= expert_intro_four %></p>
+                    </div>
+                    <div class="course"><%= course %></div>
+                    <div class="detail">
+                      <p><%= expert_detail_one %></p>
+                      <p><%= expert_detail_two %></p>
+                      <p><%= expert_detail_three %></p>
+                      <p><%= expert_detail_four %></p> 
+                    </div>
+                    <a href="/training/train-apply"><%= apply %></a>
+                  </div>
+                  <div class="tr selected" data-course-type="course-openstack-ops">
+                    <span  class="tem">USO301</span>
+                    <span>  Messaging In OpenStack(RabbitMQ)</span>
+                    <span class="icon">
+                      <span class="icon-plus"></span>
+                      <span class="icon-minus"></span>
+                    </span>
+                  </div>
+                  <div class="info selected opss" data-course-type="course-openstack-ops">
+                    <div class="title">Messaging In OpenStack (RabbitMQ)</div>
+                    <div class="intro"><%= messaging_intro %></div>
+                    <div class="course"><%= course %></div>
+                    <div class="detail">
+                      <p><%= messaging_detail_one %></p>
+                      <p><%= messaging_detail_two %></p>
+                      <p><%= messaging_detail_three %></p>
+                      <p><%= messaging_detail_four %></p> 
+                    </div>
+                    <a href="/training/train-apply"><%= apply %></a>
+                  </div>
+                  <div class="tr selected" data-course-type="course-openstack-ops">
+                    <span class="tem" >USO302</span>
+                    <span>OpenStack Monitoring</span>
+                    <span class="icon">
+                      <span class="icon-plus"></span>
+                      <span class="icon-minus"></span>
+                    </span>
+                  </div>
+                  <div class="info selected opss" data-course-type="course-openstack-ops">
+                    <div class="title">OpenStack Monitoring</div>
+                     <div class="intro"><%= monitoring_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= monitoring_detail_one %></p>
+                        <p><%= monitoring_detail_two %></p>
+                        <p><%= monitoring_detail_three %></p>
+                      </div>
+                    <a href="/training/train-apply"><%= apply %></a>
+                  </div>
+                  <div class="tr selected" data-course-type="course-openstack-ops">
+                    <span class="tem">USO303</span>
+                    <span>High Availability in OpenStack</span>
+                    <span class="icon">
+                      <span class="icon-plus"></span>
+                      <span class="icon-minus"></span>
+                    </span>
+                  </div>
+                  <div class="info selected opss" data-course-type="course-openstack-ops">
+                    <div class="title">High Availability in OpenStack</div>
+                    <div class="intro"><%= availability_intro %></div>
+                    <div class="course"><%= course %></div>
+                    <div class="detail">
+                      <p><%= availability_detail_one %></p>
+                      <p><%= availability_detail_two %></p>
+                      <p><%= availability_detail_three %></p>
+                      <p><%= availability_detail_four %></p>
+                      <p><%= availability_detail_five %></p>
+                      <p><%= availability_detail_six %></p>
+                      <p><%= availability_detail_seven %></p>
+                    </div>
+                    <a href="/training/train-apply"><%= apply %></a>
+                  </div>
+                  <div class="tr selected opss" data-course-type="course-openstack-ops">
+                    <span class="tem">USO304</span>
+                    <span>OpenStack Deployment</span>
+                    <span class="icon">
+                      <span class="icon-plus"></span>
+                      <span class="icon-minus"></span>
+                    </span>
+                  </div>
+                  <div class="info selected opss" data-course-type="course-openstack-ops">
+                    <div class="title">OpenStack Deployment</div>
+                    <div class="intro"><%= deployment_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= deployment_detail_one %></p>
+                        <p><%= deployment_detail_two %></p>
+                        <p><%= deployment_detail_three %></p>
+                        <p><%= deployment_detail_four %></p>
+                        <p><%= deployment_detail_five %></p>
+                        <p><%= deployment_detail_six %></p>
+                        <p><%= deployment_detail_seven %></p>
+                      </div>
+                    <a href="/training/train-apply"><%= apply %></a>
+                  </div>
+                  <div class="tr selected" data-course-type="course-openstack-ops">
+                    <span class="tem">USO401</span>
+                    <span>OpenStack Certificated Operation Engineer</span>
+                    <span class="icon">
+                      <span class="icon-plus"></span>
+                      <span class="icon-minus"></span>
+                    </span>
+                  </div>
+                  <div class="info selected opss" data-course-type="course-openstack-ops">
+                    <div class="title">OpenStack Certificated Operation Engineer</div>
+                    <div class="intro"><%= certificated_intro %></div>
+                      <div class="course"><%= course %></div>
+                      <div class="detail">
+                        <p><%= certificated_detail_one %></p>
+                        <p><%= certificated_detail_two %></p>
+                        <p><%= certificated_detail_three %></p>
+                        <p><%= certificated_detail_four %></p>
+                      </div>
+                    <a href="/training/train-apply"><%= apply %></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end for content -->
+    </div>
+    </article>
+<%- include('../../../../components/footer.ejs') %>

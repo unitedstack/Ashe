@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>邮箱@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人信息" transform="translate(-449.000000, -659.000000)" fill="#999999">
+            <g id="邮箱" transform="translate(449.000000, 590.000000)">
+                <path d="M0.00817382812,72.6049562 L0,81.249978 C0,82.2124989 0.81,83 1.8,83 L16.2000293,83 C17.19,83 18,82.2124989 18,81.249978 L18,72.6006203 L9.21544922,77.2590936 C9.08115234,77.3303144 8.91881836,77.3303144 8.78452148,77.2590936 L0.00817382812,72.6049562 Z M1.8,69 L16.2000293,69 C17.182793,69 17.9881641,69.776046 17.9998828,70.7289868 L9.00448242,75.6159174 L0.00908203125,70.7337329 C0.018046875,69.7786241 0.815595703,69 1.8,69 L1.8,69 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

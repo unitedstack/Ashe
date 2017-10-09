@@ -1,0 +1,50 @@
+<%- include('../../../components/header.ejs') %>
+<div class="volcano-forget">
+  <div class="login-wrapper">
+    <div class="title"><%= forget_title %></div>
+    <div class="content">
+      <div class="wrapper">
+        <input autofocus="autofocus" class="email" type="text" placeholder="<%= forget_email %>" />
+        <div class="captcha-wrapper">
+          <input class="phone" type="text" name="phone" placeholder="<%= forget_phone %>" />
+          <input class="captcha" type="text" name="captcha" placeholder="<%= code %>" />
+          <div id="sendCaptcha" class="send"><%= send_code %></div>
+        </div>
+        <div id="captcha-tip" class="error-tip"></div>
+        <input class="submit disabled" type="submit" value="<%= next_step %>" />
+      </div>
+      <div class="wrapper hidden">
+        <div class="pwd-wrapper">
+          <input class="password" type="password" placeholder="<%= password_one %>" />
+          <i class="icon-eye"></i>
+        </div>
+        <div class="re-pwd-wrapper">
+          <input id="repassword" class="repassword" type="password" placeholder="<%= password_two %>" />
+          <i class="icon-eye"></i>
+        </div>
+        <div id="pwd-tip" class="error-tip"></div>
+        <input class="submit submit-button" type="submit" value="<%= forget_submit %>" />
+      </div>
+      <div class="wrapper hidden">
+        <div class="success">
+          <div><i class="icon-success"></i></div>
+          <p><%= forget_amend %></p>
+        </div>
+        <input class="submit" type="submit" value="<%= forget_login %>" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="volcano-global-footer">
+  <div class="row-1">
+    ©2017 UnitedStack Inc. All Rights Reserved. <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备13015821号</a>
+  </div>
+  <div class="row-2">
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020347">京公网安备 11010802020347号</a>
+  </div>
+</div>
+</body>
+<script src="/static/third-party/jquery-3.2.1.min.js"></script>
+<script src="/static/common/js/global.js"></script>
+<script src="<%=jsFile %>"></script>
+</html>

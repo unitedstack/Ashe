@@ -1,0 +1,114 @@
+<%- include('../../../../components/header.ejs') %>
+  <div class="volcano-train">
+    <article >
+    <div id="page">
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="wraper">
+          <div class="volcano-common-content">
+          <img src="/static/assets/page-views/training/train/bannerpic@v2.0.png">
+            <div class="word">
+              <div class="word-title"><%= banner_title %></div>
+              <div class="word-brief"><%= banner_brief %></div>
+              <div class="word-describe"><%= banner_describe %></div>
+            </div>
+            <ul class="breadcrumb">
+              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/training/train"><%= breadcrumb_three %></a>&nbsp;/&nbsp;</li>
+              <li class="third"><%= breadcrumb_three %></li>
+            </ul>
+            </div>
+        </div>
+      </section>
+      <!-- end for banner -->
+      <!-- content -->
+      <section class="content-main">
+        <div class="volcano-common-content">
+          <div class="preview">
+            <div class="title"><%= preview_title %></div>
+            <div class="description"><%= preview_description %></div>
+            <a href="/training/train-list" class="train-list"><%= preview_list %></a>
+            <a href="/training/train-apply" class="train-apply"><%= preview_apply %></a>
+          </div>
+        </div>
+        <div class="feature">
+           <div class="inner">
+             <div class="course ops">
+               <div class="left"></div>
+               <div class="right">
+                 <div class="title">
+                   <a href="/training/train-list"><%= feature_title %></a>
+                 </div>
+                   <div class="detail"><%= feature_detail %>
+                   <p><%= feature_detail_one %></p>
+                  </div>
+               </div>
+             </div>
+            <div class="course devops">
+               <div class="left"></div>
+               <div class="right">
+                 <div class="title">
+                   <a href="/training/train-list"><%= devops_title %></a>
+                 </div>
+                    <div class="detail"><p><%= devops_detail_first %></p>
+                      <p><%= devops_detail_one %></p>
+                      <p><%= devops_detail_two %></p>
+                      <p><%= devops_detail_three %></p>
+                      <p><%= devops_detail_four %></p>
+                    </div>
+               </div>
+             </div>
+             <div class="course unitedstack">
+               <div class="left"></div>
+               <div class="right">
+                 <div class="title">
+                   <a href="/training/train-list"><%= us_title %></a>
+                 </div>
+                  <div class="detail"><%= us_detail %>
+                  <p><%= us_detail_one %></p>
+                  </div>
+               </div>
+             </div>
+           </div>
+          </div>
+        <div class="list">
+          <div class="inner">
+            <ul>
+              <li>
+                <span class="name"><%= list_one_name %></span>
+                <span class="photo">
+                  <img src="/static/assets/page-views/training/train/certification-picture-1.png">
+                </span>
+                <span class="describe"><%= list_one_detail %><br><%= list_one_detail_two %></span>
+              </li>
+              <li>
+                <span class="name"><%= list_two_name %></span>
+                <span class="photo flow">
+                   <img src="/static/assets/page-views/training/train/certification-picture-2.png">
+                </span>
+                <span class="describe"><%= list_two_detail %><br><%= list_two_detail_two %></span>
+              </li>
+              <li>
+                <span class="name"><%= list_three_name %></span>
+                <span class="photo practice">
+                   <img src="/static/assets/page-views/training/train/certification-picture-3.png">
+                </span>
+                <span class="describe"><%= list_three_detail %><br><%= list_three_detail_two %></span>
+              </li>
+              <li class="own">
+                <span class="name"><%= list_four_name %></span>
+                <span class="photo neutral">
+                   <img src="/static/assets/page-views/training/train/certification-picture-4.png">
+                </span>
+                <span class="describe"><%= list_four_detail %><br><%= list_four_detail_two %></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- end for content -->
+    </div>
+    </article>
+  </div>
+<%- include('../../../../components/footer.ejs') %>

@@ -1,0 +1,528 @@
+@import '../../../../../components/header.less';
+@import '../../../../../components/footer.less';
+@bread_color: #0B181D;
+@train_font_color: #999999;
+@train_title_color: #2C2C2C;
+@cloth_color: rgba(5, 21, 74, 0.51);
+@backline_color: rgba(255, 255, 255, 0.17);
+@blueline_color: #006f9b;
+@volume_color: rgba(255, 255, 255, 0.23);
+@control_color: rgba(255, 255, 255, 0.53);
+@spirit_color: #f6f6f6;
+@spiriti_color: rgba(79, 95, 90, 0.3);
+@spiritih_color: #222;
+@description_color: #3280a9;
+@trainlist_color: #006f9b;
+@trainapply_color: #c2003d;
+@trainapplyh_color: #950633;
+@title_color: #2C2C2C;
+@media_color: rgba(5, 21, 74, 0.51);
+@course_color: #F1F5F7;
+.volcano-train {
+  article {
+    @media (min-width: @pad_width) {
+      .volcano-common-content {
+        width: 1240px;
+        margin: auto;
+        position: relative;
+        box-sizing: border-box;
+        padding: 100px 20px 0 20px;
+      }
+    }
+    @media (min-width: @pad_width) and (max-width: 1255px) {
+      .volcano-common-content {
+        width: 100% !important;
+      }
+    }
+    @media (min-width: @mobile_width) and (max-width: @pad_width) {
+      .content-banner{
+        .volcano-common-content {
+          padding: 100px 15px 0 15px;
+          width: 100%;
+          box-sizing: border-box;
+          height: 100%;
+          .breadcrumb{
+            bottom: -47px !important;
+          }
+        }
+      }
+      .content-main{
+        .volcano-common-content {
+          padding-top: 100px;
+          .preview{
+            .description{
+              width: 100%;
+              padding: 0 2%;
+              box-sizing: border-box;
+            }
+          }
+        }
+        .feature{
+          width: 100%;
+          height: 880px;
+          padding: 0 2%;
+          box-sizing: border-box;
+          .inner{
+            width: 100% !important;
+            .course{
+              &:hover{
+                height: auto;
+              }
+            }
+          }
+        }
+        .list{
+          width: 100%;
+          padding-left: 2% !important;
+          padding-right: 2% !important;
+          box-sizing: border-box;
+          .inner{
+            width: 100% !important;
+          }
+        }
+      }
+    }
+    @media (max-width: @mobile_width) {
+        .volcano-common-content {
+          padding: 0 0.75rem;
+          width: 100%;
+          height: 100%;
+          padding-top: 50px;
+          box-sizing: border-box;
+        }
+    }
+    .content-banner {
+      width: 100%;
+      height: 540px;
+      background-image: linear-gradient(-180deg, #010413 1%, #030E22 73%, #06223F 100%);
+      position: relative;
+      .wraper{
+        img{
+          height: 540px;
+          float: right;
+          margin-top: -100px;
+        }
+        .word {
+          text-align: left;
+          position: absolute;
+          width: 577px;
+          height: auto;
+          top: 178px;
+          left: 20px;
+          .word-title {
+            display: none;
+            color: @white;
+            font-size: 24px;
+            line-height: 58px;
+          }
+          .word-brief {
+            color: @white;
+            font-size: 50px;
+            line-height: 66px;
+            letter-spacing: 3.25px;
+            margin-bottom: 30px;
+          }
+          .word-describe {
+            font-size: 18px;
+            line-height: 34px;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 2.5px;
+          }
+        }
+        .breadcrumb {
+          float: right;
+          font-size:14px;
+          line-height: 20px;
+          position: absolute;
+          right: 20px;
+          bottom: -517px;
+          color: rgba(11,24,29,0.5);
+          .first {
+            text-align: center;
+            float: left;
+            .firstpage {
+              color: @bread_color;
+              opacity: 0.5;
+              text-decoration: none;
+              &:hover {
+                color: #000;
+                opacity: 0.9;
+              }
+            }
+          }
+          .second {
+            text-align: center;
+            float: left;
+            .success{
+              color: @bread_color !important;
+              opacity: 0.5;
+              text-decoration: none;
+              &:hover {
+                color: #000;
+                opacity: 0.9;
+              }
+            }
+          }
+          .third {
+            float: left;
+            color: @bread_color;
+          }
+        }
+      }
+    }
+    .content-main {
+      width: 100%;
+      .preview {
+        margin-top: 20px;
+        margin-bottom: 80px;
+        clear: both;
+        width: 100%;
+        height:auto;
+        text-align: center;
+        .title {
+          font-size: 28px;
+          color: #2C2C2C;
+          letter-spacing: 1.2px;
+          line-height: 42px;
+        }
+        .description {
+          text-align: left;
+          font-size: 16px;
+          line-height: 28px;
+          margin-top: 30px;
+          letter-spacing: 0.6px;
+          height: 124px;
+          text-indent: 2em;
+          color: #7f7f7f;
+        }
+        a {
+          display: inline-block;
+          color: @white;
+          margin: 40px auto;
+          border-radius: 2px;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          text-align: center;
+          padding: 0 14px;
+          box-sizing: border-box;
+          transition: all 1s cubic-bezier(0.12, 0.63, 0.78, 1.22);
+          background-color: @description_color;
+          font-size: 18px;
+          height: 48px;
+          line-height: 48px;
+          width: 250px;
+          margin-top: 33px;
+        }
+        .train-list {
+          background-color:  #3280A9;;
+          margin-right: 76px;
+          &:hover{
+            background-color: #3689B5;
+          }
+        }
+        .train-apply {
+          background-color: #42B9E5;
+          &:hover{
+            background-color: #46C5F3;
+          }
+        }
+      }
+      .feature {
+        margin: 0 auto;
+        padding-top:80px;
+        padding-bottom: 80px;
+        background: @color_neutral_12;
+        .inner {
+          padding: 0;
+          margin: 0 auto;
+          width: 1200px;
+          height: auto;
+          overflow: hidden;
+          .course {
+            width: 33.333%;
+            margin: 0 auto;
+            float: left;
+            height: 660px;
+            padding: 40px 30px 60px 30px;
+            box-sizing: border-box;
+            .left {
+              background: url(/static/assets/page-views/training/train/featured-picture-1.png) no-repeat center center;
+              float: left;
+              width: 100%;
+              height: 170px;
+            }
+            .right {
+              float: left;
+              height: 100%;
+              width: 100%;
+              overflow: hidden;
+              color: @train_font_color;
+              .title {
+                font-size: 20px;
+                line-height: 26px;
+                text-align: left;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+                a {
+                  color: @train_title_color;
+                }
+              }
+              .detail {
+                font-size: 14px;
+                color: #999999;
+                letter-spacing: 0.6px;
+                line-height: 24px;
+                text-indent: 2em;
+                p{
+                  text-indent: 2em;
+                }
+                a {
+                  color: @color_accent_07;
+                }
+              }
+            }
+            &:hover{
+              background-color: #fff;
+            }
+          }
+          .devops {
+            .left {
+              background-image: url(/static/assets/page-views/training/train/featured-picture-2.png);
+            }
+          }
+          .unitedstack {
+            .left {
+              background-image: url(/static/assets/page-views/training/train/featured-picture-3.png);
+            }
+          }
+        }
+      }
+      .list {
+        padding: 100px 0 0 0;
+        margin-bottom: -10px;
+        .inner {
+          margin: 0 auto;
+          width: 1200px;
+          overflow: hidden;
+          ul {
+            li {
+              display: block;
+              float: left;
+              width: 13.33%;
+              margin-right: 15.5%;
+              span {
+                display: block;
+                text-align: center;
+              }
+              .photo {
+                display: block;
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                position: relative;
+                left: 50%;
+                margin-left: -50px;
+                margin-top: 10px;
+                img{
+                  width: 100px;
+                  height: 100px;
+                }
+              }
+              .name {
+                font-size: 28px;
+                line-height: 37px;
+                color:@train_title_color;
+              }
+              .describe {
+                display: block;
+                width: 160px;
+                font-size: 14px;
+                line-height: 24px;
+                position: relative;
+                left: 50%;
+                margin-left: -80px;
+                color:@train_title_color;
+              }
+            }
+            li.own {
+              margin-right:0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: @mobile_width) {
+  .volcano-train {
+    article {
+      font-size: 16px;
+      .content-banner {
+        margin-bottom: 20px;
+        height: 156px;
+        .wraper {
+          width: 100%;
+          margin: auto;
+          padding: 0;
+          img{
+            height: 156px;
+            margin-top: -50px;
+          }
+          .word {
+            padding-left: 4%;
+            top: 60px;
+            width:80%;
+            .word-title {
+              display: block;
+              font-size: 20px;
+              line-height: 28px;
+              color: #FFFFFF;
+              letter-spacing: 1.6px;
+            }
+            .word-brief {
+              font-size: 14px;
+              color: rgba(255,255,255,0.8);
+              letter-spacing: 1px;
+              line-height: 22px;
+            }
+            .word-describe {
+              display: none;
+            }
+          }
+          .breadcrumb {
+            display: none;
+          }
+          .train-logo{
+            display: none;
+          }
+          .coa-logo{
+            display: none;
+          }
+        }
+      }
+      .content-main {
+        width: 100%;
+        margin-bottom: -50px;
+        .volcano-common-content {
+          padding-top: 0;
+          color: @color_neutral_08;
+          .preview {
+            margin-top: 40px;
+            margin-bottom: 0;
+            text-align: left;
+            width: 100%;
+            height: auto;
+            .title{
+              display: none;
+            }
+            .description {
+              font-size: 15px;
+              line-height: 22px;
+              height: auto;
+              margin: 20px 0;
+              margin-bottom: 40px;
+            }
+            a{
+              width: 100%;
+              heigth: 44px;
+              margin: 0;
+              font-size: 15px;
+              font-weight: none;
+            }
+            .train-list{
+              margin-bottom:10px;
+            }
+            .train-apply{
+              margin-bottom:30px;
+            }
+          }
+        }
+        .feature {
+            margin: 0 auto;
+            padding: 0 0.75rem;
+            padding-top: 0;
+            background: #fff;
+            .inner {
+              width: 100% !important;
+              .course {
+                width: 100%;
+                background-color: @course_color;
+                padding: 20px 12px 0 12px;
+                margin-bottom: 15px;
+                height: 255px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                .left {
+                  width: 100%;
+                }
+                .right {
+                  .title {
+                    font-size: 18px;
+                    line-height: 24px;
+                    padding-top: 10px;
+                    margin: 0;
+                  }
+                  .detail {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        .list {
+          padding: 0;
+          overflow:hidden;
+          .inner {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            ul {
+              width: 100%;
+              height: auto;
+              padding-top: 50px;
+              li {
+                display: inline-block;
+                float: left;
+                width: 50%;
+                margin-right: 0;
+                padding-bottom: 40px;
+                span {
+                  display: block;
+                  text-align: center;
+                }
+                .photo {
+                  display: block;
+                  width: 100px;
+                  height: 100px;
+                  margin: 0 auto;
+                  position: relative;
+                  left: 50%;
+                  margin-left: -52px;
+                  margin-top: 10px;
+                }
+                .name {
+                  color:@train_title_color;
+                  font-size: 20px;
+                  line-height: 28px;
+                }
+                .describe {
+                  display: block;
+                  width: 140px;
+                  font-size: 14px;
+                  line-height: 24px;
+                  position: relative;
+                  left: 50%;
+                  margin-left: -70px;
+                  color:@train_font_color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

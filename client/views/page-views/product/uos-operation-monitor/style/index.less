@@ -1,0 +1,659 @@
+@import '../../../../../components/header.less';
+@import '../../../../../components/footer.less';
+@bread_color: #0B181D;
+@title_color: #333;
+@brief_color: #999;
+@intro_color: #666;
+.volcano-uos-operation-monitor {
+  article {
+    @media screen {
+      @media (min-width: @pad_width) {
+        .volcano-common-content {
+          width: 1240px;
+          height: 100%;
+          margin: auto;
+          position: relative;
+          box-sizing: border-box;
+          padding: 100px 20px 0 100px;
+        }
+      }
+      @media (min-width: @pad_width) and (max-width: 1255px) {
+        .volcano-common-content {
+          width: 100% !important;
+        }
+        .inner{
+          width: 100% !important;
+        }
+      }
+      @media (min-width: @mobile_width) and (max-width: @pad_width) {
+        .volcano-common-content {
+          padding: 100px 15px 0 15px;
+          width: 100%;
+          box-sizing: border-box;
+          height: 100%;
+          .breadcrumb{
+            bottom: -47px !important;
+          }
+        }
+        .inner{
+          width: 100% !important;
+          padding: 0 3% !important;
+          box-sizing: border-box;
+        }
+      }
+      @media (max-width: @mobile_width) {
+        .volcano-common-content {
+          padding: 0 3.75%;
+          width: 100%;
+          height: 100%;
+          padding-top: 50px;
+          box-sizing: border-box;
+        }
+      }
+    }
+    .content-banner {
+      width: 100%;
+      height: 540px;
+      background-image: linear-gradient(-180deg, #010413 1%, #030E22 73%, #06223F 100%);
+      position: relative;
+      .wraper{
+        img{
+          height: 540px;
+          float: right;
+          margin-top: -100px;
+        }
+        .word {
+          text-align: left;
+          position: absolute;
+          width: 577px;
+          height: auto;
+          top: 178px;
+          left: 20px;
+          .word-brief {
+            color: @white;
+            font-size: 50px;
+            line-height: 66px;
+            letter-spacing: 3.25px;
+            margin-bottom: 30px;
+          }
+          .word-brief-mobile {
+            display: none;
+          }
+          .word-describe {
+            font-size: 18px;
+            line-height: 34px;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 2.5px;
+          }
+        }
+        .product-doc {
+          display: block;
+          width: 140px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 16px;
+          color: #FFFFFF;
+          letter-spacing: 2px;
+          background: #42B9E5;
+          border-radius: 2px;
+          text-align: center;
+          position: absolute;
+          top: 393px;
+          left: 20px;
+          &:hover {
+            background: #46C5F3;
+          }
+        }
+        .breadcrumb {
+          float: right;
+          font-size:14px;
+          line-height: 20px;
+          position: absolute;
+          right: 20px;
+          bottom: -517px;
+          color: rgba(11,24,29,0.5);
+          .first {
+            text-align: center;
+            float: left;
+            .firstpage {
+              color: @bread_color;
+              opacity: 0.5;
+              text-decoration: none;
+              &:hover {
+                color: #000;
+                opacity: 0.9;
+              }
+            }
+          }
+          .second {
+            text-align: center;
+            float: left;
+            .success{
+              color: @bread_color !important;
+              opacity: 0.5;
+              text-decoration: none;
+              &:hover {
+                color: #000;
+                opacity: 0.9;
+              }
+            }
+          }
+          .third {
+            float: left;
+            color: @bread_color;
+          }
+        }
+        .btn {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          width: 200px;
+          margin: auto;
+          .clients-video {
+            display: block;
+            text-decoration: none;
+            color: white;
+            margin: 40px auto;
+            width: 140px;
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 14px;
+            box-sizing: border-box;
+            background-color: #c2003d;
+          }
+        }
+      }
+    }
+    .content-main{
+      .operation-monitor_feature {
+        width: 100%;
+        background-color: #FAFBFC;
+        padding-top: 160px;
+        .inner {
+          width: 1200px;
+          margin: 0 auto;
+          .flag {
+            display: inline-block;
+            width: 57px;
+            height: 57px;
+            margin-right: 21.5px;
+          }
+          .title {
+            display: inline-block;
+            font-size: 34px;
+            line-height: 45px;
+            color: @title_color;
+            letter-spacing: 2.27px;
+          }
+          .feature {
+            margin-top: 58px;
+            overflow: hidden;
+            .line {
+              display: none;
+            }
+            .item {
+              float: left;
+              width: 291px;
+              padding: 26px;
+              box-sizing: border-box;
+              height: 142px;
+              margin-right: 12px;
+              background: #fff url(/static/assets/page-views/product/uos-operation-monitor/feature_bg@v2.0.png) no-repeat center center;
+              .feature_logo {
+                display: inline-block;
+                width: 34.5px;
+                height: 34.5px;
+                margin-right: 12.5px;
+              }
+              .intro {
+                display: inline-block;
+                font-size: 22px;
+                color: @title_color;
+                letter-spacing: 2.2px;
+                line-height: 34.5px;
+                opacity: 0.98;
+                vertical-align: top;
+              }
+              .brief {
+                font-size: 14px;
+                color: @brief_color;
+                letter-spacing: 0.88px;
+                line-height: 24px;
+                padding-top: 9px;
+              }
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+      .operation-monitor_show {
+        width: 100%;
+        background-color: #fafbfc;
+        overflow: hidden;
+        background-size: cover;
+        padding-top: 60px;
+        .inner{
+          width: 100%;
+          margin: 0 auto;
+          .item{
+            width: 100%;
+            height: 300px;
+            border-bottom: 1px dashed #e7e7e8;
+            .show-content{
+              width: 1200px;
+              height: 100%;
+              margin: 0 auto;
+              .left{
+                width: 50%;
+                height: 100%;
+                float: left;
+                background: url(/static/assets/page-views/product/uos-operation-monitor/advantage_1@v2.0.png) no-repeat center center;
+                background-size: contain;
+                .image{
+                  display: none;
+                }
+              }
+              .right{
+                width: 50%;
+                float: left;
+                padding-top: 87px;
+                .intro{
+                  font-size: 30px;
+                  line-height: 34px;
+                  letter-spacing: 2px;
+                  padding-bottom: 16px;
+                  color: #2C2C2C;
+                }
+                .introduction{
+                  font-size: 16px;
+                  line-height: 26px;
+                  letter-spacing: 2px;
+                  color: #999;
+                  padding-right: 100px;
+                }
+              }
+            }
+          }
+          .item:nth-of-type(2){
+            .show-content{
+              .left{
+                background: url(/static/assets/page-views/product/uos-operation-monitor/advantage_2@v2.0.png) no-repeat center center;
+                background-size: contain;
+              }
+            }
+          }
+          .item:nth-of-type(3){
+            .show-content{
+              .left{
+                background: url(/static/assets/page-views/product/uos-operation-monitor/advantage_3@v2.0.png) no-repeat center center;
+                background-size: contain;
+              }
+            }
+          }
+          .item:nth-of-type(2n){
+            .show-content{
+              .left{
+                float: right;
+              }
+              .right{
+                float: right;
+                .introduction{
+                  padding-right: 0;
+                }
+              }
+            }
+          }
+          .item:last-child{
+            margin-bottom: 0;
+            border-bottom: none;
+          }
+        }
+      }
+      .operation-monitor_solve {
+        padding-top: 90px;
+        .inner {
+          width: 1200px;
+          margin: 0 auto;
+          .title {
+            font-size: 34px;
+            color: @title_color;
+            letter-spacing: 2.27px;
+            line-height: 45px;
+            padding-bottom: 60px;
+          }
+          .item {
+            padding-top: 50px;
+            img {
+              display: inline-block;
+              width: 54px;
+              margin-right: 20px;
+            }
+            .intro {
+              display: inline-block;
+              font-size: 22px;
+              color: @title_color;
+              letter-spacing: 2px;
+              line-height: 29px;
+              vertical-align: text-bottom;
+            }
+            .introduction {
+              width: 100%;
+              height: 100px;
+              background: #FAFBFC;
+              border: 1px solid #DEDEDE;
+              padding: 22px 30px 49px 30px;
+              box-sizing: border-box;
+              margin-top: 21px;
+              p {
+                font-size: 16px;
+                color: @intro_color;
+                letter-spacing: 2px;
+                line-height: 30px;
+              }
+            }
+          }
+          .first_item {
+            padding-top: 0;
+          }
+        }
+      }
+      .operation-monitor_framework{
+        width: 100%;
+        margin-top: 90px;
+        .inner {
+          width: 1200px;
+          margin: 0 auto;
+          .name{
+            font-size: 34px;
+            line-height: 45px;
+            color: @title_color;
+            margin-bottom: 84px;
+          }
+          img{
+            width: 100%;
+          }
+          .tip{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: @mobile_width) and (max-width: @pad_width) {
+  .operation-monitor_feature {
+    .inner {
+      .feature {
+        width: 70% !important;
+        margin: 0 auto;
+        .item{
+          margin-right: 70px !important;
+          margin-bottom: 50px;
+        }
+        .storage, .instance {
+          margin-bottom: 0;
+        }
+        .volume, .instance {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+  .operation-monitor_show > .inner > .item > .show-content{
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: @mobile_width) {
+  .volcano-uos-operation-monitor {
+    article {
+      font-size: 16px;
+      .content-banner{
+        margin-bottom: 0;
+        height: 190px;
+        .wraper {
+          width: 100%;
+          margin: auto;
+          padding: 0;
+          img{
+            height: 190px;
+            margin-top: -50px;
+          }
+          .word {
+            top: 65px;
+            width:80%;
+            .word-brief {
+              font-size: 20px;
+              color: @white;
+              letter-spacing: 1.6px;
+              line-height: 28px;
+              padding-bottom: 6px;
+              margin-bottom: 0;
+            }
+            .word-brief-mobile {
+              display: block;
+              font-size: 14px;
+              color: rgba(255,255,255,0.8);
+              letter-spacing: 1px;
+              line-height: 22px;
+            }
+            .word-describe {
+              display: none;
+            }
+          }
+          .product-doc {
+            width: 75px;
+            height: 25px;
+            top: 135px;
+            font-size: 12px;
+            line-height: 25px;
+            letter-spacing: 0;
+            border-radius: 0;
+          }
+          .breadcrumb {
+            display: none;
+          }
+        }
+      }
+      .content-main{
+        width: 100%;
+        .operation-monitor_feature {
+          width: 100%;
+          padding: 0 3.75%;
+          box-sizing: border-box;
+          .inner {
+            width: 100%;
+            padding-top: 26px;
+            .flag {
+              width: 52px;
+              height: 52px;
+              margin-right: 13.6px;
+            }
+            .title {
+              font-size: 18px;
+              line-height: 52px;
+              vertical-align: bottom;
+              letter-spacing: 1.5px;
+            }
+            .feature {
+              margin-top: 26px;
+              overflow: hidden;
+              .line {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-image: linear-gradient(-46deg, #28C5F6 0%, #2983E0 100%);
+              }
+              .item {
+                width: 100%;
+                float: none;
+                height: 115px;
+                margin-right: 0;
+                padding: 16px;
+                background-size: cover;
+                margin-bottom: 20px;
+                background: url(/static/assets/page-views/product/uos-operation-monitor/feature_bg_2@v2.0.png) no-repeat center right;
+                border: 1px solid #e9e9e9;
+                border-top: none;
+                .feature_logo {
+                  margin-right: 9.5px;
+                }
+                .intro {
+                  font-size: 16px;
+                  letter-spacing: 1.6px;
+                  line-height: 34.5px;
+                }
+                .brief {
+                  font-size: 12px;
+                  line-height: 20px;
+                }
+              }
+            }
+          }
+        }
+        .operation-monitor_show {
+          padding-top: 0;
+          width: 100%;
+          padding: 0 3.75%;
+          box-sizing: border-box;
+          .inner {
+            width: 100%;
+            .item{
+              width: 100%;
+              height: auto;
+              overflow: hidden;
+              margin-bottom: 0;
+              background-color: none;
+              .show-content{
+                width: 100% !important;
+                .left{
+                  width: 100%;
+                  height: 180px;
+                  background-size: contain !important;
+                  margin: 0 auto;
+                  position: relative;
+                  .img{
+                    width: 100% !important;
+                    height: 100%;
+                    background: none;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                  }
+                }
+                .right{
+                  width: 100%;
+                  height: auto;
+                  padding-top: 0;
+                  clear: both;
+                  padding-top: 10px;
+                  padding-bottom: 40px;
+                  .intro{
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: @title_color;
+                    letter-spacing: 1.07px;
+                    padding-bottom: 7px;
+                    text-align: center;
+                  }
+                  .introduction{
+                    font-size: 12px;
+                    color: #999999;
+                    letter-spacing: 1.5px;
+                    line-height: 20px;
+                    width: 100%;
+                    padding: 0 5% !important;
+                    padding-bottom: 45px;
+                    text-align: center;
+                    box-sizing: border-box;
+                  }
+                }
+              }
+            }
+            .item:nth-of-type(1){
+              padding-top: 25px;
+            }
+            .item:nth-of-type(2){
+              padding-top: 17px;
+            }
+            .item:nth-of-type(3){
+              padding-top: 14.5px;
+            }
+          }
+        }
+        .operation-monitor_solve {
+          width: 100%;
+          padding: 0 3.75%;
+          box-sizing: border-box;
+          .inner {
+            width: 100%;
+            .title {
+              padding-top: 50px;
+              padding-bottom: 22px;
+              font-size: 18px;
+              letter-spacing: 2.55px;
+              line-height: 24px;
+              text-align: center;
+            }
+            .item {
+              padding-top: 0;
+              margin-bottom: 40px;
+              img {
+                display: none;
+              }
+              .intro {
+                font-size: 16px;
+                line-height: 21px;
+                letter-spacing: 1.45px;
+                border-left: 3px solid #2983E0;
+                padding-left: 5px;
+              }
+              .introduction {
+                padding: 17px;
+                height: 130px;
+                p {
+                  font-size: 12px;
+                  letter-spacing: 1px;
+                  line-height: 20px;
+                }
+              }
+            }
+          }
+        } 
+        .operation-monitor_framework{
+          width: 100%;
+          padding: 0 3.75%;
+          margin-top: 50px;
+          margin-bottom: -40px;
+          box-sizing: border-box;
+          .inner {
+            width: 100% !important;
+            margin: 0 auto;
+            text-align: center;
+            .name{
+              font-size: 18px;
+              line-height: 24px;
+              letter-spacing: 2.55px;
+              margin-bottom: 20px;
+            }
+            img{
+              width: 100%;
+              height: auto;
+              margin: 0 auto;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
