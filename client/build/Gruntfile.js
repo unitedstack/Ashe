@@ -174,8 +174,8 @@ module.exports = function(grunt) {
   });
   require('time-grunt')(grunt);
 
-  // iconfonts
-  grunt.registerTask('font', ['clean:fonts', 'webfont', 'copy:fonts']);
+  // make iconfonts and build common css
+  grunt.registerTask('font', ['clean:fonts', 'webfont', 'copy:fonts', 'commonCss']);
 
   // copy assets to static/assets
   grunt.registerTask('copy_assets', 'Copy assets to /static/assets', ['clean:assets', 'copy:assets', 'copy:common']);
@@ -190,7 +190,7 @@ module.exports = function(grunt) {
   grunt.registerTask('html', 'Generate i18n html', ['clean:html', 'ejs2html:zh', 'ejs2html:en']);
 
   // grunt build
-  grunt.registerTask('build', ['copy_assets', 'clean:dist', 'webpack:build', 'html', 'usebanner']);
+  grunt.registerTask('build', ['copy_assets', 'clean:dist', 'webpack:build', 'commonCss', 'html', 'usebanner']);
 
   /**
    * npm run dev --pages=XXX,XXX
