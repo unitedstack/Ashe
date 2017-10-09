@@ -12,7 +12,7 @@ window.onload = window.onresize = window.onscroll = function(){
       $('.bg-framework').css({'display': 'block'});
       $('body').css('overflow','hidden');
     });
-    $(document).click(function(event){
+    $(document).click(function(){
       $('.volcano-global-header').css('display', 'block');
       $('.volcano-global-footer .totop').css('display', '');
       $('.bg-framework').css({'display': 'none'});

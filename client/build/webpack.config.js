@@ -21,23 +21,23 @@ function fsExistsSync(path) {
 
 !(function deep(dir) {
   fs.readdirSync(dir)
-  .filter(function(m) {
-    return fs.statSync(path.join(dir, m)).isDirectory() && m !== config.file.styleFolder && m !== config.file.assetsFolder;
-  })
-  .forEach(function(m) {
-    var currentFile = path.join(dir, m, 'index.js');
-    var splitHolder = path.join(dir, m).split('-views');
-    var prefix = splitHolder[0].split('views/')[1];
-    var name = splitHolder[1];
-    if(fsExistsSync(currentFile)) {
-      if(name) {
-        entry[prefix + name.replace(/\//g, '_')] = currentFile;
-      } else {
-        entry[prefix] = currentFile;
+    .filter(function(m) {
+      return fs.statSync(path.join(dir, m)).isDirectory() && m !== config.file.styleFolder && m !== config.file.assetsFolder;
+    })
+    .forEach(function(m) {
+      var currentFile = path.join(dir, m, 'index.js');
+      var splitHolder = path.join(dir, m).split('-views');
+      var prefix = splitHolder[0].split('views/')[1];
+      var name = splitHolder[1];
+      if(fsExistsSync(currentFile)) {
+        if(name) {
+          entry[prefix + name.replace(/\//g, '_')] = currentFile;
+        } else {
+          entry[prefix] = currentFile;
+        }
       }
-    }
-    deep(path.join(dir, m));
-  });
+      deep(path.join(dir, m));
+    });
 })(path.join(__dirname, '../views'));
 
 var webpackConfig = {

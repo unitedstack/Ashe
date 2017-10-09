@@ -17,7 +17,7 @@ window.onload = window.onresize = window.onscroll = function(){
       $('body').css('overflow', 'hidden');
       $('.totop').css('display', 'none');
     });
-    $('.close').click(function(event){
+    $('.close').click(function(){
       close();
     });
   }

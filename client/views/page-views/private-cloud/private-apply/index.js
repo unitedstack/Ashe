@@ -88,7 +88,7 @@ window.onload = window.onresize = function(){
     $('.summarize').toggleClass('selected');
   });
   $('.comment-star li').unbind('click');
-  $('.comment-star li').each(function(index){
+  $('.comment-star li').each(function(){
     $(this).click(function(){
       if ($(this).nextAll().hasClass('selected')) {
         $(this).nextAll().removeClass('selected');

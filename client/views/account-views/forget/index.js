@@ -45,7 +45,7 @@ btnSend.click(function() {
       type: 'POST',
       url: '/account/api/forget/phone',
       data: {username: vEmail, phone: vPhone},
-      success: function(msg) {
+      success: function() {
         phone.removeClass('error');
         captchaTip.removeClass('show');
         btnSend.addClass('disabled');
@@ -72,7 +72,7 @@ btnSend.click(function() {
 });
 
 // click button submit
-$('.submit').click(function(e) {
+$('.submit').click(function() {
   var that = $(this);
   if (!$(this).hasClass('disabled')) {
     var vEmail = email.val();
@@ -88,7 +88,7 @@ $('.submit').click(function(e) {
         type: 'POST',
         url: '/account/api/forget',
         data: {username: vEmail, phone: vPhone, code: vCode, password: vPassword},
-        success: function(msg) {
+        success: function() {
           captchaTip.removeClass('show');
           submit.removeClass('disabled');
           $('.wrapper').addClass('hidden');

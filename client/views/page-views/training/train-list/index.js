@@ -26,7 +26,7 @@ window.onload = window.onresize = function(){
     });
     per.each(function() {
       $(this).on({
-        click: function(e) {
+        click: function() {
           var type = $(this).data('course-type');
           $(this).addClass('selected').siblings(per).removeClass('selected');
           if (type == 'all') {

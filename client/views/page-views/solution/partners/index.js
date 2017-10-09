@@ -2,7 +2,7 @@ require('./style/index.less');
 
 window.onload = window.onresize = function(){
   if(!G.mobile){
-    $('.partner > .wraper').click(function(event){
+    $('.partner > .wraper').click(function(){
       $(this).addClass('selected');
       $('.cloth').addClass('selected');
     });
@@ -17,7 +17,7 @@ window.onload = window.onresize = function(){
   
   if(G.mobile){
     $('.partner > .wraper').unbind('click');
-    $('.partner > .wraper').click(function(event){
+    $('.partner > .wraper').click(function(){
       $(this).toggleClass('selected');
       if($(this).hasClass('selected')){
         $('.wraper').removeClass('selected');

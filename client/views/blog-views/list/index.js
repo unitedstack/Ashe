@@ -5,7 +5,7 @@ window.onload = window.onresize = function(){
   if (window.location.href.indexOf('search') !== -1) {
     $('input').attr('value', decodeURI(window.location.href.split('search/')[1]));
   }
-  $('.search .input').click(function(e) {
+  $('.search .input').click(function() {
     if (document.body.clientWidth <= 1025) {
       $('.search').addClass('search-mobile');
       $('article').css({'background-color': '#0B181D', 'min-height': '1120px'});

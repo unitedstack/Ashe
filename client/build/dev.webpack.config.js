@@ -5,7 +5,6 @@ const config = require('./webpack.config.js');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const fs = require('fs');
 
 config.devtool = 'cheap-source-map';
 config.output.filename = '[name].min.js';

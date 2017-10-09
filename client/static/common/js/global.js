@@ -3,13 +3,13 @@
  * @Description: Exports some global variables
  */
 
-;(function (globalEvent) {
+!(function (globalEvent) {
   if(!$ || !jQuery) {
     return;
   }
   var isMobile = function() {
     return navigator.userAgent.match(/(iphone|ipad|ipod|ios|android|mobile|blackberry|iemobile|mqqbrowser|juc|fennec|wosbrowser|browserng|Webos|symbian|windows phone)/i) || window.innerWidth <= 1024;
-  }
+  };
   var G = {
     viewWidth: document.body.offsetWidth,
     mobile: !!isMobile(),
@@ -25,10 +25,10 @@
       var location = window.location.search.substr(1);
       if (!location) {
         return false;
-      };
+      }
       location = location.split('&');
       location = location.map(function(ele){
-        if(!/\=/.test(ele)){
+        if(!/=/.test(ele)){
           ele += '=undefined';
         }
         return ele;
@@ -57,43 +57,29 @@
         $(window).trigger('switchCSSTypeToPc');
       }
     }
-  }
+  };
   G.launchFullscreen = function(element) {
-      if (element.requestFullscreen) {
-          element.requestFullscreen();
-      } else if (element.mozRequestFullScreen) {
-          element.mozRequestFullScreen();
-      } else if (element.webkitRequestFullscreen) {
-          element.webkitRequestFullscreen();
-      } else if (element.msRequestFullscreen) {
-          element.msRequestFullscreen();
-      }
-  }
-  G.exitFullscreen = function(element) {
-      if (document.exitFullscreen) {
-          document.exitFullscreen();
-      } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-      }
-  }
-  G.preloadImage = function(json){
-    var i = 0,
-      imgs = [];
-    for( var name in json ){
-      imgs[i] = new Image();
-      imgs[i].src = json[name];
-      i++;
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
     }
-    $(imgs).each(function(_index,_ele){
-      this.onload = function(){
-        // console.log(this.complete);
-      }
-    });
-  }
+  };
+  G.exitFullscreen = function() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  };
   globalEvent(G);
   return window.G = G;
 })(globalEvent);
@@ -102,7 +88,7 @@ function globalEvent(G) {
   // check browser compatibility
   var userAgent = navigator.userAgent.toLowerCase();
   var browser = {
-    version: (userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [])[1],
+    version: (userAgent.match( /.+(?:rv|it|ra|ie)[/: ]([\d.]+)/ ) || [])[1],
     msie: /msie/.test(userAgent) && !/opera/.test(userAgent)
   };
   if (parseFloat(browser.version) < 10 && browser.msie) {
@@ -121,7 +107,7 @@ function globalEvent(G) {
         G.header.css({backgroundColor: 'rgba(11, 24, 29, 0.8)'});
       } else {
         G.header.css({backgroundColor: 'rgba(11, 24, 29, 0)'});
-      };
+      }
       if(G.bodyCST > 1500) {
         G.toTop.css({opacity: 1});
       } else {
@@ -143,7 +129,7 @@ function globalEvent(G) {
     if(!G.mobile) {
       window.location = '/product/product';
     }
-  })
+  });
   $('.multi-dropdown > .dropdown-wrapper > .dropdown > li').mouseenter(function() {
     if(!G.mobile) {
       $(this).siblings().removeClass('select');

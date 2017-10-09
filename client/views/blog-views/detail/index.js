@@ -6,6 +6,7 @@ function subString(str, len) {
   length = str.length + (m ? m.length / 2 : 0);
   for(var i = 0; i < str.length; i ++) {
     singleChar = str.charAt(i).toString();
+    // eslint-disable-next-line
     if (singleChar.match(/[^\x00-\xff]/g) !== null) {
       newLength += 2;
     } else {
@@ -33,7 +34,7 @@ window.onload = window.onresize = function(){
   var text = $('.wangEditor-txt').attr('content');
   $('.wangEditor-txt').html(text);
 
-  $('.search .input').click(function(e) {
+  $('.search .input').click(function() {
     if (document.body.clientWidth <= 1025) {
       $('.search').addClass('search-mobile');
       $('article').css({'background-color': 'rgba(11, 24, 29, .85)', 'min-height': '1120px'});

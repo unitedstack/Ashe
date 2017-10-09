@@ -2,7 +2,7 @@ require('./style/index.less');
 
 window.onload = window.onresize = function(){
   var liList= $('table > tbody > tr');
-  liList.each(function(i,item){
+  liList.each(function(i){
     if(i==0){
       i=liList.length;
     }else if(i==liList.length){

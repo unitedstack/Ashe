@@ -11,7 +11,7 @@ window.onload = window.onresize = function(){
     $('.single .title span').hasClass('open') && $('.single .title span').removeClass('open');
     $('.single > .detail').css('display', 'none');
     $('.single > .title').unbind('click');
-    $('.single > .title').each(function(_index, _ele){
+    $('.single > .title').each(function(){
       $(this).click(function() {
         $(this).next().slideToggle();
         $(this).children().toggleClass('open');

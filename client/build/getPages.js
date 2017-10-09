@@ -74,6 +74,6 @@ async function walkPages(p, rootUrl, indexFile, i18nFile) {
   return obj;
 }
 
-module.exports = async (pages) => {
+module.exports = async () => {
   return await walkPages(path.join(viewsPath, 'page-views'), '/', themeConfig.file.indexFile, themeConfig.file.i18nFile);
 };

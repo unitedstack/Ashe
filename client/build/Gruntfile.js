@@ -32,7 +32,7 @@ const renderEjs = function(lang, done) {
           if(err) {
             console.log(err);
           } else {
-            fs.writeFile(distFileName, html, function(err) {
+            fs.writeFile(distFileName, html, function() {
               console.log('SUCCESS'.green, lang, key);
               flag ++;
               if(flag === length) {
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
         src: '**/assets/**',
         dest: assetsFolder,
         filter: 'isFile',
-        rename: function(dest, matchedSrcPath, options) {
+        rename: function(dest, matchedSrcPath) {
           return path.join(dest, matchedSrcPath.replace('/assets', ''));
         }
       },
@@ -210,7 +210,7 @@ module.exports = function(grunt) {
         pages.forEach(function(p, i) {
           if(p === 'home') {
             entry['home'] = path.join(__dirname, '../views', 'home-views', 'index.js');
-            glob.sync('client/static/dist/*home.min.*').length > 0 && childProcess.execSync(`rm client/static/dist/*home.min.*`);
+            glob.sync('client/static/dist/*home.min.*').length > 0 && childProcess.execSync('rm client/static/dist/*home.min.*');
           } else {
             var name = p.replace(/\//g, '_').replace('-views', '');
             entry[name] = path.join(__dirname, '../views', pages[i], 'index.js');
