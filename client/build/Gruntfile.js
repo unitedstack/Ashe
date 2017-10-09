@@ -71,7 +71,8 @@ module.exports = function(grunt) {
       assets: [assetsFolder],
       dist: 'client/static/dist',
       fonts: 'client/static/iconfonts/fonts',
-      html: 'client/static/html'
+      html: 'client/static/html',
+      commonCss: 'client/static/common/style/*.index.css'
     },
 
     webpack: {
@@ -86,7 +87,7 @@ module.exports = function(grunt) {
         dest: 'client/static/iconfonts/fonts',
         options: {
           stylesheet: 'less',
-          relativeFontPath: '../fonts',
+          relativeFontPath: './',
           destHtml: 'client/static/iconfonts/html'
         }
       }
@@ -117,6 +118,34 @@ module.exports = function(grunt) {
         cwd: 'client/static/iconfonts/fonts',
         src: '*',
         dest: 'client/static/common/style'
+      }
+    },
+
+    less: {
+      // common style
+      commonCss: {
+        options: {
+          plugins: [
+            new (require('less-plugin-autoprefix'))
+          ],
+          compress: true
+        },
+        files: {
+          'client/static/common/style/index.css': 'client/static/common/style/index.less'
+        }
+      }
+    },
+
+    // add md5 hash
+    rev: {
+      options: {
+        algorithm: 'md5',
+        length: 6
+      },
+      commonCss: {
+        files: {
+          src: ['client/static/common/style/index.css']
+        }
       }
     },
 
@@ -160,6 +189,7 @@ module.exports = function(grunt) {
   // i18n html file
   grunt.registerTask('html', 'Generate i18n html', ['clean:html', 'ejs2html:zh', 'ejs2html:en']);
 
+  // grunt build
   grunt.registerTask('build', ['copy_assets', 'clean:dist', 'webpack:build', 'html', 'usebanner']);
 
   /**
@@ -198,5 +228,7 @@ module.exports = function(grunt) {
 
     grunt.task.run(['webpack:dev']);
   });
+
+  grunt.registerTask('commonCss', ['clean:commonCss', 'less:commonCss', 'rev:commonCss']);
 
 };
