@@ -10,6 +10,7 @@
     "merge_assets": "cd client/build && grunt copy_assets",
     "html": "cd client/build && grunt html",
     "eslint": "eslint *.js server/**/ scripts/ client/**/ --ext .js --cache",
+    "add_eslint": "cd scripts && node checkPreCommit.js",
     "prepare": "cd scripts && node checkPreCommit.js"
   },
   "repository": {
