@@ -24,7 +24,12 @@ npm run dev --pages=home,page-views/about/compony
 npm run iconfont
 
 # generate static html files
+# npm run dev will watch pages and run this script.
 npm run html
+
+# move images to static/assets
+# npm run dev will watch images and run this script.
+npm run merge_assets
 
 # eslint
 npm run eslint

@@ -150,6 +150,11 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        debounceDelay: 250,
+        forever: false,
+        spawn: false
+      },
       dev: {
         files: [
           'client/views/**/*.@(js|ejs|less|json)',
@@ -157,12 +162,14 @@ module.exports = function(grunt) {
           'client/static/common/*',
           'client/static/theme/**/*.less'
         ],
-        tasks: ['dev', 'html'],
-        options: {
-          debounceDelay: 250,
-          forever: false,
-          spawn: false
-        }
+        tasks: ['dev', 'html']
+      },
+      assets: {
+        files: [
+          'client/views/**/*.@(jpg|png|gif|jpeg|svg)',
+          'client/static/common/assets/*.@(jpg|png|gif|jpeg|svg)'
+        ],
+        tasks: ['copy_assets']
       }
     }
 
