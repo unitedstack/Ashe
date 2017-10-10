@@ -41,4 +41,4 @@ npm run add_eslint
 ```
 
 ## LICENSE
-[MIT](./LICENSE)
+[Apache-2.0](./LICENSE)
