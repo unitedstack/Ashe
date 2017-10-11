@@ -12,7 +12,6 @@
  * node: '>=number <=number'      -- range (number <= nodeVersion <=number)
  */
 const version = process.version;
-const childProcess = require('child_process');
 const pkg = require('../package.json');
 const requireNodeVersion = pkg.engines.node;
 
@@ -28,7 +27,7 @@ const errorOutput = function(requireVersion) {
       `nvm install ' + requireVersion + '` or see https://nodejs.org/\x1b[0m\
       \n\
   ';
-}
+};
 
 /**
  * node: '*'
@@ -66,4 +65,4 @@ else if(/[><=]/.test(requireNodeVersion[0]) && requireNodeVersion.split(' ').len
   }
 }
 
-console.log('\x1b[32m%s\x1b[0m', 'Current node version ' + version)
+console.log('\x1b[32m%s\x1b[0m', 'Current node version ' + version);

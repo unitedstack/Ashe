@@ -1,3 +1,11 @@
+/**
+ * Author: PengJiyuan
+ *
+ * Check if pre-commit hook exist
+ * if not exist, create pre-commit
+ * before commit, npm run eslint
+ */
+
 const path = require('path');
 const fs = require('fs');
 const execFile = require('child_process').execFile;

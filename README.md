@@ -40,5 +40,17 @@ npm run add_eslint
 
 ```
 
+## PreInstall
+
+When run `npm install`, before install, will check node version.
+If current node version is not correspond to engines:node in package.json,
+Will throw an error and exit install.
+
+## PrePare
+
+When run `npm install`, after install, will check pre-commit hook.
+If no pre-commit in .git/hooks, will push file pre-commit to .git/hooks.
+Before `git commit`, will run `npm run eslint`.
+
 ## LICENSE
 [Apache-2.0](./LICENSE)
