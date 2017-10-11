@@ -11,7 +11,8 @@
     "html": "cd client/build && grunt html",
     "eslint": "eslint *.js server/**/ scripts/ client/**/ --ext .js --cache",
     "add_eslint": "cd scripts && node checkPreCommit.js",
-    "prepare": "cd scripts && node checkPreCommit.js"
+    "prepare": "cd scripts && node checkPreCommit.js",
+    "preinstall": "cd scripts && node checkNodeVersion.js"
   },
   "repository": {
     "type": "git",
@@ -29,8 +30,9 @@
     "url": "https://github.com/unitedstack/Ashe/issues"
   },
   "homepage": "https://github.com/unitedstack/Ashe#readme",
+  "engineStrict": true,
   "engines": {
-    "node": ">= 8"
+    "node": ">=8"
   },
   "browserslist": [
     "ie >= 9",
