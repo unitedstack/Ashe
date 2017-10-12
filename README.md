@@ -67,8 +67,19 @@ node: '>=number' or '<number'  -- range (nodeVersion [> or < or <= or >=] number
 node: '>=number <=number'      -- range (number <= nodeVersion <=number)
 ```
 
-If your local node version is not correspond to variable `engines:node` in package.json,
-will throw an error like that:
+If your local node version is not correspond to variable `engines:node` in package.json. eg:
+
+```json
+{
+  "engineStrict": true,
+  "engines": {
+    "node": ">=8"
+  }
+}
+```
+
+But your local node version is v7.9.0, will throw an error like that:
+
 ```
 Require Node Version >=8
 but local node version is v7.9.0
