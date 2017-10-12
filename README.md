@@ -52,5 +52,29 @@ When run `npm install`, after install, will check pre-commit hook.
 If no pre-commit in .git/hooks, will push file pre-commit to .git/hooks.
 Before `git commit`, will run `npm run eslint`.
 
+## engineStrict hook
+
+engineStrict was removed in npm 3.0.0, so can not specify node version in package.json.
+But in `scripts/checkNodeVersion.js`, make engineStrict work.
+I just made a hook, when `npm install`, If there is `engineStrict: true` in package.json,
+then check variable `engines` in package.json.
+
+`engines` support these types:
+```
+node: '*'                      -- all node versions
+node: '~x.x.x'                 -- A certain version
+node: '>=number' or '<number'  -- range (nodeVersion [> or < or <= or >=] number)
+node: '>=number <=number'      -- range (number <= nodeVersion <=number)
+```
+
+If your local node version is not correspond to variable `engines:node` in package.json,
+will throw an error like that:
+```
+Require Node Version >=8
+but local node version is v7.9.0
+  You can
+  `nvm install >=8 or see https://nodejs.org/
+```
+
 ## LICENSE
 [Apache-2.0](./LICENSE)

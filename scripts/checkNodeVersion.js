@@ -22,7 +22,7 @@ if(!pkg.engineStrict) {
 const errorOutput = function(requireVersion) {
   return '\n\
       \x1b[31mRequire Node Version ' + requireVersion + '!\n\
-      but current node version is ' + version + '\n\
+      but local node version is ' + version + '\n\
       You can:\n\
       `nvm install ' + requireVersion + '` or see https://nodejs.org/\x1b[0m\
       \n\
