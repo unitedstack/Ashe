@@ -35,6 +35,7 @@ const errorOutput = function(requireVersion) {
 if(requireNodeVersion === '*') {
   console.log('\x1b[32m%s\x1b[0m', 'Support any node version\n\
     Current node version ' + version);
+  process.exit();
 }
 /**
  * node: '~x.x.x'
