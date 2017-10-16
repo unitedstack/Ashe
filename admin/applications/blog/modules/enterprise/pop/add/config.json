@@ -1,0 +1,42 @@
+{
+  "title": "添加企业",
+  "fields": [{
+    "type": "text",
+    "info": "企业信息"
+  }, {
+    "type": "input",
+    "title": "企业名称",
+    "field": "name",
+    "required": true
+  }, {
+    "type": "input",
+    "title": "电话",
+    "field": "phone"
+  }, {
+    "type": "input",
+    "title": "地址",
+    "field": "location"
+  }, {
+    "type": "text",
+    "info": "添加账户"
+  }, {
+    "type": "input",
+    "title": "姓名",
+    "field": "nickname"
+  }, {
+    "type": "input",
+    "title": "邮箱",
+    "field": "email",
+    "required": true
+  }, {
+    "type": "input",
+    "title": "电话",
+    "field": "admin_phone",
+    "required": true
+  }],
+  "btn": {
+    "value": "创建",
+    "type": "create",
+    "disabled": true
+  }
+}

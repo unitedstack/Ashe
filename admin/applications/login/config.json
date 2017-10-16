@@ -1,0 +1,7 @@
+{
+	"modules": [
+		"home",
+		"list",
+		"detail"
+	]
+}

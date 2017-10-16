@@ -1,0 +1,106 @@
+@button-group-color: #636a73;
+@button-group-border-color: #f1f1f1;
+@button-group-bg-hover-color: #eee;
+@table-tr-bg: #142d3a;
+@table-thead-tr-border: #777777;
+@table-tr-stripped-bg: #f7f7f7;
+@clickable: #00afc8;
+
+.blog-module {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 40px;
+  overflow: auto;
+
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    background-color: #fff;
+    margin: 0 0 10px;
+    user-select: none;
+
+    > .button-group-btn {
+      width: 99px;
+      border-right: 1px solid @button-group-border-color;
+      color: @button-group-color;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 40px;
+      text-align: center;
+
+      &:hover {
+        background-color: @button-group-bg-hover-color;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #fff;
+    overflow-y: scroll;
+
+    .clickable {
+      color: @clickable;
+      cursor: pointer;
+    }
+
+    > table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+
+      > thead,
+      > tbody {
+        > tr {
+          height: 40px;
+          line-height: 40px;
+          input[type="checkbox"] {
+            cursor: pointer
+          }
+        }
+      }
+
+      > thead > tr > th,
+      > tbody > tr > td {
+        padding: 0 15px;
+      }
+
+      > thead {
+        > tr {
+          font-weight: normal;
+          color: #fff;
+          background-color: @table-tr-bg;
+          > th {
+            text-align: left;
+            border-right: 1px solid @table-thead-tr-border;
+          }
+        }
+      }
+
+      > tbody {
+        > tr {
+          border-bottom: 1px solid @button-group-border-color;
+
+          &.stripped {
+            background-color: @table-tr-stripped-bg;
+          }
+
+          > .checkbox {
+            width: 10px;
+            text-align: center;
+          }
+        }
+      }
+
+    }
+
+    .pagi-box {
+      text-align: right;
+      padding: 0 20px;
+    }
+  }
+}

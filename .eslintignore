@@ -1,3 +1,4 @@
 client/static/dist/*
+admin/dist/*
 client/static/third-party/*
 **/node_modules/**

@@ -1,0 +1,98 @@
+@pagination_item_color: #bbbfc5;
+@pagination_item_hover_color: #00afc8;
+@pagination_item_active_color: #00a6be;
+@pagination_item_selected_color: #00afc8;
+
+@pagination_next_color: #bbbfc5;
+@pagination_next_hover_color: #fff;
+@pagination_next_hover_bg_color: #00afc8;
+@pagination_next_disabled_color: #bbbfc5;
+@pagination_next_disabled_bg_color: #d5dddf;
+
+.pagination {
+  font-size: 12px;
+  display: inline-block;
+
+  > li {
+    display: inline;
+
+    a {
+      float: left;
+      display: block;
+      padding: 0;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      border-radius: 2px;
+      border: 1px solid;
+      margin: 0 4px;
+      user-select: none;
+      cursor: pointer;
+
+      i {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      i.icon-arrow-left {
+        background-image: url('/admin-static/assets/blog/arrow-left.svg');
+      }
+      i.icon-arrow-right {
+        background-image: url('/admin-static/assets/blog/arrow-right.svg');
+      }
+    }
+    .item,
+    .total {
+      color: @pagination_item_color;
+      &:hover {
+        color: @pagination_item_hover_color;
+      }
+      &:active {
+        color: @pagination_item_active_color;
+      }
+      &.active {
+        color: white;
+        background-color: @pagination_item_selected_color;
+        border-color: @pagination_item_selected_color;
+        cursor: default;
+      }
+    }
+    .omit {
+      color: @pagination_item_color;
+      cursor: default;
+      border: 0;
+      height: 24px;
+      line-height: 24px;
+    }
+    .first,
+    .prev,
+    .next,
+    .last {
+      background-color: @pagination_next_hover_color;
+      color: @pagination_next_color;
+      border: 1px solid @pagination_next_color;
+      &:hover {
+        color: @pagination_next_hover_color;
+        border-color: @pagination_next_hover_bg_color;
+        background-color: @pagination_next_hover_bg_color;
+      }
+      &.disabled, &.disabled:hover {
+        cursor: not-allowed !important;
+        color: @pagination_next_disabled_color !important;
+        border-color: @pagination_next_disabled_color !important;
+        background-color: @pagination_next_disabled_bg_color !important;
+      }
+    }
+
+    .prev,
+    .next {
+      color: @pagination_next_hover_bg_color;
+      border-color: @pagination_next_hover_bg_color;
+    }
+  }
+
+}

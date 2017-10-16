@@ -1,0 +1,27 @@
+{
+  "name": "admin-user",
+  "buttons": [{
+    "key": "add",
+    "title": "添加"
+  }, {
+    "key": "enable",
+    "title": "启用"
+  }, {
+    "key": "disable",
+    "title": "禁用"
+  }],
+  "table": {
+    "key": "id",
+    "checkbox": true,
+    "column": [{
+      "key": "email",
+      "index": "email",
+      "title": "邮箱/用户名"
+    }, {
+      "key": "enable",
+      "index": "enable",
+      "title": "启用状态"
+    }],
+    "data": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "添加管理员",
+  "fields": [{
+    "type": "input",
+    "title": "姓名",
+    "field": "nickname",
+    "required": true
+  }, {
+    "type": "input",
+    "title": "邮箱/用户名",
+    "field": "email",
+    "required": true
+  }, {
+    "type": "input_pwd",
+    "title": "密码",
+    "field": "password",
+    "required": true
+  }, {
+    "type": "input",
+    "title": "电话",
+    "field": "phone"
+  }],
+  "btn": {
+    "value": "创建",
+    "type": "create",
+    "disabled": true
+  }
+}

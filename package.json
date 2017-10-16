@@ -4,12 +4,15 @@
   "description": "Public cloud official website",
   "main": "index.js",
   "scripts": {
-    "build": "cd client/build && grunt build",
-    "dev": "cd client/build && grunt watch",
+    "client_build": "cd client/build && grunt build",
+    "client_dev": "cd client/build && grunt watch",
+    "admin_build": "cd admin && rm -rf dist/ manifest.json && node build.js --production",
+    "admin_dev": "cd admin && rm -rf dist/ manifest.json && node build.js --development",
     "iconfont": "cd client/build && grunt font",
     "merge_assets": "cd client/build && grunt copy_assets",
     "html": "cd client/build && grunt html",
-    "eslint": "eslint *.js server/**/ scripts/ client/**/ --ext .js --cache",
+    "dll": "cd admin && rm -rf dist/dll/*.js && webpack --config dll.config.js --env.production --progress",
+    "eslint": "eslint *.js server/**/ scripts/ client/**/ admin/**/ --ext .js,.jsx --cache",
     "add_eslint": "cd scripts && node checkPreCommit.js",
     "prepare": "cd scripts && node checkPreCommit.js",
     "preinstall": "cd scripts && node checkNodeVersion.js"
@@ -30,22 +33,21 @@
     "url": "https://github.com/unitedstack/Ashe/issues"
   },
   "homepage": "https://github.com/unitedstack/Ashe#readme",
-  "engineStrict": true,
-  "engines": {
-    "node": ">=8"
-  },
-  "browserslist": [
-    "ie >= 9",
-    "Firefox >= 15",
-    "Chrome >= 20",
-    "Safari >= 5"
-  ],
   "devDependencies": {
     "autoprefixer": "^7.1.5",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
     "colors": "^1.1.2",
+    "compression-webpack-plugin": "^1.0.1",
     "css-loader": "^0.28.7",
     "ejs": "^2.5.7",
     "eslint": "^4.8.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.1",
     "glob": "^7.1.2",
     "grunt": "^1.0.1",
@@ -63,10 +65,28 @@
     "load-grunt-tasks": "^3.5.2",
     "postcss-loader": "^2.0.6",
     "time-grunt": "^1.4.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "url-loader": "^0.6.2",
     "webpack": "^3.6.0"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "fs-async-await": "0.0.3",
-    "lodash": "^4.17.4"
-  }
+    "lodash": "^4.17.4",
+    "normalize.css": "^7.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "rsvp": "^4.7.0",
+    "wangeditor": "^2.1.22"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=8"
+  },
+  "browserslist": [
+    "ie >= 9",
+    "Firefox >= 20",
+    "Chrome >= 20",
+    "Safari >= 7"
+  ]
 }

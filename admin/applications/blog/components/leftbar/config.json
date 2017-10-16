@@ -1,0 +1,43 @@
+{
+  "menus": [{
+    "title": "企业列表",
+    "key": "enterprise",
+    "link": "/admin/blog/enterprise"
+  }, {
+    "title": "管理员账户",
+    "key": "admin-user",
+    "link": "/admin/blog/admin-user"
+  }, {
+    "title": "托管云申请",
+    "key": "cloud-apply",
+    "link": "/admin/blog/cloud-apply"
+  }, {
+    "title": "培训申请",
+    "key": "train-apply",
+    "link": "/admin/blog/train-apply"
+  }, {
+    "title": "博客列表",
+    "key": "blogs-list",
+    "link": "/admin/blog/blog-list"
+  }, {
+    "title": "发布博客",
+    "key": "blogs",
+    "link": "/admin/blog/blogs"
+  }, {
+    "title": "新闻列表",
+    "key": "news-list",
+    "link": "/admin/blog/news-list"
+  }, {
+    "title": "发布新闻",
+    "key": "news",
+    "link": "/admin/blog/news"
+  }, {
+    "title": "媒体空间",
+    "key": "media",
+    "link": "/admin/blog/media"
+  }, {
+    "title": "技术文档",
+    "key": "tech-docs",
+    "link": "/admin/blog/tech-docs"
+  }]
+}
