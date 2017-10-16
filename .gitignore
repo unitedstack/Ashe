@@ -69,3 +69,7 @@ client/static/iconfonts/fonts
 
 # static html files
 client/static/html
+
+# admin dist and manifest file
+admin/dist/
+admin/manifest.json
