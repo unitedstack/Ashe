@@ -82,11 +82,5 @@
   "engineStrict": true,
   "engines": {
     "node": ">=8"
-  },
-  "browserslist": [
-    "ie >= 9",
-    "Firefox >= 20",
-    "Chrome >= 20",
-    "Safari >= 7"
-  ]
+  }
 }
