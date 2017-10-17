@@ -76,3 +76,6 @@ client/static/html
 # admin dist and manifest file
 admin/dist/
 admin/manifest.json
+
+# npm file
+package-lock.json
