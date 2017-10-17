@@ -6,13 +6,13 @@
 const fs = require('fs');
 const path = require('path');
 const assetsFolder = 'client/static/assets';
-const getPages = require('./getPages.js');
 const ejs = require('ejs');
 const mkdirp = require('mkdirp');
 const childProcess = require('child_process');
 const glob = require('glob');
 let webpackConfig = require('./webpack.config.js');
 let devConfig = webpackConfig;
+let routers = {};
 require('colors');
 /**
  *
@@ -21,11 +21,18 @@ require('colors');
  */
 const renderEjs = function(lang, done) {
   const distDir = path.join(__dirname, `../static/html/${lang}`);
-  getPages().then(pages => {
+  require('./getPages.js')().then(pages => {
     const length = Object.keys(pages).length;
     let flag = 0;
-    Object.keys(pages).forEach(function(key) {
+    Object.keys(pages).forEach(key => {
       let page = pages[key];
+      if(!routers[key]) {
+        routers[key] = {
+          [lang]: path.join(distDir, `${pages[key].page}.html`)
+        };
+      } else {
+        routers[key][lang] = path.join(distDir, `${pages[key].page}.html`);
+      }
       ejs.renderFile(page.file, page[`lang${lang}`], {}, function(err, html) {
         let distFileName = path.join(distDir, page.page) + '.html';
         mkdirp(distFileName.slice(0, -11), function(err) {
@@ -38,7 +45,7 @@ const renderEjs = function(lang, done) {
               if(flag === length) {
                 done();
               }
-            });         
+            });
           }
         });
       });
@@ -193,8 +200,18 @@ module.exports = function(grunt) {
     renderEjs(lang, done);
   });
 
+  grunt.registerTask('routerlist', 'Generate router list json file', function() {
+    const done = this.async();
+    const fileName = '.routers.json';
+    fs.writeFile(path.join(__dirname, `../${fileName}`), JSON.stringify(routers), (e) => {
+      if(e) throw new Error(e);
+      console.log(`\n✓ Generate ${fileName} success!\n`.green);
+      done();
+    });
+  });
+
   // i18n html file
-  grunt.registerTask('html', 'Generate i18n html', ['clean:html', 'ejs2html:zh', 'ejs2html:en']);
+  grunt.registerTask('html', 'Generate i18n html', ['clean:html', 'ejs2html:zh', 'ejs2html:en', 'routerlist']);
 
   // grunt build
   grunt.registerTask('build', ['copy_assets', 'clean:dist', 'webpack:build', 'commonCss', 'html', 'usebanner']);

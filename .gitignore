@@ -64,6 +64,9 @@ typings/
 client/static/dist/*
 client/static/assets/*
 
+# routers list
+client/.routers.json
+
 # Icon fonts assets
 client/static/iconfonts/fonts
 
