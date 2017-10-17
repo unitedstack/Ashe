@@ -20,7 +20,7 @@ fs.readdirSync('./applications')
     return fs.statSync(path.join('./applications', m)).isDirectory();
   })
   .forEach(function(m) {
-    entry[m] = './applications/' + m + '/index.jsx';
+    entry[m] = ['babel-polyfill', './applications/' + m + '/index.jsx'];
   });
 
 module.exports = (env) => {
