@@ -77,7 +77,7 @@ module.exports = function(grunt) {
     clean: {
       assets: [assetsFolder],
       dist: 'client/static/dist',
-      fonts: 'client/static/iconfonts/fonts',
+      fonts: ['client/static/iconfonts/fonts', 'client/static/common/style/fonts', 'client/static/common/style/icons.less'],
       html: 'client/static/html',
       commonCss: 'client/static/common/style/*.index.css'
     },
@@ -93,9 +93,16 @@ module.exports = function(grunt) {
         src: 'client/static/iconfonts/svgs/**/*.svg',
         dest: 'client/static/iconfonts/fonts',
         options: {
+          types: 'eot,woff,ttf,svg',
           stylesheet: 'less',
-          relativeFontPath: './',
-          destHtml: 'client/static/iconfonts/html'
+          syntax: 'bootstrap',
+          relativeFontPath: 'fonts',
+          destHtml: 'client/static/iconfonts/html',
+          callback: function() {
+            var src = 'client/static/iconfonts/fonts/icons.less',
+              dest = 'client/static/common/style/icons.less';
+            fs.renameSync(src, dest);
+          }
         }
       }
     },
@@ -124,7 +131,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'client/static/iconfonts/fonts',
         src: '*',
-        dest: 'client/static/common/style'
+        dest: 'client/static/common/style/fonts'
       }
     },
 
