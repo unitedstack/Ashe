@@ -43,6 +43,7 @@
       "always"
     ],
     "no-console": 0,
+    "no-useless-escape": 0,
     "no-unused-vars": [2, { "vars": "all", "args": "none" }],
     "react/no-string-refs": 0,
     "react/prop-types": 0,
