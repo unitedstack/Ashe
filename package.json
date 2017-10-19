@@ -11,7 +11,6 @@
     "iconfont": "cd client/build && grunt font",
     "merge_assets": "cd client/build && grunt copy_assets",
     "html": "cd client/build && grunt html",
-    "dll": "cd admin && rm -rf dist/dll/*.js && webpack --config dll.config.js --env.production --progress",
     "eslint": "eslint *.js server/**/ scripts/ client/**/ admin/**/ --ext .js,.jsx --cache",
     "add_eslint": "cd scripts && node checkPreCommit.js",
     "prepare": "cd scripts && node checkPreCommit.js",

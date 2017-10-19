@@ -11,14 +11,20 @@ nvm use 8 && npm install && npm run build
 ## Script
 
 ```bash
-# production mode
-npm run build
+# production mode (client)
+npm run client_build
 
-# development watch mode
-npm run dev
+# development watch mode (client)
+npm run client_dev
 # build specify page to make build faster
 # eg. only build two pages. (home and page-views/about/compony)
-npm run dev --pages=home,page-views/about/compony
+npm run client_dev --pages=home,page-views/about/compony
+
+# production mode (admin)
+npm run admin_build
+
+# development watch mode (admin)
+npm run admin_dev
 
 # generate iconfonts
 npm run iconfont

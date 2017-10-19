@@ -35,10 +35,10 @@ async function walkPages(p, rootUrl, indexFile, i18nFile) {
             // css and jsFile
             let cssParse = path.parse(pageLang[key].cssFile);
             let jsParse = path.parse(pageLang[key].jsFile);
-            pageLang[key].cssFile = `${cssParse.dir}/` + glob.sync(`*.${cssParse.base}`, {
+            pageLang[key].cssFile = `${cssParse.dir}/` + glob.sync(`*${cssParse.base}`, {
               cwd: 'client/static/dist'
             });
-            pageLang[key].jsFile = `${jsParse.dir}/` + glob.sync(`*.${jsParse.base}`, {
+            pageLang[key].jsFile = `${jsParse.dir}/` + glob.sync(`*${jsParse.base}`, {
               cwd: 'client/static/dist'
             });
             pageLang[key].commonCssFile = '/static/common/style/' + glob.sync('*.index.css', {
