@@ -6,7 +6,7 @@ const glob = require('glob');
 const hashs = {};
 const matchDist = glob.sync('*.min.js',{cwd: path.join(__dirname, '../client/static/dist/')});
 matchDist.forEach(fileName => {
-  let arr = fileName.split('.');console.log(arr[-1])
+  let arr = fileName.split('.');
   if (arr.length === 4) {
     hashs[arr[1]] = arr[0];
   } else if (arr.length === 3) {
