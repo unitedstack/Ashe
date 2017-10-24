@@ -172,6 +172,7 @@ module.exports = function(grunt) {
       dev: {
         files: [
           'client/views/**/*.@(js|ejs|less|json)',
+          'client/locale/*.json',
           'client/components/*.@(ejs|less)',
           'client/static/common/*',
           'client/static/theme/**/*.less'

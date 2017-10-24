@@ -4,7 +4,6 @@ const path = require('path');
 const _ = require('lodash');
 const themeConfig = require('../config.json');
 const viewsPath = path.join(__dirname, '../views');
-const globalLang = require('../locale/lang.json');
 const glob = require('glob');
 
 const ignoreFiles = _.map(themeConfig.file, value => value);
@@ -12,6 +11,7 @@ const ignoreFiles = _.map(themeConfig.file, value => value);
 async function walkPages(p, rootUrl, indexFile, i18nFile) {
   let obj = {};
   let indexFileNoExtension = path.parse(indexFile).name;
+  let globalLang = JSON.parse(await fs.readFileAsync(path.join(__dirname, '../locale/lang.json'), 'utf8'));
 
   /**
    * @param ap 绝对路径 '/xxx/xx/themes/blog/page-views'
