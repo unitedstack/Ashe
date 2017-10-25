@@ -1,0 +1,75 @@
+<%- include('../../../../components/header.ejs') %>
+  <div class="volcano-train-apply">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="wraper">
+          <div class="volcano-common-content">
+          <img src="/static/assets/page-views/training/train-apply/bannerpic@v2.0.png">
+            <div class="word">
+              <div class="word-title"><%= banner_title %></div>
+              <div class="word-brief"><%= banner_brief %></div>
+              <div class="word-describe"><%= banner_describe %></div>
+            </div>
+            <ul class="breadcrumb">
+              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/training/train"><%= breadcrumb_three %></a>&nbsp;/&nbsp;</li>
+              <li class="third"><%= breadcrumb_four %></li>
+            </ul>
+            </div>
+        </div>
+      </section>
+      <!-- end for banner -->
+      <!-- content -->
+      <section class="content-main">
+        <div class="inner">
+          <div class="inform">
+            <div class="title">
+              <div class="apply"><%= apply %></div>
+              <div class="describe">
+                <%= apply_describe %>
+              </div>
+            </div>
+            <div class="circle">
+              <label for="name"><span class="icon icon-user"></span><%= apply_name %><em><%= apply_name_enter %></em></label>
+              <span class="logo"></span>
+              <input class="regname" type="text" name="name">
+            </div>
+            <div class="circle tel">
+              <label for="name"><span class="icon icon-tel"></span><%= apply_phone %><em><%= apply_phone_enter %></em></label>
+              <span class="logo"></span>
+              <input type="text" name="name" class="regtel">
+            </div>
+            <div class="circle">
+              <label for="name"><span class="icon icon-eemail"></span><%= apply_email %><em><%= apply_email_enter %></em></label>
+              <span class="logo"></span>
+              <input type="text" name="name" class="regemail">
+            </div>
+            <div class="circle company">
+              <label for="name"><span class="icon icon-myhome"></span><%= apply_company %><em><%= apply_company_enter %></em></label>
+              <span class="logo"></span>
+              <input type="text" name="name" class="reghome">
+            </div>
+            <div class="multiple">
+              <label for="classroom" class="classroom"><%= place %></label>
+              <div class="inlinee">
+                <label class="inline"><input type="checkbox" name="classroom" id="checked1"><%= beijing %></label>
+                <label class="inline"><input type="checkbox" name="classroom"><%= shanghai %></label>
+                <label class="gz inline"><input type="checkbox" name="classroom" checked><%= guangzhou %></label>
+              </div>
+            </div>
+            <div class="linep">
+              <div class="yes"><%= apply_yes %><span></div>
+              <div class="no"></div>
+            </div>
+            <input type="submit" value="<%= apply_train %>" class="submit">
+            <div class="contact">
+              <%= apply_contact %><br><%= apply_train_name%>, 15801679767 <%= other %>&nbsp;zhangqi@unitedstack.com
+            </div>
+        </div>
+      </section>
+      <!-- end for content -->
+    </div>
+    </article>
+  <%- include('../../../../components/footer.ejs') %>

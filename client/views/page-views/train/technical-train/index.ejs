@@ -1,0 +1,107 @@
+<%- include('../../../../components/header.ejs') %>
+  <div class="volcano-train">
+    <article >
+    <div id="page">
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="wraper">
+          <div class="volcano-common-content">
+          <img src="/static/assets/page-views/training/train/bannerpic@v2.0.png">
+            <div class="word">
+              <div class="word-title"><%= banner_title %></div>
+              <div class="word-brief"><%= banner_brief %></div>
+              <div class="word-describe"><%= banner_describe %></div>
+            </div>
+            <ul class="breadcrumb">
+              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+              <li class="second"><a class="success" href="/training/train"><%= breadcrumb_three %></a>&nbsp;/&nbsp;</li>
+              <li class="third"><%= breadcrumb_three %></li>
+            </ul>
+            </div>
+        </div>
+      </section>
+      <!-- end for banner -->
+      <!-- content -->
+      <section class="content-main">
+        <div class="volcano-common-content">
+          <div class="preview">
+            <div class="title"><%= preview_title %></div>
+            <div class="shuiyin">TRAINING COURSE </div>
+            <div class="description"><%= preview_description %></div>
+            <a href="/training/train-list" class="train-list"><%= preview_list %></a>
+            <a href="/training/train-apply" class="train-apply"><%= preview_apply %></a>
+            <div class="split-list">
+              <div class="split-list-one">
+                <img src="/static/assets/page-views/train/train/train_1.png">
+                <p class="split-list-title"><%= split_list_title_one %></p>
+                <p class="split-list-line"></p>
+                <p class="split-list-intro"><%= split_list_intro_one %></p>
+              </div>
+              <div class="split-list-one">
+                <img src="/static/assets/page-views/train/train/train_2.png">
+                <p class="split-list-title"><%= split_list_title_two %></p>
+                <p class="split-list-line"></p>
+                <p class="split-list-intro"><%= split_list_intro_two %></p>
+              </div>
+              <div class="split-list-one">
+                <img src="/static/assets/page-views/train/train/train_3.png">
+                <p class="split-list-title"><%= split_list_title_three %></p>
+                <p class="split-list-line"></p>
+                <p class="split-list-intro"><%= split_list_intro_three %></p>
+              </div>
+              <div class="split-list-one">
+                <img src="/static/assets/page-views/train/train/train_4.png">
+                <p class="split-list-title"><%= split_list_title_four %></p>
+                <p class="split-list-line"></p>
+                <p class="split-list-intro"><%= split_list_intro_four %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature">
+           <div class="inner">
+             <div class="course ops">
+               <div class="left"></div>
+               <div class="right">
+                 <div class="title">
+                   <a href="/training/train-list"><%= feature_title %></a>
+                 </div>
+                   <div class="detail"><%= feature_detail %>
+                   <p><%= feature_detail_one %></p>
+                  </div>
+               </div>
+             </div>
+            <div class="course devops">
+               <div class="left"></div>
+               <div class="right">
+                 <div class="title">
+                   <a href="/training/train-list"><%= devops_title %></a>
+                 </div>
+                    <div class="detail"><p><%= devops_detail_first %></p>
+                      <p><%= devops_detail_one %></p>
+                      <p><%= devops_detail_two %></p>
+                      <p><%= devops_detail_three %></p>
+                      <p><%= devops_detail_four %></p>
+                    </div>
+               </div>
+             </div>
+             <div class="course unitedstack">
+               <div class="left"></div>
+               <div class="right">
+                 <div class="title">
+                   <a href="/training/train-list"><%= us_title %></a>
+                 </div>
+                  <div class="detail"><%= us_detail %>
+                  <p><%= us_detail_one %></p>
+                  </div>
+               </div>
+             </div>
+           </div>
+          </div>
+      </section>
+      <!-- end for content -->
+    </div>
+    </article>
+  </div>
+<%- include('../../../../components/footer.ejs') %>

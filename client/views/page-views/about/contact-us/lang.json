@@ -1,38 +1,12 @@
 {
   "en": {
-    "address": "",
-    "banner_brief": "With the heart for your service",
-    "banner_describe": "No matter when and where, there are clouds will 24x7x365 timely contact with you, carefully for your service.",
-    "banner_title": "Contact us",
-    "beijing_address": "",
-    "beijing_btn": "beijing",
-    "breadcrumb_one": "Home",
-    "breadcrumb_three": "Contact us",
-    "breadcrumb_two": "About UnitedStack",
     "cssFile": "/static/dist/page_about_contact-us.min.css",
     "jsFile": "/static/dist/page_about_contact-us.min.js",
-    "mailch": "",
-    "phone": "",
-    "shanghai_address": "",
-    "shanghai_btn": "shanghai",
     "title": "UnitedStack - Contact Us"
   },
   "zh": {
-    "address": "地址",
-    "banner_brief": "有云用心为您服务",
-    "banner_describe": "无论何时何地，有云都将24x7x365及时与您取得联系，用心为您服务。",
-    "banner_title": "联系我们",
-    "beijing_address": "北京市朝阳区酒仙桥路16号将台新港大厦901,100016",
-    "beijing_btn": "北京",
-    "breadcrumb_one": "首页",
-    "breadcrumb_three": "联系我们",
-    "breadcrumb_two": "关于有云",
     "cssFile": "/static/dist/page_about_contact-us.min.css",
     "jsFile": "/static/dist/page_about_contact-us.min.js",
-    "mailch": "邮箱",
-    "phone": "电话",
-    "shanghai_address": "上海市长宁区娄山关路83号新虹桥中心大厦2608（近万山路） 200336",
-    "shanghai_btn": "上海",
     "title": "UnitedStack - 联系我们"
   }
 }

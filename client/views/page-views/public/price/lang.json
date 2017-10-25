@@ -1,0 +1,12 @@
+{
+  "en": {
+    "cssFile": "/static/dist/page_public_price.min.css",
+    "jsFile": "/static/dist/page_public_price.min.js",
+    "title": "qwe"
+  },
+  "zh": {
+    "cssFile": "/static/dist/page_public_price.min.css",
+    "jsFile": "/static/dist/page_public_price.min.js",
+    "title":"价格预算"
+  }
+}

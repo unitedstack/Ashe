@@ -1,69 +1,12 @@
 <%- include('../../../../components/header.ejs') %>
-  <div class="contact-us">
-    <article >
-      <!-- banner -->
-      <section class="content-banner">
-        <div class="wraper">
-          <div class="volcano-common-content">
-          <img src="/static/assets/page-views/about/contact-us/bannerpic@v2.0.png">
-            <div class="word">
-              <div class="word-title"><%= banner_title %></div>
-              <div class="word-brief"><%= banner_brief %></div>
-              <div class="word-describe"><%= banner_describe %></div>
-            </div>
-            <ul class="breadcrumb">
-              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
-              <li class="second"><a class="success" href="/about/milestones"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
-              <li class="third"><%= breadcrumb_three %></li>
-            </ul>
-            </div>
-        </div>
-      </section>
-      <!-- content-main-->
-      <section class="content-main">
-        <div class="wraper">
-          <div class="volcano-common-content">
-            <div class="left">
-              <div class="item phone">
-                <span class="icon-phone icon"></span>
-                <div class="title"><span class="telch"><%= phone %></span>&nbsp;Phone</div>
-                <p class="telnumber">400-898-5401</p>
-              </div>
-              <div class="item email">
-                <span class="icon-email icon"></span>
-                <div class="title"><span class="emailch"><%= mailch %></span>&nbsp;E-mail</div>
-                <a class="toemail" href="mailto:contact@unitedstack.com">contact@unitedstack.com</a>
-              </div>
-              <div class="item address">
-                 <span class="icon-home icon"></span>
-                 <div class="title"><span class="addressch"><%= address %></span>&nbsp;Address</div>
-                 <div class="detail">
-                  <p><%= beijing_address %></p>
-                  <p>Room901, Xingang mansion, No.16, Jiuxianqiao Road </p>
-                  <p>Chaoyang District, Beijing,100016</p>
-                  <span class="line"></span>
-                  <p><%= shanghai_address %></p>
-                  <p>2608, New town Centre, #83 Loushangguan Road,</p>
-                  <p>Changning, Shanghai, (near Wan shan Road), 200336</p>
-                 </div>
-              </div>
-            </div>
-            <div class="right">
-              <ul class="map">
-                <li class="beijing"><div class="img beijing-img"></div></li>
-                <li class="shanghai selected"><div class="img shanghai-img"></div></li>
-              </ul>
-              <ul class="tab">
-                <li class="beijing"><%= beijing_btn %></li>
-                <li class="shanghai selected"><%= shanghai_btn %></li>
-              </ul>
-              <div class="location">
-               <img class="coordinate" src="/static/assets/page-views/about/contact-us/location.png">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </article>
+<div class="contact-us">
+  <div class="center">
+    <img src="/static/assets/page-views/about/contact-us/map.jpg">
+    <div class="brief">
+      <div class="tel">联系电话：400-898-5401</div>
+      <div class="email">改！联系电话：400-898-5401</div>
+      <div class="address">地      址：北京市海淀区王庄路1号清华同方科技大厦D座17层</div>
+    </div>
   </div>
+</div>
 <%- include('../../../../components/footer.ejs') %>

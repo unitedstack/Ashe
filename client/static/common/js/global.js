@@ -104,9 +104,9 @@ function globalEvent(G) {
       G.bodyCST = document.body.scrollTop || document.documentElement.scrollTop;
       G.bodyDir = G.bodyPST > G.bodyCST ? -1 : 1;
       if (G.bodyCST > 40) {
-        G.header.css({backgroundColor: 'rgba(11, 24, 29, 0.8)'});
+        G.header.css({backgroundColor: 'rgba(9,31,63,0.86)'});
       } else {
-        G.header.css({backgroundColor: 'rgba(11, 24, 29, 0)'});
+        G.header.css({backgroundColor: 'rgba(9,31,63,0.8'});
       }
       if(G.bodyCST > 1500) {
         G.toTop.css({opacity: 1});
@@ -118,22 +118,11 @@ function globalEvent(G) {
   // header nav
   $('#header-center > li').mouseenter(function() {
     if(!G.mobile) {
-      G.header.css({backgroundColor: 'rgba(11, 24, 29, 0.8)'});
+      G.header.css({backgroundColor: 'rgba(9,31,63,0.8'});
     }
   }).mouseleave(function() {
     if(G.bodyCST <= 40 && !G.mobile) {
-      G.header.css({backgroundColor: 'rgba(11, 24, 29, 0)'});
-    }
-  });
-  $('#header-center > li > a.uos-product').click(function() {
-    if(!G.mobile) {
-      window.location = '/product/product';
-    }
-  });
-  $('.multi-dropdown > .dropdown-wrapper > .dropdown > li').mouseenter(function() {
-    if(!G.mobile) {
-      $(this).siblings().removeClass('select');
-      $(this).addClass('select');
+      G.header.css({backgroundColor: 'rgba(9,31,63,0.9'});
     }
   });
   // header mobile

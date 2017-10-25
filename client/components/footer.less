@@ -15,7 +15,45 @@
 
 .volcano-global-footer {
   clear: both;
-  margin-top: 100px;
+  .caller {
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+    background-image: linear-gradient(-224deg, #5A64FA 0%, #28C7EA 100%);
+    color: @white;
+    .center {
+      width: 1170px;
+      margin: 0 auto;
+      .reply {
+        font-size: 28px;
+        letter-spacing: 0.4px;
+        margin-right: 50px;
+      }
+      .time {
+        font-size: 48px;
+        letter-spacing: 0.69px;
+      }
+      .weixin {
+        float: right;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 1px solid white;
+        margin-top: 26px;
+      }
+      .weibo {
+        float: right;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 1px solid white;
+        margin-right: 40px;
+        margin-top: 26px;
+      }
+    }
+  }
   .totop {
     opacity: 0;
     transition: all 0.2s;
@@ -42,11 +80,12 @@
   .first {
     width: 100%;
     height: 360px;
-    background: linear-gradient(#010413, #060e23, #06223f);
+    background: #0B112F;
     overflow: hidden;
     .inner {
       width: @pad_width;
       margin: 50px auto;
+      width: 1170px;
       height: 260px;
       box-sizing: border-box;
 
@@ -97,16 +136,15 @@
         }
       }
       .center {
-        float: left;
+        float: right;
         width: auto;
         height: 100%;
-        margin-left: 110px;
         box-sizing: border-box;
-
         .column-1,
         .column-2,
         .column-3,
-        .column-4 {
+        .column-4,
+        .column-5 {
           &:not(:first-child) {
             margin-left: 80px;
           }
@@ -181,7 +219,7 @@
     width: 100%;
     height: auto;
     padding: 20px 0;
-    background-color: #06223f;
+    background-color: #0B112F;
     .wrapper {
       width: 1000px;
       height: auto;
