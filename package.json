@@ -9,6 +9,7 @@
     "client_dev": "cd client/build && grunt watch",
     "admin_build": "cd admin && rm -rf dist/ manifest.json && node build.js --production",
     "admin_dev": "cd admin && rm -rf dist/ manifest.json && node build.js --development",
+    "build": "npm run client_build && npm run admin_build",
     "release": "npm run client_build && npm run admin_build",
     "iconfont": "cd client/build && grunt font",
     "merge_assets": "cd client/build && grunt copy_assets",
