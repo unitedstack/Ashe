@@ -2,6 +2,8 @@
 
 Ashe is a public cloud offical website.
 
+[![Build Status](https://travis-ci.org/unitedstack/Ashe.svg?branch=master)](https://travis-ci.org/unitedstack/Ashe)
+
 ## Install
 
 ```bash
