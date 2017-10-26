@@ -28,6 +28,9 @@
       width: 100%;
       height: 40px;
     }
+    .palette-wrapper > .center {
+      text-align: center;
+    }
     .palette-wrapper > li > div {
       padding-left: 10px;
       box-sizing: border-box;
@@ -54,14 +57,17 @@
   var palette = document.getElementById('palette');
 
   Object.keys(color).forEach(function(c) {
+    var li = document.createElement('li');
+    var font = document.createElement('div');
     if(/@color/.test(c)) {
-      var li = document.createElement('li');
-      if(!/@color_br/.test(c)) {
-        var font = document.createElement('div');
-        font.innerHTML = c + '   (' + color[c] + ') ';
-        li.appendChild(font);
-        li.style.backgroundColor = color[c];
-      }
+      font.innerHTML = c + '   (' + color[c] + ') ';
+      li.appendChild(font);
+      li.style.backgroundColor = color[c];
+      palette.appendChild(li);
+    } else if(!/@/.test(c)) {
+      font.innerHTML = color[c];
+      li.className = 'center';
+      li.appendChild(font);
       palette.appendChild(li);
     }
   });
