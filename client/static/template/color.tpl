@@ -42,14 +42,14 @@
 </head>
 <body>
   <div class="title">
-    Theme default
+    Theme @theme_name
   </div>
   <ul id="palette" class="palette-wrapper">
 
   </ul>
 </body>
 <script>
-  var color = {"@font_family":"\"Helvetica Neue\", Helvetica, arial, \"Microsoft Yahei\", \"微软雅黑\", \"宋体\", sans-serif","@border_radius":"2px","@color_primary_01":"rgb(45, 71, 85)","@color_primary_02":"rgb(82, 115, 132)","@color_primary_03":"rgb(165, 185, 196)","@color_primary_04":"rgb(193, 11, 64)","@color_accent_05":"rgb(55, 128, 168)","@color_accent_06":"rgb(229, 75, 75)","@color_accent_07":"rgb(15, 112, 154)","@color_neutral_07":"rgb(37, 42, 45)","@color_neutral_08":"rgb(43, 54, 58)","@color_neutral_09":"rgb(114, 130, 147)","@color_neutral_10":"rgb(169, 179, 189)","@color_neutral_11":"rgb(217, 227, 229)","@color_neutral_12":"rgb(241, 245, 248)","@color_neutral_13":"rgb(255, 255, 255)"};
+  var color = @palette;
 
   var palette = document.getElementById('palette');
 

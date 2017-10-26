@@ -10,6 +10,7 @@ const ejs = require('ejs');
 const mkdirp = require('mkdirp');
 const childProcess = require('child_process');
 const glob = require('glob');
+const lessVarParse = require('less-var-parse');
 let webpackConfig = require('./webpack.config.js');
 let devConfig = webpackConfig;
 let routers = {};
@@ -262,5 +263,17 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('commonCss', ['clean:commonCss', 'less:commonCss', 'rev:commonCss']);
+
+  // Generate palette preview
+  grunt.registerTask('palette', function(buildTheme) {
+    const done = this.async();
+    const theme = process.env.npm_config_theme || buildTheme || 'default';
+    fs.readFile(`client/static/theme/${theme}/index.less`, 'utf8', (e, data) => {
+      const template = fs.readFileSync('client/static/template/color.tpl', 'utf8');
+      const vars = JSON.stringify(lessVarParse(data));
+      const content = template.replace('@palette', vars).replace('@theme_name', theme);
+      fs.writeFile(`client/static/theme/${theme}/index.html`, content, done);
+    });
+  });
 
 };

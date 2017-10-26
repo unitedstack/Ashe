@@ -31,6 +31,11 @@ npm run admin_dev
 # generate iconfonts
 npm run iconfont
 
+# generate color preview html (default theme is `default`)
+npm run palette
+# specify theme
+npm run palette --theme=XXX
+
 # generate static html files
 # npm run dev will watch pages and run this script.
 npm run html
