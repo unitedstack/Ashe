@@ -35,18 +35,18 @@
           margin-bottom: 100px;
           box-sizing: border-box;
           li {
-            background: @white;
+            background: @color_white;
             box-shadow: 0 5px 10px 0 rgba(227,227,233,0.50);
             margin-bottom: 60px;
             text-align: left;
             display: block;
             h1 {
               font-size: 16px;
-              color: @white;
+              color: @color_white;
               letter-spacing: 0.5px;
               line-height: 34px;
               height: 34px;
-              background-color: @button_blue_color;
+              background-color: @color_button_blue;
               border-radius: 4px 4px 0 0;
               position: relative;
               cursor: pointer;
@@ -85,7 +85,7 @@
             }
             .tips-2 {
               font-size: 14px;
-              color: @content_color;
+              color: @color_content;
               letter-spacing: 0.5px;
               line-height: 24px;
               margin-top: 20px;
@@ -102,7 +102,7 @@
               h1 {
                 display: block;
                 background-color: #22719b;
-                color: @white;
+                color: @color_white;
                 .icon-arrow-right {
                   transform: rotateZ(90deg) translateX(-50%);
                 }
@@ -118,7 +118,7 @@
                 .month {
                   margin-right: 30px;
                   font-size: 18px;
-                  color: @content_color;
+                  color: @color_content;
                   letter-spacing: 0.5px;
                   strong {
                     color: #EC6823;
@@ -130,7 +130,7 @@
                 .hour {
                   letter-spacing: 0.5px;
                   font-size: 18px;
-                  color: @content_color;
+                  color: @color_content;
                   strong {
                     color: #EC6823;
                   }
@@ -143,8 +143,8 @@
                 line-height: 34px;
                 font-size: 14px;
                 letter-spacing: 0.5px;
-                color: @white;
-                background: @button_blue_color;
+                color: @color_white;
+                background: @color_button_blue;
                 text-align: center;
                 margin-left: 30px;
                 border-radius: 2px;
@@ -158,11 +158,11 @@
                   box-sizing: border-box;
                   float: left;
                   font-size: 14px;
-                  color: @button_blue_color;
+                  color: @color_button_blue;
                   height: 34px;
                   line-height: 34px;
                   border: none;
-                  background: @background_color;
+                  background: @color_background;
                 }
                 .min, .add {
                   box-sizing: border-box;
@@ -172,12 +172,12 @@
                   height: 34px;
                   line-height: 34px;
                   text-align: center;
-                  color: @content_color;
+                  color: @color_content;
                   font-size: 12px;
-                  background-color: @button_gray_color;
+                  background-color: @color_button_gray;
                   &:active {
-                    background: @button_blue_color;
-                    color: @white;
+                    background: @color_button_blue;
+                    color: @color_white;
                   }
                 }
                 .min {
@@ -201,7 +201,7 @@
             }
             .tips {
               font-size: 14px;
-              color: @content_color;
+              color: @color_content;
               letter-spacing: 0.5px;
               line-height: 24px;
               padding-bottom: 40px;
@@ -209,10 +209,10 @@
             .tablist {
               margin: 35px auto;
               .tab {
-                background: @button_gray_color;
+                background: @color_button_gray;
                 border-radius: 2px;
                 font-size: 14px;
-                color: @content_color;
+                color: @color_content;
                 display: inline-block;
                 width: 100px;
                 height: 34px;
@@ -221,8 +221,8 @@
                 margin-right: 30px;
                 cursor: pointer;
                 &.selected {
-                  background-color: @button_blue_color;
-                  color: @white;
+                  background-color: @color_button_blue;
+                  color: @color_white;
                 }
               }
             }
@@ -259,16 +259,16 @@
                     font-size: 12px;
                     border-radius: 2px;
                     line-height: 34px;
-                    color: @content_color;
-                    background: @button_gray_color;
+                    color: @color_content;
+                    background: @color_button_gray;
                     letter-spacing: 0.5px;
                     &.selected {
-                      background-color: @button_blue_color;
-                      color: @white;
+                      background-color: @color_button_blue;
+                      color: @color_white;
                     }
                     &:hover {
-                      background: @button_gray_hover_color;
-                      color: @button_blue_color;
+                      background: @color_button_gray_hover;
+                      color: @color_button_blue;
                     }
                   }
                 }
@@ -297,13 +297,13 @@
                     border-radius: 2px;
                     .hasValue {
                       position: absolute;
-                      background: @module_gray_color;
+                      background: @color_module_gray;
                       border-radius: 2px;
                       height: 17px;
                     }
                     .thumb {
                       box-shadow: 1px 0 2px 0 rgba(44,178,227,0.40);
-                      border: 5px solid @button_blue_color;
+                      border: 5px solid @color_button_blue;
                       border-radius: 2px;
                       width: 1px;
                       height: 14px;
@@ -326,14 +326,14 @@
                     float: right;
                     margin-top: -12px;
                     background-color: #F9FAFB;
-                    color: @content_color;
+                    color: @color_content;
                     .unit {
                       line-height: 30px;
                       float: left;
                       width: 50px;
                       height: 30px;
                       text-align: center;
-                      background-color: @button_gray_color;
+                      background-color: @color_button_gray;
                       border-radius: 0 2px 2px 0;
                       font-size: 14px;
                     }
@@ -388,7 +388,7 @@
                     border-radius: 2px;
                     float: left;
                     .on {
-                      background-color: @module_gray_color;
+                      background-color: @color_module_gray;
                       border-radius: 2px;
                       height: 17px;
                       padding: 0;
@@ -415,7 +415,7 @@
           width: 300px;
           float: right;
           border-radius: 4px 4px 0 0;
-          background: @white;
+          background: @color_white;
           box-shadow: 0 10px 20px 0 rgba(227,227,233,0.50);
           margin-right: 3px;
           &.fixed, &.moveBottom{
@@ -435,8 +435,8 @@
             font-size: 16px;
             text-align: center;
             letter-spacing: 0.5px;
-            color: @white;
-            background-color: @button_blue_color;
+            color: @color_white;
+            background-color: @color_button_blue;
             border-radius: 4px 4px 0 0;
             margin: 0;
           }
@@ -451,12 +451,12 @@
             a {
               float: left;
               font-size: 14px;
-              color: @content_color;
+              color: @color_content;
               width: 60px;
               height: 30px;
               line-height: 30px;
               transition: 0.2s;
-              background: @button_gray_color;
+              background: @color_button_gray;
               letter-spacing: 0.5px;
               &:nth-of-type(1) {
                 border-radius: 2px 0 0 2px;
@@ -465,8 +465,8 @@
                 border-radius: 0 2px 2px 0;
               }
               &.selected {
-                background-color: @button_blue_color;
-                color: @white;
+                background-color: @color_button_blue;
+                color: @color_white;
               }
             }
           }
@@ -488,7 +488,7 @@
               }
               h1 {
                 font-size: 16px;
-                color: @character_grade_one_color;
+                color: @color_character_grade_one;
                 letter-spacing: 0.5px;
                 line-height: 28px;
                 float: left;
@@ -497,7 +497,7 @@
               h2.size {
                 display: inline-block;
                 font-size: 10px;
-                color: @content_color;
+                color: @color_content;
                 letter-spacing: 0.5px;
                 line-height: 16px;
                 float: left;
@@ -520,9 +520,9 @@
                   float: left;
                   width: 20px;
                   text-align: center;
-                  color: @white;
+                  color: @color_white;
                   font-size: 12px;
-                  background-color: @button_gray_color;
+                  background-color: @color_button_gray;
                   border-radius: 2px 0 0 2px;
                 }
                 .add {
@@ -531,12 +531,12 @@
                   float: left;
                   width: 20px;
                   text-align: center;
-                  color: @white;
+                  color: @color_white;
                   font-size: 12px;
-                  background: @button_gray_color;
+                  background: @color_button_gray;
                   border-radius: 2px 0 0 2px;
                   &:hover {
-                    background-color: @button_blue_color;
+                    background-color: @color_button_blue;
                   }
                 }
                 input {
@@ -544,20 +544,20 @@
                   float: left;
                   display: block;
                   width: 40px;
-                  background: @background_color;
-                  color: @content_color;
+                  background: @color_background;
+                  color: @color_content;
                   border-radius: 0;
                   border: none;
                 }
                 &:hover {
                   input {
-                    color: @button_blue_color;
+                    color: @color_button_blue;
                   }
                   .min {
-                    background-color: @button_blue_color;
+                    background-color: @color_button_blue;
                   }
                   .add {
-                    background-color: @button_blue_color;
+                    background-color: @color_button_blue;
                   }
                 }
               }
@@ -583,14 +583,14 @@
                 transform: rotate(45deg);
                 position: absolute;
                 right: 20px;
-                color: @detail_symbol_color;
+                color: @color_detail_symbol;
                 font-size: 30px;
               }
             }
           }
           .total {
             font-size: 18px;
-            color: @content_color;
+            color: @color_content;
             letter-spacing: 1px;
             line-height: 56px;
             strong {
@@ -604,12 +604,12 @@
             }
           }
           &.hour > .nav > a:first-child {
-            color: @content_color;
-            background-color: @button_gray_color;
+            color: @color_content;
+            background-color: @color_button_gray;
           }
           &.hour > .nav > a:last-child {
-            color: @white;
-            background-color: @button_blue_color;
+            color: @color_white;
+            background-color: @color_button_blue;
           }
           &.hour ul li .pricing.month {
             display: none;

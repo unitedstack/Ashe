@@ -82,15 +82,6 @@
         }
       }
     }
-    @media (max-width: @mobile_width) {
-        .volcano-common-content {
-          padding: 0 0.75rem;
-          width: 100%;
-          height: 100%;
-          padding-top: 50px;
-          box-sizing: border-box;
-        }
-    }
     .content-banner {
       width: 100%;
       height: 540px;
@@ -111,12 +102,12 @@
           left: 20px;
           .word-title {
             display: none;
-            color: @white;
+            color: @color_white;
             font-size: 24px;
             line-height: 58px;
           }
           .word-brief {
-            color: @white;
+            color: @color_white;
             font-size: 50px;
             line-height: 66px;
             letter-spacing: 3.25px;
@@ -191,7 +182,7 @@
           left: 50%;
           transform: translateX(-50%);
           font-size: 48px;
-          color: @character_grade_one_color;
+          color: @color_character_grade_one;
           letter-spacing: 4px;
           line-height: 70px;
         }
@@ -201,11 +192,11 @@
           line-height: 28px;
           margin-top: 30px;
           letter-spacing: 0.5px;
-          color: @content_color;
+          color: @color_content;
         }
         a {
           display: inline-block;
-          color: @white;
+          color: @color_white;
           margin: 30px auto;
           border-radius: 2px;
           border: none;
@@ -215,7 +206,7 @@
           padding: 0 14px;
           box-sizing: border-box;
           transition: all 1s cubic-bezier(0.12, 0.63, 0.78, 1.22);
-          background-color: @button_blue_color;
+          background-color: @color_button_blue;
           font-size: 18px;
           height: 48px;
           line-height: 48px;
@@ -223,16 +214,16 @@
           margin-top: 33px;
         }
         .train-list {
-          background-color: @button_blue_color;
+          background-color: @color_button_blue;
           margin-right: 76px;
           &:hover{
-            background-color: @button_blue_hover_color;
+            background-color: @color_button_blue_hover;
           }
         }
         .train-apply {
-          background-color: @button_red_color;
+          background-color: @color_button_red;
           &:hover{
-            background-color: @button_red_hover_color;
+            background-color: @color_button_red_hover;
           }
         }
         .split-list {
@@ -290,7 +281,7 @@
             padding: 40px 30px 60px 30px;
             box-sizing: border-box;
             .left {
-              background: url(/static/assets/page-views/train/train/featured-picture-1.png) no-repeat center center;
+              background: url(/static/assets/page-views/train/technical-train/featured-picture-1.png) no-repeat center center;
               float: left;
               width: 100%;
               height: 170px;
@@ -314,7 +305,7 @@
               }
               .detail {
                 font-size: 14px;
-                color: #999999;
+                color: @color_content;
                 letter-spacing: 0.6px;
                 line-height: 24px;
                 text-indent: 2em;
@@ -332,12 +323,12 @@
           }
           .devops {
             .left {
-              background-image: url(/static/assets/page-views/train/train/featured-picture-2.png);
+              background-image: url(/static/assets/page-views/train/technical-train/featured-picture-2.png);
             }
           }
           .unitedstack {
             .left {
-              background-image: url(/static/assets/page-views/train/train/featured-picture-3.png);
+              background-image: url(/static/assets/page-views/train/technical-train/featured-picture-3.png);
             }
           }
         }
@@ -398,6 +389,7 @@
     }
   }
 }
+
 @media screen and (max-width: @mobile_width) {
   .volcano-train {
     article {
@@ -416,7 +408,7 @@
           .word {
             padding-left: 4%;
             top: 60px;
-            width:80%;
+            width: 80%;
             .word-title {
               display: block;
               font-size: 20px;
@@ -447,74 +439,150 @@
       }
       .content-main {
         width: 100%;
-        margin-bottom: -50px;
         .volcano-common-content {
-          padding-top: 0;
-          color: @color_neutral_08;
+          width: 100%;
+          padding: 0 4%;
+          box-sizing: border-box;
+          margin-top: 20px;
           .preview {
-            margin-top: 40px;
-            margin-bottom: 0;
-            text-align: left;
             width: 100%;
-            height: auto;
-            .title{
+            margin-bottom: 0;
+            .title {
+              display: none;
+            }
+            .shuiyin {
               display: none;
             }
             .description {
-              font-size: 15px;
-              line-height: 22px;
-              height: auto;
-              margin: 20px 0;
-              margin-bottom: 40px;
+              font-weight: 200;
+              margin-top: 0;
+              font-size: 14px;
+              letter-spacing: 0.44px;
             }
-            a{
+            a {
+              font-weight: 200;
               width: 100%;
-              heigth: 44px;
-              margin: 0;
-              font-size: 15px;
-              font-weight: none;
+              height: 45px;
+              border-radius: 2px;
+              font-size: 18px;
+              letter-spacing: 0.5px;
+              &.train-list {
+                margin: 20px 0;        
+              }
+              &.train-apply {
+                margin: 0;       
+              }
             }
-            .train-list{
-              margin-bottom:10px;
-            }
-            .train-apply{
-              margin-bottom:30px;
-            }
-          }
-        }
-        .feature {
-            margin: 0 auto;
-            padding: 0 0.75rem;
-            padding-top: 0;
-            background: #fff;
-            .inner {
-              width: 100% !important;
-              .course {
-                width: 100%;
-                background-color: @course_color;
-                padding: 20px 12px 0 12px;
-                margin-bottom: 15px;
-                height: 255px;
-                &:last-child {
+            .split-list {
+              margin-bottom: 30px;
+              .split-list-one {
+                margin-right: 0;
+                width: 40%;
+                margin-right: 20%;
+                margin-bottom: 20px;
+                img {
+                  width: 60px;
+                  height: 60px;
+                }
+                .split-list-line {
+                  width: 38px;
+                  height: 2px;
+                }
+                .split-list-intro {
+                  width: initial;
+                  margin-right: 0;
+                  font-size: 14px;
+                  line-height: 24px;
+                  font-weight: 200;
+                }
+                &:nth-of-type(2n) {
+                  margin-right: 0;
+                }
+                &:nth-of-type(3), &:nth-of-type(4) {
                   margin-bottom: 0;
-                }
-                .left {
-                  width: 100%;
-                }
-                .right {
-                  .title {
-                    font-size: 18px;
-                    line-height: 24px;
-                    padding-top: 10px;
-                    margin: 0;
-                  }
-                  .detail {
-                    display: none;
-                  }
                 }
               }
             }
           }
+        }
+        .feature {
+          background: none;
+          padding: 0 4%;
+          box-sizing: border-box;
+          padding-top: 0;
+          .inner {
+            width: 100%;
+            .course {
+              width: 100%;
+              height: auto;
+              border: 1px solid #0280DF;
+              box-shadow: 0 0 12px 0 rgba(2,128,223,0.30);
+              border-radius: 2px;
+              margin-bottom: 20px;
+              padding: 30px;
+              box-sizing: border-box;
+              .left {
+                height: 150px;
+              }
+              .right {
+                .title {
+                  margin-top: 12px;
+                  font-size: 18px;
+                  font-weight: 200;
+                  letter-spacing: 0.5px;
+                  line-height: 30px;
+                }
+                .detail {
+                  font-size: 14px;
+                  font-weight: 200;
+                  letter-spacing: 0.5px;
+                  line-height: 24px;
+                }
+              }
+              &:last-child {
+                margin-bottom: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @mobile_width) and (max-width: @pad_width) {
+  .volcano-train article .content-main{
+    .preview {
+      margin-bottom: 40px;
+      .split-list {
+        margin-bottom: 30px;
+        .split-list-one {
+          margin-right: 0;
+          width: 40%;
+          margin-right: 20%;
+          margin-bottom: 20px;
+          img {
+            width: 60px;
+            height: 60px;
+          }
+          .split-list-line {
+            width: 38px;
+            height: 2px;
+          }
+          .split-list-intro {
+            width: initial;
+            margin-right: 0;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 200;
+          }
+          &:nth-of-type(2n) {
+            margin-right: 0;
+          }
+          &:nth-of-type(3), &:nth-of-type(4) {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }

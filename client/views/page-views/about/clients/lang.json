@@ -1,0 +1,12 @@
+{
+  "en": {
+    "cssFile": "/static/dist/page_about_clients.min.css",
+    "jsFile": "/static/dist/page_about_clients.min.js",
+    "title": "UnitedStack - Contact Us"
+  },
+  "zh": {
+    "cssFile": "/static/dist/page_about_clients.min.css",
+    "jsFile": "/static/dist/page_about_clients.min.js",
+    "title": "UnitedStack - 联系我们"
+  }
+}
