@@ -61,9 +61,9 @@
     "title": "UnitedStack - Training List"
   },
   "zh": {
-    "all_course": "所有认证课程",
+    "all_course": "所有课程",
     "apply": "我要报名",
-    "architect_course": "Solution Architect 认证课程",
+    "architect_course": "架构师课程",
     "availability_detail_five": "块存储节点的高可用设计",
     "availability_detail_four": "计算节点的高可用设计",
     "availability_detail_one": "HA意味着什么？如何实现HA？",
@@ -118,7 +118,7 @@
     "monitoring_detail_two": "UOS 日志平台架构",
     "monitoring_intro": "了解 LMA 工具链给 OpenStack 的稳定性带来什么价值，掌握 UOS LMA 工具链组成、原理和部署知识",
     "open": "已经开课",
-    "ops_course": "OpenStack Ops 认证课程",
+    "ops_course": "运维课程",
     "title": "UnitedStack - 培训列表"
   }
 }
