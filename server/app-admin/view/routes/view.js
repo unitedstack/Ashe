@@ -27,17 +27,17 @@ const getTemplateObj = (name) => {
   return {
     title: name,
     dllJsFile: glob.sync('dll_ustack_*.js', {
-      cwd: 'client/dist/dll'
+      cwd: 'admin/dist/dll'
     }),
     mainCssFile: glob.sync(`*${name}.min.css`, {
-      cwd: 'client/dist'
+      cwd: 'admin/dist'
     }),
     mainJsFile: glob.sync(`*${name}.min.js`, {
-      cwd: 'client/dist'
+      cwd: 'admin/dist'
     })
   };
 };
-const frontendApps = fs.readdirSync('client/applications').filter(file => file.indexOf('.') === -1);
+const frontendApps = fs.readdirSync('admin/applications').filter(file => file.indexOf('.') === -1);
 let firstApp;
 module.exports = (router) => {
   const routesRegExp = frontendApps.map(name => {
