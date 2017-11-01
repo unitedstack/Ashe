@@ -38,8 +38,8 @@ const maxAge = env === 'development' ? 1 : 365 * 24 * 60 * 60 * 1000;
 const staticPage = require('../client/.routers.json');
 
 app.use(mount('/static', koaStatic(path.resolve(__dirname, '../client/static'), {maxAge})));
-app.use(mount('/admin-static/dist', koaStatic(path.resolve(__dirname, '../client/dist'), {maxAge})));
-app.use(mount('/admin-static/assets', koaStatic(path.resolve(__dirname, '../client/assets'), {maxAge})));
+app.use(mount('/admin-static/dist', koaStatic(path.resolve(__dirname, '../admin/dist'), {maxAge})));
+app.use(mount('/admin-static/assets', koaStatic(path.resolve(__dirname, '../admin/assets'), {maxAge})));
 app.use(mount('/wp-content', koaStatic(path.resolve(__dirname, '../static/wp-content'), {maxAge})));
 
 // handle error
@@ -61,7 +61,7 @@ require('server/middlewares/sessionHandler')(app);
 
 // routes definition
 require('koa-validate')(app);
-//require('server/app-admin')(app);
+require('server/app-admin')(app);
 require('server/app-www')(app);
 
 module.exports = app;
