@@ -10,9 +10,13 @@
   var isMobile = function() {
     return navigator.userAgent.match(/(iphone|ipad|ipod|ios|android|mobile|blackberry|iemobile|mqqbrowser|juc|fennec|wosbrowser|browserng|Webos|symbian|windows phone)/i) || window.innerWidth <= 1024;
   };
+  var isPad = function() {
+    return window.innerWidth >= 1024 && window.innerWidth <= 1240;
+  };
   var G = {
     viewWidth: document.body.offsetWidth,
     mobile: !!isMobile(),
+    pad: !!isPad(),
     scrollbarWidth: window.innerWidth - document.body.offsetWidth,
     viewHeight: window.innerHeight,
     header: $('#volcano-global-header'),
@@ -47,6 +51,7 @@
     G.viewWidth = document.body.offsetWidth;
     G.viewHeight = window.innerHeight;
     G.mobile = !!isMobile();
+    G.pad = !!isPad();
 
     if( isOriginalMobile !== G.mobile ){
       if(G.mobile){
@@ -141,6 +146,17 @@ function globalEvent(G) {
     if(G.mobile) {
       $(this).next().slideToggle(300);
       $(this).toggleClass('second-open');
+    }
+  });
+  $('.multi-dropdown > .dropdown-wrapper > .dropdown > li').mouseenter(function() {
+    if(!G.mobile) {
+      $(this).siblings().removeClass('select');
+      $(this).addClass('select');
+      if($(this).hasClass('multi')) {
+        $(this).parents('.dropdown-wrapper').css('width', '358px');
+      } else {
+        $(this).parents('.dropdown-wrapper').css('width', '168px');
+      }
     }
   });
   //footer totop

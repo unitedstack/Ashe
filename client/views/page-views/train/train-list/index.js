@@ -41,7 +41,6 @@ window.onload = window.onresize = function(){
           $(this).children('.icon').css('color','#0280DF');
         });
       }else {
-
         $(this).css('background','#fff');
         $(this).css('color', '#333333');
         $(this).children('.icon').css('color','#0280DF');

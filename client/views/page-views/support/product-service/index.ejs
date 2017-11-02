@@ -1,0 +1,83 @@
+<%- include('../../../../components/header.ejs') %>
+  <div class="ashe-support-service">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="type-area">
+          <div class="banner">
+            <div class="banner-title"><%= banner_title %></div>
+            <div class="banner-brief"><%= banner_brief %></div>
+            <div class="banner-describe"><%= banner_describe %></div>
+            <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+          </div>
+        </div>
+        <img class="banner-img" src="/static/assets/page-views/support/product-service/banner.png">
+        <img class="banner-img-mobile" src="/static/assets/page-views/support/product-service/banner-m.png">
+      </section>
+      <div class="breadcrumb">
+        <ul class="breadcrumb-center">
+          <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+          <li class="second"><a class="success" href="/train/technical-train"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+          <li class="third"><%= breadcrumb_three %></li>
+        </ul>
+      </div>
+      <!-- end for banner -->
+      <!-- content -->
+      <section class="content-main">
+        <div class="service">
+          <p class="shuiyin">PRODUCT SERVICE</p>
+          <p class="title"><%= service_title_one %><span><%= service_title_two %></span></p>
+          <p class="brief"><%= service_intro %></p>
+          <div class="service-feature">
+            <div class="service-item">
+              <img src="/static/assets/page-views/support/product-service/logo.png">
+              <p class="item-title"><%= item_title_one %></p>
+              <p class="item-intro"><%= item_intro_one %></p>
+            </div>
+            <div class="service-item">
+              <img src="/static/assets/page-views/support/product-service/logo.png">
+              <p class="item-title"><%= item_title_two %></p>
+              <p class="item-intro"><%= item_intro_two %></p>
+            </div>
+            <div class="service-item">
+              <img src="/static/assets/page-views/support/product-service/logo.png">
+              <p class="item-title"><%= item_title_three %></p>
+              <p class="item-intro"><%= item_intro_three %></p>
+            </div>
+            <div class="service-item">
+              <img src="/static/assets/page-views/support/product-service/logo.png">
+              <p class="item-title"><%= item_title_four %></p>
+              <p class="item-intro"><%= item_intro_four %></p>
+            </div>
+            <div class="service-item">
+              <img src="/static/assets/page-views/support/product-service/logo.png">
+              <p class="item-title"><%= item_title_five %></p>
+              <p class="item-intro"><%= item_intro_five %></p>
+            </div>
+            <div class="service-item">
+              <img src="/static/assets/page-views/support/product-service/logo.png">
+              <p class="item-title"><%= item_title_six %></p>
+              <p class="item-intro"><%= item_intro_six %></p>
+            </div>
+          </div>
+          <div class="service-summary"><%= service_summary %></div>
+          <a class="apply-now" href="/support/apply-now"><%= apply_now %></a>
+        </div>
+        <div class="platform">
+          <img class="bg" src="/static/assets/page-views/support/product-service/bg.jpg">
+          <div class="pos">
+            <div class="left">
+              <p class="platform-title"><%= platform_title %></p>
+              <p class="platform-intro"><%= platform_intro %></p>
+              <a class="platform-button" href="/product/cloud-platform"><%= platform_button %></a>
+            </div>
+            <div class="right">
+              <img src="/static/assets/page-views/support/product-service/mac.png">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end for content -->
+    </article>
+  </div>
+<%- include('../../../../components/footer.ejs') %>

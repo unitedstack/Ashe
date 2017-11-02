@@ -1,25 +1,26 @@
 <%- include('../../../../components/header.ejs') %>
-  <div class="volcano-train-list">
+  <div class="ashe-train-list">
     <article >
       <!-- banner -->
       <section class="content-banner">
-        <div class="wraper">
-          <div class="volcano-common-content">
-          <img src="/static/assets/page-views/train/train-list/bannerpic@v2.0.png">
-            <div class="word">
-              <div class="word-title"><%= banner_title %></div>
-              <div class="word-brief"><%= banner_brief %></div>
-              <div class="word-describe"><%= banner_describe %></div>
-            </div>
-             <ul class="breadcrumb">
-              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
-              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
-              <li class="second"><a class="success" href="/train/train"><%= breadcrumb_three %></a>&nbsp;/&nbsp;</li>
-              <li class="third"><%= breadcrumb_four %></li>
-            </ul>
-            </div>
+        <div class="type-area">
+          <div class="banner">
+            <div class="banner-title"><%= banner_title %></div>
+            <div class="banner-brief"><%= banner_brief %></div>
+            <div class="banner-describe"><%= banner_describe %></div>
+            <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+          </div>
         </div>
+        <img class="banner-img" src="/static/assets/page-views/train/train-list/banner.png">
+        <img class="banner-img-mobile" src="/static/assets/page-views/train/train-list/banner-m.png">
       </section>
+      <div class="breadcrumb">
+        <ul class="breadcrumb-center">
+          <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+          <li class="second"><a class="success" href="/train/technical-train"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+          <li class="third"><%= breadcrumb_three %></li>
+        </ul>
+      </div>
       <!-- end for banner -->
       <!-- content -->
       <section class="content-main">
