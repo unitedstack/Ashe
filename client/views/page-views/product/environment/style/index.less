@@ -1,0 +1,390 @@
+@import '../../../../../components/header.less';
+@import '../../../../../components/footer.less';
+.ashe-environment{
+  article{
+    .content-main {
+      .wrapper {
+        width: 1170px;
+        overflow: hidden;
+        margin: 0 auto;
+        .principle {
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          margin-top: 200px; //临时
+          .title {
+            font-size: 42px;
+            color: #023200;
+            letter-spacing: 2px;
+            line-height: 55px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 45px;
+            span {
+              color: @color_button_blue !important;
+            }
+          }
+          .shuiyin {
+            font-size: 80px;
+            color: #F7F8FB;
+            letter-spacing: 2px;
+            line-height: 90px;
+            margin-bottom: 43px;
+            text-align: center;
+          }
+          .brief {
+            width: 840px;
+            margin: 0 auto;
+            font-size: 16px;
+            color: @color_content;
+            letter-spacing: 0.5px;
+            line-height: 28px;
+            text-align: center;
+            font-weight: 200;
+          }
+          .item {
+            width: 358px;
+            float: left;
+            margin-right: 47px;
+            text-align: center;
+            margin-top: 60px;
+            img {
+              width: 80px;
+              height: 72px;
+              margin-bottom: 24px;
+            }
+            .rule {
+              font-size: 22px;
+              color: @color_character_grade_one;
+              letter-spacing: 1px;
+              line-height: 30px;
+              margin-bottom: 20px;
+            }
+            .line {
+              display: none;
+            }
+            .introductoin {
+              font-weight: 200;
+              text-align: left;
+              font-size: 14px;
+              color: @color_content;
+              letter-spacing: 0.5px;
+              line-height: 24px;
+            }
+            &:nth-of-type(3n) {
+              margin-right: 0;
+            }
+          }
+        }
+        .architecture {
+          width: 100%;
+          position: relative;
+          margin-top: 80px;
+          .title {
+            font-size: 42px;
+            color: #023200;
+            letter-spacing: 2px;
+            line-height: 55px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 45px;
+            span {
+              color: @color_button_blue !important;
+            }
+          }
+          .shuiyin {
+            font-size: 80px;
+            color: #F7F8FB;
+            letter-spacing: 2px;
+            line-height: 90px;
+            margin-bottom: 43px;
+            text-align: center;
+          }
+          .brief {
+            width: 840px;
+            margin: 0 auto;
+            font-size: 16px;
+            color: @color_content;
+            letter-spacing: 0.5px;
+            line-height: 28px;
+            text-align: center;
+            font-weight: 200;
+          }
+          img {
+            margin-top: 98px;
+            width: 100%;
+          }
+        }
+        .resolute-plan {
+          width: 100%;
+          position: relative;
+          margin-top: 80px;
+          .title {
+            font-size: 42px;
+            color: #023200;
+            letter-spacing: 2px;
+            line-height: 55px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 45px;
+            span {
+              color: @color_button_blue !important;
+            }
+          }
+          .shuiyin {
+            font-size: 80px;
+            color: #F7F8FB;
+            letter-spacing: 2px;
+            line-height: 90px;
+            margin-bottom: 43px;
+            text-align: center;
+          }
+          .cabinet {
+            width: 100%;
+          }
+        }
+      }
+      .modularity {
+        background: #F9FAFB;
+        padding-top: 80px;
+        padding-bottom: 100px;
+        overflow: hidden;
+        .center {
+          width: max-content;
+          overflow: hidden;
+          margin: 0 auto;
+          box-sizing: border-box;
+          .item {
+            width: 315px;
+            float: left;
+            background-color: @color_white;
+            border: 1px solid #D7DAE2;
+            border-radius: 2px;
+            margin-right: 40px;   
+            padding: 35px 10px;
+            box-sizing: content-box;
+            img {
+              width: 100%;
+              margin-bottom: 25px;
+              cursor: pointer;
+            }
+            .modularity_title_mobile {
+              display: none;
+            }
+            .modularity_title {
+              font-size: 22px;
+              color: @color_character_grade_one;
+              letter-spacing: 1px;
+              text-align: center;
+              padding-bottom: 30px;
+            }
+            .modularity_intro {
+              font-size: 16px;
+              color: @color_content;
+              letter-spacing: 0.5px;
+              line-height: 28px;
+              font-weight: 200;
+              padding-left: 4px;
+              .left {
+                width: 50%;
+                float: left;
+              }
+              .right {
+                width: 50%;
+                float: left;
+              }
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .bg-framework, .bg-framework2, .bg-framework3 {
+      display: none;
+      background: rgba(40, 46, 51, .9);
+      position: absolute;
+      z-index: 9999;
+      cursor: pointer;
+      img {
+        width: 80%;
+        margin-top: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @mobile_width) {
+.ashe-environment{
+  article{
+    .content-main {
+      .wrapper {
+        width: 100%;
+        padding: 0 4%;
+        box-sizing: border-box;
+        .principle {
+          margin-top: 200px !important; //临时
+        }
+        .principle, .architecture, .resolute-plan {
+          margin-top: 30px;
+          .title {
+            font-size: 18px;
+            color: @color_character_grade_one;
+            letter-spacing: 0.5px;
+            line-height: 30px;
+            position: inherit;
+            padding-bottom: 15px;
+            text-align: center;
+            transform: none;
+            left: 0;
+            top: 0;
+            span {
+              color: @color_character_grade_one !important;
+            }
+          }
+          .shuiyin {
+            display: none;
+          }
+          .brief {
+            width: 100%;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            line-height: 22px;
+          }
+          .item {
+            width: 100%;
+            margin-right: 0;
+            margin-top: 30px;
+            img {
+              width: 110px;
+              height: 110px;
+              margin-bottom: 20px;
+            }
+            .rule {
+              font-size: 16px;
+              letter-spacing: 0.5px;
+              line-height: 28px;
+              margin-bottom: 0;
+            }
+            .line {
+              display: block;
+              margin: 10px auto;
+              width: 38px;
+              height: 2px;
+              background-image: linear-gradient(90deg, #5A64FA 0%, #28C7EA 100%);
+            }
+            .introductoin {
+              font-size: 12px;
+              letter-spacing: 0.5px;
+              line-height: 20px;
+            }
+          }
+        }
+        .architecture {
+          img {
+            margin-top: 30px;
+          }
+        }
+      }
+      .modularity {
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 30px;
+        padding-top: 0;
+        .center {
+          width: 100%;
+          background-color: #F9FAFB;
+          box-sizing: border-box;
+          padding: 0 4%;
+          .item {
+            width: 100%;
+            margin-right: 0;
+            border: none;
+            padding-bottom: 0;
+            background-color: #F9FAFB;
+            img {
+              width: 58%;
+              display: block;
+              margin: 0 auto;
+            }
+            .modularity_title_mobile {
+              display: block;
+              font-size: 14px;
+              color: @color_character_grade_one;
+              letter-spacing: 0.5px;
+              line-height: 26px;
+              text-align: center;
+              padding-bottom: 10px;
+            }
+            .modularity_title {
+              display: none;
+            }
+            .modularity_intro {
+              padding-top: 12px;
+              font-size: 12px;
+              letter-spacing: 0.5px;
+              line-height: 24px;
+              text-align: center;
+              .left {
+                width: 100%;
+              }
+              .right {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+@media (min-width: @mobile_width) and (max-width: @pad_width) {
+  .wrapper {
+    width: 100% !important;
+    padding: 0 4%;
+    box-sizing: border-box;
+    .principle {
+      width: 95%;
+      box-sizing: border-box;
+      .item {
+        width: 31% !important;
+        margin-right: 3% !important;
+        &:nth-of-type(3n) {
+          margin-right: 0 !important;
+        }
+      }
+    }
+    .architecture {
+      width: 100%;
+    }
+    .resolute-plan, .architecture, .principle {
+      .title {
+        font-size: 38px !important;
+      }
+    }
+  }
+  .modularity {
+    .center {
+      width: 100% !important;
+      padding: 0 4%;
+      box-sizing: border-box;
+      margin: 0 auto !important;
+      .item {
+        width: 30% !important;
+        margin-right: 1.5% !important;
+        .modularity_intro {
+          font-size: 14px !important;
+        }
+        &:last-child {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+}

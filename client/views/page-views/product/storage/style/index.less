@@ -1,0 +1,263 @@
+@import '../../../../../components/header.less';
+@import '../../../../../components/footer.less';
+.ashe-product-storage{
+  article{
+    padding-bottom: 100px;
+    .part-one, .part-two, .part-three{
+      width: 1170px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      .title {
+        font-size: 42px;
+        color: #023200;
+        letter-spacing: 2px;
+        line-height: 55px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 45px;
+        span {
+          color: @color_button_blue !important;
+        }
+      }
+      .shuiyin {
+        font-size: 80px;
+        color: #F7F8FB;
+        letter-spacing: 2px;
+        line-height: 90px;
+        margin-bottom: 43px;
+        text-align: center;
+      }
+      .brief {
+        width: 840px;
+        margin: 0 auto;
+        font-size: 16px;
+        color: @color_content;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        text-align: center;
+        font-weight: 200;
+      }
+      .performance {
+        overflow: hidden;
+        padding-bottom: 80px;
+        padding-top: 60px;
+        .performance-item {
+          border: 1px solid #D7DAE2;
+          box-sizing: border-box;
+          width: 292.5px;
+          height: 291px;
+          padding: 50px 28px 22px 28px;
+          float: left;
+          border-left: none;
+          img {
+            display: block;
+            margin: 0 auto;
+            width: 56px;
+            height: 56px;
+            padding-bottom: 17px;
+          }
+          .performance-title {
+            font-size: 18px;
+            color: @color_character_grade_one;
+            line-height: 30px;
+            padding-bottom: 16px;
+            text-align: center;
+          }
+          .performance-intro {
+            font-size: 14px;
+            color: @color_content;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+            font-weight: 200;
+            text-align: center;
+          }
+          &:first-child {
+            border-left: 1px solid #D7DAE2;
+          }
+        }
+      }
+      .framework {
+        width: 100%;
+        padding-bottom: 100px;
+        img {
+          display: block;
+          width: 860px;
+          margin: 0 auto;
+        }
+      }
+      .feature {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        overflow: hidden;
+        .item {
+          float: left;
+          width: 358px;
+          margin-right: 47px;
+          img {
+            display: block;
+            margin: 0 auto;
+            width: 80px;
+            height: 80px;
+            padding-bottom: 16px;
+          }
+          .item_title {
+            font-size: 22px;
+            color: @color_character_grade_one;
+            letter-spacing: 1px;
+            line-height: 30px;
+            padding-bottom: 20px;
+            text-align: center;
+          }
+          .item_intro {
+            font-size: 14px;
+            color: @color_content;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+            font-weight: 200;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @mobile_width) {
+  .ashe-product-storage{
+    article{
+      padding-bottom: 0;
+      .content-main {
+        width: 100%;
+        padding: 0 4%;
+        box-sizing: border-box;
+        padding-top: 20px;
+        .part-one, .part-two, .part-three{
+          width: 100%;
+          .shuiyin {
+            display: none;
+          }
+          .title {
+            position: static;
+            transform: none;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            line-height: 30px;
+            text-align: center;
+            padding-bottom: 20px;
+            span {
+              color: @color_character_grade_one !important;
+            }
+          }
+          .brief {
+            display: none;
+          }
+          .performance {
+            padding-top: 0;
+            padding-bottom: 30px;
+            .performance-item {
+              width: 50%;
+              height: 230px;
+              padding: 30px 10px 22px 10px;
+              img {
+                width: 30px;
+                height: 30px;
+                padding-bottom: 10px;
+              }
+              .performance-title {
+                font-size: 16px;
+                line-height: 28px;
+                padding-bottom: 10px;
+              }
+              .performance-intro {
+                font-size: 12px;
+                line-height: 20px;
+                
+              }
+              &:nth-of-type(1), &:nth-of-type(2) {
+                border-bottom: none;
+              }
+              &:nth-of-type(3) {
+                border-left: 1px solid #D7DAE2;
+              }
+            }
+            &:nth-of-type(2) {
+              .performance-item {
+                .performance-intro {
+                  text-align: left;
+                }
+              }
+            }
+          }
+          .framework {
+            padding-bottom: 30px;
+            img {
+              width: 100%;
+            }
+          }
+          .feature {
+            padding-top: 0;
+            padding-bottom: 30px;
+            .item {
+              width: 100%;
+              margin-right: 0;
+              border: 1px solid #D7DAE2;
+              box-sizing: border-box;
+              padding: 30px 22px;
+              margin-bottom: 20px;
+              .item_title {
+                font-size: 18px;
+                letter-spacing: 0.56px;
+                line-height: 28px;
+                padding-bottom: 10px;
+              }
+              .item_intro {
+                font-size: 12px;
+                letter-spacing: 0.5px;
+                line-height: 20px;
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: @mobile_width) and (max-width: @pad_width) {
+  .ashe-product-storage{
+    article{
+      padding-bottom: 0;
+      .content-main {
+        width: 100%;
+        padding: 0 4%;
+        box-sizing: border-box;
+        padding-top: 20px;
+        .part-one, .part-two, .part-three{
+          width: 100%;
+          .performance {
+            .performance-item {
+              width: 25%;
+            }
+          }
+          .feature {
+            .item {
+              width: 32%;
+              margin-right: 2%;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<%- include('../../../../components/header.ejs') %>
+  <div class="ashe-public-alarm">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="type-area">
+          <div class="banner">
+            <div class="banner-title"><%= banner_title %></div>
+            <div class="banner-brief"><%= banner_brief %></div>
+            <div class="banner-describe"><%= banner_describe %></div>
+            <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+          </div>
+        </div>
+        <img class="banner-img" src="/static/assets/page-views/public/alarm/banner.png">
+        <img class="banner-img-mobile" src="/static/assets/page-views/public/alarm/banner-m.png">
+      </section>
+      <div class="breadcrumb">
+        <ul class="breadcrumb-center">
+          <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+          <li class="second"><a class="success" href="/public/compute"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+          <li class="third"><%= breadcrumb_three %></li>
+        </ul>
+      </div>
+      <!-- end for banner -->
+      <!-- content -->
+      <div class="content-main">
+        <div class="volume-center">
+          <div class="introduction">
+            <img src="/static/assets/page-views/public/alarm/alarm.png">
+            <div class="right">
+              <p class="shuiyin">ALARMS</p>
+              <p class="title"><%= introduction_title_one %><span><%= introduction_title_two %></span></p>
+              <p class="intro"><%= introduction_intro %></p>
+<!-- 链接跳转修改 -->
+              <a class="signup" href="/product/cloud-platform"><%= introduction_a %></a>
+            </div>
+            <div class="description">
+              <div class="description_item">
+                <img src="/static/assets/page-views/public/alarm/url.png">
+                <p class="line"></p>
+                <p class="description_title"><%= description_title_one %></p>
+                <p class="description_brief"><%= description_brief_one %></p>
+              </div>
+              <div class="description_item">
+                <img src="/static/assets/page-views/public/alarm/url.png">
+                <p class="line"></p>
+                <p class="description_title"><%= description_title_two %></p>
+                <p class="description_brief"><%= description_brief_two %></p>
+              </div>
+              <div class="description_item">
+                <img src="/static/assets/page-views/public/alarm/url.png">
+                <p class="line"></p>
+                <p class="description_title"><%= description_title_three %></p>
+                <p class="description_brief"><%= description_brief_three %></p>
+              </div>
+              <div class="description_item">
+                <img src="/static/assets/page-views/public/alarm/url.png">
+                <p class="line"></p>
+                <p class="description_title"><%= description_title_four %></p>
+                <p class="description_brief"><%= description_brief_four %></p>
+              </div>
+            </div>
+<!-- 链接跳转修改 -->
+            <a class="signup-mobile"href="/product/cloud-platform"><%= introduction_a %></a>
+          </div>
+        </div>
+      </div>
+      <div class="content-product">
+        <div class="product-center">
+          <div class="product-title"><%= product_title_one %><span><%= product_title_two %></span></div>
+          <div class="feature">
+            <div class="feature-left">
+              <img class="block-one" src="/static/assets/page-views/public/alarm/bg.jpg">
+              <img class="block-two" src="/static/assets/page-views/public/alarm/bg2.jpg">
+            </div>
+            <div class="feature-right">
+              <div class="feature-item feature-item-one">
+                <img src="/static/assets/page-views/public/alarm/al1.png">
+                <p class="item-title"><%= feature_title_one %></p>
+                <p class="item-brief"><%= feature_brief_one %></p>
+              </div>
+              <div class="feature-item feature-item-two">
+                <img src="/static/assets/page-views/public/alarm/al2.png">
+                <p class="item-title"><%= feature_title_two %></p>
+                <p class="item-brief"><%= feature_brief_two %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end for content -->
+    </div>
+    </article>
+<%- include('../../../../components/footer.ejs') %>
