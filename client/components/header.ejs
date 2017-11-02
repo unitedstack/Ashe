@@ -20,7 +20,7 @@
       <li>
         <a href="javascript:void(0)" class="public-cloud">
           <%= public_cloud %>
-          <i class="icon-arrow-down"></i>
+          <!-- <i class="icon-arrow-down"></i> -->
         </a>
         <div class="dropdown-wrapper">
           <ul class="dropdown">
@@ -32,16 +32,32 @@
           </ul>
         </div>
       </li>
-      <li>
+
+      <li class="multi-dropdown">
         <a href="javascript:void(0)" class="uos-product">
           <%= product %>
-          <i class="icon-arrow-down"></i>
         </a>
         <div class="dropdown-wrapper wide-wrapper">
           <ul class="dropdown wide">
             <li><a href="/product/environment"><%= environment %></a></li>
-            <li><a href="/product/hardware"><%= hardware %></a></li>
-            <li><a href="/product/cloud-platform"><%= cloud_platform %></a></li>
+            <li class="multi">
+              <a href="/product/hardware/rack-server"><%= hardware %></a>
+              <ul class="child-dropdown">
+                <li class="two"><a href="/product/hardware/rack-server"><%= rack_server %></a></li>
+                <li class="two"><a href="/product/hardware/tower-server"><%= tower_server %></a></li>
+                <li class="two"><a href="/product/hardware/blade-server"><%= blade_server %></a></li>
+                <li class="two"><a href="/product/hardware/enterprise-storage"><%= enterprise_storage %></a></li>
+              </ul>
+            </li>
+            <li class="multi">
+              <a href="/product/cloud-platform/enterprise"><%= cloud_platform %></a>
+              <ul class="child-dropdown">
+                <li class="two"><a href="/product/cloud-platform/enterprise">Enterprise</a></li>
+                <li class="two"><a href="/product/cloud-platform/director">Director</a></li>
+                <li class="two"><a href="/product/cloud-platform/operator">Operator</a></li>
+                <li class="two"><a href="/product/cloud-platform/manager">Manager</a>
+              </ul>
+            </li>
             <li><a href="/product/storage"><%= storage %></a></li>
             <li><a href="/product/big-data"><%= big_data %></a></li>
             <li><a href="/product/cloud-security"><%= cloud_security %></a></li>

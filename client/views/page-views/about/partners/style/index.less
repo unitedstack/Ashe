@@ -143,5 +143,41 @@
   }
 }
 @media (min-width: @mobile_width) and (max-width: @pad_width) {
-  
+  .wrapper {
+    width: 100% !important;
+    padding: 0 8%;
+    box-sizing: border-box;
+    margin-bottom: 50px !important;
+    .partners-detail {
+      .list {
+        width: 22% !important;
+        max-height: 500px !important;
+        margin-right: 4% !important;
+        padding: 15px !important;
+        img {
+          width: 80% !important;
+          height: auto !important;
+          margin: 0 auto !important;
+          display: block;
+        }
+        &:nth-of-type(4n) {
+          margin-right: 0 !important;
+        }
+      }
+    }
+    .partners-img {
+      .item {
+        width: 22% !important;
+        height: auto !important;
+        margin-right: 4% !important;
+        img {
+          width: 100% !important;
+          box-sizing: border-box;
+        }
+        &:nth-of-type(4n) {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
 }

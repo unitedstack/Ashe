@@ -45,7 +45,8 @@ require('./style/index.less');
     html[index++] = '<div class="g-slider">';
     html[index++] = '<div class="track"><div class="hasValue"></div><div class="thumb"><span class="num"></span></div></div>';
     html[index++] = '<div class="numberPad">' + this.min + ' - ' + this.max + this.unit + '</div>';
-    html[index++] = '<div class="resPad"><input class="numberUnit" type="text" value="" /><div class="unit">' + this.unit + '</div></div></div>';
+    html[index++] = '<div class="resPad"><input class="numberUnit" type="text" value="" /><div class="unit">' + this.unit + '</div></div>';
+    html[index++] = '<div class="resPad-mobile"><span class="numberunitMobile">' + this.min + '</span><span class="unit">' + this.unit + '</span></div></div></div>';
     this.wrapper.html(html.join(''));
     var that = this;
     this.x = 0;
@@ -104,8 +105,11 @@ require('./style/index.less');
       e.preventDefault();
     });
     
+
     this.wrapper.find('.track').on('click',function(e) {
       var v = Math.round( (e.pageX - $(this).offset().left) / that.barLength * (that.max - that.min) + that.min );
+      $(this).parent().children().last().children().first().html(v);
+      $(this).parent().children().last().children().last().css('left', $(this).parent().children().last().children().first().width());
       if (!isNaN(v)) {
         that.setValue(v);
       }
@@ -127,6 +131,11 @@ require('./style/index.less');
       });
       this.wrapper.find('input').val(v);
       this.wrapper.find('.hasValue').width(pos);
+      // if(this.wrapper.find('.hasValue').parents('.for-tab')) {
+      //   console.log(23)
+      // }
+
+      // this.wrapper.find('.for-tab').find('.hasValue').width();
       this.value = v;
       if (this.onChange) {
         this.onChange(v);
@@ -671,3 +680,43 @@ require('./style/index.less');
     $(this).css('left',0);
   });
 })(document, window);
+window.onload = window.onresize = window.onscroll = function(){
+  if (G.mobile) {
+    $('.bg-framework').css({'width': $(window).width() + 15, 'height': $(window).height() - $('.volcano-global-footer').height() - $('.pricelist').height() - $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
+    $(this).siblings('ul').css({'display':'block', 'top': -$('.pricelist ul li').height() * $('.pricelist ul li').length + 'px'});
+    $('.shopping').click(function(e) {
+      e.stopPropagation();
+      if($(this).hasClass('active')) {
+        $(this).siblings('ul').css({'display':'none'});
+        $('.bg-framework').css({'display': 'none'});
+      } else {
+        $(this).addClass('active');
+        $('body').css('overflow','hidden');
+        $('.bg-framework').css({'display': 'block'});
+        $('.bg-framework').css({'width': $(window).width() + 15, 'height': $(window).height() - $('.volcano-global-footer').height() - $('.pricelist').height() - $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
+        $(this).siblings('ul').css({'display':'block', 'top': -$('.pricelist ul li').height() * $('.pricelist ul li').length + 'px'});
+        $('.close').click(function(){
+          $('.bg-framework').css({'height': $(window).height() - $('.volcano-global-footer').height() - $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
+          $(this).parents('ul').css({'top': -$('.pricelist ul li').height() * ($('.pricelist ul li').length - 1) + 'px'});
+          if ($(this).parents('ul').children('li').length - 1 == 0) {
+            $('.bg-framework').css({'display': 'none'});
+            $('body').css('overflow','');
+          } else {
+            $('.bg-framework').css({'display': 'block'});
+          }
+        });
+        if ($(this).siblings('ul').children('li').length == 0) {
+          $('.bg-framework').css({'display': 'none'});
+          $('body').css('overflow','');
+        } else {
+          $('.bg-framework').css({'display': 'block'});
+        }
+        $('.adds').click(function() {
+          $('.pricelist ul').css('display', 'none');
+          $('body').css('overflow','hidden');
+        });
+        $(this).removeClass('active');
+      }
+    });
+  }
+};
