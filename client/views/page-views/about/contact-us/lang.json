@@ -1,0 +1,26 @@
+{
+  "en": {
+    "banner_brief": "A full range of courseware",
+    "banner_describe": "UnitedStack has cloud training to lecturers, take you to the professional road.",
+    "banner_describe_mobile": "UnitedStack has cloud training to lecturers",
+    "banner_title": "Train list",
+    "breadcrumb_one": "Home",
+    "breadcrumb_three": "Training list",
+    "breadcrumb_two": "Technical train",
+    "cssFile": "/static/dist/page_about_contact-us.min.css",
+    "jsFile": "/static/dist/page_about_contact-us.min.js",
+    "title": "UnitedStack - Contact Us"
+  },
+  "zh": {
+    "banner_brief": "同方云",
+    "banner_describe": "无论何时何地，同方云都将24*7*365及时与您取得联系，为您提供最优质的云服务体验。我们秉着用户至上，执着与为客户着想，用心服务的态度，真诚为您服务，为您解决一切烦恼。",
+    "banner_describe_mobile": "无论何时何地，同方云都将24*7*365及时与您取得联系，为您提供最优质的云服务体验。",
+    "banner_title": "开放、开源、透明",
+    "breadcrumb_one": "首页",
+    "breadcrumb_three": "关于有云",
+    "breadcrumb_two": "关于我们",
+    "cssFile": "/static/dist/page_about_contact-us.min.css",
+    "jsFile": "/static/dist/page_about_contact-us.min.js",
+    "title": "UnitedStack - 联系我们"
+  }
+}

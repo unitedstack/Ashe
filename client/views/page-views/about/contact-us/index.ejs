@@ -1,0 +1,44 @@
+<%- include('../../../../components/header.ejs') %>
+<div class="contact-us">
+  <article>
+    <section class="content-banner">
+      <div class="type-area">
+        <div class="banner">
+          <div class="banner-title"><%= banner_title %></div>
+          <div class="banner-brief"><%= banner_brief %></div>
+          <div class="banner-describe"><%= banner_describe %></div>
+          <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+        </div>
+      </div>
+      <img class="banner-img" src="/static/assets/page-views/about/contact-us/banner.jpg">
+      <img class="banner-img-mobile" src="/static/assets/page-views/about/contact-us/banner.jpg">
+    </section>
+    <div class="breadcrumb">
+      <ul class="breadcrumb-center">
+        <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+        <li class="second"><a class="success" href="/about/company"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+        <li class="third"><%= breadcrumb_three %></li>
+      </ul>
+    </div>
+    <div class="center">
+      <div class="contact-title">
+        <div class="contact">CONTACT US</div>
+        <div class="contact-content"><span>联系</span>我们</div>
+      </div>
+      <div class="contact-footer">
+        <div class="contact-left">
+          <img src="/static/assets/page-views/about/contact-us/map.png">
+        </div>
+        <div class="contact-right">
+          <div class="biref">联系我们<span>400-898-5401</span></div>
+          <div class="email">邮箱<span><a class="toemail" href="mailto:contact@unitedstack.com">contact@unitedstack.com</a></span></div>
+          <div class="address">地址
+            <span>北京市海淀区王庄路1号清华同方科技大厦D座17层</span>
+            <span>Tsinghua Tongfang Technology Building D Block 17 Layer Hi-tech Plaza,Haidian Beijing,China,100083</span>
+          </div>
+        </div>
+      </div>
+    </div>
+   </article>
+</div>
+<%- include('../../../../components/footer.ejs') %>

@@ -1,0 +1,244 @@
+@import '../../../../../components/header.less';
+@import '../../../../../components/footer.less';
+.contact-us{
+  @media screen and (min-width: @pad_width) {
+    .center {
+      width: 1170px;
+      margin: 0 auto;
+      .contact-title {
+        .contact {
+          font-family: MicrosoftYaHei-Bold!important;
+          font-weight: bold;
+          font-size: 80px;
+          color: #F3F5F8;
+          letter-spacing: 2px;
+          line-height: 90px;
+          text-align: center;
+        }
+        .contact-content {
+          font-family: PingFangSC-Light!important;
+          margin-top: -50px;
+          margin-bottom: 60px;
+          font-weight: 200;
+          font-size: 48px;
+          letter-spacing: 4px;
+          text-align: center;
+          span {
+            color: @color_button_blue;
+          }
+        }
+      }
+      .contact-footer {
+        overflow: hidden;
+        margin-bottom: 200px;
+        .contact-left {
+          float: left;
+          img {
+            width: 740px;
+            height: 408px;
+          }
+        }
+        .contact-right {
+          float: right;
+          width: 319px;
+          height: 308px;
+          background: @color_white;
+          border: 1px solid #D7DAE2;
+          border-radius: 2px;
+          padding: 50px 20px 50px 30px;
+          box-sizing: content-box;
+          .biref, .email {
+            font-family: MicrosoftYaHeiLight !important;
+            font-weight: 200;
+            font-size: 14px;
+            color: @color_character_grade_one;
+            letter-spacing: 1px;
+            span {
+              font-family: MicrosoftYaHeiLight !important;
+              font-weight: 200;
+              display: block;
+              margin: 14px 0 40px;
+              font-size: 12px;
+              color: @color_button_blue;
+              .toemail {
+                color: @color_button_blue;
+              }
+            }
+          }
+          .address {
+            font-family: MicrosoftYaHeiLight !important;
+            font-weight: 200;
+            font-size: 14px;
+            color: @color_character_grade_one;
+            letter-spacing: 1px;
+            span {
+              font-family: MicrosoftYaHeiLight !important;
+              font-weight: 200;
+              display: block;
+              font-size: 12px;
+            }
+            span:first-child {
+              color: @color_content;
+              line-height: 14px;
+              margin: 14px 0 8px;
+            }
+            span:last-child {
+              color: @color_content;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: @mobile_width) and (max-width: @pad_width) {
+    .center {
+      width: 92%;
+      margin: 0 auto;
+      .contact-title {
+        .contact {
+          font-family: MicrosoftYaHei-Bold!important;
+          font-weight: bold;
+          font-size: 80px;
+          color: #F3F5F8;
+          letter-spacing: 2px;
+          line-height: 90px;
+          text-align: center;
+        }
+        .contact-content {
+          font-family: PingFangSC-Light!important;
+          margin-top: -50px;
+          margin-bottom: 60px;
+          font-weight: 200;
+          font-size: 48px;
+          letter-spacing: 4px;
+          text-align: center;
+          span {
+            color: @color_button_blue;
+          }
+        }
+      }
+      .contact-footer {
+        overflow: hidden;
+        margin-bottom: 200px;
+        .contact-left {
+          float: left;
+          width: 60%;
+          img {
+            width: 100%;
+            height: 408px;
+          }
+        }
+        .contact-right {
+          float: right;
+          width: 31%;
+          height: 308px;
+          background: @color_white;
+          border: 1px solid #D7DAE2;
+          border-radius: 2px;
+          padding: 50px 20px 50px 30px;
+          box-sizing: content-box;
+          .biref, .email {
+            font-family: MicrosoftYaHeiLight !important;
+            font-weight: 200;
+            font-size: 14px;
+            color: @color_character_grade_one;
+            letter-spacing: 1px;
+            span {
+              font-family: MicrosoftYaHeiLight !important;
+              font-weight: 200;
+              display: block;
+              margin: 14px 0 40px;
+              font-size: 12px;
+              color: @color_button_blue;
+              .toemail {
+                color: @color_button_blue;
+              }
+            }
+          }
+          .address {
+            font-family: MicrosoftYaHeiLight !important;
+            font-weight: 200;
+            font-size: 14px;
+            color: @color_character_grade_one;
+            letter-spacing: 1px;
+            span {
+              font-family: MicrosoftYaHeiLight !important;
+              font-weight: 200;
+              display: block;
+              font-size: 12px;
+            }
+            span:first-child {
+              color: @color_content;
+              line-height: 14px;
+              margin: 14px 0 8px;
+            }
+            span:last-child {
+              color: @color_content;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: @mobile_width) {
+    .center {
+      width: 92%;
+      margin: 80px auto;
+      .contact-title {
+        display: none
+      }
+      .contact-footer {
+        margin-bottom: 27px;
+        .contact-left {
+          img {
+            width: 100%;
+          }
+        }
+        .contact-right {
+          margin-top: 40px;
+          .email {
+            margin: 16px 0;
+          }
+          .biref, .email {
+            font-family: MicrosoftYaHeiLight !important;
+            font-weight: 200;
+            font-size: 14px;
+            color: @color_character_grade_one;
+            letter-spacing: 0.5px;
+            line-height: 26px;
+            span {
+              font-family: MicrosoftYaHeiLight !important;
+              font-weight: 200;
+              display: inline-block;
+              font-size: 14px;
+              color: @color_button_blue;
+              letter-spacing: 0.5px;
+              line-height: 26px;
+              margin-left: 10px;
+              .toemail {
+                color: @color_button_blue;
+              }
+            }
+          }
+          .address {
+            font-family: MicrosoftYaHeiLight !important;
+            font-weight: 200;
+            font-size: 14px;
+            color: @color_character_grade_one;
+            letter-spacing: 1px;
+            span {
+              font-family: MicrosoftYaHeiLight !important;
+              font-weight: 200;
+              font-size: 14px;
+              color: #333333;
+              letter-spacing: 0.5px;
+              line-height: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
