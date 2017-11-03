@@ -5,6 +5,13 @@
     "title": "qwe"
   },
   "zh": {
+    "banner_brief": "有云，只交付予您更好的体验",
+    "banner_describe": "我们不只关注成本，还关注更好的用户体验。我们承诺交付与您最优质、量身定制的云计算服务，是您值得信任的云服务专家",
+    "banner_describe_mobile": "我们不只关注成本，还关注更好的用户体验。",
+    "banner_title": "价格预算",
+    "breadcrumb_one": "首页",
+    "breadcrumb_three": "价格预算",
+    "breadcrumb_two": "公有云",
     "cssFile": "/static/dist/page_public_price.min.css",
     "jsFile": "/static/dist/page_public_price.min.js",
     "title":"价格预算"

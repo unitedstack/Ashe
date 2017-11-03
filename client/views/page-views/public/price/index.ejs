@@ -1,40 +1,36 @@
 <%- include('../../../../components/header.ejs') %>
 <div class="price-budget">
-  <div id="v1-page-price">
-    <section point="v1-page-price-0" id="price">
-      <div class="w1280">
-        <ul class="content">
-<!-- 云主机 -->
-          <li>
-            <h1>
-              <span class="icon icon-instance"></span>云主机
-            </h1>
-            <div class="box">
-              <div class="tips-2">云主机的价格由他的配置大小（CPU、内存的数量）来决定。如果您使用的操作系统还有额外的授权费用，比如Windows或Linux分发版，还需要附加额外的厂商授权费用。</div>
-              <div class="interactiveArea"></div>
-              <div class="res">
-                <div>
-                  <span class="month"><strong></strong>元/月</span>
-                  <span class="hour">(<strong></strong>元/小时)</span>
-                </div>
-                <a href="javascript:;" class="adds">加入清单</a>
-                <div class="count">
-                  <a href="javascript:;" class="min">-</a>
-                  <input type="text" data-type="Instance" value="1" />
-                  <a href="javascript:;" class="add">+</a>
-                </div>
-              </div>
-              <div class="tips">【注】:主机关机时，收系统盘的费用(按照系统盘的占用空间收费，收费标准同性能型硬盘)，CPU/内存不再收费。</div>
-            </div>
-          </li>
-<!-- 云主机快照 -->
-          <li>
-            <h1>
-              <span class="icon icon-snapshot"></span>
-              云主机快照
-            </h1>
-            <div class="box">
-              <div class="tips-2">主机快照用于云主机的备份与恢复，可以随时对云主机秒极打快照，并且可以随时从任意快照节点秒级恢复。</div>
+  <article>
+    <section class="content-banner">
+      <div class="type-area">
+        <div class="banner">
+          <div class="banner-title"><%= banner_title %></div>
+          <div class="banner-brief"><%= banner_brief %></div>
+          <div class="banner-describe"><%= banner_describe %></div>
+          <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+        </div>
+      </div>
+      <img class="banner-img" src="/static/assets/page-views/train/train-list/banner.png">
+      <img class="banner-img-mobile" src="/static/assets/page-views/train/train-list/banner-m.png">
+    </section>
+    <div class="breadcrumb">
+      <ul class="breadcrumb-center">
+        <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+        <li class="second"><a class="success" href="/train/technical-train"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+        <li class="third"><%= breadcrumb_three %></li>
+      </ul>
+    </div>
+    <div id="v1-page-price">
+      <section point="v1-page-price-0" id="price">
+        <div class="w1280">
+          <ul class="content">
+  <!-- 云主机 -->
+            <li>
+              <h1>
+                <span class="icon icon-instance"></span>云主机
+              </h1>
+              <div class="box">
+                <div class="tips-2">云主机的价格由他的配置大小（CPU、内存的数量）来决定。如果您使用的操作系统还有额外的授权费用，比如Windows或Linux分发版，还需要附加额外的厂商授权费用。</div>
                 <div class="interactiveArea"></div>
                 <div class="res">
                   <div>
@@ -44,177 +40,202 @@
                   <a href="javascript:;" class="adds">加入清单</a>
                   <div class="count">
                     <a href="javascript:;" class="min">-</a>
-                    <input type="text" data-type="HostSnapshot" value="1" />
+                    <input type="text" data-type="Instance" value="1" />
                     <a href="javascript:;" class="add">+</a>
                   </div>
                 </div>
-                <div class="tips">注：云主机快照价格由它的系统盘大小（GB）决定。</div>
-            </div>
-          </li>
-<!-- 公网IP -->
-          <li>
-            <h1>
-              <span class="icon icon-FloatingIP"></span>
-              公网IP
-            </h1>
-            <div class="box">
-              <div class="tips-2">如果您的云主机或路由器需连接互联网，那么您需要申请公网 IP 地址，其价格由公网IP的带宽决定。</div>
-              <div class="interactiveArea"></div>
-              <div class="res">
-                <div>
-                  <span class="month"><strong></strong>元/月</span>
-                  <span class="hour">(<strong></strong>元/小时)</span>
-                </div>
-                <a href="javascript:;" class="adds">加入清单</a>
-                <div class="count">
-                  <a href="javascript:;" class="min">-</a>
-                  <input type="text" data-type="IP" value="1" />
-                  <a href="javascript:;" class="add">+</a>
-                </div>
+                <div class="tips">【注】:主机关机时，收系统盘的费用(按照系统盘的占用空间收费，收费标准同性能型硬盘)，CPU/内存不再收费。</div>
               </div>
-            </div>
-          </li>
-<!-- 路由器 -->
-          <li>
-            <h1>
-              <span class="icon icon-router"></span>
-              路由器
-            </h1>
-            <div class="box">
-              <div class="tips-2">路由器用于您的多个私有网络之间，以及私有网络与互联网之间的连通。路由器可以绑定公网IP，还可以通过VPN方式与其它传统网络连接。</div>
-              <div class="interactiveArea"></div>
-              <div class="res">
-                <div>
-                  <span class="month"><strong></strong>元/月</span>
-                  <span class="hour">(<strong></strong>元/小时)</span>
-                </div>
-                <a href="javascript:;" class="adds">加入清单</a>
-                <div class="count">
-                  <a href="javascript:;" class="min">-</a>
-                  <input type="text" data-type="Router" value="1" />
-                  <a href="javascript:;" class="add">+</a>
-                </div>
+            </li>
+  <!-- 云主机快照 -->
+            <li>
+              <h1>
+                <span class="icon icon-snapshot"></span>
+                云主机快照
+              </h1>
+              <div class="box">
+                <div class="tips-2">主机快照用于云主机的备份与恢复，可以随时对云主机秒极打快照，并且可以随时从任意快照节点秒级恢复。</div>
+                  <div class="interactiveArea"></div>
+                  <div class="res">
+                    <div>
+                      <span class="month"><strong></strong>元/月</span>
+                      <span class="hour">(<strong></strong>元/小时)</span>
+                    </div>
+                    <a href="javascript:;" class="adds">加入清单</a>
+                    <div class="count">
+                      <a href="javascript:;" class="min">-</a>
+                      <input type="text" data-type="HostSnapshot" value="1" />
+                      <a href="javascript:;" class="add">+</a>
+                    </div>
+                  </div>
+                  <div class="tips">注：云主机快照价格由它的系统盘大小（GB）决定。</div>
               </div>
-            </div>
-          </li>
-<!-- 云硬盘 -->
-          <li class="disk">
-            <h1>
-              <span class="icon icon-volume"></span>
-              云硬盘
-            </h1>
-            <div class="box">
-              <div class="tips-2">每个云主机都带有系统盘，Linux主机系统盘为 20G、Windows主机系统盘为 50G。您还可以购买额外的云硬盘挂载到云主机上，以增大云主机的硬盘空间。云硬盘的价格由它的容量大小来决定。
-              </div>
-              <div class="tablist">
-                <span class="tab selected">性能型云硬盘</span>
-                <span class="tab">容量型云硬盘</span>
-              </div>
-              <div class="for-tab">
+            </li>
+  <!-- 公网IP -->
+            <li>
+              <h1>
+                <span class="icon icon-FloatingIP"></span>
+                公网IP
+              </h1>
+              <div class="box">
+                <div class="tips-2">如果您的云主机或路由器需连接互联网，那么您需要申请公网 IP 地址，其价格由公网IP的带宽决定。</div>
                 <div class="interactiveArea"></div>
                 <div class="res">
-                  <div class="volumePrice">
+                  <div>
                     <span class="month"><strong></strong>元/月</span>
                     <span class="hour">(<strong></strong>元/小时)</span>
                   </div>
                   <a href="javascript:;" class="adds">加入清单</a>
                   <div class="count">
                     <a href="javascript:;" class="min">-</a>
-                    <input type="text" data-type="Volume" value="1" />
+                    <input type="text" data-type="IP" value="1" />
                     <a href="javascript:;" class="add">+</a>
                   </div>
                 </div>
-                <div class="tips">注：我们的云硬盘默认最高可达6000IOPS，吞吐量可达170M/s，如有更高的需求，需向我们提交申请。创建单块云硬盘最小容量10GB。</div>
               </div>
-              <div class="for-tab" style="display:none">
+            </li>
+  <!-- 路由器 -->
+            <li>
+              <h1>
+                <span class="icon icon-router"></span>
+                路由器
+              </h1>
+              <div class="box">
+                <div class="tips-2">路由器用于您的多个私有网络之间，以及私有网络与互联网之间的连通。路由器可以绑定公网IP，还可以通过VPN方式与其它传统网络连接。</div>
                 <div class="interactiveArea"></div>
                 <div class="res">
-                  <div class="sataVolumePrice">
+                  <div>
                     <span class="month"><strong></strong>元/月</span>
                     <span class="hour">(<strong></strong>元/小时)</span>
                   </div>
                   <a href="javascript:;" class="adds">加入清单</a>
                   <div class="count">
                     <a href="javascript:;" class="min">-</a>
-                    <input type="text" data-type="SataVolume" value="1" />
+                    <input type="text" data-type="Router" value="1" />
                     <a href="javascript:;" class="add">+</a>
                   </div>
                 </div>
-                <div class="tips">容量型云硬盘IOPS可达500，吞吐量可达48MB/s。</div>
               </div>
-            </div>
-          </li>
-<!-- 云硬盘快照 -->
-          <li>
-            <h1>
-              <span class="icon icon-snapshot"></span>
-              云硬盘快照
-            </h1>
-            <div class="box">
-              <div class="tips-2">云硬盘快照用于云硬盘的备份与恢复，可以随时对云硬盘秒极打快照，并且可以随时从任意快照节点秒级恢复。</div>
-              <div class="interactiveArea"></div>
-              <div class="res">
-                <div>
-                  <span class="month"><strong></strong>元/月</span>
-                  <span class="hour">(<strong></strong>元/小时)</span>
+            </li>
+  <!-- 云硬盘 -->
+            <li class="disk">
+              <h1>
+                <span class="icon icon-volume"></span>
+                云硬盘
+              </h1>
+              <div class="box">
+                <div class="tips-2">每个云主机都带有系统盘，Linux主机系统盘为 20G、Windows主机系统盘为 50G。您还可以购买额外的云硬盘挂载到云主机上，以增大云主机的硬盘空间。云硬盘的价格由它的容量大小来决定。
                 </div>
-                <a href="javascript:;" class="adds">加入清单</a>
-                <div class="count">
-                  <a href="javascript:;" class="min">-</a>
-                  <input type="text" data-type="Snapshot" value="1" />
-                  <a href="javascript:;" class="add">+</a>
+                <div class="tablist">
+                  <span class="tab selected">性能型云硬盘</span>
+                  <span class="tab">容量型云硬盘</span>
+                </div>
+                <div class="for-tab">
+                  <div class="interactiveArea"></div>
+                  <div class="res">
+                    <div class="volumePrice">
+                      <span class="month"><strong></strong>元/月</span>
+                      <span class="hour">(<strong></strong>元/小时)</span>
+                    </div>
+                    <a href="javascript:;" class="adds">加入清单</a>
+                    <div class="count">
+                      <a href="javascript:;" class="min">-</a>
+                      <input type="text" data-type="Volume" value="1" />
+                      <a href="javascript:;" class="add">+</a>
+                    </div>
+                  </div>
+                  <div class="tips">注：我们的云硬盘默认最高可达6000IOPS，吞吐量可达170M/s，如有更高的需求，需向我们提交申请。创建单块云硬盘最小容量10GB。</div>
+                </div>
+                <div class="for-tab" style="display:none">
+                  <div class="interactiveArea"></div>
+                  <div class="res">
+                    <div class="sataVolumePrice">
+                      <span class="month"><strong></strong>元/月</span>
+                      <span class="hour">(<strong></strong>元/小时)</span>
+                    </div>
+                    <a href="javascript:;" class="adds">加入清单</a>
+                    <div class="count">
+                      <a href="javascript:;" class="min">-</a>
+                      <input type="text" data-type="SataVolume" value="1" />
+                      <a href="javascript:;" class="add">+</a>
+                    </div>
+                  </div>
+                  <div class="tips">容量型云硬盘IOPS可达500，吞吐量可达48MB/s。</div>
                 </div>
               </div>
-              <div class="tips">云硬盘快照价格由它的容量大小（GB）决定。</div>
-            </div>
-          </li>
-<!-- 监控报警 -->
-          <li>
-            <h1>
-              <span class="icon icon-monitor"></span>
-              监控报警
-            </h1>
-            <div class="box">
-              <div class="tips-2">监控报警系统为UOS云平台上的资源提供实时的可视化的监控数据，系统提供了多种监控指标，可以对一个或多个指标，灵活设定报警规则，发送报警通知，以便让用户能及时的了解资源的使用情况，性能问题以及健康状况。</div>
-              <div class="interactiveArea"></div>
-              <div class="res">
-                <div>
-                  <span class="month"><strong></strong>元/月</span>
-                  <span class="hour">(<strong></strong>元/小时)</span>
+            </li>
+  <!-- 云硬盘快照 -->
+            <li>
+              <h1>
+                <span class="icon icon-snapshot"></span>
+                云硬盘快照
+              </h1>
+              <div class="box">
+                <div class="tips-2">云硬盘快照用于云硬盘的备份与恢复，可以随时对云硬盘秒极打快照，并且可以随时从任意快照节点秒级恢复。</div>
+                <div class="interactiveArea"></div>
+                <div class="res">
+                  <div>
+                    <span class="month"><strong></strong>元/月</span>
+                    <span class="hour">(<strong></strong>元/小时)</span>
+                  </div>
+                  <a href="javascript:;" class="adds">加入清单</a>
+                  <div class="count">
+                    <a href="javascript:;" class="min">-</a>
+                    <input type="text" data-type="Snapshot" value="1" />
+                    <a href="javascript:;" class="add">+</a>
+                  </div>
                 </div>
-                <a href="javascript:;" class="adds">加入清单</a>
-                <div class="count">
-                  <a href="javascript:;" class="min">-</a>
-                  <input type="text" data-type="Alarm" value="1" />
-                  <a href="javascript:;" class="add">+</a>
-                </div>
+                <div class="tips">云硬盘快照价格由它的容量大小（GB）决定。</div>
               </div>
-             </div>
-          </li>
-        </ul>
-        <div class="bg-framework">
-        </div>
-        <div class="pricelist">
-          <h1 class="title">价格预算清单</h1>
-          <img src="" class="shopping">
-          <div class="nav">
-            <a href="javascript:;" class="month selected">月</a>
-            <a href="javascript:;" class="hour">小时</a>
-          </div>
-          <ul>
+            </li>
+  <!-- 监控报警 -->
+            <li>
+              <h1>
+                <span class="icon icon-monitor"></span>
+                监控报警
+              </h1>
+              <div class="box">
+                <div class="tips-2">监控报警系统为UOS云平台上的资源提供实时的可视化的监控数据，系统提供了多种监控指标，可以对一个或多个指标，灵活设定报警规则，发送报警通知，以便让用户能及时的了解资源的使用情况，性能问题以及健康状况。</div>
+                <div class="interactiveArea"></div>
+                <div class="res">
+                  <div>
+                    <span class="month"><strong></strong>元/月</span>
+                    <span class="hour">(<strong></strong>元/小时)</span>
+                  </div>
+                  <a href="javascript:;" class="adds">加入清单</a>
+                  <div class="count">
+                    <a href="javascript:;" class="min">-</a>
+                    <input type="text" data-type="Alarm" value="1" />
+                    <a href="javascript:;" class="add">+</a>
+                  </div>
+                </div>
+               </div>
+            </li>
           </ul>
-          <div class="totalBar">
-            <div class="total month">总计 <strong>0.00</strong>元/月</div>
-            <div class="total hour">总计 <strong>0.0000</strong>元/小时</div>
-            <div class="nav phone-show">
+          <div class="bg-framework">
+          </div>
+          <div class="pricelist">
+            <h1 class="title">价格预算清单</h1>
+            <img src="" class="shopping">
+            <div class="nav">
               <a href="javascript:;" class="month selected">月</a>
               <a href="javascript:;" class="hour">小时</a>
             </div>
+            <ul>
+            </ul>
+            <div class="totalBar">
+              <div class="total month">总计 <strong>0.00</strong>元/月</div>
+              <div class="total hour">总计 <strong>0.0000</strong>元/小时</div>
+              <div class="nav phone-show">
+                <a href="javascript:;" class="month selected">月</a>
+                <a href="javascript:;" class="hour">小时</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
+  </article>
 </div>
 <%- include('../../../../components/footer.ejs') %>
 

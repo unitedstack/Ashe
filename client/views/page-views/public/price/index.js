@@ -2,6 +2,7 @@ require('./style/index.less');
 
 (function(doc, win) {
   'use strict';
+  win.barLength = 0;
   var flavorObj = {'flavors': [{'name': 'compute-12', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/215ea357-2d56-4387-9991-0c083806e3f8', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/215ea357-2d56-4387-9991-0c083806e3f8', 'rel': 'bookmark'}], 'ram': 12288, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 12, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': '215ea357-2d56-4387-9991-0c083806e3f8'}, {'name': 'memory-2', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/21c0cf18-d0dc-43ab-8fdb-40ba8b0935d9', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/21c0cf18-d0dc-43ab-8fdb-40ba8b0935d9', 'rel': 'bookmark'}], 'ram': 8192, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 2, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': '21c0cf18-d0dc-43ab-8fdb-40ba8b0935d9'}, {'name': 'compute-8', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/270a6d65-d1da-4a15-ad3a-7bcf969839e5', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/270a6d65-d1da-4a15-ad3a-7bcf969839e5', 'rel': 'bookmark'}], 'ram': 8192, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 8, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': '270a6d65-d1da-4a15-ad3a-7bcf969839e5'}, {'name': 'micro-2', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/3332c026-533a-43d0-b415-abd3fdab09bf', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/3332c026-533a-43d0-b415-abd3fdab09bf', 'rel': 'bookmark'}], 'ram': 1024, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 1, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': '3332c026-533a-43d0-b415-abd3fdab09bf'}, {'name': 'standard-2', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/7f05780f-caf6-43bd-af55-b183cec6a758', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/7f05780f-caf6-43bd-af55-b183cec6a758', 'rel': 'bookmark'}], 'ram': 4096, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 2, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': '7f05780f-caf6-43bd-af55-b183cec6a758'}, {'name': 'standard-12', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/8aaf699a-c760-43cf-8241-4b4cabbfaa51', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/8aaf699a-c760-43cf-8241-4b4cabbfaa51', 'rel': 'bookmark'}], 'ram': 24576, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 12, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': '8aaf699a-c760-43cf-8241-4b4cabbfaa51'}, {'name': 'micro-1', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/8abaa0f9-30e1-4509-8ba5-5c97366029df', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/8abaa0f9-30e1-4509-8ba5-5c97366029df', 'rel': 'bookmark'}], 'ram': 512, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 1, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': '8abaa0f9-30e1-4509-8ba5-5c97366029df'}, {'name': 'memory-12', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/8e49d971-a306-4e59-ab04-fd0db8ba8f06', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/8e49d971-a306-4e59-ab04-fd0db8ba8f06', 'rel': 'bookmark'}], 'ram': 49152, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 12, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': '8e49d971-a306-4e59-ab04-fd0db8ba8f06'}, {'name': 'standard-1', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/8e7ae928-b7ee-4883-b2b5-49d23e0b1909', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/8e7ae928-b7ee-4883-b2b5-49d23e0b1909', 'rel': 'bookmark'}], 'ram': 2048, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 1, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': '8e7ae928-b7ee-4883-b2b5-49d23e0b1909'}, {'name': 'memory-8', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/aa5987fe-6bf4-4162-a817-5cdc5c4338db', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/aa5987fe-6bf4-4162-a817-5cdc5c4338db', 'rel': 'bookmark'}], 'ram': 32768, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 8, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': 'aa5987fe-6bf4-4162-a817-5cdc5c4338db'}, {'name': 'memory-4', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/b59c48a8-f816-4689-8f0c-2951d37e9c44', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/b59c48a8-f816-4689-8f0c-2951d37e9c44', 'rel': 'bookmark'}], 'ram': 16384, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 4, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': 'b59c48a8-f816-4689-8f0c-2951d37e9c44'}, {'name': 'compute-2', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/b59d6ef7-95dd-424d-9db5-a2bc9c792f73', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/b59d6ef7-95dd-424d-9db5-a2bc9c792f73', 'rel': 'bookmark'}], 'ram': 2048, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 2, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': 'b59d6ef7-95dd-424d-9db5-a2bc9c792f73'}, {'name': 'standard-4', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/be7f5c4e-08c2-4576-8bac-290d2a9335f5', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/be7f5c4e-08c2-4576-8bac-290d2a9335f5', 'rel': 'bookmark'}], 'ram': 8192, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 4, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': 'be7f5c4e-08c2-4576-8bac-290d2a9335f5'}, {'name': 'compute-4', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/c40bf599-a979-4404-8332-5a23f75a66cd', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/c40bf599-a979-4404-8332-5a23f75a66cd', 'rel': 'bookmark'}], 'ram': 4096, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 4, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': 'c40bf599-a979-4404-8332-5a23f75a66cd'}, {'name': 'memory-1', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/d049a545-6f64-49d0-81d2-68a3e11f656f', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/d049a545-6f64-49d0-81d2-68a3e11f656f', 'rel': 'bookmark'}], 'ram': 4096, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 1, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': 'd049a545-6f64-49d0-81d2-68a3e11f656f'}, {'name': 'standard-16', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/d200524b-f8b1-4024-986b-ec9c341c55ff', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/d200524b-f8b1-4024-986b-ec9c341c55ff', 'rel': 'bookmark'}], 'ram': 32768, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 16, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': 'd200524b-f8b1-4024-986b-ec9c341c55ff'}, {'name': 'standard-8', 'links': [{'href': 'http://console.ustack.com/v2/8fb9f2b042ee4233a519784db37a5f2f/flavors/e15253c2-c340-4402-89ae-cfd794774560', 'rel': 'self'}, {'href': 'http://console.ustack.com/8fb9f2b042ee4233a519784db37a5f2f/flavors/e15253c2-c340-4402-89ae-cfd794774560', 'rel': 'bookmark'}], 'ram': 16384, 'OS-FLV-DISABLED:disabled': false, 'vcpus': 8, 'swap': '', 'os-flavor-access:is_public': true, 'rxtx_factor': 1.0, 'OS-FLV-EXT-DATA:ephemeral': 0, 'disk': 20, 'id': 'e15253c2-c340-4402-89ae-cfd794774560'}]};
   var priceObj = [
     {'currency': 'CNY', 'unit': 'hour', 'unit_price': '0.0500', 'name': 'listener', 'service': 'network'},
@@ -52,7 +53,7 @@ require('./style/index.less');
     this.x = 0;
     this.thumbnail = this.wrapper.find('.thumb');
     this.onDragging = false;
-    this.barLength = this.wrapper.find('.track').width();
+    win.barLength = this.wrapper.find('.track').width();
     this.thumbnail.on('mousedown touchstart', function(e) { console.log('start');
       that.start = parseInt(that.thumbnail.css('left'));
       if(e.type == 'touchstart'){
@@ -87,14 +88,14 @@ require('./style/index.less');
           that.ex = e.pageX;
         }
         var pos = that.ex - that.x;
-        var v = Math.round( (that.start + pos) / that.barLength * (that.max - that.min) + that.min);
+        var v = Math.round((that.start + pos) / win.barLength * (that.max - that.min) + that.min);
         that.setValue(v);
       }
     });
 
     $(window).on({
       resize: function(){
-        that.barLength = that.wrapper.find('.track').width();
+        win.barLength = that.wrapper.find('.track').width();
       }
     });
     this.wrapper.find('input').blur(function(e) {
@@ -107,7 +108,7 @@ require('./style/index.less');
     
 
     this.wrapper.find('.track').on('click',function(e) {
-      var v = Math.round( (e.pageX - $(this).offset().left) / that.barLength * (that.max - that.min) + that.min );
+      var v = Math.round( (e.pageX - $(this).offset().left) / win.barLength * (that.max - that.min) + that.min );
       $(this).parent().children().last().children().first().html(v);
       $(this).parent().children().last().children().last().css('left', $(this).parent().children().last().children().first().width());
       if (!isNaN(v)) {
@@ -125,17 +126,12 @@ require('./style/index.less');
       if (v > this.max) {
         v = this.max;
       }
-      var pos = (v - this.min) / (this.max - this.min) * this.barLength;
+      var pos = (v - this.min) / (this.max - this.min) * win.barLength;
       this.thumbnail.css({
         left: pos - 6
       });
       this.wrapper.find('input').val(v);
       this.wrapper.find('.hasValue').width(pos);
-      // if(this.wrapper.find('.hasValue').parents('.for-tab')) {
-      //   console.log(23)
-      // }
-
-      // this.wrapper.find('.for-tab').find('.hasValue').width();
       this.value = v;
       if (this.onChange) {
         this.onChange(v);
@@ -693,10 +689,11 @@ window.onload = window.onresize = window.onscroll = function(){
         $(this).addClass('active');
         $('body').css('overflow','hidden');
         $('.bg-framework').css({'display': 'block'});
-        $('.bg-framework').css({'width': $(window).width() + 15, 'height': $(window).height() - $('.volcano-global-footer').height() - $('.pricelist').height() - $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
+        $('.bg-framework').css({'width': $(window).width(), 'height': $('.pricelist').offset().top - $(window).scrollTop() - $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
+        // $('.bg-framework').css({'width': $(window).width(), 'height': $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
         $(this).siblings('ul').css({'display':'block', 'top': -$('.pricelist ul li').height() * $('.pricelist ul li').length + 'px'});
         $('.close').click(function(){
-          $('.bg-framework').css({'height': $(window).height() - $('.volcano-global-footer').height() - $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
+          $('.bg-framework').css({'height': $('.pricelist').offset().top - $(window).scrollTop() - $('.pricelist').children('ul').height() + 54});
           $(this).parents('ul').css({'top': -$('.pricelist ul li').height() * ($('.pricelist ul li').length - 1) + 'px'});
           if ($(this).parents('ul').children('li').length - 1 == 0) {
             $('.bg-framework').css({'display': 'none'});
