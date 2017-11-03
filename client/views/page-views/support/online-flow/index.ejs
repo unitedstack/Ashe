@@ -1,0 +1,170 @@
+<%- include('../../../../components/header.ejs') %>
+<div class="main">
+  <article>
+    <section class="content-banner">
+      <div class="type-area">
+      <div class="banner">
+        <div class="banner-title"><%= banner_title %></div>
+        <div class="banner-brief"><%= banner_brief %></div>
+        <div class="banner-describe"><%= banner_describe %></div>
+        <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+      </div>
+      </div>
+      <img class="banner-img" src="/static/assets/page-views/support/online-flow/banner.png">
+      <img class="banner-img-mobile" src="/static/assets/page-views/support/online-flow/banner-m.png">
+    </section>
+  </article>
+
+  <section class="content">
+    <nav class="breadcrumbs clearfix">
+      <ul>
+        <li><%= breadcrumbs_one %>&nbsp;/&nbsp;</li>
+        <li><%= breadcrumbs_two %>&nbsp;/&nbsp;</li>
+        <li class="active"><%= breadcrumbs_three %></li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <div class="custom-services">
+        <div class="title-section">
+          <div class="background-title">CUSTOM SERVICE</div>
+          <div class="title">
+            <span><%= custom_services_title_sec_one %></span><span><%= custom_services_title_sec_two %></span>
+          </div>
+        </div>
+        <ul class="service-list clearfix">
+          <li>
+            <div class="service-wrapper">
+              <div class="service-title"><%= first_service_title %></div>
+              <div class="service-content"><%= first_service_content %></div>
+            </div>
+          </li>
+          <li>
+            <div class="service-wrapper">
+              <div class="service-title"><%= second_service_title %></div>
+              <div class="service-content"><%= second_service_content %></div>
+            </div>
+          </li>
+          <li>
+            <div class="service-wrapper">
+              <div class="service-title"><%= third_service_title %></div>
+              <div class="service-content"><%= third_service_content %></div>
+            </div>
+          </li>
+          <li>
+            <div class="service-wrapper">
+              <div class="service-title"><%= fourth_service_title %></div>
+              <div class="service-content"><%= fourth_service_content %></div>
+            </div>
+          </li>
+          <li>
+            <div class="service-wrapper">
+              <div class="service-title"><%= fifth_service_title %></div>
+              <div class="service-content">
+                <%= fifth_service_content %>
+                <ul>
+                  <li>
+                    <%= fifth_service_list_content_one %>
+                  </li>
+                  <li>
+                    <%= fifth_service_list_content_two %>
+                  </li>
+                </ul>
+              </div>
+            </div>    
+          </li>
+          <li>
+            <div class="service-wrapper">
+              <div class="service-title"><%= sixth_service_title %></div>
+              <div class="service-content">
+                <%= sixth_service_content %>
+                <ul>
+                  <li><%= sixth_service_list_content %></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="service-bar">
+          <li class="point">
+            <img src="/static/assets/page-views/support/online-flow/bluedot.jpg" alt="" />
+          </li>
+          <li class="point">
+            <img src="/static/assets/page-views/support/online-flow/bluedot.jpg" alt="" />
+          </li>          
+          <li class="point">
+            <img src="/static/assets/page-views/support/online-flow/bluedot.jpg" alt="" />
+          </li>          
+          <li class="point">
+            <img src="/static/assets/page-views/support/online-flow/bluedot.jpg" alt="">
+          </li>          
+          <li class="point">
+            <img src="/static/assets/page-views/support/online-flow/bluedot.jpg" alt="">
+          </li>          
+          <li class="point">
+            <img src="/static/assets/page-views/support/online-flow/bluedot.jpg" alt="">
+          </li>
+        </ul>
+      </div>
+      <div class="common-problems">
+        <div class="title-section">
+            <div class="background-title">Problem</div>
+            <div class="title">
+              <span><%= common_problems_title_sec_one %></span><span><%= common_problems_title_sec_two %></span>
+            </div>
+        </div>
+        <ul class="problem-list clearfix">
+          <li>
+            <div class="question">
+              <span class="symbol">Q:</span>
+              <span class="question-content"><%= ques1 %></span>
+            </div>
+            <div class="answer">
+              <span class="symbol">A:</span>
+              <div class="answer-content">
+                <ul>
+                  <li><%= ans1_a %></li>
+                  <li><%= ans1_b %></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <span class="symbol">Q:</span>
+              <span class="question-content"><%= ques2 %></span>
+            </div>
+            <div class="answer">
+              <span class="symbol">A:</span>
+              <div class="answer-content"><%= ans2 %></div>
+            </div>
+          </li>
+          <li>
+            <div class="question">
+              <span class="symbol">Q:</span>
+              <span class="question-content"><%= ques3 %></span>
+            </div>
+            <div class="answer">
+              <span class="symbol">A:</span>
+              <div class="answer-content"><%= ans3 %></div>
+            </div>
+          <li>
+            <div class="question">
+              <span class="symbol">Q:</span>
+              <span class="question-content"><%= ques4 %></span>
+            </div>
+            <div class="answer">
+              <span class="symbol">A:</span>
+              <div class="answer-content">
+                <ul>
+                  <li><%= ans4_a %></li>
+                  <li><%= ans4_b %></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+<%- include('../../../../components/footer.ejs') %>

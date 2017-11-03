@@ -1,0 +1,343 @@
+@import '../../../../../components/header.less';
+@import '../../../../../components/footer.less';
+
+@deepestFtColor: @color_character_grade_one;
+@deeperFtColor: @color_character_grade_two;
+@deepFtColor: @color_character_grade_three;
+@btnBlueColor: @color_button_blue;
+@btnBlueHoverColor: @color_button_blue_hover;
+@btnRedColor: @color_button_red;
+@btnRedHoverColor: @color_button_red_hover;
+@btnGrayColor: @color_button_gray;
+@detailGrayColor: #d7dae2;
+@btnGreenColor: @color_button_green;
+
+/* mixin definition start */
+.smallest-font-style() {
+  line-height: 24px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.normal-font-style() {
+  line-height: 30px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.big-font-style() {
+  line-height: 30px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.biggest-font-style() {
+  line-height: 56px;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+/* mixin definition end */
+
+.main {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  width: 100%;
+  .content {
+    .breadcrumbs {
+      width: 1170px;
+      margin: 18px auto 0;
+      ul {
+        float: right;
+        color: @deeperFtColor;
+        .smallest-font-style();
+      }
+      li {
+        float: left;
+        &.active {
+          color: @deepestFtColor;
+          margin-left: 1px;
+        }
+      }
+    }
+    .main-content {
+      width: 970px;
+      margin: 58px auto 0;
+      color: @deepestFtColor;
+      .big-font-style();
+      .form-title {
+        margin: 0px;
+        .biggest-font-style();
+      }
+      .form-info {
+        margin-top: 20px;
+        line-height: 28px;
+        font-size: 18.1px;
+        letter-spacing: 0.45px;
+      }
+
+      input[type=text] {
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+        border: none;
+        border-bottom: 1px solid @detailGrayColor;
+        outline: none;
+        .normal-font-style();
+        &:focus {
+          border-bottom-color: @btnBlueColor;
+        }
+        &.input-error-border {
+          border-bottom-color: @btnRedColor;
+        }
+        &.input-correct-border {
+          border-bottom-color: @btnGreenColor;
+        }
+      }
+
+      .message {
+        margin-top: 10px;
+        height: 24px;
+        .smallest-font-style();
+      }
+      .error-msg {
+        display: none;
+        color: @btnRedColor;
+      }
+      .correct-msg {
+        display: none;
+        color: @btnGreenColor;
+      }
+    }
+
+    .name-field {
+      margin-top: 40px;
+    }
+    .phone-field,
+    .email-field,
+    .company-field {
+      margin-top: 26px;
+    }
+
+    .company-survey {
+      margin-top: 26px;
+      div {
+        .biggest-font-style();
+      }
+      .switcher {
+        width: 120px;
+        height: 50px;
+        display: table;
+        margin-top: 40px;
+        font-size: 0;
+        text-align: center;
+        border-radius: 2px;
+        color: @color_content;
+        span {
+          cursor: pointer;
+          width: 50%;
+          height: 100%;
+          display: table-cell;
+          font-size: 18px;
+          letter-spacing: 0.5px;
+          line-height: 28px;
+          vertical-align: middle;
+          background: @btnGrayColor;
+        }
+        span.checked {
+          background: @btnBlueColor;
+          color: white;
+        }
+      }
+
+      textarea {
+        margin-top: 40px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 200px;
+        resize: none;
+        border: 1px solid #d7dae2;
+        border-radius: 2px;
+        .normal-font-style();
+        padding: 8px;
+        outline: none;
+      }
+    }
+
+    .company-evaluation {
+      color: @deepestFtColor;
+      margin-top: 40px;
+      div {
+        .big-font-style();
+      }
+      ul {
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        li {
+          float: left;
+          margin-top: 40px;
+          &:nth-child(odd) {
+            margin-right: 100px;
+          }
+        }
+        span {
+          float: left;
+        }
+      }
+
+      li ul {
+        float: left;
+        margin-left: 10px;
+        li.icon-star {
+          color: @btnGrayColor;
+          text-align: center;
+          margin: 0 0 0 21px;
+          width: 29px;
+          &.checked {
+            color: @btnBlueColor;
+          }
+        }
+        .icon-star::before {
+          vertical-align: baseline;
+        }
+      }
+    }
+
+    .btn-area button{
+      outline: none;
+      margin: 60px 0 101px;
+      float: right;
+      width: 250px;
+      height: 50px;
+      padding: 12px;
+      font-size: 18px;
+      color: white;
+      letter-spacing: 0.5px;
+      line-height: 28px;
+      border: none;
+      border-radius: 2px;
+      background: @btnBlueColor;
+      &:hover {
+        background: @btnBlueHoverColor;
+      }
+    }
+  }
+  .clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
+@media (max-width: 1169px) and (min-width: 1024px) {
+  .mian .content .breadcrumbs {
+    width: 92%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main .content {
+    .breadcrumbs {
+      display: none;
+    }
+
+    .main-content {
+      width: 92%;
+      margin: 20px auto 0;
+      color: @deepestFtColor;
+      .normal-font-style();
+      .form-title {
+        .normal-font-style();
+      }
+      .form-info {
+        margin-top: 10px;
+        .smallest-font-style();
+        color: @color_content;
+      }
+
+      input[type=text] {
+        margin-top: 8px;
+        .smallest-font-style();
+        line-height: 22px;
+      }
+
+      .message {
+        margin-top: 4px;
+        font-size: 12px;
+        height: 20px;
+        letter-spacing: 0.5px;
+        line-height: 20px;
+      }
+      .name-field {
+        margin-top: 20px;
+      }
+      
+      .email-field,
+      .company-field,
+      .phone-field,
+      .company-survey {
+        margin-top: 6px;
+      }
+
+      .company-survey {
+        .title {
+          .normal-font-style();
+        }
+        .switcher {
+          margin-top: 20px;
+          width: 72px;
+          height: 30px;
+          span {
+            width: 36px;
+            .smallest-font-style();
+          }
+        }
+
+        textarea {
+          margin-top: 20px;
+          .smallest-font-style();
+        }
+      }
+
+      .company-evaluation {
+        margin-top: 21px;
+        div {
+          font-size: 16px;
+          letter-spacing: 0.5px;
+          line-height: 28px;
+        }
+        ul {
+          .smallest-font-style();
+          margin-top: 10px;
+          li {
+            width: 100%;
+            margin-top: 10px;
+            margin-right: 0;
+          }
+          span {
+            width: 17.6%;
+          }
+        }
+        li ul {
+          width: 76.5%;
+          margin: 0 0 0 5.7%;
+          li.icon-star {
+            margin: 0 10.1% 0 0;
+            width: 5.6%;
+            height: 14px;
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .btn-area button {
+        height: 45%;
+        width: 100%;
+        margin: 20px 0 30px;
+        line-height: 30px;
+        padding: 7px 0 8px;
+      }
+    }
+  }
+}
+

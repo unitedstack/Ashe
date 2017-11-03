@@ -1,580 +1,318 @@
 @import '../../../../../components/header.less';
 @import '../../../../../components/footer.less';
-@bread_color: #0B181D;
-.volcano-train-apply {
-  article {
-    overflow: hidden;
-    @media (min-width: @pad_width) {
-        .volcano-common-content {
-          width: 1240px;
-          margin: auto;
-          position: relative;
-          box-sizing: border-box;
-          padding: 100px 20px 0 100px;
+
+@deepestFtColor: @color_character_grade_one;
+@deeperFtColor: @color_character_grade_two;
+@deepFtColor: @color_character_grade_three;
+@btnBlueColor: @color_button_blue;
+@btnBlueHoverColor: @color_button_blue_hover;
+@btnRedColor: @color_button_red;
+@btnRedHoverColor: @color_button_red_hover;
+@btnGrayColor: @color_button_gray;
+@detailGrayColor: #d7dae2;
+@btnGreenColor: @color_button_green;
+
+/* mixin definition start */
+.smallest-font-style() {
+  line-height: 24px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.normal-font-style() {
+  line-height: 30px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.big-font-style() {
+  line-height: 30px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.biggest-font-style() {
+  line-height: 56px;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+/* mixin definition end */
+
+body {
+  position: relative;
+}
+
+.main {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  width: 100%;
+  .content {
+    .breadcrumbs {
+      width: 1170px;
+      margin: 18px auto 0;
+      ul {
+        float: right;
+        color: @deeperFtColor;
+        .smallest-font-style();
+      }
+      li {
+        float: left;
+        &.active {
+          color: @deepestFtColor;
+          margin-left: 1px;
         }
-    }
-    @media (min-width: @pad_width) and (max-width: 1255px) {
-      .volcano-common-content {
-        width: 100% !important;
       }
     }
-    @media (min-width: @mobile_width) and (max-width: @pad_width) {
-      .volcano-common-content {
-        padding: 100px 15px 0 15px;
+    .main-content {
+      width: 970px;
+      margin: 58px auto 0;
+      color: @deepestFtColor;
+      .big-font-style();
+      .form-title {
+        margin: 0px;
+        .biggest-font-style();
+      }
+      .form-info {
+        margin-top: 20px;
+        line-height: 28px;
+        font-size: 18.1px;
+        letter-spacing: 0.45px;
+      }
+
+      input[type=text] {
         width: 100%;
-        box-sizing: border-box;
-        height: 100%;
-        .breadcrumb{
-          bottom: -47px !important;
+        margin-top: 12px;
+        padding: 0;
+        border: none;
+        border-bottom: 1px solid @detailGrayColor;
+        outline: none;
+        .normal-font-style();
+        &:focus {
+          border-bottom-color: @btnBlueColor;
+        }
+        &.input-error-border {
+          border-bottom-color: @btnRedColor;
+        }
+        &.input-correct-border {
+          border-bottom-color: @btnGreenColor;
         }
       }
-      .inner{
-        width: 100% !important;
-        padding: 0 2% !important;
-        box-sizing: border-box;
-        .inform{
-           width: 100% !important;
-          .tel,.company{
-            margin-left: 0 !important;
-          }
-        }
+
+      .message {
+        margin-top: 8px;
+        height: 24px;
+        .smallest-font-style();
+      }
+      .error-msg {
+        display: none;
+        color: @btnRedColor;
+      }
+      .correct-msg {
+        display: none;
+        color: @btnGreenColor;
       }
     }
-    @media (max-width: @mobile_width) {
-        .volcano-common-content {
-          padding: 0 0.75rem;
-          width: 100%;
-          height: 100%;
-          padding-top: 50px;
-          box-sizing: border-box;
-        }
+
+    .name-field {
+      margin-top: 42px;
     }
-    .content-banner {
-      width: 100%;
-      height: 540px;
-      background-image: linear-gradient(-180deg, #010413 1%, #030E22 73%, #06223F 100%);
-      margin-bottom: 100px;
-      position: relative;
-      .wraper{
-        img{
-          height: 540px;
-          float: right;
-          margin-top: -100px;
+    .phone-field,
+    .email-field,
+    .company-field {
+      margin-top: 8px;
+    }
+
+    .class-location-field {
+      margin-top: 60px;
+      ul {
+        margin-top: -5px;
+        margin-bottom: 40px;
+        color: #454545;
+      }
+      li {
+        float: left;
+        min-width: 148px;
+        margin-right: 22px;
+        margin-top: 30px;
+        height: 30px;
+        line-height: 30px;
+        position: relative;
+        font-size: 20px;
+        &:nth-child(6n) {
+          min-width: 0;
+          margin-right: 0;
         }
-        .word {
-          text-align: left;
-          position: absolute;
-          width: 650px;
-          height: auto;
-          top: 178px;
-          left: 20px;
-          .word-title {
-            display: none;
-            color: @color_white;
-            font-size: 24px;
-            line-height: 58px;
-          }
-          .word-brief {
-            color: @color_white;
-            font-size: 50px;
-            line-height: 66px;
-            letter-spacing: 3.25px;
-            margin-bottom: 30px;
-          }
-          .word-describe {
-            font-size: 18px;
-            line-height: 34px;
-            color: rgba(255,255,255,0.6);
-            letter-spacing: 2.5px;
-          }
+      }
+      [type=radio] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+      }
+      [type=radio] + label::before{
+        content: '\a0';
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-right: 26px;
+        line-height: 28px;
+        background: #F9FAFB;
+        border: 1px solid @detailGrayColor;
+      }
+      [type=radio]:checked + label::before {
+        background: url(/static/assets/page-views/train/train-apply/yes.jpg) center no-repeat;
+        background-color: @btnBlueColor;
+      }
+      label {
+        line-height: 28px;
+      }
+    }
+
+    .class-location-map {
+      margin-top: 20px;
+    }
+
+    .canvas {
+      margin-left: 4.6%;
+      background: white;
+    }
+
+    .btn-area button{
+      margin: 41px auto 0;
+      outline: none;
+      display: block;
+      width: 250px;
+      height: 50px;
+      padding: 12px;
+      font-size: 18px;
+      color: white;
+      letter-spacing: 0.5px;
+      line-height: 28px;
+      border: none;
+      border-radius: 2px;
+      background-color: @btnBlueColor;
+      &:hover {
+        background: @btnBlueHoverColor;
+      }
+    }
+
+    .question-info {
+      width: 805px;
+      margin: 60px auto 100px;
+      .big-font-style();
+      color: @deepestFtColor;
+    }
+  }
+  .clearfix {
+    overflow: hidden;
+  }
+
+  @media (max-width: 1169px) and (min-width: 1024px) {
+    .content .breadcrumbs {
+      width: 92%;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .content {
+      .breadcrumbs {
+        display: none;
+      }
+      .main-content {
+        width: 92%;
+        margin-top: 20px;
+        .form-title {
+          .normal-font-style();
         }
-        .breadcrumb {
-          float: right;
-          font-size:14px;
+        .form-info {
+          margin-top: 10px;
+          .smallest-font-style();
+          color: #7688AD;
+        }
+
+        input[type=text] {
+          margin-top: 8px;
+          .smallest-font-style();
+        }
+
+        .message {
+          margin-top: 4px;
+          font-size: 12px;
+          letter-spacing: 0.5px;
           line-height: 20px;
-          position: absolute;
-          right: 20px;
-          bottom: -517px;
-          color: rgba(11,24,29,0.5);
-          .first {
-            text-align: center;
-            float: left;
-            .firstpage {
-              color: @bread_color;
-              opacity: 0.5;
-              text-decoration: none;
-              &:hover {
-                color: #000;
-                opacity: 0.9;
-              }
-            }
-          }
-          .second {
-            text-align: center;
-            float: left;
-            .success{
-              color: @bread_color !important;
-              opacity: 0.5;
-              text-decoration: none;
-              &:hover {
-                color: #000;
-                opacity: 0.9;
-              }
-            }
-          }
-          .third {
-            float: left;
-            color: @bread_color;
-          }
         }
-        .train-logo {
-          position: absolute;
-          right: 208px;
-          top: 128px;
-          width: 124px;
-          border: none;
+
+        .name-field {
+          margin-top: 20px;
         }
-        .coa-logo {
-          position: absolute;
-          right: 100px;
-          top: 115px;
-          height: 80px;
+        .phone-field,
+        .email-field,
+        .company-field {
+          margin-top: 6px;
         }
-      }
-    }
-    .content-main {
-      width: 100%;
-      margin-bottom: 100px;
-      .inner{
-        margin: 0 auto;
-        width: 1200px;
-        padding: 0 20px;
-        div{
-          .title {
-            margin: 30px auto;
-            overflow: hidden;
-            .apply {
-              width: 100%;
-              padding-left: 45px;
-              height: 55px;
-              line-height: 55px;
-              background-color: @color_neutral_12;
-            }
-            .describe {
-              margin-top: 20px;
-              padding: 30px 45px 40px 20px;
-              font-size: 16px;
-              line-height: 26px;
-              color: #282E33;
-            }
-          }
-          .circle {
-            width: 41.5%;
-            float: left;
-            margin-right: 0;
-            height: 100px;
-            padding-right: 40px;
-            position: relative;
-            label {
-              position: relative;
-              padding-left: 20px;
-              font-size: 16px;
-              line-height: 28px;
-              display: block;
-              margin-bottom: 5px;
-              color: rgba(44, 71, 85, 0.7);
-              &:before {
-                content: '*';
-                font-size: 22px;
-                color: rgba(255, 0, 0, 0.7);
-                position: absolute;
-                top: 0;
-                left: 0;
-                line-height: 1.7;
-              }
-              em {
-                display: none;
-              }
-            }
-            input {
-              width: 100%;
-              box-sizing: border-box;
-              font-size: 14px;
-              padding-left: 10px;
-              height: 41px;
-              line-height: 30px;
-              border: solid 1px rgba(0, 0, 0, 0.25);
-              background-color: @color_neutral_12;
-              border-radius: 2px;
-            }
-          }
-          .tel {
-            margin-left: 80px !important;
-          }
-          .company {
-            margin-left: 80px !important;
-          }
-          .circle.selected {
-            em {
-              display: block;
-              color: #C2003D;
-              float: right;
-              position: absolute;
-              top: 74px;
-              font-size: 12px;
-            }
-            .logo {
-              background-image: url(/static/assets/page-views/training/train-apply/cha.png);
-              display: block;
-              width: 26px;
-              height: 26px;
-              position: absolute;
-              right: 0;
-              top: 50%;
-              margin-top: -10px;
-              background-repeat: no-repeat;
-              background-position: center center;
-            }
-          }
-          .circle.right {
-            .logo {
-              background-image: url(/static/assets/page-views/training/train-apply/gou.png);
-              display: block;
-              width: 26px;
-              height: 26px;
-              position: absolute;
-              right: 0;
-              top: 50%;
-              margin-top: -10px;
-              background-repeat: no-repeat;
-              background-position: center center;
-            }
-          }
-          .multiple {
-            clear: both;
-            float: left;
-            height: 80px;
-            line-height: 80px;
-            width: 100%;
-            position: relative;
-            color: @color_neutral_09;
-            margin-bottom: 0;
-            label {
-              display: inline-block;
-              line-height: 30px;
-              margin-right: 50px;
-              background-color: @color_white;
-            }
-            .classroom {
-              margin-right: 10px !important;
-            }
-            .inlinee{
-              display: inline-block;
-            }
-            input {
-              margin-right: 6px;
-            }
-          }
-          .submit {
-            box-sizing: border-box;
-            font-size: 18px;
-            border: none;
-            cursor: pointer;
-            display: block;
-            margin: 30px auto;
-            margin-bottom: 60px;
-            font-size: 18px;
-            color: white;
-            border-radius: 2px;
-            text-align: center;
-            background: #3280a9;
-            padding: 0 26px;
-            height: 48px;
-            line-height: 48px;
-          }
-          .linep{
-            width: 100%;
-            position: relative;
-            height: 30px;
-            margin-top: 30px;
-            margin-bottom: 40px;
-            font-size: 18px;
-            float: left;
-            .yes{
-              width: 100%;
-              height: 30px;
-              text-align: center;
-              visibility: hidden;
-              position: absolute;
-              right: 0;
-              top: 0;
-              color: #1bb6a1;
-              line-height: 30px;
-              span{
-                display: block;
-                width: 26px;
-                height: 26px;
-                position: absolute;;
-                right: 0;
-                top: 0;
-                background-image: url(/static/assets/page-views/training/train-apply/gou.png) no-repeat center center;
-              }
-            }
-            .no{
-              width: 100%;
-              height: 30px;
-              text-align: center;
-              visibility: hidden;
-              position: absolute;
-              right: 0;
-              top: 0;
-              color: #C2003D;
-              line-height: 30px;
-              span{
-                display: block;
-                width: 26px;
-                height: 26px;
-                position: absolute;;
-                right: 0;
-                top: 0;
-                background: url(/static/assets/page-views/training/train-apply/cha.png) no-repeat center center;
-              }
-            }
-          }
-          .contact {
-            clear: both;
-            background-color: #DDEFFA;
-            width: 100%;
-            padding: 30px 45px 40px 45px;
-            font-size: 16px;
-            line-height: 26px;
-            float: left;
-            box-sizing: border-box;
-          }
-          .contactm{
-            display: none;
-          }
-          .submitm{
-            display: none;
-          }
-          .linepm{
-            display: none;
-          }
+
+        .class-location-field {
+          margin-top: 16px;
+        }
+
+        .class-location-map {
+          margin-top: 22px;
+        }
+        .canvas {
+          margin-left: 0;
+        }
+
+        .btn-area button {
+          margin: 20px auto;
+          width: 100%;
+          height: 45px;
+          padding: 8px 0 7px;
+          color: white;
+          .normal-font-style();
+        }
+
+        .question-info {
+          width: 100%;
+          margin-bottom: 30px;
         }
       }
     }
   }
-}
-@media screen and (max-width: @mobile_width) {
-  .volcano-train-apply {
-    article {
-      font-size: 16px;
-      .content-banner {
-        margin-bottom: 20px;
-        height: 156px;
-        .wraper {
-          width: 100%;
-          margin: auto;
-          padding: 0;
-          img{
-            height: 156px;
-            margin-top: -50px;
-          }
-          .word {
-            padding-left: 4%;
-            top: 60px;
-            width:80%;
-            .word-title {
-              display: block;
-              font-size: 20px;
-              line-height: 28px;
-              color: #FFFFFF;
-              letter-spacing: 1.6px;
-            }
-            .word-brief {
-              font-size: 14px;
-              color: rgba(255,255,255,0.8);
-              letter-spacing: 1px;
-              line-height: 22px;
-            }
-            .word-describe {
-              display: none;
-            }
-          }
-          .breadcrumb {
-            display: none;
-          }
-        }
-      }
-      .content-main {
-        width: 100%;
-        // margin: 20px 0;
-        .inner {
-          margin: 0 auto;
-          width: 100% !important;
-          padding: 0 15px;
-          box-sizing: border-box;
-          div {
-            .title {
-              margin: 0;
-              width: 100%;
-              padding-bottom: 23px;
-              .apply {
-                display: none;
-              }
-              .describe {
-                padding: 0;
-                font-size: 14px;
-                line-height: 19px;
-                padding-left: 5px;
-                padding-right: 10px;
-              }
-            }
-            .circle{
-              width: 90%;
-              margin: 0;
-              height: 85px;
-              label{
-                width: 100%;
-                font-size: 14px;
-                line-height: 19px;
-                padding-left: 10px;
-                box-sizing: border-box;
-                &:before {
-                  font-size: 14px;
-                  line-height: 19px;
-                  top: 12%;
-                  width : 10px;
-                }
-              }
-              .logo{
-                display: none;
-              }
-              input{
-                width: 100%;
-                height: 30px;
-              }
-            }
-            .tel {
-              margin-left: 0 !important;
-            }
-            .company {
-              margin-left: 0 !important;
-            }
-            .circle.selected {
-              em {
-                top: 54px;
-              }
-              .logo {
-                margin-top: -4%;
 
-              }
-            }
-            .circle.right {
-              .logo {
-                margin-top: -4%;
-              }
-            }
-            .multiple {
-              margin-bottom: 0;
-              font-size: 14px;
-              line-height: 19px;
-              width: 90%;
-              label.classroom{
-                display: block;
-                margin-right: 0 !important;
-              }
-              .inlinee{
-                display: flex;
-                justify-content: space-between;
-                label{
-                  margin: 0 !important;
-                }
-              }
-            }
-            .contact {
-              background-color: #DDEFFA;
-              display: block;
-              width: 100%;
-              margin: 0;
-              padding: 24px 5px 23px 5px;
-              font-size: 14px;
-              line-height: 19px;
-              color: #282E33;
-              box-sizing: border-box;
-              height: auto;
-              float: left;
-            }
-            .submit {
-              display: block;
-              width: 100%;
-              height: 45px;
-              background-color: #3280A9;
-              font-size: 14px;
-              float: left;
-              border: none;
-              background: #3280a9;
-              margin: 0 auto;
-              line-height: 45px;
-              cursor: pointer;
-              display: inherit;
-              color: white;
-              border-radius: 2px;
-              text-align: center;
-              margin-bottom: 28px;
-            }
-            .linep {
-              display: block;
-              float: left;
-              margin-top: 5px;
-              height: 16px;
-              text-align: center;
-              width: 100%;
-              position: relative;
-              margin-bottom: 29px;
-              .yes{
-                display: inline-block;
-                width: 100%;
-                font-size: 12px;
-                line-height: 16px;
-                color: #1bb6a1;
-                text-align: center;
-                visibility: hidden;
-                span{
-                  display: inline-block;
-                  width: 16px;
-                  height: 16px;
-                  position: absolute;
-                  top: 5%;
-                  background: url(/static/assets/page-views/training/train-apply/gou.png) no-repeat;
-                  background-size: 100% 100%;
-                }
-              }
-              .no{
-                display: inline-block;
-                width: 100%;
-                font-size: 12px;
-                line-height: 16px;
-                color: #C2003D;
-                text-align: center;
-                position: absolute;
-                right: 0;
-                top: 0;
-                visibility: hidden;
-                span{
-                  display: inline-block;
-                  width: 16px;
-                  height: 16px;
-                  position: absolute;
-                  top: 5%;
-                  margin-left: 5px;
-                  background: url(/static/assets/page-views/training/train-apply/cha.png) no-repeat;
-                  background-size: 100% 100%;
-                }
-              }
-            }
-          }
-        }
+  @media (max-width: 1023px) and (min-width: 960px) {
+    .content .main-content .class-location-field ul li{
+      &:nth-child(6n) {
+        min-width: 148px;
+        margin-right: 22px;
+      }
+      &:nth-child(5n) {
+        min-width: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+    .content .main-content .class-location-field ul {
+      margin-top: 8px;
+      li {
+        min-width: 75px;
+        margin-top: 14px;
+        margin-right: 20px;
+        height: 24px;
+        line-height: 24px;
+      }
+      [type=radio] + label::before{
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+        line-height: 18px;
+      }
+      [type=radio]:checked + label::before {
+        background-size: 13.4px 9.3px;
+      }
+      label {
+        .smallest-font-style();
       }
     }
   }
