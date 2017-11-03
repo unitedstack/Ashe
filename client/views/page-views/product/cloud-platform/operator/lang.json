@@ -1,0 +1,29 @@
+{
+  "en": {
+    "cssFile": "/static/dist/page_product_cloud-platform_operator.min.css",
+    "jsFile": "/static/dist/page_product_cloud-platform_operator.min.js",
+    "title": "TongFang cloud - Operator"
+  },
+  "zh": {
+    "banner_brief": "自动化部署",
+    "banner_describe": "同方云全栈云平台——公有云是一套用来部署和管理OpenStack集群的工具集，基于社区的OpenStack TripleO开发，它将复杂的同方云公有云系统的部署交付，变得简单化，具有高度的确定性和可控性。",
+    "banner_describe_mobile": "同方云Operator是集监控，日志，告警于一体的综合性运营平台",
+    "banner_title": "灵活的",
+    "breadcrumb_one": "首页",
+    "breadcrumb_three":  "同方云 Operator",
+    "breadcrumb_two": "产品",
+    "cssFile": "/static/dist/page_product_cloud-platform_operator.min.css",
+    "operator_feature_intro_one": "优提供从系统层到应用层，从硬件到软件，涵盖计算、网络、存储等核心服务的监控服务。提供从系统层到应用层，从硬件到软件，涵盖计算、网络、存储等核心服务的监控服务。提供从系统层到应用层，从硬件到软件，涵盖计算、网络、存储等核心",
+    "operator_feature_intro_three": "通过联动性全方位地监控可以层层升深入快速定位故障点。通过联动性全方位地监控可以层层升深入快速定位故障点。通过联动性全方位地监控可以层层升深入快速定位故障点。通过联动性全方位地监控可以层层升深入快速定位故障点。",
+    "operator_feature_intro_two": "对平台产生的日志，告警，监控数据进行深入分析，发现潜在问题。对平台产生的日志，告警，监控数据进行深入分析，发现潜在问题。对平台产生的日志，告警，监控数据进行深入分析，发现潜在问题。对平台产生的日志，告警，监控数据进行",
+    "operator_feature_title_one": "全方位监控",
+    "operator_feature_title_three": "快速排障",
+    "operator_feature_title_two": "数据分析",
+    "operator_title_one": "Operator",
+    "operator_title_two": "功能&特性",
+    "jsFile": "/static/dist/page_product_cloud-platform_operator.min.js",
+    "partner_title_one": "解决客户的",
+    "partner_title_two": "痛点",
+    "title": "同方云 - Operator"
+  }
+}

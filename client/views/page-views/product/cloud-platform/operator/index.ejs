@@ -1,0 +1,101 @@
+<%- include('../../../../../components/header.ejs') %>
+  <div class="ashe-platform-operator">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="type-area">
+          <div class="banner">
+            <div class="banner-title"><%= banner_title %></div>
+            <div class="banner-brief"><%= banner_brief %></div>
+            <div class="banner-describe"><%= banner_describe %></div>
+            <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+          </div>
+        </div>
+        <img class="banner-img" src="/static/assets/page-views/product/cloud-platform/operator/banner.png">
+        <img class="banner-img-mobile" src="/static/assets/page-views/product/cloud-platform/operator/banner-m.png">
+      </section>
+      <div class="breadcrumb">
+        <ul class="breadcrumb-center">
+          <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+          <li class="second"><a class="success" href="/product/environment"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+          <li class="third"><%= breadcrumb_three %></li>
+        </ul>
+      </div>
+      <!-- main -->
+      <div class="content-main">
+        <div class="part-one">
+          <p class="shuiyin">OPERATOR</p>
+          <p class="title"><%= operator_title_one %><span><%= operator_title_two %></span></p>
+          <div class="feature">
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-platform/operator/1.png">
+              <p class="item_title"><%= operator_feature_title_one %></p>
+              <p class="item_intro"><%= operator_feature_intro_one %></p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-platform/operator/2.png">
+              <p class="item_title"><%= operator_feature_title_two %></p>
+              <p class="item_intro"><%= operator_feature_intro_two %></p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-platform/operator/3.png">
+              <p class="item_title"><%= operator_feature_title_three %></p>
+              <p class="item_intro"><%= operator_feature_intro_three %></p>
+            </div>
+          </div>
+          <div class="function">
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-platform/operator/4.png">
+              <p class="line"></p>
+              <p class="item-title">监控平台</p>
+              <p class="item-intro">提供全方位监控，快速发现平台故障立即修复及避免故障。</p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-platform/operator/5.png">
+              <p class="line"></p>
+              <p class="item-title">告警平台</p>
+              <p class="item-intro">对告警进行分类汇总，接收及时有效的告警信息。</p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-platform/operator/6.png">
+              <p class="line"></p>
+              <p class="item-title">日志平台</p>
+              <p class="item-intro">集中收集日志，归档，压缩，备份，强大的分析和报表功能。</p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-platform/operator/7.png">
+              <p class="line"></p>
+              <p class="item-title">可视化</p>
+              <p class="item-intro">提供多层监控运维视图，层层细化，方便快速定位异常。</p>
+            </div>
+          </div>
+        </div>
+        <div class="part-two">
+          <div class="part-two-center">
+            <p class="shuiyin">PAIN POINT</p>
+            <p class="title"><%= partner_title_one %><span><%= partner_title_two %></span></p>
+            <div class="list-item">
+              <div class="list-title">全面监控，有效监控集群状态</div>
+              <div class="list-intro">同方云是由多套系统组成的一套集硬件和软件为一体的分布式系统，涵盖范围深且广，对监控带来很大的挑战，同方云Operator提供云平台由硬件到软件，从底层到上层，全方位监控，可以有效监控集群状态。</div>
+            </div>
+            <div class="list-item">
+              <div class="list-title">及时快速定位故障信息</div>
+              <div class="list-intro">同方云系统复杂，当系统出现故障时，及时快速定位故障信息，可以最大程度地减少损失，同方云Operator涵盖丰富的报警，并且提供级联报警，从上层到下层，可及时快速定位故障信息。</div>
+            </div>
+            <div class="list-item">
+              <div class="list-title">可靠性验证以及故障演练</div>
+              <div class="list-intro">云平台是构建IT的基石，其稳定性以及可靠性至关重要，同方云设计了云平台可靠性验证以及故障演练方案和系统，从云平台的多个维度进行可靠性验证，从上册到下层，可及时快速定位故障信息。</div>
+            </div>
+            <div class="list-item">
+              <div class="list-title">整合多个运维工具，进行可视化运维，提供用户体验</div>
+              <div class="list-intro">同方云Operator整合多个运维工具到一个管理面板，设计了从高层到底层的多个维度的集群状态信息展示画板，可以进行可视化运维，提高运维效率，以及运维体验。</div>
+            </div>
+          </div>
+        </div>
+        <div class="framework">
+          <img src="/static/assets/page-views/product/cloud-platform/operator/framework.png">
+        </div>
+      </div>
+    </article>
+  </div>
+<%- include('../../../../../components/footer.ejs') %>
