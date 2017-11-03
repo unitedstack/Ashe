@@ -1,0 +1,243 @@
+@import '../../../../../components/header.less';
+@import '../../../../../components/footer.less';
+.om-management {
+  overflow: hidden;
+   @media screen and (min-width: @mobile_width) {
+    .common {
+      padding-top: 100px;
+      width: 1170px;
+      margin: 0 auto;
+      overflow: hidden;
+      .om-title {
+        .technical {
+          font-family: MicrosoftYaHei-Bold !important;
+          font-size: 80px;
+          color: #F7F8FB;
+          letter-spacing: 2px;
+          line-height: 90px;
+          text-align: center;
+          font-weight: bold;
+        }
+        .support {
+          font-family: MicrosoftYaHeiLight !important;
+          font-weight: 200;
+          font-size: 42px;
+          letter-spacing: 2px;
+          line-height: 55px;
+          text-align: center;
+          margin-top: -50px;
+          span {
+            color: @color_button_blue;
+          }
+        }
+      }
+      .om-content {
+        font-family: MicrosoftYaHeiLight !important;
+        max-width: 840px;
+        margin: 32px auto 60px;
+        font-weight: 200;
+        font-size: 16px;
+        color: #7688AD;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        text-align: center;
+      }
+      .om-footer {
+        .footer-common {
+          float: left;
+          width: 33%;
+          height: 289px;
+          border: 1px solid @color_border_grey;
+          .footer-title {
+            text-align: center;
+            margin-top: 50px;
+            img {
+              width: 56px;
+              height: 56px;
+            }
+          }
+          .footer-content {
+            font-family: MicrosoftYaHeiLight !important;
+            max-width: 180px;
+            font-weight: 200;
+            font-size: 18px;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: 30px;
+            margin: 16px auto;
+            text-align: center;
+          }
+          .footer-foot {
+            font-family: MicrosoftYaHeiLight !important;
+            max-width: 332px;
+            margin: 0 28px;
+            font-weight: 200;
+            font-size: 14px;
+            color: #7688AD;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .common:last-child {
+      margin-bottom: 200px;
+    }
+  }
+  @media screen and (min-width: @mobile_width) and (max-width: @pad_width) {
+    .common {
+      padding-top: 100px;
+      width: 92%;
+      margin: 0 auto;
+      overflow: hidden;
+      .om-title {
+        .technical {
+          font-family: MicrosoftYaHei-Bold !important;
+          font-size: 80px;
+          color: #F7F8FB;
+          letter-spacing: 2px;
+          line-height: 90px;
+          text-align: center;
+          font-weight: bold;
+        }
+        .support {
+          font-family: MicrosoftYaHeiLight !important;
+          font-weight: 200;
+          font-size: 42px;
+          letter-spacing: 2px;
+          line-height: 55px;
+          text-align: center;
+          margin-top: -50px;
+          span {
+            color: @color_button_blue;
+          }
+        }
+      }
+      .om-content {
+        font-family: MicrosoftYaHeiLight !important;
+        max-width: 840px;
+        margin: 32px auto 60px;
+        font-weight: 200;
+        font-size: 16px;
+        color: #7688AD;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        text-align: center;
+      }
+      .om-footer {
+        .footer-common {
+          float: left;
+          width: 33%;
+          height: 289px;
+          border: 1px solid @color_border_grey;
+          .footer-title {
+            text-align: center;
+            margin-top: 50px;
+            img {
+              width: 56px;
+              height: 56px;
+            }
+          }
+          .footer-content {
+            font-family: MicrosoftYaHeiLight !important;
+            max-width: 180px;
+            font-weight: 200;
+            font-size: 18px;
+            color: #333333;
+            letter-spacing: 0;
+            line-height: 30px;
+            margin: 16px auto;
+            text-align: center;
+          }
+          .footer-foot {
+            font-family: MicrosoftYaHeiLight !important;
+            max-width: 332px;
+            margin: 0 28px;
+            font-weight: 200;
+            font-size: 14px;
+            color: #7688AD;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .common:last-child {
+      margin-bottom: 200px;
+    }
+  }
+  @media screen and (max-width: @mobile_width) {
+    .common {
+      width: 92%;
+      margin: 0 auto;
+      overflow: hidden;
+      margin: 20px auto 15px;
+      .om-title {
+        .technical {
+          display: none;
+        }
+        .support {
+          font-family: MicrosoftYaHei !important;
+          font-size: 18px;
+          color: #333333;
+          letter-spacing: 0.5px;
+          line-height: 30px;
+          text-align: center;
+        }
+      }
+      .om-content {
+        font-family: MicrosoftYaHeiLight !important;
+        font-weight: 200;
+        margin-bottom: 30px;
+        font-size: 12px;
+        color: #7688AD;
+        letter-spacing: 0.5px;
+        line-height: 20px;
+        text-align: center;
+      }
+      .om-footer {
+        width: 100%;
+        .footer-common {
+          float: left;
+          width: 49%;
+          height: 228px;
+          border: 1px solid @color_border_grey;
+          .footer-title {
+            text-align: center;
+            margin-top: 30px;
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+          .footer-content {
+            max-width: 160px;
+            font-family: MicrosoftYaHei !important;
+            font-size: 16px;
+            color: #333333;
+            letter-spacing: 0.5px;
+            line-height: 28px;
+            margin: 10px auto;
+            text-align: center;
+          }
+          .footer-foot {
+            font-family: MicrosoftYaHeiLight !important;
+            max-width: 332px;
+            margin: 0 auto;
+            font-weight: 200;
+            font-size: 12px;
+            color: #7688AD;
+            letter-spacing: 0.5px;
+            line-height: 20px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .common:last-child {
+      margin-bottom: 30px;
+    }
+  }
+}
