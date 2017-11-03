@@ -1,5 +1,5 @@
 {
-  "zh": {
+  "en": {
     "banner_brief": "Monitor the alarm",
     "banner_describe": "TongFang cloud design team configuration panel allows users to follow the performance of the past, for the individual needs of the definition of alarm threshold.",
     "banner_describe_mobile": "TongFang cloud design team configuration panel allows users to follow the performance of the past, for the individual needs of the definition of alarm threshold.",
@@ -16,10 +16,10 @@
     "description_title_one": "Multiple indicators of any combination",
     "description_title_three": "SMS at any time service",
     "description_title_two": "Delicate and precise monitoring",
-    "feature_brief_one": "With a larger single hard disk capacity, up to 5TB, for higher capacity requirements of the application, such as document storage and other offline business.",
-    "feature_brief_two": "The cloud drives consolidate computing, storage and network resources with IT infrastructure capabilities to support flexible expansion and provide pay-per-view billing.",
-    "feature_title_one": "High capacity hard drive",
-    "feature_title_two": "High performance elastic expansion",
+    "feature_brief_one": "For each alarm rule, you can define the corresponding thresholds, periods, and periods. Basis of the alarm threshold There are three values to choose from: average, maximum, minimum, averages apply in most cases, the maximum can be used to monitor the peak, the minimum value on the contrary.",
+    "feature_brief_two": "Each alarm provides three states: normal state, alarm state, insufficient data. Coverage of all the indicators monitored by the situation, to facilitate operation and maintenance personnel to promptly investigate the problem.",
+    "feature_title_one": "Flexible definition of alarm rules",
+    "feature_title_two": "Three alarm conditions to meet different scenarios",
     "introduction_a": "Use now",
     "introduction_intro": "Including CPU, memory, disk, Wu network and other resources to achieve a fine to the minute level of monitoring, each cloud host will produce more than 100,000 data. The current cloud with the cloud has been stored in the cloud with hundreds of millions of cloud host monitoring data, each cloud host monitoring data can be positioned within 2 seconds and show. At the same time with the Fang Yun design team configuration panel allows users to follow the performance of the past, for the individual needs of the definition of alarm threshold, so you peace of mind.",
     "introduction_title_one": "Monitor",
@@ -29,7 +29,7 @@
     "product_title_two": "Function",
     "title": "TongFang cloud - Alarm"
   },
-  "en": {
+  "zh": {
     "banner_brief": "监控报警",
     "banner_describe": "同方云的设计团队的配置面板让用户可以按以往性能表现，针对个性化需求定义报警阙值。",
     "banner_describe_mobile": "同方云的设计团队的配置面板让用户可以按以往性能表现，针对个性化需求定义报警阙值",
@@ -46,10 +46,10 @@
     "description_title_one": "多指标任意组合",
     "description_title_three": "短信随时服务",
     "description_title_two": "细腻精确监控",
-    "feature_brief_one": "拥有更大的单块硬盘容积，最高可达5TB，适用于对容量要求较高的应用，例如文档存储等离线业务。",
-    "feature_brief_two": "云硬盘整合了计算、存储与网络资源IT基础设施能力租用服务，支持弹性扩容，并提供按需付费的结算功能。",
-    "feature_title_one": "高容量型硬盘",
-    "feature_title_two": "高性能弹性扩容",
+    "feature_brief_one": "对于每个报警规则，都可以定义对应的阈值、周期和周期数。平均值适用于大多数情况，最大值可以用来对峰值进行监控，最小值反之。",
+    "feature_brief_two": "每个报警提供三种状态：正常状态、报警状态、数据不足。覆盖所监控指标的所有情况，方便运维人员及时排查问题。",
+    "feature_title_one": "灵活定义报警规则",
+    "feature_title_two": "三种报警满足不同场景",
     "introduction_a": "立即使用",
     "introduction_intro": "包括CPU、内存、磁盘、吴网络等资源都实现了精细到分钟级的监控，每台云主机将产生超过10万条数据。当前同方云公有云中已经保存了数以十亿的云主机监控数据，每台云主机的监控数据可以在2秒钟内进行定位并展现。同时同方云的设计团队的配置面板让用户可以按以往性能表现，针对个性化需求定义报警阙值，让您安枕无忧。",
     "introduction_title_one": "监控",

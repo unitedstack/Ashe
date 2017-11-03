@@ -148,6 +148,7 @@ function globalEvent(G) {
       $(this).toggleClass('second-open');
     }
   });
+
   $('.multi-dropdown > .dropdown-wrapper > .dropdown > li').mouseenter(function() {
     if(!G.mobile) {
       $(this).siblings().removeClass('select');
@@ -158,6 +159,12 @@ function globalEvent(G) {
         $(this).parents('.dropdown-wrapper').css('width', '168px');
       }
     }
+  });
+  $('.login-link').click(function(){
+    window.location = ('http://console.ustack.com');
+  });
+  $('.register-link').click(function(){
+    window.location = ('http://console.ustack.com/register');
   });
   //footer totop
   $(G.toTop).click(function() {

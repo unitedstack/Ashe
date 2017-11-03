@@ -1,118 +1,141 @@
 <%- include('../../../../components/header.ejs') %>
 <div class="ashe-clients">
-  <div class="center">
-<!-- 教育行业 -->
-    <div class="item">
-      <div class="left">
-        <div class="title">教育行业</div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/jy1.png">
-          <span class="intro">与同方云强强联合，打开云服务的新篇章。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/jy2.png">
-          <span class="intro">同方云解决了我们的资源与存储问题，同时节省了总成本。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/jy3.png">
-          <span class="intro">同方云解决了我们的资源与存储问题，同时节省了总成本。</span>
+  <article>
+  <!-- banner -->
+    <section class="content-banner">
+      <div class="type-area">
+        <div class="banner">
+          <div class="banner-title"><%= banner_title %></div>
+          <div class="banner-brief"><%= banner_brief %></div>
+          <div class="banner-describe"><%= banner_describe %></div>
+          <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
         </div>
       </div>
-      <div class="right">
-        <img src="/static/assets/page-views/about/clients/2222.png">
+      <img class="banner-img" src="/static/assets/page-views/public/alarm/banner.png">
+      <img class="banner-img-mobile" src="/static/assets/page-views/public/alarm/banner-m.png">
+    </section>
+    <div class="breadcrumb">
+      <ul class="breadcrumb-center">
+        <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+        <li class="second"><a class="success" href="/public/compute"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+        <li class="third"><%= breadcrumb_three %></li>
+      </ul>
+    </div>
+    <!-- end for banner -->
+    <div class="center">
+  <!-- 教育行业 -->
+      <div class="item" id="education">
+        <div class="left">
+          <div class="title">教育行业</div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/jy1.png">
+            <span class="intro">与同方云强强联合，打开云服务的新篇章。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/jy2.png">
+            <span class="intro">同方云解决了我们的资源与存储问题，同时节省了总成本。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/jy3.png">
+            <span class="intro">同方云解决了我们的资源与存储问题，同时节省了总成本。</span>
+          </div>
+        </div>
+        <div class="right">
+          <img src="/static/assets/page-views/about/clients/2222.png">
+        </div>
+      </div>
+  <!-- 金融行业 -->
+    <div class="item" id="financial">
+        <div class="left">
+          <div class="title">金融行业</div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/jr1.png">
+            <span class="intro">性能与资源的矛盾在同方云这里被完美解决了。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/jr2.png">
+            <span class="intro">同方云很好地保障了我们同时在线数十万的高并发需求和弹性。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/jr3.png">
+            <span class="intro">同方云搞高效、稳定的管理资源，值得我们信赖。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/jr4.png">
+            <span class="intro">同方云的资源原地弹性变更和关机不收费帮助我们节约了一半以上的IT支出。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/jr5.png">
+            <span class="intro">高效稳定的云计算技术为互联网企业提供强有力的支持，保证业务稳定运行。</span>
+          </div>
+        </div>
+        <div class="right">
+          <img src="/static/assets/page-views/about/clients/2222.png">
+        </div>
+      </div>
+  <!-- 政府行业 -->
+      <div class="item government">
+        <div class="left">
+          <div class="title">政府行业</div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/zf1.png">
+            <span class="intro">性能与资源的矛盾在同方云这里被完美解决了。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/zf2.png">
+            <span class="intro">采用同方云云计算完美得解决了扩容问题。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/zf3.png">
+            <span class="intro">借助同方云云计算技术和完善的API让我们实现定制化开发。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/zf4.png">
+            <span class="intro">同方云助力公安资源云化，更高效、环保地管理利用资源。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/zf5.png">
+            <span class="intro">同方云解决了我们的资源与存储问题，同时节省了总成本。</span>
+          </div>
+        </div>
+        <div class="right">
+          <img src="/static/assets/page-views/about/clients/2222.png">
+        </div>
+      </div>
+  <!-- 大型企业 -->
+      <div class="item">
+        <div class="left">
+          <div class="title">大型企业</div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/dx1.png">
+            <span class="intro">此伙伴关系的缔结令我们和客户能够在中国及海外市场获得卓越的效能和稳定性。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/dx2.png">
+            <span class="intro">快速部署快速交付，不仅是块还靠谱。同方云云计算是我们正确的选择。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/dx3.png">
+            <span class="intro">同方云为我们客户IT架构云化提供了充分的炮弹，获得大量客户的好评。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/dx4.png">
+            <span class="intro">与同方与的合作让我们找到了进入云世界的钥匙。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/dx5.png">
+            <span class="intro">同方云完美的解决了海量碎文件的读写问题，存储技术绝对一流。</span>
+          </div>
+          <div class="case">
+            <img src="/static/assets/page-views/about/clients/dx6.png">
+            <span class="intro">我们的数据存放在同方云的公有云平台上从未发生过数据丢失，同方云是值得信赖的合作伙伴。</span>
+          </div>
+        </div>
+        <div class="right">
+          <img src="/static/assets/page-views/about/clients/2222.png">
+        </div>
       </div>
     </div>
-<!-- 金融行业 -->
-  <div class="item">
-      <div class="left">
-        <div class="title">金融行业</div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/jr1.png">
-          <span class="intro">性能与资源的矛盾在同方云这里被完美解决了。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/jr2.png">
-          <span class="intro">同方云很好地保障了我们同时在线数十万的高并发需求和弹性。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/jr3.png">
-          <span class="intro">同方云搞高效、稳定的管理资源，值得我们信赖。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/jr4.png">
-          <span class="intro">同方云的资源原地弹性变更和关机不收费帮助我们节约了一半以上的IT支出。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/jr5.png">
-          <span class="intro">高效稳定的云计算技术为互联网企业提供强有力的支持，保证业务稳定运行。</span>
-        </div>
-      </div>
-      <div class="right">
-        <img src="/static/assets/page-views/about/clients/2222.png">
-      </div>
-    </div>
-<!-- 政府行业 -->
-    <div class="item">
-      <div class="left">
-        <div class="title">政府行业</div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/zf1.png">
-          <span class="intro">性能与资源的矛盾在同方云这里被完美解决了。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/zf2.png">
-          <span class="intro">采用同方云云计算完美得解决了扩容问题。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/zf3.png">
-          <span class="intro">借助同方云云计算技术和完善的API让我们实现定制化开发。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/zf4.png">
-          <span class="intro">同方云助力公安资源云化，更高效、环保地管理利用资源。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/zf5.png">
-          <span class="intro">同方云解决了我们的资源与存储问题，同时节省了总成本。</span>
-        </div>
-      </div>
-      <div class="right">
-        <img src="/static/assets/page-views/about/clients/2222.png">
-      </div>
-    </div>
-<!-- 大型企业 -->
-    <div class="item">
-      <div class="left">
-        <div class="title">大型企业</div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/dx1.png">
-          <span class="intro">此伙伴关系的缔结令我们和客户能够在中国及海外市场获得卓越的效能和稳定性。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/dx2.png">
-          <span class="intro">快速部署快速交付，不仅是块还靠谱。同方云云计算是我们正确的选择。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/dx3.png">
-          <span class="intro">同方云为我们客户IT架构云化提供了充分的炮弹，获得大量客户的好评。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/dx4.png">
-          <span class="intro">与同方与的合作让我们找到了进入云世界的钥匙。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/dx5.png">
-          <span class="intro">同方云完美的解决了海量碎文件的读写问题，存储技术绝对一流。</span>
-        </div>
-        <div class="case">
-          <img src="/static/assets/page-views/about/clients/dx6.png">
-          <span class="intro">我们的数据存放在同方云的公有云平台上从未发生过数据丢失，同方云是值得信赖的合作伙伴。</span>
-        </div>
-      </div>
-      <div class="right">
-        <img src="/static/assets/page-views/about/clients/2222.png">
-      </div>
-    </div>
-  </div>
+  </article>
 </div>
 <%- include('../../../../components/footer.ejs') %>

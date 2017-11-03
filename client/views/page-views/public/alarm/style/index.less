@@ -68,6 +68,77 @@
           .description {
             display: none;
           }
+          .pc-function {
+            width: 800px;
+            padding-top: 58px;
+            overflow: hidden;
+            margin: 0 auto;
+            .function-item {
+              float: left;
+              width: 250px;
+              height: 300px;
+              background: @color_white;
+              border-radius: 4px;
+              margin-right: 25px;
+              padding: 36px 20px 15px 20px;
+              box-sizing: border-box;
+              .function-img {
+                display: block;
+                width: 80px !important;
+                height: 80px !important;
+                margin: 0 auto;
+                padding-bottom: 40px;
+                padding-top: 0;
+                float: none;
+              }
+              .line {
+                width: 74px;
+                height: 4px;
+                margin: 0 auto;
+                background-image: linear-gradient(90deg, #4A83F5 0%, #2FBAEC 100%);
+                margin-bottom: 25px;
+              }
+              .function-title {
+                font-size: 22px;
+                color: @color_character_grade_one;
+                letter-spacing: 1px;
+                line-height: 30px;
+                text-align: center;
+              }
+              .function-intro {
+                display: none;
+                font-size: 14px;
+                color: @color_white;
+                letter-spacing: 0.5px;
+                line-height: 28px;
+                font-weight: 200;
+              }
+              &:hover {
+                padding: 25px;
+                background-image: linear-gradient(54deg, #5A64FA 0%, #28C7EA 100%);
+                border-radius: 4px;
+                .function-img {
+                  display: none;
+                }
+                .function-title {
+                  font-size: 22px;
+                  color: @color_white;
+                  letter-spacing: 1px;
+                  line-height: 30px;
+                  padding-bottom: 15px;
+                }
+                .line {
+                  display: none;
+                }
+                .function-intro {
+                  display: block;
+                }
+              }
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
           .signup-mobile {
             display: none;
           }
@@ -195,6 +266,15 @@
         .feature-right {
           .feature-item {
             height: 250px !important;
+            .item-title {
+              padding-top: 5px !important;
+            }
+            .item-intro {
+              padding-top: 5px !important;
+            }
+          }
+          .feature-item-one {
+            border-bottom: none !important;
           }
         }
       }
@@ -260,7 +340,6 @@
                 margin-bottom: 20px;
                 img {
                   width: 76px !important;
-                  height: 72px !important;
                   margin-bottom: 19.4px !important;
                 }
                 .line {
@@ -287,6 +366,9 @@
                   padding-bottom: 45px;
                 }
               }
+            }
+            .pc-function {
+              display: none;
             }
             .signup-mobile {
               display: block;
@@ -336,24 +418,24 @@
                 float: left;
                 box-sizing: border-box;
                 width: 50%;
-                height: 178px;
+                height: 218px !important;
                 img {
                   width: 30px;
                   height: 30px;
                 }
                 .item-title {
-                  padding-top: 10px;
-                  padding-bottom: 10px;
+                  padding-top: 8px;
+                  padding-bottom: 8px;
                   font-size: 16px;
                   letter-spacing: 0.5px;
-                  line-height: 28px;
+                  line-height: 18px;
                 }
                 .item-brief {
-                  font-size: 12px;
+                  font-size: 10px;
                   letter-spacing: 0.5px;
-                  line-height: 20px;
+                  line-height: 16px;
                   padding-top: 0;
-                  padding-bottom: 10px;
+                  padding-bottom: 6px;
                 }
               }
               .feature-item-one {
