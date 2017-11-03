@@ -57,7 +57,7 @@
     "wechat": "WeChat"
   },
   "zh": {
-    "about_us_header": "关于有云",
+    "about_us_header": "关于我们",
     "alarm": "监控报警",
     "apply_now": "立即申请",
     "big_data": "大数据",
@@ -111,6 +111,6 @@
     "train_apply": "培训申请",
     "train_list": "培训列表",
     "uos3": "产品文档",
-    "wechat": "有云微信"
+    "wechat": "同方微信"
   }
 }
