@@ -1,75 +1,104 @@
 <%- include('../../../../components/header.ejs') %>
-  <div class="volcano-train-apply">
-    <article >
-      <!-- banner -->
-      <section class="content-banner">
-        <div class="wraper">
-          <div class="volcano-common-content">
-          <img src="/static/assets/page-views/training/train-apply/bannerpic@v2.0.png">
-            <div class="word">
-              <div class="word-title"><%= banner_title %></div>
-              <div class="word-brief"><%= banner_brief %></div>
-              <div class="word-describe"><%= banner_describe %></div>
+<div class="main">
+  <article>
+    <section class="content-banner">
+      <div class="type-area">
+        <div class="banner">
+          <div class="banner-title"><%= banner_title %></div>
+          <div class="banner-brief"><%= banner_brief %></div>
+          <div class="banner-describe"><%= banner_describe %></div>
+          <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+        </div>
+      </div>
+      <img class="banner-img" src="/static/assets/page-views/train/train-apply/banner.png">
+      <img class="banner-img-mobile" src="/static/assets/page-views/train/train-apply/banner-m.png">
+    </section>
+  </article>
+  <section class="content">
+    <nav class="breadcrumbs clearfix">
+      <ul>
+        <li><%= breadcrumbs_one %>&nbsp;/&nbsp;</li>
+        <li><%= breadcrumbs_two %>&nbsp;/&nbsp;</li>
+        <li class="active"><%= breadcrumbs_three %></li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <div class="application-form-wrapper">
+        <form action="" id="application-form">
+          <div class="form-title">
+            <%= form_title %>
+          </div>
+          <div class="form-info">
+            <%= form_info %>
+          </div>
+          <div class="name-field">
+            <div class="title"><%= name_title %></div>
+            <input type="text" name="name" id="name"
+             maxlength="60" />
+            <div class="message">
+              <div class="error-msg"><%= name_error_msg %></div>
+              <div class="correct-msg"><%= name_correct_msg %></div>
             </div>
-            <ul class="breadcrumb">
-              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
-              <li class="second"><a class="success" href="/private-cloud/private-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
-              <li class="second"><a class="success" href="/training/train"><%= breadcrumb_three %></a>&nbsp;/&nbsp;</li>
-              <li class="third"><%= breadcrumb_four %></li>
+          </div>
+          <div class="phone-field">
+            <div class="title"><%= phone_title %></div>
+            <input type="text" name="phone" id="phone"
+            />
+            <div class="message">
+              <div class="error-msg"><%= phone_error_msg %></div>
+              <div class="correct-msg"><%= phone_correct_msg %></div>
+            </div>
+          </div>
+          <div class="email-field">
+            <div class="title"><%= email_title %></div>
+            <input type="text" name="email" id="email"
+            />
+            <div class="message">
+              <div class="error-msg"><%= email_error_msg %></div>
+              <div class="correct-msg"><%= email_correct_msg %></div>
+            </div>
+          </div>
+          <div class="company-field">
+            <div class="title"><%= company_title %></div>
+            <input type="text" name="company" id="company"
+            maxlength="80" />
+            <div class="message">
+              <div class="error-msg"><%= company_error_msg %></div>
+              <div class="correct-msg"><%= company_correct_msg %></div>
+            </div>
+          </div>
+          <div class="class-location-field">
+            <div class="title"><%= class_location_title %></div>
+            <ul class="clearfix">
+            <% var locs = [loc1, loc2, loc3, loc4, loc5, loc6,
+              loc7, loc8, loc9, loc10] %>
+            <% for(var i = 1; i<= 10; i++) { %>
+              <li>
+                <input type="radio" id='<%= "loc"+i %>'
+                  name="location" value="<%= locs[i-1] %>" data-index="<%= i - 1 %>"/>
+                <label for='<%= "loc"+i %>'><%= locs[i-1] %></label>
+              </li>
+            <% } %>
             </ul>
+            <div class="message">
+                <div class="error-msg"><%= location_error_msg %></div>
+                <div class="correct-msg"><%= location_correct_msg %></div>
             </div>
-        </div>
-      </section>
-      <!-- end for banner -->
-      <!-- content -->
-      <section class="content-main">
-        <div class="inner">
-          <div class="inform">
-            <div class="title">
-              <div class="apply"><%= apply %></div>
-              <div class="describe">
-                <%= apply_describe %>
-              </div>
-            </div>
-            <div class="circle">
-              <label for="name"><span class="icon icon-user"></span><%= apply_name %><em><%= apply_name_enter %></em></label>
-              <span class="logo"></span>
-              <input class="regname" type="text" name="name">
-            </div>
-            <div class="circle tel">
-              <label for="name"><span class="icon icon-tel"></span><%= apply_phone %><em><%= apply_phone_enter %></em></label>
-              <span class="logo"></span>
-              <input type="text" name="name" class="regtel">
-            </div>
-            <div class="circle">
-              <label for="name"><span class="icon icon-eemail"></span><%= apply_email %><em><%= apply_email_enter %></em></label>
-              <span class="logo"></span>
-              <input type="text" name="name" class="regemail">
-            </div>
-            <div class="circle company">
-              <label for="name"><span class="icon icon-myhome"></span><%= apply_company %><em><%= apply_company_enter %></em></label>
-              <span class="logo"></span>
-              <input type="text" name="name" class="reghome">
-            </div>
-            <div class="multiple">
-              <label for="classroom" class="classroom"><%= place %></label>
-              <div class="inlinee">
-                <label class="inline"><input type="checkbox" name="classroom" id="checked1"><%= beijing %></label>
-                <label class="inline"><input type="checkbox" name="classroom"><%= shanghai %></label>
-                <label class="gz inline"><input type="checkbox" name="classroom" checked><%= guangzhou %></label>
-              </div>
-            </div>
-            <div class="linep">
-              <div class="yes"><%= apply_yes %><span></div>
-              <div class="no"></div>
-            </div>
-            <input type="submit" value="<%= apply_train %>" class="submit">
-            <div class="contact">
-              <%= apply_contact %><br><%= apply_train_name%>, 15801679767 <%= other %>&nbsp;zhangqi@unitedstack.com
-            </div>
-        </div>
-      </section>
-      <!-- end for content -->
+          </div>
+          <div class="class-location-map">
+            <canvas id="class-map" width="880" height="685" class="canvas">
+              <%= doest_support_canvas %>
+            </canvas>
+          </div>
+          <div class="btn-area">
+            <button id="submitBtn"><%= submit_btn %></button>
+          </div>
+        </form>
+      </div>
+      <div class="question-info">
+        <%= question_info %>
+      </div>
     </div>
-    </article>
-  <%- include('../../../../components/footer.ejs') %>
+  </section>
+</div>
+<%- include('../../../../components/footer.ejs') %>
