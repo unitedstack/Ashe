@@ -10,8 +10,8 @@
     "banner_describe_mobile": "高效稳定的云计算技术为互联网企业提供强有力的支撑，保证业务稳定运行",
     "banner_title": "客户案例",
     "breadcrumb_one": "首页",
-    "breadcrumb_three": "",
-    "breadcrumb_two": "关于有云",
+    "breadcrumb_three": "客户案例",
+    "breadcrumb_two": "关于我们",
     "cssFile": "/static/dist/page_about_clients.min.css",
     "jsFile": "/static/dist/page_about_clients.min.js",
     "title": "UnitedStack - 联系我们"
