@@ -1,0 +1,251 @@
+<%- include('../../../../components/header.ejs') %>
+<div class="technical-support">
+  <article>
+    <section class="content-banner">
+      <div class="type-area">
+        <div class="banner">
+          <div class="banner-title"><%= banner_title %></div>
+          <div class="banner-brief"><%= banner_brief %></div>
+          <div class="banner-describe"><%= banner_describe %></div>
+          <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+        </div>
+      </div>
+      <img class="banner-img" src="/static/assets/page-views/support/technical-support/banner.jpg">
+    </section>
+    <div class="breadcrumb">
+      <ul class="breadcrumb-center">
+        <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+        <li class="second"><a class="success" href="/support/product-service"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+        <li class="third"><%= breadcrumb_three %></li>
+      </ul>
+    </div>
+    <div class="bg-content">
+      <div class="private-func">
+        <div class="private-cloud-func"><%= private_cloud %><span><%= function_outline %></span></div>
+        <div class="function-outline">FUNCTION OUTLINE</div>
+        <div class="func-table">
+          <div class="table-instance">
+            <div class="instance-left">
+              <div class="title">
+                <span class="exper">EXPERIENCE</span>
+                <div class="exper-title">弹性<span>云主机</span></div>
+              </div>
+              <span><%= instance_right %></span>
+            </div>
+            <img class="instance-right" src="/static/assets/page-views/support/technical-support/instance.png"/>
+          </div>
+          <div class="table-instance">
+            <img class="software-left" src="/static/assets/page-views/support/technical-support/network.png"/>
+            <div class="software-right">
+              <div class="title">
+                <span class="exper">EXPERIENCE</span>
+                <div class="exper-title">软件<span>定义网络</span></div>
+              </div>
+              <span><%= software_tip %></span>
+            </div>
+          </div>
+          <div class="table-instance">
+            <div class="instance-left">
+              <div class="title">
+                <span class="exper">EXPERIENCE</span>
+                <div class="exper-title">统一<span>存储</span></div>
+              </div>
+              <span><%= storage_tip %></span>
+            </div>
+            <img class="instance-right" src="/static/assets/page-views/support/technical-support/storage.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="private-func">
+        <div class="private-cloud-func"><%= private_cloud %><span><%= function_characteristics %></span></div>
+        <div class="function-outline">CHARACTERISTICS</div>
+        <div class="characteristics-table">
+          <img src="/static/assets/page-views/support/technical-support/high.png">
+          <div class="tip"><%= high_able %></div>
+          <div class="line"></div>
+          <span><%= high_able_tip %></span>
+        </div>
+        <div class="characteristics-table" style="margin: 0 90px">
+          <img src="/static/assets/page-views/support/technical-support/sc.png">
+          <div class="tip"><%= security %></div>
+          <div class="line"></div>
+          <span><%= security_tip %></span>
+        </div>
+        <div class="characteristics-table">
+          <img src="/static/assets/page-views/support/technical-support/monitor.png">
+          <div class="tip"><%= monitor %></div>
+          <div class="line"></div>
+          <span><%= monitor_tip %></span>
+        </div>
+        <div class="characteristics-table" style="margin-top: 30px">
+          <img src="/static/assets/page-views/support/technical-support/manage.png">
+          <div class="tip"><%= management %></div>
+          <div class="line"></div>
+          <span><%= management_tip %></span>
+        </div>
+        <div class="characteristics-table" style="margin: 30px 90px 0 90px">
+          <img src="/static/assets/page-views/support/technical-support/up.png">
+          <div class="tip"><%= upgrade %></div>
+          <div class="line"></div>
+          <span><%= upgrade_tip %></span>
+        </div>
+        <div class="characteristics-table">
+          <img src="/static/assets/page-views/support/technical-support/alarm.png">
+          <div class="tip">报警</div>
+          <div class="line"></div>
+          <span>同方云为您提供持续不断产品更新，优化云平台性能，上线新的产品功能，你的云平台将再技术和功能保持领先。</span>
+        </div>
+      </div>
+      <div class="private-func" style="margin-bottom: 200px">
+        <div class="compared"><%= compared %></div>
+        <div class="icon">
+          <img src="/static/assets/page-views/support/technical-support/green.png"><span><%= excellent %></span>
+          <img src="/static/assets/page-views/support/technical-support/yellow.png"><span><%= medium %></span>
+          <img src="/static/assets/page-views/support/technical-support/red.png"><span><%= inferior %></span>
+        </div>
+        <div class="compared-table">
+          <div class="table-one head"></div>
+          <div class="table-two head">Openstack <%= original_edition %></div>
+          <div class="table-two head">Openstack <%= issue %></div>
+          <div class="table-two head end">UOS</div>
+        </div>
+        <div class="compared-table">
+          <div class="content-one content first"><%= func %></div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/red.png">
+            <span><%= user_develop %></span>
+          </div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= func_issuer %></span>
+          </div>
+          <div class="content-two content end">
+            <img src="/static/assets/page-views/support/technical-support/green.png">
+            <span><%= func_uos %></span>
+          </div>
+        </div>
+        <div class="compared-table">
+          <div class="content-one content odd first"><%= performance %></div>
+          <div class="content-two content odd">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= performance_original %></span>
+          </div>
+          <div class="content-two content odd">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= performance_original %></span>
+          </div>
+          <div class="content-two content odd end">
+            <img src="/static/assets/page-views/support/technical-support/green.png">
+            <span><%= performance_uos %></span>
+          </div>
+        </div>
+        <div class="compared-table">
+          <div class="content-one content first"><%= stability %></div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/red.png">
+            <span><%= stability_original %></span>
+          </div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= stability_issue %></span>
+          </div>
+          <div class="content-two content end">
+            <img src="/static/assets/page-views/support/technical-support/green.png">
+            <span><%= stability_uos %></span>
+          </div>
+        </div>
+        <div class="compared-table">
+          <div class="content-one content odd first"><%= peration %></div>
+          <div class="content-two content odd">
+            <img src="/static/assets/page-views/support/technical-support/red.png">
+            <span><%= peration_original %></span>
+          </div>
+          <div class="content-two content odd">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= peration_original %></span>
+          </div>
+          <div class="content-two content odd end">
+            <img src="/static/assets/page-views/support/technical-support/green.png">
+            <span><%= peration_uos %></span>
+          </div>
+        </div>
+        <div class="compared-table">
+          <div class="content-one content first"><%= upgrade %></div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/red.png">
+            <span><%= no %></span>
+          </div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= no %></span>
+          </div>
+          <div class="content-two content end">
+            <img src="/static/assets/page-views/support/technical-support/green.png">
+            <span><%= upgrade_uos %></span>
+          </div>
+        </div>
+        <div class="compared-table">
+          <div class="content-one content odd first"><%= service %></div>
+          <div class="content-two content odd">
+            <img src="/static/assets/page-views/support/technical-support/red.png">
+            <span><%= no %></span>
+          </div>
+          <div class="content-two content odd">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= no %></span>
+          </div>
+          <div class="content-two content odd end">
+            <img src="/static/assets/page-views/support/technical-support/green.png">
+            <span><%= service_uos %></span>
+          </div>
+        </div>
+        <div class="compared-table">
+          <div class="content-one content first"><%= time %></div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= time_original %></span>
+          </div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= time_issue %></span>
+          </div>
+          <div class="content-two content end">
+            <img src="/static/assets/page-views/support/technical-support/green.png">
+            <span><%= time_uos %></span>
+          </div>
+        </div>
+        <div class="compared-table">
+          <div class="content-one content odd first"><%= risk %></div>
+          <div class="content-two content odd">
+            <img src="/static/assets/page-views/support/technical-support/red.png">
+            <span><%= risk_original %></span>
+          </div>
+          <div class="content-two content odd">
+            <img src="/static/assets/page-views/support/technical-support/yellow.png">
+            <span><%= risk_issue %></span>
+          </div>
+          <div class="content-two content odd end">
+            <img src="/static/assets/page-views/support/technical-support/green.png">
+            <span><%= risk_uos %></span>
+          </div>
+        </div>
+        <div class="compared-table">
+          <div class="content-one content first"><%= cost %></div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/red.png">
+            <span><%= high %></span>
+          </div>
+          <div class="content-two content">
+            <img src="/static/assets/page-views/support/technical-support/red.png">
+            <span><%= high %></span>
+          </div>
+          <div class="content-two content end">
+            <img src="/static/assets/page-views/support/technical-support/green.png">
+            <span><%= low %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+<%- include('../../../../components/footer.ejs') %>
