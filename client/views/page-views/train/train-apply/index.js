@@ -157,14 +157,22 @@ $(function() {
       modal.setOptions({
         content: data.message,
         btnContent: '知道了',
-        btnType: 'create'
+        btnType: 'create',
+        iconSrc: '/static/assets/page-views/train/train-apply/gou.png'
       });
       modal.show();
     }).fail(function(jqXHR) {
       var response = JSON.parse(jqXHR.responseText);
+      var message;
+      if(response.errors) {
+        message = response.errors[0].message;
+      } else {
+        message = '申请失败';
+      }
       modal.setOptions({
-        content: response.errors[0].message,
-        btnContent: '重新申请'
+        content: message,
+        btnContent: '重新申请',
+        iconSrc: '/static/assets/page-views/train/train-apply/cha.png'
       });
       modal.show();
     });
@@ -222,9 +230,9 @@ $(function() {
     };
   }
 
-  mapImg.src = '/static/assets/page-views/training-application/map.jpg';
-  defaultImg.src = '/static/assets/page-views/training-application/default.jpg';
-  checkedImg.src = '/static/assets/page-views/training-application/selected.jpg';
+  mapImg.src = '/static/assets/page-views/train/train-apply/map.jpg';
+  defaultImg.src = '/static/assets/page-views/train/train-apply/default.jpg';
+  checkedImg.src = '/static/assets/page-views/train/train-apply/selected.jpg';
 
   $(canvas).on('click', clickHandler);
 

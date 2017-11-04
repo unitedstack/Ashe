@@ -29,8 +29,9 @@
 
   .content {
     .breadcrumbs {
+      font-weight: 100;
       width: 1030px;
-      margin: 18px auto 0;
+      margin: 50px auto 0;
       ul {
         float: right;
         color: @color_character_grade_two;
@@ -38,6 +39,10 @@
       }
       li {
         float: left;
+        a {
+          color: @color_character_grade_two;
+          cursor: pointer;
+        }
         &.active {
           color: @color_character_grade_one;
           margin-left: 1px;
@@ -61,6 +66,7 @@
     height: 113px;
     text-align: center;
     .background-title {
+      font-family: "MicrosoftYaHei-Bold" !important;
       font-weight: bold;
       font-size: 80px;
       color: #F7F8FB;;
@@ -68,7 +74,8 @@
       line-height: 90px;
     }
     .title {
-      font-weight: lighter;
+      font-family: "MicrosoftYaHeiLight" !important;
+      font-weight: 100;
       position: relative;
       top: -22px;
       display: inline-block;
@@ -107,13 +114,15 @@
     }
 
     .service-title {
+      font-family: "MicrosoftYaHei" !important;
       text-align: center;
       .big-font-style();
       color: @color_content;
     }
 
     .service-content {
-      font-weight: 200px;
+      font-family: "MicrosoftYaHeiLight" !important;
+      font-weight: 100;
       font-size: 14px;
       color: @color_content;
       letter-spacing: 0.5px;
@@ -147,6 +156,13 @@
     overflow: hidden;
     .title-section {
       margin-top: 100px;
+      .background-title {
+        font-family: "MicrosoftYaHei-Bold" !important;
+        font-size: 80px;
+        color: #F3F4F7;
+        letter-spacing: 2px;
+        line-height: 90px;
+      }
     }
   }
 
@@ -170,12 +186,15 @@
       color: white;
       font-size: 0;
       .symbol {
+        font-family: "PingFangSC-Semibold" !important;
         float: left;
         width: 45px;
         margin-right: 4px;
         .big-font-style();
       }
       .question-content {
+        font-family: "PingFangSC-Light" !important;
+        font-weight: 100;
         display: inline-block;
         font-size: 16px;
         letter-spacing: 0.5px;
@@ -191,6 +210,7 @@
       border-radius: 0 0 2px 2px;
       font-size: 0;
       .symbol {
+        font-family: "PingFangSC-Semibold" !important;
         float: left;
         width: 45px;
         margin-right: 4px;
@@ -198,6 +218,8 @@
         .big-font-style();
       }
       .answer-content {
+        font-family: "PingFangSC-Light" !important;
+        font-weight: 100;
         width: 459px;
         display: inline-block;
         color: @color_content;
@@ -245,16 +267,16 @@
           float: left;
           margin: 0 0 30px 0;
         }
-        &::after {
-          content: '';
-          width: 12px;
-          height: 20px;
-          border: 1px solid red;
-          position: absolute;
-          bottom: -25px;
-          left: 50%;
-          margin-left: -6px;
-        }
+        // &::after {
+        //   content: '';
+        //   width: 12px;
+        //   height: 20px;
+        //   border: 1px solid red;
+        //   position: absolute;
+        //   bottom: -25px;
+        //   left: 50%;
+        //   margin-left: -6px;
+        // }
       }
 
       .service-wrapper {

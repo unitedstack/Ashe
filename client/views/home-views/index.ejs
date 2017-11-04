@@ -1,284 +1,320 @@
 <%- include('../../components/header.ejs') %>
-<div class="volcano-home">
-  <section class="content-banner">
-    <div class="carousel" id="carousel">
-      <div class="wrapper" id="wrapper">
-        <ul class="m_unit" id="m_unit">
-          <li style="background: url(/static/assets/banner1@v2.0.jpg) no-repeat center center;background-size: cover;" class="preloading first first-page">
-            <div class="experts">
-              <p class="title"><%= uos_title %></p>
-              <p class="brief"><%= uos_brief %></p>
-              <a href="/product/product"><%= link_detail_one %></a>
+<div class="main">
+  <!-- banner begin -->
+  <section class="banner">
+    <div class="pc-banner">
+      <ul class="carousel">
+        <li class="banner-wrapper">
+          <div class="banner-content-wrapper">
+            <div class="banner-title1"><%= first_banner_title1 %></div>
+            <div class="banner-title2"><%= first_banner_title2 %></div>
+            <div class="banner-content"><%= first_banner_content %></div>
+            <div>
+              <a href="/public/storage">
+                <button class="banner-btn1 banner-btn"><%= banner_btn1 %></button>
+              </a>
+              <a href="http://console.ustack.com/login?next=/">
+                <button class="banner-btn2 banner-btn"><%= banner_btn2 %></button>
+              </a>
             </div>
-          </li>
-          <li style="background: url(/static/assets/banner2.jpg) no-repeat center center;background-size: cover;" class="preloading second-page">
-            <div class="experts">
-              <p class="title"><%= experts_title %></p>
-              <p class="brief"><%= experts_brief %></p>
-              <a href="/account/register"><%= link_one %></a>
+          </div>
+        </li>
+        <li class="banner-wrapper">
+          <div class="banner-content-wrapper">
+            <div class="banner-title1"><%= second_banner_title1 %></div>
+            <div class="banner-title2"><%= second_banner_title2 %></div>
+            <div class="banner-content"><%= second_banner_content %></div>
+            <div>
+              <a href="/product/cloud-security">
+                <button class="banner-btn1 banner-btn"><%= banner_btn1 %></button>
+              </a>
+              <a href="/account/login">
+                <button class="banner-btn2 banner-btn"><%= banner_btn2 %></button>
+              </a>
             </div>
-          </li>
-        </ul>
-      </div>
-      <div class="circle" id="circle">
-        <div class="item">
-          <div class="li circle_left"><span class="unit_width"></span></div>
-        </div>
-        <div class="item">
-          <div class="li"><span class="unit_width"></span></div>
-        </div>
-      </div>
+          </div>
+        </li>
+        <li class="banner-wrapper">
+          <div class="banner-content-wrapper">
+            <div class="banner-title1"><%= third_banner_title1 %></div>
+            <div class="banner-title2"><%= third_banner_title2 %></div>
+            <div class="banner-content"><%= third_banner_content %></div>
+            <div>
+              <a href="/product/cloud-platform/product">
+                <button class="banner-btn1 banner-btn"><%= banner_btn1 %></button>
+              </a>
+              <a href="http://console.ustack.com/login?next=/">
+                <button class="banner-btn2 banner-btn"><%= banner_btn2 %></button>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="control-bar">
+        <li class="point active" data-index=1></li>
+        <li class="point" data-index=2></li>
+        <li class="point" data-index=3></li>
+      </ul>
     </div>
   </section>
-  <section class="content-main">
-    <div class="innerc">
-      <div class="crosswise">
-        <ul>
-          <li class="service">
-            <img src="/static/assets/crosswise1.png" class="logo">
-            <img src="/static/assets/crosswise11.png" class="logo-new">
-            <p class="intro"><%= crosswise_one %></p>
-            <div class="line"></div>
-            <div class="detail">
-              <%= crosswise_one_detail %>
-            </div>
-          </li>
-          <li class="construction">
-            <img src="/static/assets/crosswise2.png" class="logo">
-            <img src="/static/assets/crosswise22.png" class="logo-new">
-            <p class="intro"><%= crosswise_two %></p>
-            <div class="line"></div>
-            <div class="detail">
-              <%= crosswise_two_detail %>
-            </div>
-          </li>
-          <li class="om">
-            <img src="/static/assets/crosswise3.png" class="logo">
-            <img src="/static/assets/crosswise33.png" class="logo-new">
-            <p class="intro"><%= crosswise_three %></p>
-            <div class="line"></div>
-            <div class="detail">
-              <%= crosswise_three_detail %>
-            </div>
-          </li>
-          <li class="documents">
-            <img src="/static/assets/crosswise4.png" class="logo">
-            <img src="/static/assets/crosswise44.png" class="logo-new">
-            <p class="intro"><%= crosswise_four %></p>
-            <div class="line"></div>
-            <div class="detail">
-              <%= crosswise_four_detail %>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="show">
-      <div class="inner">
-        <div class="item">
-          <div class="show-content">
-            <div class="left"></div>
-            <div class="right">
-              <p class="intro"><%= show_one_title %></p>
-              <p class="introduction"><%= show_one_detail %></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-        <div class="show-content">
-          <div class="left"></div>
-          <div class="right">
-            <p class="intro"><%= show_two_title %></p>
-            <p class="introduction"><%= show_two_detail %></p>
-          </div>
-        </div>
-        </div>
-        <div class="item">
-          <div class="show-content">
-            <div class="left"></div>
-            <div class="right">
-              <p class="intro"><%= show_three_title %></p>
-              <p class="introduction"><%= show_three_detail %></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="advantage">
-      <div class="title"><%=advantage_title %></div>
-      <div class="brief"><%=advantage_brief%></div>
-      <div class="ad-content">
-        <div class="left">
-          <div class="item">
-            <img src="/static/assets/ad1.png">
-            <p class="ad-title"><%=advantage_one_title%></p>
-            <div class="ad-brief">
-              <p><i></i><span class="per-brief"><%=advantage_one_brief_one%><b>;&nbsp;</b></span></p>
-              <p><i></i><span class="per-brief"><%=advantage_one_brief_two%></span></p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/static/assets/ad2.png">
-            <p class="ad-title"><%=advantage_two_title%></p>
-            <div class="ad-brief">
-              <p><i></i><span class="per-brief"><%=advantage_two_brief_one%><b>;&nbsp;</b></span></p>
-              <p><i></i><span class="per-brief"><%=advantage_two_brief_two%><b>;&nbsp;</b></span></p>
-              <p><i></i><span class="per-brief"><%=advantage_two_brief_three%></span></p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/static/assets/ad3.png">
-            <p class="ad-title"><%=advantage_three_title%></p>
-            <div class="ad-brief">
-              <p><i></i><span class="per-brief"><span></span><%=advantage_three_brief_one%><b>;&nbsp;</b></span></p>
-              <p><i></i><span class="per-brief"><span></span><%=advantage_three_brief_two%><b>;&nbsp;</b></span></p>
-              <p><i></i><span class="per-brief"><span></span><%=advantage_three_brief_three%></span></p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/static/assets/ad4.png">
-            <p class="ad-title"><%=advantage_four_title%></p>
-            <div class="ad-brief">
-              <p><i></i><span class="per-brief"><span></span><%=advantage_four_brief_one%></span></p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/static/assets/ad5.png">
-            <p class="ad-title"><%=advantage_five_title%></p>
-            <div class="ad-brief">
-              <p><i></i><span class="per-brief"><span></span><%=advantage_five_brief_one%><b>;&nbsp;</b></span></p>
-              <p><i></i><span class="per-brief"><span></span><%=advantage_five_brief_two%></span></p>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <img src="/static/assets/advantage.png">
-        </div>
-      </div>
+  <!-- banner end -->
 
-    </div>
-<!--     <div class="framework">
-      <div class="inner">
-        <div class="title"><%= framework_title %></div>
-        <div class="brief"><%= framework_brief %></div>
-        <div class="framephoto framephoto1"> </div>
-        <div class="framephoto framephoto2"> </div>
-        <div class="framephoto framephoto3"> </div>
-        <div class="framephoto framephoto4"> </div>
+  <!-- content begin -->
+  <section class="content">
+    
+    <!-- architecture begin -->
+    <div class="architecture clearfix">
+      <div class="content-wrapper">
+        <div class="content-title"><%= architecture_title %></div>
+        <div class="architecture-content"><%= architecture_content %></div>
+        <a href="/product/environment">
+          <button class="content-btn"><%= architecture_btn %></button>
+        </a>
       </div>
-    </div> -->
-    <div class="classify">
-      <div class="wall"></div>
-      <div class="inner">
-        <div class="title"><%= classify_title %></div>
-        <div class="brief"><%= classify_brief %></div>
-        <div class="classify-ul">
-          <div class="classify-li milestones">
-            <img src="/static/assets/6-1@v2.0.jpg">
-            <div class="under-detail">
-              <p class="title"><%= classify_one_name %></p>
-              <p class="line"></p>
-              <p class="detail"><%= classify_one_detail %></p>
-              <a href="/about/milestones" class="under"><%= classify_one_name_two %></a>
-            </div>
-          </div>
-          <div class="classify-li contact">
-            <img src="/static/assets/6-2@v2.0.jpg">
-            <div class="under-detail">
-              <p class="title"><%= classify_two_name %></p>
-              <p class="line"></p>
-              <p class="detail"><%= classify_two_detail %></p>
-              <a href="/about/contact-us" class="under"><%= classify_two_name %></a>
-            </div>
-          </div>
-          <div class="classify-li train">
-            <img src="/static/assets/6-3@v2.0.jpg">
-            <div class="under-detail">
-              <p class="title"><%= classify_three_name %></p>
-              <p class="line"></p>
-              <p class="detail"><%= classify_three_detail %></p>
-              <a href="/training/train" class="under"><%= classify_three_name %></a>
-            </div>
-          </div>
-          <div class="classify-li recruitment">
-            <img src="/static/assets/6-4@v2.0.jpg">
-            <div class="under-detail">
-              <p class="title"><%= classify_four_name %></p>
-              <p class="line"></p>
-              <p class="detail"><%= classify_four_detail %></p>
-              <a href="/about/jobs" class="under"><%= classify_four_name %></a>
-            </div>
-          </div>
+      <div class="img-wrapper">
+        <div class="architecture-list">
+          <img src="/static/assets/home-views/architecture-bg.png" alt="" class="architecture-bg">
         </div>
       </div>
     </div>
-    <div class="articles">
-      <div class="news">
-        <div class="title"><%= news_title %></div>
-        <div class="detail">
-        <% if(home_news[0]) {%>
-          <a class="first" href="/news/<%= home_news[0].url%>">
-            <%if (home_news[0].cover){%>
-              <div class="first-img" style="background: url(<%= home_news[0].cover %>) no-repeat center center;background-size:cover;"></div>
-            <% }else{%>
-              <div class="first-img" style="background: url(static/assets/holder.png) no-repeat center center;background-size:cover;"></div>
-            <% }%>
-            <div class="curtain">
-              <p id="fold" class="content"><%= home_news[0].title%></p>
+    <!-- architecture end -->
+
+    <!-- features begin -->
+    <div class="feature-list-wrapper">
+      <div class="feature-header">
+        <div class="feature-title">
+          <div class="bg-title">FIELDS INVOLVED</div>
+          <div class="title">
+            <span><%= first_feat_title_sec1 %></span><span>&</span><span><%= first_feat_title_sec2 %></span>
+          </div>
+        </div>
+        <div class="feature-content"><%= first_feat_content %></div>
+      </div>
+      <ul class="feature-list">
+        <li class="feature-wrapper">
+          <div class="feature-content-wrapper clearfix">
+            <div class="clearfix feat-content">
+                <div class="feature-title">
+                    <%= second_feat_title %>
+                  </div>
+                  <div class="feature-content">
+                    <%= second_feat_content %>
+                  </div>
             </div>
-          </a>
-          <%}%>
-          <% for(var i = 1;i<home_news.length; i++ ) {%>
-          <div class="list">
-            <span class="date"><%= new Date(home_news[i].createdAt).getFullYear() + '年' + (new Date(home_news[i].createdAt).getMonth() + 1) + '月' + new Date(home_news[i].createdAt).getDate() +'日'%></span>
-            <span class="name"><%= home_news[i].authorName%></span>
-            <a class="content" href="/news/<%= home_news[i].url%>"><%= home_news[i].title%></a>
+            <div class="feat-ani">
+              <div class="ani1"></div>
+              <div class="ani2"></div>
+              <div class="ani3"></div>
+              <div class="ani4"></div>
+              <div class="ani5"></div>
+              <div class="ani6"></div>
+              <div class="ani7"></div>
+              <div class="ani8"></div>
+              <div class="ani9"></div>
+              <div class="ani10"></div>
+              <div class="ani11"></div>
+            </div>
           </div>
-          <%}%>
-        </div>
-        <div class="mobile-detail">
-          <% for(var i = 0;i<home_news.length; i++ ) {%>
-          <div class="list">
-            <span class="date"><%= new Date(home_news[i].createdAt).getFullYear() + '年' + (new Date(home_news[i].createdAt).getMonth() + 1) + '月' + new Date(home_news[i].createdAt).getDate() +'日'%></span>
-            <span class="name"><%= home_news[i].authorName%></span>
-            <a class="content" href="/news/<%= home_news[i].url%>"><%= home_news[i].title%></a>
+        </li>
+        <li class="feature-wrapper">
+          <div class="feature-content-wrapper clearfix">
+            <div class="clearfix feat-content">
+              <div class="feature-title">
+                <%= third_feat_title %>
+              </div>
+              <div class="feature-content">
+                <%= third_feat_content %>
+              </div>
+            </div>
+            <div class="feat-ani">
+              <div class="ani1"></div>
+              <div class="ani2"></div>
+              <div class="ani3"></div>
+              <div class="ani4"></div>
+              <div class="ani5"></div>
+              <div class="ani6"></div>
+              <div class="ani7"></div>
+              <div class="ani8"></div>
+              <div class="ani9"></div>
+              <div class="ani10"></div>
+              <div class="ani11"></div>
+            </div>
           </div>
-          <%}%>
+        </li>
+        <li class="feature-wrapper">
+          <div class="feature-content-wrapper clearfix">
+            <div class="clearfix feat-content">
+                <div class="feature-title">
+                    <%= fourth_feat_title %>
+                  </div>
+                  <div class="feature-content">
+                    <%= fourth_feat_content %>
+                  </div>
+            </div>
+            <div class="feat-ani">
+                <div class="ani1"></div>
+                <div class="ani2"></div>
+                <div class="ani3"></div>
+                <div class="ani4"></div>
+                <div class="ani5"></div>
+                <div class="ani6"></div>
+                <div class="ani7"></div>
+                <div class="ani8"></div>
+                <div class="ani9"></div>
+                <div class="ani10"></div>
+                <div class="ani11"></div>
+              </div>
+          </div>
+         </li>
+         <li class="feature-wrapper">
+            <div class="feature-content-wrapper clearfix">
+              <div class="feat-content">
+                  <div class="feature-title">
+                      <%= fifth_feat_title %>
+                    </div>
+                    <div class="feature-content">
+                      <%= fifth_feat_content %>
+                    </div>
+              </div>
+              <div class="feat-ani">
+                  <div class="ani1"></div>
+                  <div class="ani2"></div>
+                  <div class="ani3"></div>
+                  <div class="ani4"></div>
+                  <div class="ani5"></div>
+                  <div class="ani6"></div>
+                  <div class="ani7"></div>
+                  <div class="ani8"></div>
+                  <div class="ani9"></div>
+                  <div class="ani10"></div>
+                  <div class="ani11"></div>
+                </div>
+            </div>
+          </li>
+      </ul>
+    </div>
+    <!-- features end -->
+
+    <!-- area begin -->
+    <div class="area-wrapper">
+      <div class="area-title">
+        <div class="bg-title">SERVICE AREA</div>
+        <div class="title">
+          <span><%= area_title_sec1 %></span><span><%= area_title_sec2 %></span>
         </div>
-        <a href="/news?page=1" class="more" ><%= more_news %></a>
       </div>
-      <div class="blog">
-        <div class="title"><%= blog_title %></div>
-        <div class="detail">
-          <% for(var i = 0;i<home_blog.length; i++ ) {%>
-          <div class="list">
-            <span class="date"><%= new Date(home_blog[i].createdAt).getFullYear() + '年' + (new Date(home_blog[i].createdAt).getMonth() + 1) + '月' + new Date(home_blog[i].createdAt).getDate() +'日'%></span>
-              <a id="txt" class="content" href="/blog/<%= home_blog[i].url%>" title="<%= home_blog[i].title %>"><%= home_blog[i].title %></a>
-              <div class="dotted">......</div>
+      <div><%= area_intro_content %></div>
+      <ul class="area-list clearfix">
+        <li class="area-content-wrapper" data-index=1>
+          <div class="top">
+            <img src="/static/assets/home-views/edu.png" alt="" class="area-icon">
+            <div class="bar"></div>
+            <div class="area-name"><%= first_area_name %></div>
           </div>
-          <%}%>
+          <div class="bottom">
+            <div class="content-title"><%= first_area_name %></div>
+            <div class="area-content"><%= first_area_content %></div>
+          </div>
+        </li>
+        <li class="area-content-wrapper" data-index=2>
+          <div class="top">
+            <img src="/static/assets/home-views/fin.png" alt="" class="area-icon">
+            <div class="bar"></div>
+            <div class="area-name"><%= second_area_name %></div>
+          </div>
+          <div class="bottom">
+            <div class="content-title"><%= second_area_name %></div>
+            <div class="area-content"><%= second_area_content %></div>
+          </div>
+        </li>
+        <li class="area-content-wrapper" data-index=3>
+          <div class="top">
+            <img src="/static/assets/home-views/gov.png" alt="" class="area-icon">
+            <div class="bar"></div>
+            <div class="area-name"><%= third_area_name %></div>
+          </div>
+          <div class="bottom">
+            <div class="content-title"><%= third_area_name %></div>
+            <div class="area-content"><%= third_area_content %></div>
+          </div>
+        </li>
+        <li class="area-content-wrapper" data-index=4>
+          <div class="top">
+            <img src="/static/assets/home-views/com.png" alt="" class="area-icon">
+            <div class="bar"></div>
+            <div class="area-name"><%= fourth_area_name %></div>
+          </div>
+          <div class="bottom">
+            <div class="content-title"><%= fourth_area_name %></div>
+            <div class="area-content"><%= fourth_area_content %></div>
+          </div>
+        </li>
+      </ul>
+      <!-- <button><%= area_btn %></button> -->
+    </div>
+    <!-- area end -->
+
+    <!-- customer begin -->
+    <div class="customer-wrapper">
+      <div class="customer-title title-section">
+        <div class="bg-title">CUSTOMER</div>
+        <div class="title">
+          <span><%= customer_title_sec1 %></span><span><%= customer_title_sec2 %></span>
         </div>
-        <a href="/blog?page=1" class="more"><%= link_two %></a>
+      </div>
+      <div><%= customer_append_content %></div>
+      <ul class="customer-list clearfix">
+        <% for(var i = 1; i <= 10; i++) { %>
+          <li class="customer">
+            <img src="/static/assets/home-views/cu<%= i %>.png" alt="">
+          </li>
+        <% } %>  
+        </ul>
+      <!-- <button>更多客户</button> -->
+    </div>
+    <!-- customer end -->
+
+    <!-- cummunity begin -->
+    <div class="community"></div>
+    <!-- cummunity end -->
+
+    <!-- reference begin -->
+    <div class="refer-wrapper">
+      <div class="refer-move-bg move-bg1">
+        <img src="/static/assets/home-views/refer-bg-move1.png" alt="" />
+        <img src="/static/assets/home-views/refer-bg-move1.png" alt="" />
+      </div>
+      <div class="refer-move-bg move-bg2">
+        <img src="/static/assets/home-views/refer-bg-move2.png" alt="" />
+        <img src="/static/assets/home-views/refer-bg-move2.png" alt="" />
+      </div>
+      <div class="refer-move-bg move-bg3">
+        <img src="/static/assets/home-views/refer-bg-move3.png" alt="" />
+        <img src="/static/assets/home-views/refer-bg-move3.png" alt="" />
+      </div>
+      <div class="refer-content-wrapper">
+        <div class="refer-content">
+          <span class="big">云计算</span>
+          <span class="small">是一种</span>
+          <span class="big">商业计算模型</span>
+          <span class="small">，它将计算任务分布在大量计算</span>
+          <span class="small">机构成的</span>
+          <span class="big">资源池</span>
+          <span class="small">上，使各种应用能够根据需要获取</span>
+          <span class="big">计算能</span>
+          <span class="big">力</span>
+          <span class="small">、</span>
+          <span class="big">存储空间</span>
+          <span class="small">和</span>
+          <span class="big">网络连通性</span>
+          <span class="small">，及各种</span>
+          <span class="big">软件服务</span>
+          <span class="small">.</span>
+        </div>
       </div>
     </div>
-    <div class="cloud">
-      <div class="title"><%= win %></div>
-      <div class="brief"><%= win_flag %></div>
-      <div class="image">
-        <img class="logo1" src="static/assets/7-1.png">
-        <img class="logo2" src="static/assets/7-2.png">
-        <img class="logo3" src="static/assets/7-3.png">
-        <img class="logo4" src="static/assets/7-4.png">
-        <img class="logo5" src="static/assets/7-5.png">
-      </div>
-    </div>
-    <div class="caller">
-      <div class="character">
-        <p class="call"><%= caller_one %></p>
-        <p class="call"><%= caller_one_part %></p>
-        <p><span><%= caller_two %></span>&nbsp;<%= caller_three %>&nbsp;<span><%= caller_four %></span></p>
-      </div>
-    </div>
+    <!-- reference end -->
   </section>
+  <!-- content end -->
 </div>
 <%- include('../../components/footer.ejs') %>

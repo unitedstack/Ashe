@@ -181,14 +181,22 @@ $(function(){
       modal.setOptions({
         content: data.message,
         btnContent: '知道了',
-        btnType: 'create'
+        btnType: 'create',
+        iconSrc: '/static/assets/page-views/support/apply-now/gou.png'
       });
       modal.show();
     }).fail(function(jqXHR) {
       var response = JSON.parse(jqXHR.responseText);
+      var message;
+      if(response.errors) {
+        message = response.errors[0].message;
+      } else {
+        message = '申请失败';
+      }
       modal.setOptions({
-        content: response.errors[0].message,
-        btnContent: '重新申请'
+        content: message,
+        btnContent: '重新申请',
+        iconSrc: '/static/assets/page-views/support/apply-now/cha.png'
       });
       modal.show();
     });
