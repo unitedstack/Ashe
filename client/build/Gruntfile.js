@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 
     banner: '/*!\n' +
       ' * Ashe v<%= pkg.version %>\n' +
-      ' * Powered by UNITEDSTACK Inc.\n' +
+      ' * Powered by TFCloud.\n' +
       ' */\n',
 
     usebanner: {
