@@ -16,7 +16,7 @@ function Modal() {
     zIndex: 1000,
     width: 250,
     height: 192,
-    iconSrc: '',
+    iconSrc: '/static/assets/page-views/train/train-apply/gou.png',
     content: 'modal content',
     btnContent: 'cancel',
     btnType: 'normal',

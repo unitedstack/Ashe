@@ -51,6 +51,10 @@
       }
       li {
         float: left;
+        a {
+          color: @color_character_grade_two;
+          cursor: pointer;
+        }
         &.active {
           color: @deepestFtColor;
           margin-left: 1px;
@@ -63,10 +67,13 @@
       color: @deepestFtColor;
       .big-font-style();
       .form-title {
+        font-family: "PingFangSC-Regular" !important;
         margin: 0px;
         .biggest-font-style();
       }
       .form-info {
+        font-family: "PingFangSC-Light" !important;
+        font-weight: 100;
         margin-top: 20px;
         line-height: 28px;
         font-size: 18.1px;
@@ -74,6 +81,8 @@
       }
 
       input[type=text] {
+        font-family: "PingFangSC-Light" !important;
+        font-weight: 100;
         width: 100%;
         margin-top: 10px;
         padding: 0;
@@ -93,6 +102,8 @@
       }
 
       .message {
+        font-family: "PingFangSC-Light" !important;
+        font-weight: 100;
         margin-top: 10px;
         height: 24px;
         .smallest-font-style();
@@ -116,9 +127,19 @@
       margin-top: 26px;
     }
 
+    .name-field,
+    .phone-field,
+    .email-field,
+    .company-field {
+      .title {
+        font-family: "PingFangSC-Semibold" !important;
+      }
+    }
+
     .company-survey {
       margin-top: 26px;
       div {
+        font-family: "PingFangSC-Regular" !important;
         .biggest-font-style();
       }
       .switcher {
@@ -156,7 +177,7 @@
         border: 1px solid #d7dae2;
         border-radius: 2px;
         .normal-font-style();
-        padding: 8px;
+        padding: 15px;
         outline: none;
       }
     }
@@ -165,9 +186,12 @@
       color: @deepestFtColor;
       margin-top: 40px;
       div {
+        font-family: "PingFangSC-Semibold" !important;
         .big-font-style();
       }
       ul {
+        font-family: "PingFangSC-Light";
+        font-weight: 100;
         font-size: 18px;
         letter-spacing: 0.5px;
         line-height: 28px;
@@ -202,6 +226,9 @@
     }
 
     .btn-area button{
+      cursor: pointer;
+      font-family: "PingFangSC-Light" !important;
+      font-weight: 100;
       outline: none;
       margin: 60px 0 101px;
       float: right;

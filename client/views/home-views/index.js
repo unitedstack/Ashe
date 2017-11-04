@@ -1,124 +1,136 @@
 require('./style/index.less');
-$('.content-banner').height(G.viewHeight);
-$('.content-banner .carousel').height(G.viewHeight);
-$('.content-banner .carousel .wrapper .m_unit li').height(G.viewHeight);
 
-window.onload = window.onresize = function(){
-  var $circleLis = $('#circle .item');
-  var $wrapper = $('#wrapper');
-  var idx = 0, nowLeft;
-  var imgWidth = $(window).width();
+$(function() {
 
-  $('.content-banner').height(G.viewHeight);
-  $('.content-banner .carousel').height(G.viewHeight);
-  $('.content-banner .carousel .wrapper .m_unit li').height(G.viewHeight);
+  var referTimer;
+  var bannerTimer;
+  var currentIndex = 1;
+  var $doc = $(document);
+  var $carousel = $('.carousel').eq(0);
+  var $bannerWrapper = $('.banner-wrapper');
+  var $bannerContentWrapper = $('.banner-content-wrapper');
+  var $ctrlPoints = $('.control-bar .point');
+  var $areaList = $('.area-list li');
+  var animating = false;
 
-  $circleLis.click(function(){
-    idx = $(this).index();
-    nowLeft = idx * imgWidth;
-    $wrapper.stop(true).animate({'left': -nowLeft},1000);
-    $circleLis.eq(idx).children().addClass('cur').parent().siblings().children().removeClass('cur');
-    $('#circle > .item > .li.circle_left > span').css('background','rgba(255, 255, 255, 0.4)');
-    $('#circle > .item > .li.circle_left.cur > span').css('background','rgba(255, 255, 255, 1)');
-  });
-
-  $('.service').click(function(){
-    location.href = '/private-cloud/private-service';
-  });
-  $('.construction').click(function(){
-    location.href = '/private-cloud/private-skill';
-  });
-  $('.om').click(function(){
-    location.href = '/private-cloud/private-start';
-  });
-  $('.documents').click(function(){
-    location.href = '/docs';
-  });
-  if(!G.mobile){
-    $('.milestones').unbind('click');
-    $('.contact').unbind('click');
-    $('.train').unbind('click');
-    $('.recruitment').unbind('click');
-    var txtNum= $('#fold').html(); 
-    var htmlStr='';
-    if(txtNum.length > 10){
-      htmlStr =txtNum.substring(0,txtNum.length-10);
-      htmlStr = htmlStr+'......';
-      $('#fold').html(htmlStr);
+  $areaList.on('click', function(evt) {
+    var index = $(evt.target).data('index');
+    var baseUrl = '/about/clients';
+    if(index === 1) {
+      window.location = baseUrl + '#education';
+    } else if(index === 2) {
+      window.location = baseUrl + '#financial';
+    } else if(index === 3) {
+      window.location = baseUrl + '#government';
+    } else {
+      window.location = baseUrl;
     }
-    $('.framephoto4').mouseenter(function(event){
-      event.stopPropagation();
-      $('.framephoto1').css('background-image','url(/static/assets/framework-1-2.png)');
-      $('.framephoto2').css('background-image','url(/static/assets/framework-2-2.png)');
-      $('.framephoto3').css('background-image','url(/static/assets/framework-3-2.png)');
-    });
-    $('.framephoto3').mouseenter(function(event){
-      event.stopPropagation();
-      $('.framephoto1').css('background-image','url(/static/assets/framework-1-2.png)');
-      $('.framephoto2').css('background-image','url(/static/assets/framework-2-2.png)');
-      $('.framephoto4').css('background-image','url(/static/assets/framework-4-2.png)');
-    });
-    $('.framephoto2').mouseenter(function(event){
-      event.stopPropagation();
-      $('.framephoto1').css('background-image','url(/static/assets/framework-1-2.png)');
-      $('.framephoto3').css('background-image','url(/static/assets/framework-3-2.png)');
-      $('.framephoto4').css('background-image','url(/static/assets/framework-4-2.png)');
-    });
-    $('.framephoto1').mouseenter(function(event){
-      event.stopPropagation();
-      $('.framephoto2').css('background-image','url(/static/assets/framework-2-2.png)');
-      $('.framephoto3').css('background-image','url(/static/assets/framework-3-2.png)');
-      $('.framephoto4').css('background-image','url(/static/assets/framework-4-2.png)');
-    });
-    $('.framephoto1').mouseleave(function(event){
-      event.stopPropagation();
-      $('.framephoto2').css('background-image','');
-      $('.framephoto3').css('background-image','');
-      $('.framephoto4').css('background-image','');
-    });
-    $('.framephoto2').mouseleave(function(event){
-      event.stopPropagation();
-      $('.framephoto1').css('background-image','');
-      $('.framephoto3').css('background-image','');
-      $('.framephoto4').css('background-image','');
-    });
-    $('.framephoto3').mouseleave(function(event){
-      event.stopPropagation();
-      $('.framephoto1').css('background-image','');
-      $('.framephoto2').css('background-image','');
-      $('.framephoto4').css('background-image','');
-    });
-    $('.framephoto4').mouseleave(function(event){
-      event.stopPropagation();
-      $('.framephoto1').css('background-image','');
-      $('.framephoto2').css('background-image','');
-      $('.framephoto3').css('background-image','');
+  });
+
+  $(window).on('resize', resizeHandler);
+  $(window).on('scroll', scrollHandler);
+  $ctrlPoints.on('click', pointClickHandler);
+  $bannerContentWrapper.on('mouseenter', function() {
+    if(bannerTimer) {
+      clearInterval(bannerTimer);
+      bannerTimer = null;
+    }
+  });
+  $bannerContentWrapper.on('mouseleave', bannerPlay);
+
+  setBannerSize();
+  bannerPlay();
+
+  function resizeHandler() {
+    if(animating) {
+      $carousel.stop(false, true);
+    }
+    setBannerSize();
+  }
+
+  function bannerPlay() {
+    if(bannerTimer) {
+      return;
+    }
+    bannerTimer = setInterval(function() {
+      var newIndex = currentIndex + 1;
+      if(newIndex == 4) {
+        newIndex = 1;
+      }
+      $ctrlPoints.eq(newIndex - 1).click();
+      currentIndex = newIndex;
+    }, 2500);
+  }
+
+  function pointClickHandler(evt) {
+    clearInterval(bannerTimer);
+    bannerTimer = null;
+
+    if(animating) {
+      $carousel.stop(false, true);
+    }
+    animating = true;
+    var $target = $(evt.target);
+    var index = $target.data('index');
+    if(index === currentIndex) {
+      return;
+    }
+    
+    $ctrlPoints.removeClass('active');
+    $target.addClass('active');
+    bannerRotate(index);
+  }
+
+  function bannerRotate(index) {
+    var docWidth = $doc.width();
+    var newLeft;
+    if(index === 1) {
+      newLeft = 0;
+    } else if(index === 2) {
+      newLeft = -1 * docWidth;
+    } else {
+      newLeft = -2 * docWidth;
+    }
+
+    $carousel.animate({
+      left: newLeft
+    }, 800, function() {
+      if(!bannerTimer) {
+        bannerPlay();
+      }
+      animating = false;
+      currentIndex = index;
     });
   }
-  if(G.mobile){
-    $('.milestones').click(function(){
-      location.href = '/about/milestones';
+
+  function setBannerSize() {
+    var docWidth = $doc.width();
+    var winH = $(window).height();
+    $('.pc-banner').height(winH);
+    $carousel.width(5 * docWidth);
+    $bannerWrapper.width(docWidth);
+  }
+
+  function typingAnimation() {
+    console.log('ffsfsf');
+    var $bigs = $('.refer-content .big');
+    var $smalls = $('.refer-content .small');
+    $bigs.each(function(i, elem) {
+      var $elem = $(elem);
+      $elem.addClass('big' + (i + 1));
     });
-    $('.contact').click(function(){
-      location.href = '/about/contact-us';
-    });
-    $('.train').click(function(){
-      location.href = '/training/train';
-    });
-    $('.recruitment').click(function(){
-      location.href = '/about/jobs';
-    });
-    $('.list1').click(function(){
-      location.href = '/product/uos-director';
-    });
-    $('.list2').click(function(){
-      location.href = '/product/uos-enterprise';
-    });
-    $('.list3').click(function(){
-      location.href = '/product/uos-halo';
-    });
-    $('.list4').click(function(){
-      location.href = '/product/uos-operation-monitor';
+
+    $smalls.each(function(i, elem) {
+      var $elem = $(elem);
+      $elem.addClass('small' + (i + 1));
     });
   }
-};
+
+  function scrollHandler(evt) {
+    var refetTop = $('.refer-wrapper').position().top;
+    var scollT = $(window).scrollTop();
+    if(scollT > (refetTop - 400) && !referTimer) {
+      referTimer = setTimeout(typingAnimation, 600);
+    }
+  }
+});

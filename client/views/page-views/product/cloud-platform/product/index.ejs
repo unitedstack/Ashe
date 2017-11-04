@@ -10,15 +10,15 @@
           <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
         </div>
       </div>
-      <img class="banner-img" src="/static/assets/page-views/support/product-service/banner.png">
-      <img class="banner-img-mobile" src="/static/assets/page-views/support/product-service/banner-m.png">
+      <img class="banner-img" src="/static/assets/page-views/product/cloud-platform/product/banner.jpg">
+      <!-- <img class="banner-img-mobile" src="/static/assets/page-views/product/cloud-platform/product/banner-m.png"> -->
     </section>
   </article>
   <section class="content">
     <nav class="breadcrumbs clearfix">
       <ul>
-        <li><%= breadcrumbs_one %>&nbsp;/&nbsp;</li>
-        <li><%= breadcrumbs_two %>&nbsp;/&nbsp;</li>
+        <li><a href="/"><%= breadcrumbs_one %></a>&nbsp;/&nbsp;</li>
+        <li><a href="/support/product-service"><%= breadcrumbs_two %></a>&nbsp;/&nbsp;</li>
         <li class="active"><%= breadcrumbs_three %></li>
       </ul>
     </nav>
@@ -82,32 +82,32 @@
         </div>
         <ul class="feature-list clearfix">
           <li>
-            <img src="/static/assets/page-views/product/cloud-platform/product/area.png" alt="" class="feature-icon">
+            <img src="/static/assets/page-views/product/cloud-platform/product/feat1.png" alt="" class="feature-icon">
             <div class="feature-title"><%= first_feature_title %></div>
             <div class="feature-content"><%= first_feature_content %></div>
           </li>
           <li>
-            <img src="/static/assets/page-views/product/cloud-platform/product/area.png" alt="" class="feature-icon">
+            <img src="/static/assets/page-views/product/cloud-platform/product/feat2.png" alt="" class="feature-icon">
             <div class="feature-title"><%= second_feature_title %></div>
             <div class="feature-content"><%= second_feature_content %></div>
           </li>
           <li>
-            <img src="/static/assets/page-views/product/cloud-platform/product/area.png" alt="" class="feature-icon">
+            <img src="/static/assets/page-views/product/cloud-platform/product/feat3.png" alt="" class="feature-icon">
             <div class="feature-title"><%= third_feature_title %></div>
             <div class="feature-content"><%= third_feature_content %></div>
           </li>
           <li>
-            <img src="/static/assets/page-views/product/cloud-platform/productarea.png" alt="" class="feature-icon">
+            <img src="/static/assets/page-views/product/cloud-platform/product/feat4.png" alt="" class="feature-icon">
             <div class="feature-title"><%= fourth_feature_title %></div>
             <div class="feature-content"><%= fourth_feature_content %></div>
           </li>
           <li>
-            <img src="/static/assets/page-views/product/cloud-platform/product/area.png" alt="" class="feature-icon">
+            <img src="/static/assets/page-views/product/cloud-platform/product/feat5.png" alt="" class="feature-icon">
             <div class="feature-title"><%= fifth_feature_title %></div>
             <div class="feature-content"><%= fifth_feature_content %></div>
           </li>
           <li>
-            <img src="/static/assets/page-views/product/cloud-platform/product/area.png" alt="" class="feature-icon">
+            <img src="/static/assets/page-views/product/cloud-platform/product/feat6.png" alt="" class="feature-icon">
             <div class="feature-title"><%= sixth_feature_title %></div>
             <div class="feature-content"><%= sixth_feature_content %></div>
           </li>
@@ -132,7 +132,9 @@
                 <div><%= first_intro_sect1 %></div>
                 <div><%= first_intro_sect2 %></div>
               </div>
-              <button class="intro-btn"><%= first_intro_btn %></button>
+              <a href="/product/cloud-platform/enterprise">
+                <button class="intro-btn"><%= first_intro_btn %></button>
+              </a>
             </div>
           </li>
           <li class="intro-wrapper clearfix">
@@ -144,7 +146,9 @@
                 <div><%= second_intro_sect1 %></div>
                 <div><%= second_intro_sect2 %></div>
               </div>
-              <button class="intro-btn"><%= second_intro_btn %></button>
+              <a href="/product/cloud-platform/director">
+                <button class="intro-btn"><%= second_intro_btn %></button>
+              </a>
             </div>
           </li>
           <li class="intro-wrapper clearfix">
@@ -156,7 +160,9 @@
                 <div><%= third_intro_sect1 %></div>
                 <div><%= third_intro_sect2 %></div>
               </div>
-              <button class="intro-btn"><%= third_intro_btn %></button>
+              <a href="/product/cloud-platform/manager">
+                <button class="intro-btn"><%= third_intro_btn %></button>
+              </a>
             </div>
           </li>
           <li class="intro-wrapper clearfix">
@@ -168,7 +174,9 @@
                 <div><%= fourth_intro_sect1 %></div>
                 <div><%= fourth_intro_sect2 %></div>
               </div>
-              <button class="intro-btn"><%= fourth_intro_btn %></button>
+              <a href="/product/cloud-platform/operator">
+                <button class="intro-btn"><%= fourth_intro_btn %></button>
+              </a>
             </div>
           </li>
         </ul>
