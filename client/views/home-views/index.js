@@ -59,7 +59,7 @@ $(function() {
       }
       $ctrlPoints.eq(newIndex - 1).click();
       currentIndex = newIndex;
-    }, 2500);
+    }, 10000);
   }
 
   function pointClickHandler(evt) {
