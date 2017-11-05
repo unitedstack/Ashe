@@ -62,6 +62,7 @@ module.exports = (app) => {
     ctx.commonField.url = ctx.request.path;
     const data = Object.assign({
       commonCssFile: `/static/common/style/${ctx.app.FileHash.index}.index.css`,
+      commonJsFile: `/static/common/js/${ctx.app.FileHash.g}.g.js`,
       home_news: articles[0].articles,
       home_blog: articles[1].articles
     }, globalLang[ctx.session.lang], homeLang[ctx.session.lang],{

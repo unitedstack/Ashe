@@ -13,9 +13,13 @@ matchDist.forEach(fileName => {
     hashs[arr[0]] = '';
   }
 });
-const matchCommon = glob.sync('*.index.css', {cwd: path.join(__dirname, '../client/static/common/style/')});
-if (matchCommon[0]) {
-  hashs.index = matchCommon[0].split('.')[0];
+const matchCommonCss = glob.sync('*.index.css', {cwd: path.join(__dirname, '../client/static/common/style/')});
+const matchCommonJs = glob.sync('*.g.js', {cwd: path.join(__dirname, '../client/static/common/js/')});
+if (matchCommonCss[0]) {
+  hashs.index = matchCommonCss[0].split('.')[0];
+}
+if (matchCommonJs[0]) {
+  hashs.g = matchCommonJs[0].split('.')[0];
 }
 
 const Koa = require('koa');

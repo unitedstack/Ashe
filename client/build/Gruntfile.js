@@ -80,7 +80,8 @@ module.exports = function(grunt) {
       dist: 'client/static/dist',
       fonts: ['client/static/iconfonts/fonts', 'client/static/common/style/fonts', 'client/static/common/style/icons.less'],
       html: 'client/static/html',
-      commonCss: 'client/static/common/style/*.index.css'
+      commonCss: 'client/static/common/style/*.index.css',
+      commonJs: 'client/static/common/js/*.g.js'
     },
 
     webpack: {
@@ -133,6 +134,16 @@ module.exports = function(grunt) {
         cwd: 'client/static/iconfonts/fonts',
         src: '*',
         dest: 'client/static/common/style/fonts'
+      },
+      commonJs: {
+        // icon fonts
+        expand: true,
+        cwd: 'client/static/common/js',
+        src: 'global.js',
+        dest: 'client/static/common/js',
+        rename: function(dest, matchedSrcPath) {
+          return path.join(dest, matchedSrcPath.replace('global.js', 'g.js'));
+        }
       }
     },
 
@@ -160,6 +171,11 @@ module.exports = function(grunt) {
       commonCss: {
         files: {
           src: ['client/static/common/style/index.css']
+        }
+      },
+      commonJs: {
+        files: {
+          src: ['client/static/common/js/g.js']
         }
       }
     },
@@ -223,7 +239,7 @@ module.exports = function(grunt) {
   grunt.registerTask('html', 'Generate i18n html', ['clean:html', 'ejs2html:zh', 'ejs2html:en', 'routerlist']);
 
   // grunt build
-  grunt.registerTask('build', ['copy_assets', 'clean:dist', 'webpack:build', 'commonCss', 'html', 'usebanner']);
+  grunt.registerTask('build', ['copy_assets', 'clean:dist', 'webpack:build', 'commonCss', 'commonJs', 'html', 'usebanner']);
 
   /**
    * npm run dev --pages=XXX,XXX
@@ -263,6 +279,8 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('commonCss', ['clean:commonCss', 'less:commonCss', 'rev:commonCss']);
+
+  grunt.registerTask('commonJs', ['clean:commonJs', 'copy:commonJs', 'rev:commonJs']);
 
   // Generate palette preview
   grunt.registerTask('palette', function(buildTheme) {

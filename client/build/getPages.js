@@ -44,6 +44,9 @@ async function walkPages(p, rootUrl, indexFile, i18nFile) {
             pageLang[key].commonCssFile = '/static/common/style/' + glob.sync('*.index.css', {
               cwd: 'client/static/common/style'
             });
+            pageLang[key].commonJsFile = '/static/common/js/' + glob.sync('*.g.js', {
+              cwd: 'client/static/common/js'
+            });
           });
           obj[url.toLowerCase()].langen = Object.assign({}, globalLang.en, pageLang.en);
           obj[url.toLowerCase()].langzh = Object.assign({}, globalLang.zh, pageLang.zh);
