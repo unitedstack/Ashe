@@ -92,6 +92,7 @@ module.exports = (app) => {
   router.get('*', async (ctx) => {
     let data = Object.assign({
       commonCssFile: `/static/common/style/${ctx.app.FileHash.index}.index.css`,
+      commonJsFile: `/static/common/js/${ctx.app.FileHash.g}.g.js`,
     }, globalLang[ctx.session.lang], pageLang[ctx.session.lang],{
       cssFile: `/static/dist/${ctx.app.FileHash[404]? ctx.app.FileHash[404] + '.' : ''}404.min.css`,
       jsFile: `/static/dist/${ctx.app.FileHash[404] ? ctx.app.FileHash[404] + '.' : ''}404.min.js`,
