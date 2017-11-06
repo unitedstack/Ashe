@@ -160,6 +160,7 @@ function globalEvent(G) {
       }
     }
   });
+
   $('.login-link').click(function(){
     window.location = ('https://console.tfcloud.com/');
   });

@@ -688,10 +688,8 @@ window.onload = window.onresize = window.onscroll = function(){
       } else {
         $(this).addClass('active');
         $('body').css('overflow','hidden');
-        $('.bg-framework').css({'display': 'block'});
-        $('.bg-framework').css({'width': $(window).width(), 'height': $('.pricelist').offset().top - $(window).scrollTop() - $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
-        // $('.bg-framework').css({'width': $(window).width(), 'height': $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
-        $(this).siblings('ul').css({'display':'block', 'top': -$('.pricelist ul li').height() * $('.pricelist ul li').length + 'px'});
+        $(this).siblings('ul').css('display','block');//待确认
+        $(this).siblings('ul').css({'top': -$('.pricelist ul li').height() * $('.pricelist ul li').length + 'px'});
         $('.close').click(function(){
           $('.bg-framework').css({'height': $('.pricelist').offset().top - $(window).scrollTop() - $('.pricelist').children('ul').height() + 54});
           $(this).parents('ul').css({'top': -$('.pricelist ul li').height() * ($('.pricelist ul li').length - 1) + 'px'});
