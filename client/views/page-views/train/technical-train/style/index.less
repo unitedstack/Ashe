@@ -26,7 +26,7 @@
         margin: auto;
         position: relative;
         box-sizing: border-box;
-        padding: 50px 20px 0 20px;
+        padding: 0 20px;
       }
     }
     @media (min-width: @pad_width) and (max-width: 1255px) {
@@ -192,10 +192,10 @@
             padding: 40px 30px 60px 30px;
             box-sizing: border-box;
             .left {
-              background: url(/static/assets/page-views/train/technical-train/featured-picture-1.png) no-repeat center center;
               float: left;
-              width: 100%;
-              height: 170px;
+              img {
+                width: 100%;
+              }
             }
             .right {
               float: left;
@@ -231,16 +231,6 @@
             }
             &:hover{
               background-color: #fff;
-            }
-          }
-          .devops {
-            .left {
-              background-image: url(/static/assets/page-views/train/technical-train/featured-picture-2.png);
-            }
-          }
-          .unitedstack {
-            .left {
-              background-image: url(/static/assets/page-views/train/technical-train/featured-picture-3.png);
             }
           }
         }
@@ -395,6 +385,13 @@
               box-sizing: border-box;
               .left {
                 height: 150px;
+                width: 100%;
+                img {
+                  width: auto;
+                  height: 150px;
+                  display: block;
+                  margin: 0 auto;
+                }
               }
               .right {
                 .title {
