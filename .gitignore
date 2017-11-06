@@ -76,6 +76,9 @@ client/static/html
 # common css
 client/static/common/style/*.css
 
+# common js
+client/static/common/js/*.g.js
+
 # admin dist and manifest file
 admin/dist/
 admin/manifest.json

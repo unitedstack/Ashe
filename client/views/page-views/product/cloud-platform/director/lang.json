@@ -7,7 +7,7 @@
   "zh": {
     "banner_brief": "自动化部署",
     "banner_describe": "同方云全栈云平台——公有云是一套用来部署和管理OpenStack集群的工具集，基于社区的OpenStack TripleO开发，它将复杂的同方云公有云系统的部署交付，变得简单化，具有高度的确定性和可控性。",
-    "banner_describe_mobile": "",
+    "banner_describe_mobile": "基于社区的OpenStack TripleO开发，它将复杂的同方云公有云系统的部署交付，变得简单化",
     "banner_title": "灵活的",
     "breadcrumb_one": "首页",
     "breadcrumb_three":  "同方云 Director",
