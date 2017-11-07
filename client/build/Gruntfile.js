@@ -136,7 +136,6 @@ module.exports = function(grunt) {
         dest: 'client/static/common/style/fonts'
       },
       commonJs: {
-        // icon fonts
         expand: true,
         cwd: 'client/static/common/js',
         src: 'global.js',
@@ -202,6 +201,12 @@ module.exports = function(grunt) {
           'client/static/common/assets/*.@(jpg|png|gif|jpeg|svg)'
         ],
         tasks: ['copy_assets']
+      },
+      commonJs: {
+        files: [
+          'client/static/common/js/global.js'
+        ],
+        tasks: ['commonJs']
       }
     }
 
