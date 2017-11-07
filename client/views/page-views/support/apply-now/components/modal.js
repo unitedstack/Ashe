@@ -16,7 +16,7 @@ function Modal() {
     zIndex: 1000,
     width: 250,
     height: 192,
-    iconSrc: '/static/assets/page-views/support/apply-now/gou.png',
+    iconSrc: '/static/assets/page-views/support/apply-now/success.jpg',
     content: 'modal content',
     btnContent: 'cancel',
     btnType: 'normal',

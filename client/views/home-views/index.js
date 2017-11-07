@@ -1,17 +1,79 @@
 require('./style/index.less');
 
+var srcBase = '/static/assets/home-views/';
+var imageSrc = [
+  'first-banner-bg.jpg',
+  'second-banner-bg.jpg',
+  'third-banner-bg.jpg',
+  'architecture-bg.png',
+  'feature-bg.jpg',
+  'com.png',
+  'edu.png',
+  'fin.png',
+  'gov.png',
+  'refer-bg.jpg',
+  'refer-bg-move1.png',
+  'refer-bg-move2.png',
+  'refer-bg-move3.png'
+];
+
+function preloadImages(srcBase, imageSrc) {
+  document.body.style.overflow = 'hidden';
+  var total = imageSrc.length;
+  var loaded = 0;
+  var progress = 0;
+  var step = Math.floor(100 / total);
+
+  imageSrc.map(function(item) {
+    return srcBase + item;
+  }).forEach(function(item) {
+    var image = new Image();
+    image.onload = function() {
+      loaded ++;
+      progress += step;
+      if(loaded === total) {
+        progress = 100;
+        updateProgressBar(progress);
+        hideMask();
+      } else {
+        updateProgressBar(progress);
+      }
+    };
+    image.src = item;
+  });
+}
+
+function updateProgressBar(progress) {
+  var $progressBar = $('#preload-mask .progress-bar');
+  var $content = $('#preload-mask .content');
+  $progressBar.width(progress * 5.5);
+  $content.text(progress + '%');
+}
+
+function hideMask() {
+  document.body.style.overflow = 'auto';
+  var mask = document.getElementById('preload-mask');
+  if(mask) {
+    $(mask).addClass('fading-preload-mask');
+    setTimeout(function() {
+      document.body.removeChild(mask);
+    }, 1500);
+  }
+}
+
+preloadImages(srcBase, imageSrc);
+setTimeout(hideMask, 5000);
+
 $(function() {
 
   var referTimer;
   var bannerTimer;
-  var currentIndex = 1;
-  var $doc = $(document);
-  var $carousel = $('.carousel').eq(0);
+  var currentIndex = 0;
   var $bannerWrapper = $('.banner-wrapper');
   var $bannerContentWrapper = $('.banner-content-wrapper');
   var $ctrlPoints = $('.control-bar .point');
   var $areaList = $('.area-list li');
-  var animating = false;
+  var fontVisible = false;
 
   $areaList.on('click', function(evt) {
     var index = $(evt.target).data('index');
@@ -30,89 +92,98 @@ $(function() {
   $(window).on('resize', resizeHandler);
   $(window).on('scroll', scrollHandler);
   $ctrlPoints.on('click', pointClickHandler);
-  $bannerContentWrapper.on('mouseenter', function() {
-    if(bannerTimer) {
-      clearInterval(bannerTimer);
-      bannerTimer = null;
-    }
-  });
-  $bannerContentWrapper.on('mouseleave', bannerPlay);
+  $bannerContentWrapper.on('mouseenter', bannerHover);
+  $bannerContentWrapper.on('mouseleave', bannerBlur);
 
   setBannerSize();
-  bannerPlay();
+
+  autoPlay();
 
   function resizeHandler() {
-    if(animating) {
-      $carousel.stop(false, true);
-    }
     setBannerSize();
   }
 
-  function bannerPlay() {
-    if(bannerTimer) {
-      return;
+  function scrollHandler(evt) {
+    var refetTop = $('.refer-wrapper').position().top;
+    var referHeight = $('.refer-wrapper').height();
+    var windowH = $(window).height();
+    var scollT = $(window).scrollTop();
+
+    if(scollT <= refetTop - referHeight && fontVisible) {
+      hideFont();
+    } else if(scollT > (refetTop - windowH / 2) && !referTimer) {
+      referTimer = setTimeout(typingAnimation, 600);
     }
-    bannerTimer = setInterval(function() {
-      var newIndex = currentIndex + 1;
-      if(newIndex == 4) {
-        newIndex = 1;
-      }
-      $ctrlPoints.eq(newIndex - 1).click();
-      currentIndex = newIndex;
-    }, 10000);
+  }
+
+  function hideFont() {
+    if(referTimer) {
+      clearTimeout(referTimer);
+      referTimer = null;
+    }
+
+    var $bigs = $('.refer-content .big');
+    var $smalls = $('.refer-content .small');
+
+    $bigs.each(function(i, elem) {
+      var $elem = $(elem);
+      $elem.removeClass('big' + (i + 1));
+    });
+
+    $smalls.each(function(i, elem) {
+      var $elem = $(elem);
+      $elem.removeClass('small' + (i + 1));
+    });
+    fontVisible = false;
   }
 
   function pointClickHandler(evt) {
-    clearInterval(bannerTimer);
-    bannerTimer = null;
-
-    if(animating) {
-      $carousel.stop(false, true);
+    if(bannerTimer) {
+      autoStop();
     }
-    animating = true;
-    var $target = $(evt.target);
-    var index = $target.data('index');
+    var index = $(evt.target).data('index');
     if(index === currentIndex) {
       return;
     }
-    
-    $ctrlPoints.removeClass('active');
-    $target.addClass('active');
-    bannerRotate(index);
+    $bannerWrapper.eq(currentIndex).removeClass('active');
+    $bannerWrapper.eq(index).addClass('active');
+    $ctrlPoints.eq(currentIndex).removeClass('active');
+    $ctrlPoints.eq(index).addClass('active');
+    currentIndex = index;
+    autoPlay();
   }
 
-  function bannerRotate(index) {
-    var docWidth = $doc.width();
-    var newLeft;
-    if(index === 1) {
-      newLeft = 0;
-    } else if(index === 2) {
-      newLeft = -1 * docWidth;
-    } else {
-      newLeft = -2 * docWidth;
-    }
+  function bannerHover(evt) {
+    autoStop();
+  }
 
-    $carousel.animate({
-      left: newLeft
-    }, 800, function() {
-      if(!bannerTimer) {
-        bannerPlay();
-      }
-      animating = false;
-      currentIndex = index;
-    });
+  function bannerBlur(evt) {
+    autoPlay();
   }
 
   function setBannerSize() {
-    var docWidth = $doc.width();
     var winH = $(window).height();
     $('.pc-banner').height(winH);
-    $carousel.width(5 * docWidth);
-    $bannerWrapper.width(docWidth);
+  }
+
+  function autoPlay() {
+    if(!bannerTimer) {
+      bannerTimer = setInterval(function() {
+        var index = currentIndex + 1;
+        if(index === 3) {
+          index = 0;
+        }
+        $ctrlPoints.eq(index).click();
+      }, 10000);
+    }
+  }
+
+  function autoStop() {
+    clearInterval(bannerTimer);
+    bannerTimer = null;
   }
 
   function typingAnimation() {
-    console.log('ffsfsf');
     var $bigs = $('.refer-content .big');
     var $smalls = $('.refer-content .small');
     $bigs.each(function(i, elem) {
@@ -124,13 +195,6 @@ $(function() {
       var $elem = $(elem);
       $elem.addClass('small' + (i + 1));
     });
-  }
-
-  function scrollHandler(evt) {
-    var refetTop = $('.refer-wrapper').position().top;
-    var scollT = $(window).scrollTop();
-    if(scollT > (refetTop - 400) && !referTimer) {
-      referTimer = setTimeout(typingAnimation, 600);
-    }
+    fontVisible = true;
   }
 });

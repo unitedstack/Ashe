@@ -4,12 +4,12 @@
   <section class="banner">
     <div class="pc-banner">
       <ul class="carousel">
-        <li class="banner-wrapper">
+        <li class="banner-wrapper active">
           <div class="banner-content-wrapper">
             <div class="banner-title1"><%= first_banner_title1 %></div>
             <div class="banner-title2"><%= first_banner_title2 %></div>
             <div class="banner-content"><%= first_banner_content %></div>
-            <div>
+            <div class="clearfix">
               <a href="/public/storage">
                 <button class="banner-btn1 banner-btn"><%= banner_btn1 %></button>
               </a>
@@ -24,7 +24,7 @@
             <div class="banner-title1"><%= second_banner_title1 %></div>
             <div class="banner-title2"><%= second_banner_title2 %></div>
             <div class="banner-content"><%= second_banner_content %></div>
-            <div>
+            <div class="clearfix">
               <a href="/product/cloud-security">
                 <button class="banner-btn1 banner-btn"><%= banner_btn1 %></button>
               </a>
@@ -39,7 +39,7 @@
             <div class="banner-title1"><%= third_banner_title1 %></div>
             <div class="banner-title2"><%= third_banner_title2 %></div>
             <div class="banner-content"><%= third_banner_content %></div>
-            <div>
+            <div class="clearfix">
               <a href="/product/cloud-platform/product">
                 <button class="banner-btn1 banner-btn"><%= banner_btn1 %></button>
               </a>
@@ -51,9 +51,9 @@
         </li>
       </ul>
       <ul class="control-bar">
-        <li class="point active" data-index=1></li>
+        <li class="point active" data-index=0></li>
+        <li class="point" data-index=1></li>
         <li class="point" data-index=2></li>
-        <li class="point" data-index=3></li>
       </ul>
     </div>
   </section>
@@ -265,8 +265,8 @@
       <div><%= customer_append_content %></div>
       <ul class="customer-list clearfix">
         <% for(var i = 1; i <= 10; i++) { %>
-          <li class="customer">
-            <img src="/static/assets/home-views/cu<%= i %>.png" alt="">
+          <li class="customer customer<%= i %>">
+            <!-- <img src="/static/assets/home-views/cu<%= i %>.png" alt=""> -->
           </li>
         <% } %>  
         </ul>
@@ -294,27 +294,46 @@
       </div>
       <div class="refer-content-wrapper">
         <div class="refer-content">
-          <span class="big">云计算</span>
-          <span class="small">是一种</span>
-          <span class="big">商业计算模型</span>
-          <span class="small">，它将计算任务分布在大量计算</span>
-          <span class="small">机构成的</span>
-          <span class="big">资源池</span>
-          <span class="small">上，使各种应用能够根据需要获取</span>
-          <span class="big">计算能</span>
-          <span class="big">力</span>
-          <span class="small">、</span>
-          <span class="big">存储空间</span>
-          <span class="small">和</span>
-          <span class="big">网络连通性</span>
-          <span class="small">，及各种</span>
-          <span class="big">软件服务</span>
-          <span class="small">.</span>
+          <span class="big">云计算</span><span class="small">是一种</span><span class="big">商业计算模型</span><span class="small">，它将计算任务分布在大量计算</span><span class="small">机构成的</span><span class="big">资源池</span><span class="small">上，使各种应用能够根据需要获取</span><span class="big">计算能</span><span class="big">力</span><span class="small">、</span><span class="big">存储空间</span><span class="small">和</span><span class="big">网络连通性</span><span class="small">，及各种</span><span class="big">软件服务</span><span class="small">.</span>
         </div>
       </div>
     </div>
     <!-- reference end -->
   </section>
   <!-- content end -->
+</div>
+<div id="preload-mask">
+  <div class="header">
+    <div class="wrapper">
+        <div class="left"></div>
+        <ul class="center">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="right">
+          <div></div>
+          <div></div>
+        </div>
+    </div>
+
+  </div>
+  <div class="banner-wrapper">
+      <div class="banner-content-wrapper">
+        <div class="banner-title1"></div>
+        <div class="banner-title2"></div>
+        <div class="progress-bar">
+          <div class="content">30%</div>
+        </div>
+        <div class="banner-content1"></div>
+        <div class="banner-content2"></div>
+        <div>
+            <button class="banner-btn1 banner-btn"></button>
+            <button class="banner-btn2 banner-btn"></button>
+        </div>
+      </div>
+    </div>
 </div>
 <%- include('../../components/footer.ejs') %>

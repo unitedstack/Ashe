@@ -170,6 +170,7 @@ $(function(){
         modal.setOptions({
           content: '申请中',
           btnContent: '退出申请',
+          iconSrc: '/static/assets/page-views/support/apply-now/loading.jpg',
           clickHandler: function() {
             jqXHR.abort();
             modal.hide();
@@ -182,7 +183,7 @@ $(function(){
         content: data.message,
         btnContent: '知道了',
         btnType: 'create',
-        iconSrc: '/static/assets/page-views/support/apply-now/gou.png'
+        iconSrc: '/static/assets/page-views/support/apply-now/success.jpg'
       });
       modal.show();
     }).fail(function(jqXHR) {
@@ -196,7 +197,7 @@ $(function(){
       modal.setOptions({
         content: message,
         btnContent: '重新申请',
-        iconSrc: '/static/assets/page-views/support/apply-now/cha.png'
+        iconSrc: '/static/assets/page-views/support/apply-now/error.jpg'
       });
       modal.show();
     });
