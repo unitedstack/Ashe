@@ -1,20 +1,20 @@
 {
   "en": {
-    "banner_brief": "UnitedStack official logo",
-    "banner_describe": "UnitedStack's official logo and slogan for media and blog use are available for download.",
+    "banner_brief": "TongFang cloud official logo",
+    "banner_describe": "TongFang cloud's official logo and slogan for media and blog use are available for download.",
     "banner_title": "Corporate logo",
     "breadcrumb_one": "Home",
     "breadcrumb_three": "Corporate logo",
-    "breadcrumb_two": "About UnitedStack",
+    "breadcrumb_two": "About TongFang cloud",
     "cssFile": "/static/dist/page_about_identify.min.css",
     "extendmeta": "The source file (extensible)",
     "download": "download",
-    "flag": "UnitedStack corporate logo & slogan",
-    "flag_content": "To meet the demand of media and the use of blog, here, download UnitedStack provide official logo and slogan.The latest version of the logo will be the first time updates on this.",
+    "flag": "TongFang cloud corporate logo & slogan",
+    "flag_content": "To meet the demand of media and the use of blog, here, download TongFang cloud provide official logo and slogan.The latest version of the logo will be the first time updates on this.",
     "jsFile": "/static/dist/page_about_identify.min.js",
     "preview": "preview",
     "prompt": "The following version supports preview or download:",
-    "title": "UnitedStack - Identify"
+    "title": "TongFang cloud - Identify"
   },
   "zh": {
     "banner_brief": "同方云 官方标识",
@@ -27,8 +27,8 @@
     "cssFile": "/static/dist/page_about_identify.min.css",
     "extendmeta": "源文件（可扩展）",
     "download": "下载",
-    "flag": "UnitedStack 企业标识&标语",
-    "flag_content": "为满足媒体和博客的使用需求，在这里，UnitedStack 提供官方标识和标语的下载。最新版本标识也将第一时间更新于此。",
+    "flag": "同方云企业标识&标语",
+    "flag_content": "为满足媒体和博客的使用需求，在这里，同方云提供官方标识和标语的下载。最新版本标识也将第一时间更新于此。",
     "jsFile": "/static/dist/page_about_identify.min.js",
     "preview": "预览",
     "prompt": "下列版本支持预览或下载：",
