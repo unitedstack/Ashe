@@ -195,7 +195,7 @@
 }
 
 .fading-preload-mask {
-  transition: opacity 1.5s;
+  transition: opacity 0.75s;
   opacity: 0;
 }
 
@@ -222,8 +222,8 @@
   }
 
   .banner-wrapper {
-    backface-visibility: hidden;
     position: absolute;
+    perspective: 800px;
     left: 0;
     top: 0;
     opacity: 0;
@@ -255,8 +255,8 @@
     top: 50%;
     left: 50%;
     opacity: 0;
-    transition: transform 0.5s 0.5s;
-    transform: translate(-50%, -50%) translateY(-14.3px) rotateY(90deg);
+    transition: all 1s 0.5s;
+    transform: translate(-50%, -50%) translateY(-14.3px) rotateY(9deg);
     width: 660px;
     height: 295px;
     color: white;
@@ -294,7 +294,7 @@
   }
 
   .banner-content {
-    font-weight: 100;
+    font-weight: 300;
     width: 550px;
     margin: 4px 0 18px 55px;
     font-size: 14px;
@@ -307,7 +307,7 @@
   }
 
   .banner-btn {
-    font-weight: 100;
+    font-weight: 300;
     color: white;
     border: none;
     border-radius: 2px;
@@ -361,6 +361,9 @@
     &:last-child {
       margin-right: 0;
     }
+    &:hover {
+      background: rgba(255, 255, 255, .8);
+    }
   }
 
   .control-bar .point.active {
@@ -382,13 +385,13 @@
     width: 1174px;
     height: 517px;
     margin: 93px auto 101px;
-    font-weight: 100;
+    font-weight: 200;
     .content-wrapper {
       width: 319px;
       margin-top: 78px;
       float: left;
       .content-title {
-        font-weight: 100;
+        font-weight: 200;
         font-size: 42px;
         color: @color_character_grade_one ;
         letter-spacing: 2px;
@@ -396,7 +399,7 @@
       }
     
       .architecture-content {
-        font-weight: 100;
+        font-weight: 200;
         width: 306px;
         margin: 20px 0 31px;
         color: @color_content;
@@ -404,7 +407,7 @@
       }
   
       .content-btn {
-        font-weight: 100;
+        font-weight: 200;
         padding: 5px 22px 7px;
         color: white;
         cursor: pointer;
@@ -463,7 +466,7 @@
       .title {
         position: relative;
         top: -33px;
-        font-weight: 100;
+        font-weight: 200;
         color: white;
         height: 60px;
         font-size: 42px;
@@ -476,7 +479,7 @@
     }
     .feature-content {
       margin-top: 18px;
-      font-weight: 100;
+      font-weight: 200;
       font-size: 16px;
       color: white;
       letter-spacing: 0.5px;
@@ -490,6 +493,7 @@
       height: 268px;
       margin-bottom: 70px;
       background-color: rgba(23,92,190, .4);
+      overflow: hidden;
     }
   }
 
@@ -506,7 +510,7 @@
       line-height: 40px;
     }
     .feature-content {
-      font-weight: 100;
+      font-weight: 200;
       width: 530px;
       font-size: 14px;
       letter-spacing: 0.5px;
@@ -518,7 +522,6 @@
     position: relative;
     width: 500px;
     height: 100%;
-    overflow: hidden;
     .ani1 {
       position: absolute;
       width: 22px;
@@ -556,7 +559,7 @@
         transform: translate(-50px, 40px);
       }
       .ani11 {
-        transform: translate(-30px) rotate(45deg);
+        transform: translate(-120px) rotate(45deg);
       }
     }
     .ani2 {
@@ -720,7 +723,7 @@
     .title {
       position: relative;
       top: -38px;
-      font-weight: 100;
+      font-weight: 200;
       font-size: 42px;
       height: 60px;
       letter-spacing: 2px;
@@ -733,7 +736,7 @@
       }
     }
     + div {
-      font-weight: 100;
+      font-weight: 200;
       text-align: center;
       width: 840px;
       margin: 21px auto 61px;
@@ -783,7 +786,6 @@
   }
 
   .bottom {
-    opacity: 0;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(46deg, 
@@ -800,7 +802,7 @@
       padding: 0 28px;
       font-size: 14px;
       letter-spacing: 0.5px;
-      font-weight: 100;
+      font-weight: 200;
     }
   }
 
@@ -808,9 +810,7 @@
     cursor: pointer;
   }
   .area-content-wrapper:hover .bottom {
-    opacity: 1;
     transform: translateY(-100%);
-    transition: opacity 0.5s;
   }
 
   .area-list + button {
@@ -825,7 +825,7 @@
     border-radius: 2px;
     color: white;
     font-size: 18px;
-    font-weight: 100;
+    font-weight: 200;
     line-height: 24px;
     letter-spacing: 1px;
   }
@@ -850,7 +850,7 @@
       opacity: 1;
     }
     .title {
-      font-weight: 100;
+      font-weight: 200;
       position: relative;
       font-size: 42px;
       height: 60px;
@@ -867,7 +867,7 @@
   }
 
   .customer-title + div {
-    font-weight: 100;
+    font-weight: 200;
     width: 840px;
     margin: 8px auto 61px;
     font-size: 16px;
@@ -1003,7 +1003,7 @@
     top: 0;
     margin-left: -585px;
     .refer-content {
-      font-weight: 100;
+      font-weight: 200;
       position: relative;
       float: right;
       width: 660px;
@@ -1027,11 +1027,11 @@
 
   .big {
     font-size: 32px;
-    font-weight: 100;
+    font-weight: 200;
   }
 
   .small {
-    font-weight: 100;
+    font-weight: 200;
     color: #999;
     font-size: 20px;
   }
@@ -1613,6 +1613,17 @@
       bottom: 0;
       width: 100%;
       height: 100%;
+      div {
+        transition: none !important;
+      }
+      &:hover {
+        .ani1, .ani6, .ani7, .ani9 {
+          transform: none;
+        }
+        .ani2, .ani3, .ani4, .ani5, .ani8, .ani10 {
+          transform: rotate(45deg);
+        }
+      }
     }
 
     .area-wrapper {
@@ -1776,7 +1787,7 @@
   }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1025px) and (min-width: 769px) {
   .main  .customer {
     width: 30%;
     &:nth-child(n+4) {
