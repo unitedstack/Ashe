@@ -26,32 +26,12 @@
 
 .main {
   width: 100%;
-  .content {
-    .breadcrumbs {
-      width: 1170px;
-      margin: 50px auto 0;
-      ul {
-        float: right;
-        color: @color_character_grade_two;
-        .smallest-font-style();
-      }
-      li {
-        float: left;
-        a {
-          color: @color_character_grade_two;
-          cursor: pointer;
-        }
-        &.active {
-          color: @color_character_grade_one;
-          margin-left: 1px;
-        }
-      }
-    }
+  button {
+    outline: none;
   }
-
   .main-content {
     width: 100%;
-    margin: 15px auto 0;
+    margin: 0 auto;
     color: @color_character_grade_one;
   }
 
@@ -70,8 +50,8 @@
   .advantage-wrapper {
     img {
       float: left;
-      width: 318px;
-      height: 318px;
+      width: 320px;
+      height: 320px;
       margin-top: 16px;
     }
     > div {
@@ -158,7 +138,7 @@
   .feature-icon {
     display: block;
     width: 80px;
-    height: 72px;
+    height: 80px;
     margin: 0 auto;
   }
   .feature-content {
@@ -308,16 +288,15 @@
       background: @color_button_blue;
       border-radius: 4px;
       letter-spacing: 0.39px;
+      &:hover {
+        background: @color_button_blue_hover;
+      }
     }
   }
 }
 
 @media (max-width: 1170px) {
   .main {
-    .content .breadcrumbs {
-      display: none;
-    }
-
     .main-content {
       margin-top: 0;
     }
@@ -420,7 +399,7 @@
     }
 
     .feature-content {
-      text-align: left;
+      text-align: center;
       font-size: 12px;
       line-height: 20px;
     }

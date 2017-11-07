@@ -27,34 +27,9 @@
 .main {
   width: 100%;
 
-  .content {
-    .breadcrumbs {
-      width: 1170px;
-      margin: 50px auto 0;
-      font-family: "PingFangSC-Light" !important;
-      font-weight: 100;
-      ul {
-        float: right;
-        color: @color_character_grade_two;
-        .smallest-font-style();
-      }
-      li {
-        float: left;
-        a {
-          color: @color_character_grade_two;
-          cursor: pointer;
-        }
-        &.active {
-          color: @color_character_grade_one;
-          margin-left: 1px;
-        }
-      }
-    }
-  }
-
   .main-content {
     width: 100%;
-    margin: 26px auto 200px;
+    margin: 0 auto 200px;
     color: @color_character_grade_one;
   }
 
@@ -66,7 +41,6 @@
     width: 1170px;
     height: 50px;
     margin: 0 auto;
-    font-family: "PingFangSC-Light" !important;
     font-weight: 100;
     ul {
       border: 1px solid @color_button_blue;
@@ -97,23 +71,23 @@
   }
 
   .agreement-title {
-    font-family: "PingFangSC-Regular" !important;
     font-size: 28px;
     letter-spacing: 1px;
     line-height: 40px;
   }
 
   .agreement-content-list > li{
-    font-family: "PingFangSC-Light" !important;
     font-weight: 100;
     margin-top: 30px;
     .symbol {
       float: left;
-      width: 38px;
-      height: 38px;
-      background: #D8D8D8;
-      border: 1px solid #979797;
+      width: 40px;
+      height: 40px;
       border-radius: 1px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     .agreement-content {
       width: 1110px;
@@ -135,7 +109,6 @@
     }
   }
   .agreement-wrapper .agreement-table-title {
-    font-family: "PingFangSC-Light" !important;
     font-weight: 100;
     text-align: center;
     margin: 30px auto;
@@ -164,7 +137,6 @@
     }
     
     thead tr {
-      font-family: "PingFangSC-Regular" !important;
       border-color: @color_button_blue;
       font-size: 28px;
       background: @color_button_blue;
@@ -173,7 +145,6 @@
       line-height: 40px;
     }
     tbody td {
-      font-family: "PingFangSC-Light" !important;
       font-weight: 100;
       font-size: 18px;
       color: @color_content;
@@ -185,18 +156,9 @@
   }
 }
 
-@media (max-width: 1169px) and (min-width: 1024px) {
-  .main .content .breadcrumbs {
-    width: 92%;
-  }
-}
 
 @media (max-width: 1023px) {
   .main {
-    .content .breadcrumbs {
-      display: none;
-    }
-
     .main-content {
       margin: 0 auto 30px;
     }
@@ -220,8 +182,8 @@
     .agreement-content-list > li {
       margin-top: 20px;
       .symbol {
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
       }
       .agreement-content {
         margin-left: 10px;

@@ -41,38 +41,16 @@
   }
   width: 100%;
   .content {
-    .breadcrumbs {
-      width: 1170px;
-      margin: 18px auto 0;
-      ul {
-        float: right;
-        color: @deeperFtColor;
-        .smallest-font-style();
-      }
-      li {
-        float: left;
-        a {
-          color: @color_character_grade_two;
-          cursor: pointer;
-        }
-        &.active {
-          color: @deepestFtColor;
-          margin-left: 1px;
-        }
-      }
-    }
     .main-content {
       width: 970px;
-      margin: 58px auto 0;
+      margin: 0 auto;
       color: @deepestFtColor;
       .big-font-style();
       .form-title {
-        font-family: "PingFangSC-Regular" !important;
         margin: 0px;
         .biggest-font-style();
       }
       .form-info {
-        font-family: "PingFangSC-Light" !important;
         font-weight: 100;
         margin-top: 20px;
         line-height: 28px;
@@ -81,7 +59,6 @@
       }
 
       input[type=text] {
-        font-family: "PingFangSC-Light" !important;
         font-weight: 100;
         width: 100%;
         margin-top: 10px;
@@ -102,7 +79,6 @@
       }
 
       .message {
-        font-family: "PingFangSC-Light" !important;
         font-weight: 100;
         margin-top: 10px;
         height: 24px;
@@ -127,19 +103,9 @@
       margin-top: 26px;
     }
 
-    .name-field,
-    .phone-field,
-    .email-field,
-    .company-field {
-      .title {
-        font-family: "PingFangSC-Semibold" !important;
-      }
-    }
-
     .company-survey {
       margin-top: 26px;
       div {
-        font-family: "PingFangSC-Regular" !important;
         .biggest-font-style();
       }
       .switcher {
@@ -186,7 +152,6 @@
       color: @deepestFtColor;
       margin-top: 40px;
       div {
-        font-family: "PingFangSC-Semibold" !important;
         .big-font-style();
       }
       ul {
@@ -227,7 +192,6 @@
 
     .btn-area button{
       cursor: pointer;
-      font-family: "PingFangSC-Light" !important;
       font-weight: 100;
       outline: none;
       margin: 60px 0 101px;
@@ -254,18 +218,8 @@
   }
 }
 
-@media (max-width: 1169px) and (min-width: 1024px) {
-  .mian .content .breadcrumbs {
-    width: 92%;
-  }
-}
-
 @media (max-width: 1023px) {
   .main .content {
-    .breadcrumbs {
-      display: none;
-    }
-
     .main-content {
       width: 92%;
       margin: 20px auto 0;
