@@ -83,5 +83,8 @@ client/static/common/js/*.g.js
 admin/dist/
 admin/manifest.json
 
+# config file
+config/index.js
+
 # npm file
 package-lock.json
