@@ -386,12 +386,37 @@
                       display: none;
                     }
                   }
+                  &.multi {
+                    a.four {
+                      .icon-arrow-right {
+                        margin-left: 45px !important;
+                      }
+                    }
+                    a.five {
+                      .icon-arrow-right {
+                        margin-left: 31px !important;
+                      }
+                    }
+                    &.select {
+                      a.four {
+                        .icon-arrow-right {
+                          margin-left: 55px !important;
+                        }
+                      }
+                      a.five {
+                        .icon-arrow-right {
+                          margin-left: 41px !important;
+                        }
+                      }
+                    }
+                  }
                   ul.child-dropdown {
+                    padding-right: 0 !important;
                     li {
                       width: 140px !important;
                       a {
                         padding-left: 12px !important;
-                        width: 140px !important;
+                        width: 150px !important;
                       }
                     }
                   }
@@ -701,16 +726,43 @@
       }
     }
     .volcano-global-header > .header-wrapper > .header-center li > .wide-wrapper .wide li {
-      width: 150px !important;
+      width: 168px !important;
       a {
-        width: 150px !important;
+        width: 168px !important;
       }
     }
 
-    .volcano-global-header .header-wrapper .header-center li.multi-dropdown .dropdown-wrapper .dropdown .multi .child-dropdown li {
-      width: 150px !important;
-      a {
+    .volcano-global-header .header-wrapper .header-center li.multi-dropdown .dropdown-wrapper .dropdown .multi .child-dropdown {
+      padding-right: 0;
+      li {
         width: 150px !important;
+        a {
+          width: 150px !important;
+        }
+      }
+    }
+    .volcano-global-header .header-wrapper .header-center li.multi-dropdown .dropdown-wrapper .dropdown .multi {
+      a.four {
+        .icon-arrow-right {
+          margin-left: 35px;
+        }
+      }
+      a.five {
+        .icon-arrow-right {
+          margin-left: 21px;
+        }
+      }
+      &.select {
+        a.four {
+          .icon-arrow-right {
+            margin-left: 45px;
+          }
+        }
+        a.five {
+          .icon-arrow-right {
+            margin-left: 31px;
+          }
+        }
       }
     }
   }

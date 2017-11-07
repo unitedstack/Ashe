@@ -676,20 +676,24 @@ require('./style/index.less');
     $(this).css('left',0);
   });
 })(document, window);
+
 window.onload = window.onresize = window.onscroll = function(){
   if (G.mobile) {
-    $('.bg-framework').css({'width': $(window).width() + 15, 'height': $(window).height() - $('.volcano-global-footer').height() - $('.pricelist').height() - $('.pricelist').children('ul').height(), 'top': $(window).scrollTop()});
     $(this).siblings('ul').css({'display':'block', 'top': -$('.pricelist ul li').height() * $('.pricelist ul li').length + 'px'});
     $('.shopping').click(function(e) {
       e.stopPropagation();
       if($(this).hasClass('active')) {
         $(this).siblings('ul').css({'display':'none'});
         $('.bg-framework').css({'display': 'none'});
+        $('.volcano-global-footer .totop').css('display', '');
+        $('body').css('overflow','');
       } else {
         $(this).addClass('active');
         $('body').css('overflow','hidden');
-        $(this).siblings('ul').css('display','block');//待确认
-        $(this).siblings('ul').css({'top': -$('.pricelist ul li').height() * $('.pricelist ul li').length + 'px'});
+        $('.bg-framework').css({'display': 'block'});
+        $('.volcano-global-footer .totop').css('display', 'none');
+        $('.bg-framework').css({'width': $(window).width(), 'height': $('.pricelist').offset().top - $(window).scrollTop() - $('.pricelist').children('ul').height(), 'top': $(window).scrollTop() - 238});
+        $(this).siblings('ul').css({'display':'block', 'top': -$('.pricelist ul li').height() * $('.pricelist ul li').length + 'px'});
         $('.close').click(function(){
           $('.bg-framework').css({'height': $('.pricelist').offset().top - $(window).scrollTop() - $('.pricelist').children('ul').height() + 54});
           $(this).parents('ul').css({'top': -$('.pricelist ul li').height() * ($('.pricelist ul li').length - 1) + 'px'});
@@ -701,14 +705,19 @@ window.onload = window.onresize = window.onscroll = function(){
           }
         });
         if ($(this).siblings('ul').children('li').length == 0) {
+          $(this).siblings('ul').css({'display': 'block'});
           $('.bg-framework').css({'display': 'none'});
           $('body').css('overflow','');
-        } else {
-          $('.bg-framework').css({'display': 'block'});
+        } else if ($(this).siblings('ul').children('li').length > 0) {
+          $('.shopping').click(function() {
+            $(this).siblings('ul').css({'display': 'none'});
+            $('.bg-framework').css({'display': 'none'});
+            $('body').css('overflow','');
+          });
         }
         $('.adds').click(function() {
           $('.pricelist ul').css('display', 'none');
-          $('body').css('overflow','hidden');
+          $('body').css('overflow','');
         });
         $(this).removeClass('active');
       }
