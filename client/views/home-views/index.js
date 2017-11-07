@@ -46,8 +46,15 @@ function preloadImages(srcBase, imageSrc) {
 function updateProgressBar(progress) {
   var $progressBar = $('#preload-mask .progress-bar');
   var $content = $('#preload-mask .content');
-  $progressBar.width(progress * 5.5);
+  var isMobile = $(window).width() <= 1024 ? true : false;
+  var width = getWidth(isMobile);
+  $progressBar.width(progress * width / 100);
   $content.text(progress + '%');
+}
+
+function getWidth(isMobile) {
+  var width = isMobile ? ($('#preload-mask .banner-content-wrapper').width() * 0.78) : 550;
+  return width;
 }
 
 function hideMask() {
@@ -57,7 +64,7 @@ function hideMask() {
     $(mask).addClass('fading-preload-mask');
     setTimeout(function() {
       document.body.removeChild(mask);
-    }, 1500);
+    }, 750);
   }
 }
 
