@@ -130,6 +130,18 @@
             }
           }
         }
+        .characteristics-table:nth-child(4) {
+          img {
+            width: 64px;
+            height: 80px;
+          }
+        }
+        .characteristics-table:nth-child(7) {
+          img {
+            width: 80px;
+            height: 64px;
+          }
+        }
         .characteristics-table {
           float: left;
           width: 300px;
@@ -140,8 +152,8 @@
           letter-spacing: 0.5px;
           line-height: 24px;
           img {
-            width: 78px;
-            height: 78px;
+            width: 80px;
+            height: 80px;
             display: block;
             margin: 0 auto;
           }
@@ -259,6 +271,16 @@
       }
     }
   }
+  @media screen and (min-width: 990px) and (max-width: @pad_width) {
+    .characteristics-table {
+      width: 400px !important;
+    }
+  }
+  @media screen and (max-width: 990px) {
+    .characteristics-table {
+      width: 40% !important;
+    }
+  }
   @media screen and (max-width: @pad_width) {
     .bg-content {
       width: 92%;
@@ -360,6 +382,19 @@
             }
           }
         }
+        .characteristics-table:nth-child(4) {
+          img {
+            width: 48px;
+            height: 60px;
+          }
+        }
+        .characteristics-table:nth-child(7) {
+          margin-top: 22px !important;
+          img {
+            width: 60px;
+            height: 48px;
+          }
+        }
         .characteristics-table {
           &:nth-child(odd) {
             float: left;
@@ -367,7 +402,6 @@
           &:nth-child(even) {
             float: right;
           }
-          width: 40%;
           font-family: PingFangSC-Light !important;
           font-weight: 200;
           font-size: 14px;
