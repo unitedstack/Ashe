@@ -156,6 +156,22 @@
             box-sizing: border-box;
             border-radius: 4px;
             cursor: pointer;
+            &.hover {
+              background: linear-gradient(54deg, #5A64FA 0%, #28C7EA 100%) !important;
+              border-radius: 4px 0 0 4px !important;
+              .line {
+                background: #fff !important;
+              }
+              .function-brief {
+                color: #fff !important;
+              }
+              .normal {
+                display: none !important;
+              }
+              .hover {
+                display: block !important;
+              }
+            }
             img {
               display: block;
               margin: 0 auto;
