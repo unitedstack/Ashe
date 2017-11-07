@@ -27,7 +27,7 @@
     "data_feature_intro_two": "云平台天生的弹性与自动化，因此构建在云平台之上的大数据平台也能享受到同样的好处。",
     "data_feature_title_one": "性能不减，合理调度",
     "data_feature_title_three": "物理资源与大数据平台解耦",
-    "data_feature_title_two": "块速交付，快速扩容",
+    "data_feature_title_two": "快速交付，快速扩容",
     "data_intro": "同方云分布式内存数据库具有查询速度快、数据装载速度快、批量DML处理快的主要特点，而且数据处理规模和性能可以随着硬件的添加呈近线性增加，有良好可扩展性，在数据仓库、商业智能，海量数据的处理方面表现优异。",
     "data_title_one": "同方云",
     "data_title_two": "大数据解决方案",

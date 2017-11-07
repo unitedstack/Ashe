@@ -6,7 +6,7 @@
   },
   "zh": {
     "banner_brief": "完美的整合平台",
-    "banner_describe": "同方云不仅支持OpenStack核心IAAS服务，同时还作为个整合平台能够与包含Hadoop大数据生态和CloudFoundaryPaa等在内的平台服务做无缝整合。解决客户业务层面各种需求。",
+    "banner_describe": "UOS 不仅支持 OpenStack 核心 IaaS 服务，同时还作为一个整合平台，能够与包含 Hadoop 大数据生态和 Cloud Foundary PaaS 等在内的平台服务做无缝整合。",
     "banner_describe_mobile": "同方云不仅支持OpenStack核心IAAS服务。 ",
     "banner_title": "同方云",
     "breadcrumb_one": "首页",
