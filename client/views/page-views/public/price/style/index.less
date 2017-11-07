@@ -242,21 +242,28 @@
                   display: block;
                   height: 0;
                 }
+                li {
+                  box-shadow: none;
+                  margin: 0;
+                }
                 .option {
                   float: left;
-                  width: 95px;
-                  height: 34px;
-                  text-align: center;
-                  margin-right: 28px;
-                  box-shadow: none;
-                  margin-bottom: 30px;
+                  .tab {
+                    &.hide {
+                      display: none;
+                    }
+                  }
                   &:nth-of-type(1) {
                     clear: left;
                   }
                   a {
-                    display: inline-block;
-                    width: 95px;
+                    width: 100px;
                     height: 34px;
+                    text-align: center;
+                    margin-right: 28px;
+                    box-shadow: none;
+                    margin-bottom: 20px;
+                    display: inline-block;
                     font-size: 12px;
                     border-radius: 2px;
                     line-height: 34px;
@@ -419,6 +426,8 @@
           }
         }
         .pricelist {
+          position: fixed;
+          left: 960px;
           width: 300px;
           float: right;
           border-radius: 4px 4px 0 0;
@@ -665,12 +674,6 @@
             margin-top: 10px;
             margin-bottom: 0;
             padding-bottom: 18px;
-            .options {
-              .option {
-                margin-right: 10px;
-                margin-bottom: 20px;
-              }
-            }
             .sliderArea {
               min-height: 38px;
               div {
@@ -768,6 +771,7 @@
       box-shadow: none;
       margin-right: 0;
       position: relative;
+      left: 0;
       .title {
         display: none;
       }
