@@ -65,7 +65,7 @@
     "description_title_two": "在线迁移",
     "feature_brief_four": "可视化的操作界面，让您一目了然。同时，虚拟机没有网络也照样可以管理。",
     "feature_brief_one": "精确到分级的可视化实时监控，所有资源一目了然；按需设置个性化报警阀值，保障性能满格,业务持续运行。",
-    "feature_brief_three": "挂载到云主机上的硬盘可以随时进行在线秒级扩容，无需进行线下操作，保证系统24×7运行。",
+    "feature_brief_three": "挂载到云主机上的硬盘可以随时进行在线秒级备份，无需进行线下操作，保证系统24×7运行。",
     "feature_brief_two": "可提供多种实例配置规格。",
     "feature_title_four": "VNC管理",
     "feature_title_one": "实时监控",
