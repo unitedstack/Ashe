@@ -276,9 +276,14 @@
       width: 400px !important;
     }
   }
-  @media screen and (max-width: 990px) {
+  @media screen and (max-width: 740px) {
     .characteristics-table {
       width: 40% !important;
+    }
+  }
+  @media screen and (min-width: 740px) and (max-width: 990px) {
+    .characteristics-table {
+      width: 320px !important;
     }
   }
   @media screen and (max-width: @pad_width) {
@@ -402,6 +407,7 @@
           &:nth-child(even) {
             float: right;
           }
+          min-height: 200px;
           font-family: PingFangSC-Light !important;
           font-weight: 200;
           font-size: 14px;

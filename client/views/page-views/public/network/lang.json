@@ -90,7 +90,7 @@
     "load_description_title_one": "URL重定向",
     "load_description_title_three": "超负载均衡CLB",
     "load_description_title_two": "多协议、多策略",
-    "load_feature_brief_four": "一定时间内，确保将来自相同客户端的请求，转发至后端相同的服务器进行处理",
+    "load_feature_brief_four": "一定时间内，确保将来自相同客户端的请求，转发至后端相同的服务器进行处理。",
     "load_feature_brief_one": "可以只通过鼠标点击操作，完成一个负载均衡器的创建从而将业务负载平均的分配到多个云主机中。",
     "load_feature_brief_three": "采用多种方式检查，每一个检查策略都可以根据业务应用制定不同的重试时间、次数以及判定状态异常时间。",
     "load_feature_brief_two": "基于资源池化的负载均衡配置，业务主机可以动态的添加或移除，业务主机的状态与权重也可在线修改。",
