@@ -125,21 +125,25 @@ $(function(){
 
     if(!vName.trim()) {
       $name.blur();
+      $name.focus();
       return;
     }
 
     if(!vPhone.trim()) {
       $phone.blur();
+      $phone.focus();
       return;
     }
 
     if(!vEmail.trim()) {
       $email.blur();
+      $email.focus();
       return;
     }
 
     if(!vCompany.trim()) {
       $company.blur();
+      $company.focus();
       return;
     }
     
