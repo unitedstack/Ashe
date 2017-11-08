@@ -14,7 +14,7 @@
     "breadcrumb_two": "产品",
     "cssFile": "/static/dist/page_product_cloud-platform_manager.min.css",
     "manager_feature_intro_one": "包含了计算、存储、网络、认证、编排、监控等核心功能。",
-    "manager_feature_intro_three": "100%兼容原声OpenStackAPI，支持完全自主",
+    "manager_feature_intro_three": "100%兼容原声OpenStackAPI，支持完全自主。",
     "manager_feature_intro_two": "包含了用户管理，资源管理，服务管理集群管理等管理功能。",
     "manager_feature_title_one": "核心OpenStack功能全覆盖",
     "manager_feature_title_three": "兼容",
