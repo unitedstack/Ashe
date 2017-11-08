@@ -23,6 +23,7 @@
           .right {
             float: left;
             width: 779px;
+            height: 336px;
             padding-top: 54px;
             position: relative;
             .shuiyin {
@@ -49,10 +50,11 @@
               color: @color_content;
               letter-spacing: 0.5px;
               line-height: 28px;
-              margin-bottom: 83px;
               font-weight: 200;
             }
             .signup {
+              position: absolute;
+              bottom: 0;
               display: block;
               background: @color_button_blue;
               border-radius: 2px;
@@ -63,6 +65,9 @@
               letter-spacing: 0.4px;
               line-height: 36px;
               color: @color_white;
+              &:hover {
+                background: @color_button_blue_hover;
+              }
             }
           }
           .description {
@@ -265,6 +270,7 @@
         }
         .right {
           width: 60% !important;
+          height: 316px !important;
         }
       }
     }
@@ -310,6 +316,7 @@
             }
             .right {
               width: 100% !important;
+              height: auto;
               float: inherit;
               padding-top: 30px;
               .shuiyin {
@@ -388,6 +395,9 @@
               border-radius: 2px;
               margin: 0 auto;
               margin-bottom: 30px;
+              &:hover {
+                background: @color_button_blue_hover;
+              }
             }
           }
         }

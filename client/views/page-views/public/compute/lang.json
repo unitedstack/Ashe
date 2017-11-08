@@ -89,7 +89,7 @@
     "image_introduction_title_one": "丰富的",
     "image_introduction_title_two": "镜像",
     "introduction_a": "立即使用",
-    "introduction_intro": "同方云云主机服务是云计算中最基础的服务，基于OpenStack Nova项目建设，承载了同方云云平台所有服务的计算业务。比传统物理机更先进的是，同方云云主机可以实时添加或删除网卡、硬盘，更改主机CPU/内存等，也可以通过VNC终端在无网络的情况下管理虚拟机。在UOS中，创建和销毁一台云主机只需不到10秒钟，在关机状态超过30天前都不计费，实现真正的弹性按需计费。",
+    "introduction_intro": "同方云云主机服务是云计算中最基础的服务，基于OpenStack Nova项目建设，承载了同方云云平台所有服务的计算业务。比传统物理机更先进的是，同方云云主机可以实时添加或删除网卡、硬盘，更改主机CPU/内存等，也可以通过VNC终端在无网络的情况下管理虚拟机。",
     "introduction_title_one": "弹性",
     "introduction_title_two": "云主机",
     "jsFile": "/static/dist/page_public_compute.min.js",
