@@ -5,7 +5,7 @@ var imageSrc = [
   'first-banner-bg.jpg',
   'second-banner-bg.jpg',
   'third-banner-bg.jpg',
-  'architecture-bg.png',
+  'architecture-bg-v1.1.png',
   'arch-hover.png',
   'arch.png',
   'feature-bg.jpg',
