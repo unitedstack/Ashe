@@ -6,6 +6,8 @@ var imageSrc = [
   'second-banner-bg.jpg',
   'third-banner-bg.jpg',
   'architecture-bg.png',
+  'arch-hover.png',
+  'arch.png',
   'feature-bg.jpg',
   'com.png',
   'edu.png',
@@ -69,7 +71,7 @@ function hideMask() {
 }
 
 preloadImages(srcBase, imageSrc);
-setTimeout(hideMask, 5000);
+setTimeout(hideMask, 10000);
 
 $(function() {
 
@@ -83,7 +85,7 @@ $(function() {
   var fontVisible = false;
 
   $areaList.on('click', function(evt) {
-    var index = $(evt.target).data('index');
+    var index = $(evt.currentTarget).data('index');
     var baseUrl = '/about/clients';
     if(index === 1) {
       window.location = baseUrl + '#education';
@@ -92,7 +94,7 @@ $(function() {
     } else if(index === 3) {
       window.location = baseUrl + '#government';
     } else {
-      window.location = baseUrl;
+      window.location = baseUrl + '#business';
     }
   });
 
@@ -101,6 +103,8 @@ $(function() {
   $ctrlPoints.on('click', pointClickHandler);
   $bannerContentWrapper.on('mouseenter', bannerHover);
   $bannerContentWrapper.on('mouseleave', bannerBlur);
+
+  $('.flash-fix').hide();
 
   setBannerSize();
 

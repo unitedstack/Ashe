@@ -241,6 +241,9 @@
               float: left;
               text-align: center;
               margin-top: 20px;
+              &:first-child {
+                margin-right: 40px;
+              }
               img {
                 width: 60px;
                 height: 60px;
@@ -342,6 +345,20 @@
               vertical-align: middle;
             }
           }
+        }
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    .bg-size .about .about-footer {
+      width: 100%;
+      .foot-block {
+        width: calc(~"50% - 5px");
+        &:first-child {
+          margin-right: 10px !important;
+        }
+        :last-child {
+          width: 100%;
         }
       }
     }
