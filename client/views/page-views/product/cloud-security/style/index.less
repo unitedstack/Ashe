@@ -52,9 +52,6 @@
             width: 80px;
             padding-bottom: 16px;
           }
-          .special {
-            height: 80px !important;
-          }
           .item_title {
             font-size: 22px;
             color: @color_character_grade_one;
@@ -111,6 +108,21 @@
             border-left: 1px solid #D7DAE2;
           }
         }
+      }
+    }
+
+    /* icon 大小不同特殊处理一下 */
+    .languard .feature .item{
+      &:first-child img {
+        width: 70px;
+      }
+      &:nth-child(2) img {
+        width: 81px;
+        padding-bottom: 15px;
+      }
+      &:last-child img {
+        width: 78px;
+        padding-bottom: 21px;
       }
     }
     .lansky, .languard {
