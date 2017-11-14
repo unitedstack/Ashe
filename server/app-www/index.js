@@ -38,17 +38,6 @@ module.exports = (app) => {
     if (!ctx.session.lang) {
       ctx.session.lang = defaultLang;
     }
-    ctx.commonField = {
-      lang: ctx.session.lang,
-      logined: !!(ctx.session && ctx.session.user && ctx.session.user.token)
-    };
-    if (ctx.commonField.logined) {
-      ctx.commonField.nickname = ctx.session.user.nickname;
-      ctx.commonField.email = ctx.session.user.email;
-    } else {
-      ctx.commonField.nickname = '';
-      ctx.commonField.email = '';
-    }
     await next();
   });
 
@@ -59,7 +48,6 @@ module.exports = (app) => {
       articleCtrl.listArticle({category: 'news', limit: 5}),
       articleCtrl.listArticle({category: 'blog', limit: 5})
     ]);
-    ctx.commonField.url = ctx.request.path;
     const data = Object.assign({
       commonCssFile: `/static/common/style/${ctx.app.FileHash.index}.index.css`,
       commonJsFile: `/static/common/js/${ctx.app.FileHash.g}.g.js`,
@@ -68,7 +56,7 @@ module.exports = (app) => {
     }, globalLang[ctx.session.lang], homeLang[ctx.session.lang],{
       cssFile: `/static/dist/${ctx.app.FileHash.home ? ctx.app.FileHash.home + '.' : ''}home.min.css`,
       jsFile: `/static/dist/${ctx.app.FileHash.home ? ctx.app.FileHash.home + '.' : ''}home.min.js`,
-    }, {commonField: ctx.commonField});
+    });
     await ctx.render('home-views/index', data);
   });
 
@@ -96,7 +84,7 @@ module.exports = (app) => {
     }, globalLang[ctx.session.lang], pageLang[ctx.session.lang],{
       cssFile: `/static/dist/${ctx.app.FileHash[404]? ctx.app.FileHash[404] + '.' : ''}404.min.css`,
       jsFile: `/static/dist/${ctx.app.FileHash[404] ? ctx.app.FileHash[404] + '.' : ''}404.min.js`,
-    },{commonField: ctx.commonField});
+    });
     ctx.status = 404;
     await ctx.render('404-views/index', data);
   });

@@ -1,7 +1,66 @@
 {
   "i18n": true,
   "defaultLang": "zh",
-  "articleUrl": {},
+  "articleUrl": {
+    "/blog": {
+      "type": "list",
+      "params": {
+        "category": "blog"
+      },
+      "pageHash": "blog_list"
+    },
+    "/blog/search/:search": {
+      "type": "list",
+      "params": {
+        "category": "blog"
+      },
+      "pageHash": "blog_list"
+    },
+    "/blog/tag/:tag": {
+      "type": "list",
+      "params": {
+        "category": "blog",
+        "pageHash": 0
+      },
+      "pageHash": "blog_list"
+    },
+    "/blog/:url": {
+      "type": "detail",
+      "params": {
+        "category": "blog"
+      },
+      "pageHash": "blog_detail"
+    },
+    "/news": {
+      "type": "list",
+      "params": {
+        "category": "news"
+      },
+      "pageHash": "news_list"
+    },
+    "/news/tag/:tag": {
+      "type": "list",
+      "params": {
+        "category": "news"
+      },
+      "pageHash": "news_list"
+    },
+    "/news/search/:search": {
+      "type": "list",
+      "params": {
+        "category": "news",
+        "search": null
+      },
+      "pageHash": "news_list"
+    },
+    "/news/:url": {
+      "type": "detail",
+      "params": {
+        "category": "news"
+      },
+      "pageHash": "news_detail"
+    }
+  },
   "file": {
     "indexFile": "index.ejs",
     "indexJsFile": "index.js",
