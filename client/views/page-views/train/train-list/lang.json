@@ -58,7 +58,7 @@
     "monitoring_intro": "Understand the value of the LMA toolchain for the stability of OpenStack, master the UOS LMA tool chain composition, principles and deployment knowledge",
     "open": "Has been started",
     "ops_course": "OpenStack Ops Certification",
-    "title": "UnitedStack - Training List"
+    "title": "TongFang cloud - Training List"
   },
   "zh": {
     "all_course": "所有课程",
@@ -119,6 +119,6 @@
     "monitoring_intro": "了解 LMA 工具链给 OpenStack 的稳定性带来什么价值，掌握 UOS LMA 工具链组成、原理和部署知识",
     "open": "已经开课",
     "ops_course": "运维课程",
-    "title": "UnitedStack - 培训列表"
+    "title": "同方云 - 培训列表"
   }
 }
