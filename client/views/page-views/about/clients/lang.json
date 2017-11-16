@@ -2,7 +2,7 @@
   "en": {
     "cssFile": "/static/dist/page_about_clients.min.css",
     "jsFile": "/static/dist/page_about_clients.min.js",
-    "title": "UnitedStack - Contact Us"
+    "title": "TongFang cloud - Clients"
   },
   "zh": {
     "banner_brief": "同方云，分享创造共赢",
@@ -14,6 +14,6 @@
     "breadcrumb_two": "关于我们",
     "cssFile": "/static/dist/page_about_clients.min.css",
     "jsFile": "/static/dist/page_about_clients.min.js",
-    "title": "UnitedStack - 联系我们"
+    "title": "同方云 - 客户案例"
   }
 }

@@ -28,7 +28,7 @@
     "robust": "Robust computing performance",
     "speed_up": "Speed up access to application data",
     "support_inte": "Support 2 Intel Xeon E5-2600V3/V4 series processors, the largest 44 core, and 24 DDR4 memory slots, providing powerful computing performance.",
-    "title": "hardware",
+    "title": "TongFang cloud - Hardware",
     "tough_performance": "Provide tough performance",
     "trxd": "TR730xd can be used as an excellent database server, providing more than one million times of IOPS performance."
   },
@@ -61,7 +61,7 @@
     "robust": "强悍计算性能",
     "speed_up": "加快应用程序数据访问",
     "support_inte": "支持2颗Intel Xeon E5-2600V3/V4系列处理器，最大44个核心，及24个DDR4内存插槽，提供强悍计算性能。",
-    "title":"硬件设备",
+    "title":"同方云 - 刀片式服务器",
     "tough_performance": "提供强悍性能",
     "trxd": "TR730xd可以作为一款优秀的数据库服务器，提供超过一百万次IOPS的性能。"
   }

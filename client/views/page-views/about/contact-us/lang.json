@@ -9,7 +9,7 @@
     "breadcrumb_two": "Technical train",
     "cssFile": "/static/dist/page_about_contact-us.min.css",
     "jsFile": "/static/dist/page_about_contact-us.min.js",
-    "title": "UnitedStack - Contact Us"
+    "title": "TongFang cloud - Contact Us"
   },
   "zh": {
     "banner_brief": "同方云",
@@ -21,6 +21,6 @@
     "breadcrumb_two": "关于我们",
     "cssFile": "/static/dist/page_about_contact-us.min.css",
     "jsFile": "/static/dist/page_about_contact-us.min.js",
-    "title": "UnitedStack - 联系我们"
+    "title": "同方云 - 联系我们"
   }
 }

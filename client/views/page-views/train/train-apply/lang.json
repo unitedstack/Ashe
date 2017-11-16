@@ -39,7 +39,7 @@
     "phone_title": "Phone",
     "question_info": "If you need further knowledge of our training courses or have any other questions, please feel free to contact us: ZhangQi, 15801679767 or zhangqi@unitedstack.com.",
     "submit_btn": "Apply for registration training",
-    "title": "Parrner"
+    "title": "TongFang cloud - Train Apply"
   },
   "zh": {
     "banner_describe": "同方云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域，我们带你走向专业之路。",
@@ -81,6 +81,6 @@
     "phone_title": "电话",
     "question_info": "如果您对我们的培训课程需要进一步了解或有其他疑问，欢迎您随时联系我们：ZhangQi, 15801679767 或 zhangqi@unitedstack.com。",
     "submit_btn": "申请报名培训",
-    "title": "培训申请"
+    "title": "同方云 - 培训申请"
   }
 }
