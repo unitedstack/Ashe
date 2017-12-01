@@ -43,9 +43,9 @@ const configObj = {
   },
   smtp: {
     host: 'smtp.qq.com',
-    port": 465,
-    secure": true,
-    auth": {
+    port: 465,
+    secure: true,
+    auth: {
       user: '',
       pass: ''
     }
