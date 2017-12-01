@@ -88,3 +88,5 @@ config/index.js
 
 # npm file
 package-lock.json
+
+nginx_conf/*
