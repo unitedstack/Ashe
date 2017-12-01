@@ -63,7 +63,47 @@ body {
             width: 100%;
             margin: 58px auto 0;
             color: @deepestFtColor;
+            position: relative;
             .big-font-style();
+            #submit-tip {
+                position: absolute;
+                top: 75px;
+                right: 2px;
+                width: 296px;
+                height: 88px;
+                box-shadow: 0 0 8px 2px rgba(234,234,234,0.50);
+                border-radius: 2px;
+                #submit-tip-icon {
+                    display: block;
+                    float: left;
+                    width: 28px;
+                    height: 28px;
+                    margin: 30px 24px 30px 39px; 
+                }
+                #submit-tip-content-wrapper {
+                    float: left;
+                    width: 139px;
+                }
+                #submit-tip-title {
+                    font-size: 16px;
+                    color: #333333;
+                    letter-spacing: 0;
+                    margin: 20px 0 8px;
+                    line-height: 20px;
+                }
+                #submit-tip-success-content {
+                    font-size: 12px;
+                    color: @color_content;
+                    letter-spacing: 0;
+                    line-height: 20px;
+                }
+                #submit-tip-fail-content {
+                    font-size: 12px;
+                    color: #D95D53;
+                    letter-spacing: 0;
+                    line-height: 20px;
+                }
+            }
             .form-title {
                 margin: 0px;
                 .biggest-font-style();
@@ -333,6 +373,13 @@ body {
     .main {
         .content {
             .main-content {
+                #submit-tip {
+                    background: #fff;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
                 .name-field,
                 .phone-field,
                 .email-field,
