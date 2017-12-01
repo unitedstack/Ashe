@@ -1,0 +1,469 @@
+@import '../../../../../components/header.less';
+@import '../../../../../components/footer.less';
+@deepestFtColor: @color_character_grade_one;
+@deeperFtColor: @color_character_grade_two;
+@deepFtColor: @color_character_grade_three;
+@btnBlueColor: @color_button_blue;
+@btnBlueHoverColor: @color_button_blue_hover;
+@btnRedColor: @color_button_red;
+@btnRedHoverColor: @color_button_red_hover;
+@btnGrayColor: @color_button_gray;
+@detailGrayColor: #d7dae2;
+@btnGreenColor: @color_button_green;
+
+/* mixin definition start */
+
+.smallest-font-style() {
+    line-height: 24px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.normal-font-style() {
+    line-height: 30px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.big-font-style() {
+    line-height: 30px;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.biggest-font-style() {
+    line-height: 56px;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+
+/* mixin definition end */
+
+
+
+
+body {
+    position: relative;
+}
+
+.main {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+    width: 100%;
+    .content {
+        width: 100%;
+        .main-content {
+            width: 100%;
+            margin: 58px auto 0;
+            color: @deepestFtColor;
+            .big-font-style();
+            .form-title {
+                margin: 0px;
+                .biggest-font-style();
+            }
+            .form-info {
+                font-weight: 200;
+                margin-top: 20px;
+                line-height: 28px;
+                font-size: 18.1px;
+                letter-spacing: 0.45px;
+            } // 水印效果
+            .application {
+                position: relative;
+                .title {
+                    font-size: 42px;
+                    color: #023200;
+                    letter-spacing: 2px;
+                    line-height: 55px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 45px;
+                    span {
+                        color: @color_button_blue;
+                    }
+                }
+                .shuiyin {
+                    font-size: 80px;
+                    color: #F7F8FB;
+                    letter-spacing: 2px;
+                    line-height: 90px;
+                    margin-bottom: 43px;
+                    text-align: center;
+                }
+                .brief {
+                    width: 60%;
+                    margin: 0 auto;
+                    font-size: 16px;
+                    color: @color_content;
+                    letter-spacing: 0.5px;
+                    line-height: 28px;
+                    text-align: center;
+                    font-weight: 200;
+                }
+            }
+            input[type=text] {
+                font-weight: 200;
+                width: 100%;
+                margin-top: 12px;
+                padding: 0;
+                border: none;
+                border-bottom: 1px solid @detailGrayColor;
+                outline: none;
+                .normal-font-style();
+                &:focus {
+                    border-bottom-color: @btnBlueColor;
+                }
+                &.input-error-border {
+                    border-bottom-color: @btnRedColor;
+                }
+                &.input-correct-border {
+                    border-bottom-color: @btnGreenColor;
+                }
+            }
+            .message {
+                font-weight: 200;
+                margin-top: 8px;
+                height: 24px;
+                .smallest-font-style();
+            }
+            .error-msg {
+                display: none;
+                color: @btnRedColor;
+            }
+            .correct-msg {
+                display: none;
+                color: @btnGreenColor;
+            }
+        }
+        .name-field {
+            margin-top: 42px;
+        }
+        .phone-field,
+        .email-field,
+        .company-field {
+            margin-top: 8px;
+        }
+        .company-field {
+            margin-bottom: 150px;
+        }
+        .name-field,
+        .phone-field,
+        .email-field,
+        .company-field {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            .title {
+                font-size: 18px;
+                letter-spacing: 0.5px;
+                line-height: 30px;
+            }
+        } 
+        .btn-area button {
+            cursor: pointer;
+            font-weight: 200;
+            margin: 41px auto 172px auto;
+            outline: none;
+            display: block;
+            width: 250px;
+            height: 50px;
+            padding: 12px;
+            font-size: 18px;
+            color: white;
+            letter-spacing: 0.5px;
+            line-height: 28px;
+            border: none;
+            border-radius: 2px;
+            background-color: @btnBlueColor;
+            &:hover {
+                background: @btnBlueHoverColor;
+            }
+        }
+    }
+    .company-field {
+        font-size: 0;
+        .company-wrapper1 {
+            display: inline-block;
+            margin-right: 0; 
+            vertical-align: top;
+            width: 49.8%;
+            .title {
+                margin-bottom: 12px;
+            }
+            .province,
+            .city {
+                display: inline-block;
+                vertical-align: top;
+                width: 180px;
+                height: 40px;
+                border: solid 1px #D8D8D8;
+                border-radius: 2px;
+                line-height: 40px;
+                text-indent: 16px;
+                font-size: 0;
+                position: relative;
+            }
+            .city {
+                margin-left: 20px;
+            }
+            .province:hover, .city:hover{
+              cursor: pointer;
+            }
+            .province span,
+            .city span {
+                font-size: 14px;
+            }
+            .province img,
+            .city img {
+                width: 12px;
+                height: 6px;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .Pwrapper,
+            .Cwrapper {
+                overflow: auto;
+                height: 150px;
+                width: 100%;
+                border: 1px solid #FFFFFF;
+                display: none;
+                box-shadow: 0 0 22 0 #DEE0E0;
+                font-size: 14px;
+                background-color: #FFFFFF;
+            }
+            .Pcategory:hover,
+            .Ccategory:hover {
+                cursor: pointer;
+                background-color: #C3E1F7;
+            }
+        }
+        .company-wrapper2 {
+            margin-left: 0;
+            display: inline-block;
+            width: 50%;
+            .title {
+                margin-bottom: 12px;
+            }
+            .input #company {
+                width: 100%;
+            }
+        }
+    }
+    .progress {
+        height: 417px;
+        width: 886px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        position: relative;
+        ul {
+            width: 100%;
+            position: absolute;
+            top: 250px;
+            li {
+                color: white;
+                position: absolute;
+                &:nth-of-type(1) {
+                    left: 210px;
+                }
+                &:nth-of-type(2) {
+                    left: 330px;
+                }
+                &:nth-of-type(3) {
+                    left: 470px;
+                }
+                &:nth-of-type(4) {
+                    left: 620px;
+                }
+            }
+        }
+    }
+    .partner {
+        width: 100%;
+        height: 750px;
+        margin-bottom: 200px;
+        .showcase {
+            width: 100%;
+            ul {
+                text-align: center;
+                &+ul {
+                    margin-top: 8px;
+                }
+                li {
+                    display: inline-block;
+                    height: 100px;
+                    width: 23%;
+                    border: 1px solid #D7DAE2;
+                    box-shadow: 0 1px 6px 0 #E2E2E9;
+                    &+li {
+                        margin-left: 1%;
+                    }
+                }
+            }
+        }
+    }
+    .application-form-wrapper {
+        margin-right: auto;
+        margin-left: auto;
+        .title {
+            img {
+                vertical-align: top;
+                width: 13px;
+                height: 18px;
+            }
+        }
+    } 
+}
+
+@media (max-width: 960px) {
+    .breadcrumb {
+        display: none;
+    } 
+    .main {
+        .content {
+            .main-content {
+                .name-field,
+                .phone-field,
+                .email-field,
+                .company-field {
+                    width: 95%;
+                    margin-bottom: 0;
+                }
+                margin-top: 0;
+                .company-wrapper1 {
+                    z-index: 10;
+                    display: block;
+                    width: 100%;
+                    .province {
+                        width: 45%;
+                    }
+                    .city {
+                        width: 45%;
+                        margin-left: 8%;
+                    }
+                }
+                .company-wrapper2 {
+                    z-index: 10;
+                    display: block;
+                    margin-top: 40px;
+                    width: 100%;
+                }
+                .progress {
+                    width: 90%;
+                    height: 200px;
+                    margin: 20px auto;
+                }
+                .btn-area {
+                    width: 95%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    #submitBtn {
+                        margin: 0 auto 50px auto;
+                        width: 90%;
+                    }
+                }
+                .partner {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 0;
+                    .showcase {
+                        ul {
+                            text-align: center;
+                            li {
+                                display: inline-block;
+                                width: 17.8%;
+                                border: 1px solid #D7DAE2;
+                                box-shadow: 0 1px 6px 0 #E2E2E9;
+                                &+li {
+                                    margin-left: 6%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media (max-width: 700px) {
+    .main {
+        .content {
+            .main-content {
+                margin-top: 0;
+                .application {
+                    position: static;
+                    .title {
+                        width: 95%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        font-size: 18px;
+                        color: #333333;
+                        position: static;
+                        text-align: left;
+                        transform: none;
+                        span {
+                            color: #333333;
+                        }
+                    }
+                    .shuiyin {
+                        display: none;
+                    }
+                    .brief {
+                        width: 95%;
+                        margin: 0 auto;
+                        font-size: 12px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 501px) and (max-width: 949px) {
+    .main {
+        .content {
+            .main-content {
+                .partner {
+                    .showcase {
+                        ul {
+                            li {
+                                height: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        .content {
+            .main-content {
+                .partner {
+                    .showcase {
+                        ul {
+                            li {
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
