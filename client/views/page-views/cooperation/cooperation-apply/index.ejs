@@ -1,0 +1,192 @@
+<%- include('../../../../components/header.ejs') %>
+    <div class="main">
+        <article>
+            <section class="content-banner">
+                <div class="type-area">
+                    <div class="banner">
+                        <div class="banner-title">
+                            <%= banner_title %>
+                        </div>
+                        <div class="bacooperationbrief">
+                            <%= banner_brief %>
+                        </div>
+                        <div class="banner-describe">
+                            <%= banner_describe %>
+                        </div>
+                        <div class="banner-describe-mobile">
+                            <%= banner_describe_mobile %>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-img" style="background:url(/static/assets/page-views/cooperation/cooperation-apply/合作申请banner.jpg) no-repeat center center;background-size:cover"></div>
+            </section>
+            <div class="breadcrumb">
+                <ul class="breadcrumb-center">
+                    <li class="first">
+                        <a class="firstpage" href="/">
+                            <%= breadcrumb_one %>
+                        </a>&nbsp;/&nbsp;</li>
+                    <li class="second">
+                        <a class="success" href="/train/technical-train">
+                            <%= breadcrumb_two %>
+                        </a>&nbsp;/&nbsp;</li>
+                    <li class="third">
+                        <%= breadcrumb_three %>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <section class="content">
+            <div class="main-content">
+                <div class="application">
+                    <p class="shuiyin">APPLICATION</p>
+                    <p class="title">
+                        <%= application_title_one %><span><%= application_title_two %></span>
+                    </p>
+                    <p class="brief">
+                        <%= application_intro %>
+                    </p>
+                </div>
+                <div class="application-form-wrapper">
+                    <form action="" id="application-form">
+                        <div class="name-field">
+                            <div class="title">
+                                <img src="/static/assets/page-views/cooperation/cooperation-apply/星.png" alt="star">
+                                <%= name_title %>
+                            </div>
+                            <input type="text" name="name" id="name" maxlength="60" />
+                            <div class="message">
+                                <div class="error-msg">
+                                    <%= name_error_msg %>
+                                </div>
+                                <div class="correct-msg">
+                                    <%= name_correct_msg %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-field">
+                            <div class="title">
+                                <img src="/static/assets/page-views/cooperation/cooperation-apply/星.png" alt="star">
+                                <%= phone_title %>
+                            </div>
+                            <input type="text" name="phone" id="phone" />
+                            <div class="message">
+                                <div class="error-msg">
+                                    <%= phone_error_msg %>
+                                </div>
+                                <div class="correct-msg">
+                                    <%= phone_correct_msg %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="email-field">
+                            <div class="title">
+                                <%= email_title %>
+                            </div>
+                            <input type="text" name="email" id="email" />
+                            <div class="message">
+                                <div class="error-msg">
+                                    <%= email_error_msg %>
+                                </div>
+                                <div class="correct-msg">
+                                    <%= email_correct_msg %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-field">
+                            <div class="company-wrapper1">
+                                <div class="title">
+                                    <%= company_position %>
+                                </div>
+                                <div class="province">
+                                    <span></span><img src="/static/assets/page-views/cooperation/cooperation-apply/Fill1.png" alt="arrow">
+                                    <div class="Pwrapper">
+                        
+                                    </div>
+                                </div>
+                                <div class="city">
+                                    <span></span><img src="/static/assets/page-views/cooperation/cooperation-apply/Fill1.png" alt="arrow">
+                                    <div class="Cwrapper">
+                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="company-wrapper2">
+                                <div class="title">
+                                    <%= company_title %>
+                                </div>
+                                <input type="text" name="company" id="company" maxlength="80" />
+                                <div class="message">
+                                    <div class="error-msg">
+                                        <%= company_error_msg %>
+                                    </div>
+                                    <div class="correct-msg">
+                                        <%= company_correct_msg %>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="application">
+                            <p class="shuiyin">COOPERATION PROGRESS</p>
+                            <p class="title">
+                                <%= cooperation_title_one %><span><%= cooperation_title_two %></span>
+                            </p>
+                            <p class="brief">
+                                <%= cooperation_intro %>
+                            </p>
+                        </div>
+                        <div class="progress" style="background:url(/static/assets/page-views/cooperation/cooperation-apply/Group23.jpg) no-repeat center center;background-size:contain">
+
+                        </div>
+                        <div class="btn-area">
+                            <button id="submitBtn">
+                                <%= submit_btn %>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="partner" style="background:url(/static/assets/page-views/cooperation/cooperation-apply/Group24.png) no-repeat center top;background-size:cover;">
+                    <div class="application">
+                        <p class="shuiyin">PARTNER</p>
+                        <p class="title">
+                            <%= partner_title_one %><span><%= partner_title_two %></span>
+                        </p>
+                    </div>
+                    <div class="showcase" >
+                        <ul>
+                            <li></li><li>
+                            </li><li>
+                            </li><li>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li></li><li>
+                            </li><li>
+                            </li><li>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li></li><li>
+                            </li><li>
+                            </li><li>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li></li><li>
+                            </li><li>
+                            </li><li>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li></li><li>
+                            </li><li>
+                            </li><li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <%- include('../../../../components/footer.ejs') %>
