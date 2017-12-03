@@ -15,6 +15,7 @@ const checkCaptcha = (ctx, next) => {
     ctx.session.www_captcha = '';
     return next();
   } else {
+    ctx.status = 400;
     ctx.body = {
       statusCode: 400,
       errors: [{
@@ -53,7 +54,7 @@ module.exports = async (router, globalLang, viewsPath) => {
       };
       //todo 发送邮件
       const body = ctx.request.body;
-      await sendEmail(
+      sendEmail(
         contactEmail,
         '【同方云】有新的培训申请',
         {content: `
@@ -91,7 +92,7 @@ module.exports = async (router, globalLang, viewsPath) => {
         message: '合作申请成功'
       };
       //todo 发送邮件
-      await sendEmail(
+      sendEmail(
         contactEmail,
         '【同方云】有新的合作申请',
         {content: `
