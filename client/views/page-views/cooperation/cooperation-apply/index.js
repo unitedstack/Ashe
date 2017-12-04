@@ -173,7 +173,7 @@ $(function () {
 
   function provinceClickHandle() {
     if (!$('.Cwrapper').is(':hidden')) {
-      $('.Cwrapper').slideToggle();
+      $('.Cwrapper').slideToggle(1);
       $('.city img').attr('src', $('.province img').attr('src') === urlUp ? urlUp : urlDown);
     }
     $('.province img').attr('src', $('.province img').attr('src') === urlUp ? urlDown : urlUp);
@@ -182,7 +182,7 @@ $(function () {
 
   function cityClickHandle() {
     if (!$('.Pwrapper').is(':hidden')) {
-      $('.Pwrapper').slideToggle();
+      $('.Pwrapper').slideToggle(1);
       $('.province img').attr('src', $('.city img').attr('src') === urlUp ? urlUp : urlDown);
     }
     if (id !== -1) {
@@ -193,20 +193,20 @@ $(function () {
 
 
   $('.province').click(function () {
-    $('.Pwrapper').slideToggle();
+    $('.Pwrapper').slideToggle(1);
     provinceClickHandle();
   });
 
 
 
   $('.city').click(function () {
-    $('.Cwrapper').slideToggle();
+    $('.Cwrapper').slideToggle(1);
     cityClickHandle();
   });
 
   $('.Pcategory').click(function (e) {
     e.stopPropagation();
-    $('.Pwrapper').slideToggle();
+    $('.Pwrapper').slideToggle(1);
     item1 = $(this).text();
     $('.province span').text(item1);
     $('.Ccategory').remove();
@@ -218,7 +218,7 @@ $(function () {
     });
     $('.Ccategory').click(function (e) {
       e.stopPropagation();
-      $('.Cwrapper').slideToggle();
+      $('.Cwrapper').slideToggle(1);
       item2 = $(this).text();
       $('.city span').text(item2);
       $('.city img').attr('src', $('.city img').attr('src') === urlUp ? urlDown : urlUp);
@@ -230,10 +230,10 @@ $(function () {
   $('body').click(function (e) {
     if (!$(e.target).is('.province, .province span, .province img, .city span, .city img, .city, .Ccategory, .Pcategory, .Pwrapper, .Cwrapper')) {
       if (!$('.Pwrapper').is(':hidden')) {
-        $('.Pwrapper').slideToggle();
+        $('.Pwrapper').slideToggle(1);
       }
       if (!$('.Cwrapper').is(':hidden')) {
-        $('.Cwrapper').slideToggle();
+        $('.Cwrapper').slideToggle(1);
       }
     }
   });
