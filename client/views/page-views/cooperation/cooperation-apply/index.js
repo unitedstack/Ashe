@@ -1,8 +1,8 @@
 require('./style/index.less');
 $(function () {
 // 交互事件处理部分
-  var SingletonModal = require('./components/modal');
-  var modal = new SingletonModal();
+  var Modal = require('../../../../static/common/js/modal/modal');
+  var modal = new Modal();
   var $form = $('#application-form');
   var $name = $form.find('#name');
   var $phone = $form.find('#phone');

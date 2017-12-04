@@ -2,8 +2,8 @@ require('./style/index.less');
 
 $(function(){
 
-  var SingletonModal = require('./components/modal');
-  var modal = new SingletonModal();
+  var Modal = require('../../../../static/common/js/modal/modal');
+  var modal = new Modal();
   // 交互事件处理部分
   var $form = $('#application-form');
   var $name = $form.find('#name');
@@ -88,6 +88,7 @@ $(function(){
       return;
     }
     $this.addClass('checked');
+    $('.company-evaluation').show();
     $didNotUseBtn.removeClass('checked');
     $appendInfo.prop('placeholder', usedHolderText);
   }
@@ -98,6 +99,7 @@ $(function(){
       return;
     }
     $this.addClass('checked');
+    $('.company-evaluation').hide();
     $usedBtn.removeClass('checked');
     $appendInfo.prop('placeholder', didNotUseHolderText);
   }
@@ -117,41 +119,62 @@ $(function(){
 
   function btnClickHandler(evt) {
     evt.preventDefault();
-    var vName = $('#name').val();
-    var vEmail = $('#email').val();
-    var vPhone = $('#phone').val();
-    var vCompany = $('#company').val();
-    var vRemark = $('#appendInfo').val();
+    var vName = $name.val().trim();
+    var vEmail = $email.val().trim();
+    var vPhone = $phone.val().trim();
+    var vCompany = $company.val().trim();
 
-    if(!vName.trim()) {
+    if(!vName) {
       $name.blur();
       $name.focus();
       return;
     }
 
-    if(!vPhone.trim()) {
+    if(!vPhone) {
       $phone.blur();
       $phone.focus();
       return;
     }
 
-    if(!vEmail.trim()) {
+    if(!vEmail) {
       $email.blur();
       $email.focus();
       return;
     }
 
-    if(!vCompany.trim()) {
+    if(!vCompany) {
       $company.blur();
       $company.focus();
       return;
     }
+
+    var isMobile = document.documentElement.clientWidth <= 960 ? true : false;
     
+    modal.setOptions({
+      isMobile: isMobile,
+      opacity: 0.2,
+      width: 550,
+      height: 296,
+      isCaptcha: true,
+      onSendRequest: onSendRequest
+    });
+    modal.show();
+    
+  }
+
+  function onSendRequest(captcha, cb) {
+    var vName = $name.val().trim();
+    var vEmail = $email.val().trim();
+    var vPhone = $phone.val().trim();
+    var vCompany = $company.val().trim();
+    var vRemark = $appendInfo.val();
+
     var data = {
       nickname: vName,
       email: vEmail,
       phone: vPhone,
-      company: vCompany
+      company: vCompany,
+      captcha: captcha
     };
     if (vRemark) {
       data.description = vRemark;
@@ -169,41 +192,25 @@ $(function(){
     $.ajax({
       type: 'POST',
       url: '/apply/api/private-cloud',
-      data: data,
-      beforeSend: function(jqXHR){
-        modal.setOptions({
-          content: '申请中',
-          btnContent: '退出申请',
-          iconSrc: '/static/assets/page-views/support/apply-now/loading.jpg',
-          clickHandler: function() {
-            jqXHR.abort();
-            modal.hide();
-          }
-        });
-        modal.show();
-      }
+      data: data
     }).done(function(data) {
-      modal.setOptions({
-        content: data.message,
-        btnContent: '知道了',
-        btnType: 'create',
-        iconSrc: '/static/assets/page-views/support/apply-now/success.jpg'
-      });
-      modal.show();
+      var tipConfig = {
+        tipIconSrc: '/static/assets/page-views/train/train-apply/checked.png',
+        tipTitle: '申请成功',
+        tipContent: '同方云已收到您的申请'
+      };
+      var parent = document.getElementsByClassName('main-content')[0];
+
+      cb(tipConfig, parent, 'success');
     }).fail(function(jqXHR) {
-      var response = JSON.parse(jqXHR.responseText);
-      var message;
-      if(response.errors) {
-        message = response.errors[0].message;
-      } else {
-        message = '申请失败';
-      }
-      modal.setOptions({
-        content: message,
-        btnContent: '重新申请',
-        iconSrc: '/static/assets/page-views/support/apply-now/error.jpg'
-      });
-      modal.show();
+      var tipConfig = {
+        tipIconSrc: '/static/assets/page-views/train/train-apply/warning.png',
+        tipTitle: '申请失败',
+        tipContent: '同方云没有收到您的申请'
+      };
+      var parent = document.getElementsByClassName('main-content')[0];
+
+      cb(tipConfig, parent, 'fail');
     });
   }
 });
