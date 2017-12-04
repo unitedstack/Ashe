@@ -6,7 +6,7 @@ $(function () {
   var $form = $('#application-form');
   var $name = $form.find('#name');
   var $phone = $form.find('#phone');
-  //   var $email = $form.find('#email');
+  var $email = $form.find('#email');
   //   var $company = $form.find('#company');
   var $submitBtn = $form.find('#submitBtn');
 
@@ -36,6 +36,7 @@ $(function () {
       $msg.find('.error-msg').show();
       return false;
     }
+    return true;
   }
 
   function changeInputState(target, regexp) {
@@ -76,8 +77,6 @@ $(function () {
     var vName = $('#name').val();
     var vEmail = $('#email').val();
     var vPhone = $('#phone').val();
-    var vCompanyLocation = $('.province span').text() + $('.city span').text();
-    var vCompanyName = $('#company').val();
 
     if (!vName.trim()) {
       $name.blur();
@@ -92,7 +91,8 @@ $(function () {
     }
 
     if (vEmail.trim()) {
-      if (mailValidation(vEmail)) {
+      if (!mailValidation(vEmail)) {
+        $email.focus();
         return;
       }
     } else {
@@ -101,60 +101,60 @@ $(function () {
       $('#email').removeClass('input-error-border');
     }
 
+    var isMobile = document.documentElement.clientWidth <= 960 ? true : false;
 
-    if (!vCompanyName.trim()) {
-      vCompanyLocation = '';
-    }
+    modal.setOptions({
+      isMobile: isMobile,
+      opacity: 0.2,
+      width: 550,
+      height: 296,
+      isCaptcha: true,
+      onSendRequest: onSendRequest
+    });
+    modal.show();
+  }
 
+  function onSendRequest(captcha, cb) {
+    var vName = $('#name').val();
+    var vEmail = $('#email').val();
+    var vPhone = $('#phone').val();
+    var vCompanyLocation = $('.province span').text() + $('.city span').text();
+    var vCompanyName = $('#company').val();
 
     var data = {
       nickname: vName,
       email: vEmail,
       phone: vPhone,
       company: vCompanyName,
-      location: vCompanyLocation
+      location: vCompanyLocation,
+      captcha: captcha
     };
 
     $.ajax({
       type: 'POST',
-      url: '/apply/api/train',
+      url: '/apply/api/cooperation',
       data: data,
-      beforeSend: function (jqXHR) {
-        modal.setOptions({
-          content: '申请中',
-          btnContent: '退出申请',
-          iconSrc: '/static/assets/page-views/train/train-apply/loading/jpg',
-          clickHandler: function () {
-            jqXHR.abort();
-            modal.hide();
-          }
-        });
-        modal.show();
-      }
     }).done(function (data) {
-      modal.setOptions({
-        content: data.message,
-        btnContent: '知道了',
-        btnType: 'create',
-        iconSrc: '/static/assets/page-views/train/train-apply/success.jpg'
-      });
-      modal.show();
+      var tipConfig = {
+        tipIconSrc: '/static/assets/page-views/cooperation/cooperation-apply/checked.png',
+        tipTitle: '申请成功',
+        tipContent: '同方云已收到您的申请'
+      };
+      var parent = document.getElementsByClassName('main-content')[0];
+
+      cb(tipConfig, parent, 'success');
     }).fail(function (jqXHR) {
-      var response = JSON.parse(jqXHR.responseText);
-      var message;
-      if (response.errors) {
-        message = response.errors[0].message;
-      } else {
-        message = '申请失败';
-      }
-      modal.setOptions({
-        content: message,
-        btnContent: '重新申请',
-        iconSrc: '/static/assets/page-views/train/train-apply/error.jpg'
-      });
-      modal.show();
+      var tipConfig = {
+        tipIconSrc: '/static/assets/page-views/cooperation/cooperation-apply/warning.png',
+        tipTitle: '申请失败',
+        tipContent: '同方云没有收到您的申请'
+      };
+      var parent = document.getElementsByClassName('main-content')[0];
+
+      cb(tipConfig, parent, 'fail');
     });
   }
+
 
   // 省市二联菜单
   var province = data['provinces'];
