@@ -1,0 +1,54 @@
+#submit-tip {
+  background: #fff;
+  position: fixed;
+  top: 125px;
+  right: -296px;
+  width: 296px;
+  height: 88px;
+  z-index: 2000;
+  box-shadow: 0 0 8px 2px rgba(234,234,234,0.50);
+  border-radius: 2px;
+  transition: transform 0.5s;
+  &.enter {
+    transform: translateX(-306px);
+  }
+  #submit-tip-icon {
+      display: block;
+      float: left;
+      width: 28px;
+      height: 28px;
+      margin: 30px 24px 30px 39px; 
+  }
+  #submit-tip-content-wrapper {
+      float: left;
+      width: 139px;
+  }
+  #submit-tip-title {
+      font-size: 16px;
+      color: #333;
+      letter-spacing: 0;
+      margin: 20px 0 8px;
+      line-height: 20px;
+  }
+  #submit-tip-success-content {
+      font-size: 12px;
+      color: #7688AD;
+      letter-spacing: 0;
+      line-height: 20px;
+  }
+  #submit-tip-fail-content {
+      font-size: 12px;
+      color: #D95D53;
+      letter-spacing: 0;
+      line-height: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  #submit-tip {
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

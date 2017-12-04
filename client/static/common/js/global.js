@@ -154,9 +154,9 @@ function globalEvent(G) {
       $(this).siblings().removeClass('select');
       $(this).addClass('select');
       if($(this).hasClass('multi')) {
-        $(this).parents('.dropdown-wrapper').css('width', '358px');
+        $(this).parents('.dropdown-wrapper').css('width', '300px');
       } else {
-        $(this).parents('.dropdown-wrapper').css('width', '168px');
+        $(this).parents('.dropdown-wrapper').css('width', '150px');
       }
     }
   });

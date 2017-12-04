@@ -1,16 +1,11 @@
-var SingletonModal = (function () {
-  var instance;
-
-  return function() {
-    if(!instance) {
-      return instance = new Modal();
-    }
-    return instance;
-  };
-})();
+require('./style/index.less');
 
 function Modal() {
+  var _this = this;
   this.defaultOptions = {
+    isMobile: false,
+    isCaptcha: true,
+    onSendRequest: function() { _this.destroy(); },
     opacity: 0.8,
     zIndex: 1000,
     width: 250,
@@ -79,13 +74,13 @@ Modal.prototype._getModalElem = function() {
     elem = document.createElement('div');
     elem.id = 'modal';
   }
-  var styleText = 'position: absolute; top: 50%; left: 50%;' +
+  var styleText = 'position: fixed; top: 50%; left: 50%;' +
     ' transform: translate(-50%, -50%); background: white; z-index: ' + (this.options.zIndex + 1) + '; display: none; border-radius: 2px;';
   
   if(this.options.isMobile) {
     styleText = styleText + ' width: 375px; height: 194px;';
   } else {
-    styleText = styleText + ' width:' + this.options.width + '; height: ' + this.options.height;
+    styleText = styleText + ' width:' + this.options.width + 'px; height: ' + this.options.height + 'px';
   }
 
   elem.style.cssText = styleText;
@@ -102,11 +97,10 @@ Modal.prototype._setModalContent = function(modal) {
   var textElem = document.createElement('div');
   textElem.id = 'captcha-text';
   textElem.innerHTML = '请输入验证码，完成验证';
-
   if(this.options.isMobile) {
-    textElem.style = 'margin: 34px 0 11px 46px; line-height: 24px; font-size: 12px; letter-spacing: .55px; color: #333';
+    textElem.style.cssText = 'margin: 34px 0 11px 46px; line-height: 24px; font-size: 12px; letter-spacing: .55px; color: #333';
   } else {
-    textElem.style = 'margin: 60px 0 20px 88px; line-height: 30px; font-size: 22px; letter-spacing: 1px; color: #333';
+    textElem.style.cssText = 'margin: 60px 0 20px 88px; line-height: 30px; font-size: 22px; letter-spacing: 1px; color: #333';
   }
 
   var inputWrapper = document.createElement('div');
@@ -116,22 +110,24 @@ Modal.prototype._setModalContent = function(modal) {
   var input = document.createElement('input');
   input.id = 'captcha-input';
   input.type = 'text';
+  var inputStyle = 'padding: 5px 10px; border: 1px solid #D8D8D8;border-radius: 2px; color: #333; vertical-align: top;';
 
   if(this.options.isMobile) {
-    input.style = 'width: 176px; margin-left: 46px; padding: 5px 10px; border: 1px solid #D8D8D8; line-height: 24px; font-size: 12px; border-radius: 2px; color: #333; vertical-align: top';
+    input.style.cssText = inputStyle + ' width: 176px; margin-left: 46px; line-height: 24px; font-size: 12px;';
   } else {
-    input.style = 'width: 250px; margin-left: 88px; padding: 5px 10px; border: 1px solid #D8D8D8; line-height: 30px; font-size: 22px; border-radius: 2px; color: #333; vertical-align: top';
+    input.style.cssText = inputStyle + ' width: 250px; margin-left: 88px; line-height: 30px; font-size: 22px;';
   }
 
   var timeStamp = (new Date()).getTime();
   var src = '/api/tool/captcha?' + (String(timeStamp)).slice(-8);
   var captcha = new Image();
   captcha.src = src;
+  var captchaStyle = 'display: inline-block; margin-left: 11px; cursor: pointer;';
 
   if(this.options.isMobile) {
-    captcha.style = 'width: 76px; height: 33px; display: inline-block; margin-left: 11px';
+    captcha.style.cssText = captchaStyle + ' width: 76px; height: 33px;';
   } else {
-    captcha.style = 'width: 91px; height: 40px; display: inline-block; margin-left: 11px';
+    captcha.style.cssText = captchaStyle + ' width: 91px; height: 40px;';
   }
 
 
@@ -140,11 +136,12 @@ Modal.prototype._setModalContent = function(modal) {
   var submitBtn = document.createElement('button');
   submitBtn.id = 'submit-captcha';
   submitBtn.innerHTML = '确定';
+  var btnStyle = 'display: block; font-weight: 200; color: #fff; background: #0280DF; border-radius: 2px; border: none; line-height: 28px; outline: none; cursor: pointer;';
 
   if(this.options.isMobile) {
-    submitBtn.style = 'display: block; margin: 21px auto; padding: 3.9px 31px 3.1px 31px; font-size: 14px; font-weight: 200; color: #fff; background: #0280DF; border-radius: 2px; border: none; line-height: 28px; letter-spacing: 0.33px; outline: none; cursor: pointer';
+    submitBtn.style.cssText = btnStyle + ' margin: 21px auto; padding: 3.9px 31px 3.1px 31px; font-size: 14px; letter-spacing: 0.33px;';
   } else {
-    submitBtn.style = 'display: block; margin: 34px auto; padding: 11px 37px 11px 38px; font-size: 18px; font-weight: 200; color: #fff; background: #0280DF; border-radius: 2px; border: none; line-height: 28px; letter-spacing: 0.5px; outline: none; cursor: pointer';
+    submitBtn.style.cssText = btnStyle + ' margin: 34px auto; padding: 11px 37px 11px 38px; font-size: 18px; letter-spacing: 0.5px;';
   }
 
 
@@ -203,8 +200,17 @@ Modal.prototype.showTip = function(tipConfig, parent, tipType) {
 
   parent.appendChild(tipElem);
 
+  if(!this.options.isMobile) {
+    setTimeout(function() {
+      $(tipElem).addClass('enter');
+    }, 150);
+  }
+
   setTimeout(function() {
-    parent.removeChild(tipElem);
+    $(tipElem).removeClass('enter');
+    setTimeout(function() {
+      parent.removeChild(tipElem);
+    }, 800);
   }, 5000);
 };
 
@@ -218,4 +224,4 @@ Modal.prototype.destroy = function() {
   document.removeEventListener('click', this.destroy);
 };
 
-module.exports = SingletonModal;
+module.exports = Modal;
