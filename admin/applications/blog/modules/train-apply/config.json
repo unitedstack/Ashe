@@ -1,0 +1,16 @@
+{
+  "name": "train-apply",
+  "table": {
+    "key": "id",
+    "column": [{
+      "key": "company",
+      "index": "company",
+      "title": "公司名称"
+    }, {
+      "key": "createdAt",
+      "index": "createdAt",
+      "title": "创建时间"
+    }],
+    "data": []
+  }
+}

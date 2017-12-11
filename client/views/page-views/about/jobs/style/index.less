@@ -1,0 +1,417 @@
+@import '../../../../../components/header.less';
+@import '../../../../../components/footer.less';
+
+.jobs {
+  .bg-size {
+    width: 100%;
+    overflow: hidden;
+    .shadow-title(1);
+    .about {
+      width: 1170px;
+      height: auto;
+      margin: 70px auto;
+      .ad {
+        width: 100%;
+        height: 440px;
+        overflow: hidden;
+        .first,
+        .second,
+        .third {
+          float: left;
+          width: 33.33%;
+          height: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          .inner {
+            margin: auto;
+            width: 324px;
+            height: 100%;
+            img {
+              width: 98px;
+              height: 100px;
+            }
+            .title {
+              margin-top: 54px;
+              width: 100%;
+              height: 32px;
+              line-height: 32px;
+              font-size: 24px;
+              color: #0280DF;
+              text-align: center;
+            }
+            .content {
+              margin-top: 30px;
+              width: 100%;
+              line-height: 36px;
+              height: 216px;
+              letter-spacing: 0.83px;
+              font-weight: 200;
+              text-align: left;
+            }
+          }
+        }
+        .second {
+          border-left: 1px solid #b6b6b6;
+          border-right: 1px solid #b6b6b6;
+          border-image: linear-gradient(#ffffff, #b6b6b6, #ffffff) 1 1;
+        }
+      }
+      .jobs-wrapper {
+        width: 100%;
+        height: auto;
+        margin-top: 70px;
+        padding: 0 30px;
+        box-sizing: border-box;
+        .wrapper {
+          width: 100%;
+          height: 100%;
+          .header {
+            display: none;
+            padding: 0px 30px;
+            border: 1px solid #DAD7E2;
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 254px;
+            .selected-wrapper {
+              width: 100%;
+              height: 64px;
+              line-height: 64px;
+              border-bottom: 1px solid #DAD7E2;
+              overflow: hidden;
+              div.label {
+                float: left;
+                width: 120px;
+                font-size: 22px;
+                color: #333333;
+                letter-spacing: 0.61px;
+              }
+              ul.content {
+                float: right;
+                width: 920px;
+                height: 64px;
+                padding: 16px 0;
+                li {
+                  float: left;
+                  position: relative;
+                  margin-right: 20px;
+                  width: 120px;
+                  height: 34px;
+                  line-height: 34px;
+                  text-align: center;
+                  background: #C0E4FF;
+                  font-size: 18px;
+                  color: #0280DF;
+                  cursor: pointer;
+                  i {
+                    display: block;
+                    position: absolute;
+                    right: -6px;
+                    top: -18px;
+                    font-size: 14px;
+                    transition: color 0.3s;
+                    &:hover {
+                      color: darken(#0280DF, 10%)
+                    }
+                  }
+                }
+              }
+            }
+            .row {
+              margin-top: 18px;
+              width: 100%;
+              height: auto;
+              .label {
+                display: inline-block;
+                vertical-align: top;
+                width: 120px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 22px;
+                color: #6D6D6D;
+              }
+              .content {
+                margin-left: -8px;
+                display: inline-block;
+                padding: 5px 0;
+                width: 920px;
+                min-height: 30px;
+                line-height: 30px;
+                font-size: 18px;
+                li {
+                  float: left;
+                  width: 60px;
+                  height: 20px;
+                  line-height: 20px;
+                  color: #333333;
+                  font-weight: 300;
+                  text-align: center;
+                  transition: color 0.3s;
+                  cursor: pointer;
+                  user-select: none;
+                  &:not(:last-child) {
+                    border-right: 1px solid #DAD7E2;
+                  }
+                  &.select,
+                  &:hover {
+                    color: #0280DF;
+                  }
+                }
+              }
+            }
+          }
+          .jobs-list-wrapper {
+            .title {
+              margin-top: 38px;
+              font-size: 28px;
+              color: #333333;
+              letter-spacing: 1px;
+              line-height: 40px;
+            }
+            ul.jobs-list {
+              counter-reset: subproject;
+              li {
+                clear: both;
+                &:not(:first-child) {
+                  margin-top: 60px;
+                }
+                &:last-child {
+                  margin-bottom: 40px;
+                }
+                .title {
+                  width: 100%;
+                  height: 40px;
+                  line-height: 40px;
+                  font-size: 20px;
+                  color: #0280DF;
+                  letter-spacing: 0.95px;
+                  &:before {
+                    display: inline-block;
+                    margin-right: 20px;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    content: counter(subproject, decimal-leading-zero);
+                    counter-increment: subproject;
+                    background-color: #0280DF;
+                    border-radius: 0.5px;
+                    font-size: 24px;
+                    color: #FFFFFF;
+                    letter-spacing: 1.14px;
+                    text-align: center;
+                  }
+                }
+                .content {
+                  width: 100%;
+                  height: auto;
+                  .job-type,
+                  .job-responsibility,
+                  .job-requirements,
+                  .plus,
+                  .email {
+                    margin-top: 20px;
+                    width: 100%;
+                    min-height: 30px;
+                    .label {
+                      display: inline-block;
+                      vertical-align: top;
+                      width: 88px;
+                      height: 30px;
+                      font-size: 16px;
+                      color: #7688AD;
+                      line-height: 30px;
+                    }
+                    .content {
+                      display: inline-block;
+                      width: 920px;
+                      min-height: 30px;
+                      line-height: 30px;
+                      color: #7688AD;
+                      font-weight: 300;
+                    }
+                  }
+                  .email {
+                    .content {
+                      a {
+                        font-weight: 400;
+                        color: #0280DF;
+                        transition: color 0.3s;
+                        &:hover {
+                          color: darken(#0280DF, 10%);
+                        }
+                      }
+                    }
+                  }
+                }
+                .footer {
+                  margin-top: 20px;
+                  width: 100%;
+                  height: 50px;
+                  .btn-join {
+                    display: block;
+                    float: right;
+                    width: 200px;
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: #0280DF;
+                    border-radius: 2px;
+                    font-size: 18px;
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-weight: 300;
+                    cursor: pointer;
+                    &:hover {
+                      background-color: darken(#0280DF, 10%);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @pad_width) {
+  .jobs {
+    .bg-size {
+      padding: 0 20px;
+      box-sizing: border-box;
+      padding-top: 20px;
+      .shadow-title(2);
+      .about {
+        margin: auto;
+        margin-top: 70px;
+        width: 100%;
+        .ad {
+          width: 100%;
+          height: auto;
+          .first,
+          .second,
+          .third {
+            float: none;
+            width: 100%;
+            height: auto;
+            .inner {
+              width: 100%;
+              .title {
+                margin-top: 20px;
+                font-size: 18px;
+                color: #0280DF;
+                line-height: 30px;
+              }
+              .content {
+                height: auto;
+                font-size: 12px;
+                color: #7688AD;
+                letter-spacing: 0.5px;
+                line-height: 20px;
+              }
+            }
+          }
+          .second,
+          .third {
+            margin-top: 20px;
+          }
+          .second {
+            border: none;
+          }
+        }
+        .jobs-wrapper {
+          padding: 0;
+          .wrapper {
+            .jobs-list-wrapper {
+              .title {
+                font-size: 20px;
+              }
+              ul.jobs-list {
+                li {
+                  &:not(:first-child) {
+                    margin-top: 60px;
+                  }
+                  &:last-child {
+                    margin-bottom: 40px;
+                  }
+                  .title {
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 16px;
+                    color: #0280DF;
+                    &:before {
+                      margin-right: 10px;
+                      width: 30px;
+                      height: 30px;
+                      line-height: 30px;
+                      font-size: 16px;
+                    }
+                  }
+                  .content {
+                    width: 100%;
+                    height: auto;
+                    .job-type,
+                    .job-responsibility,
+                    .job-requirements,
+                    .plus,
+                    .email {
+                      margin-top: 20px;
+                      width: 100%;
+                      min-height: 30px;
+                      .label {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 64px;
+                        height: 20px;
+                        font-size: 12px;
+                        line-height: 20px;
+                      }
+                      .content {
+                        display: inline-block;
+                        width: calc(~"100% - 80px");
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                        min-height: 20px;
+                        line-height: 20px;
+                        font-weight: 200;
+                      }
+                    }
+                    .email {
+                      .content {
+                        a {
+                          font-weight: 400;
+                          color: #0280DF;
+                          transition: color 0.3s;
+                          &:hover {
+                            color: darken(#0280DF, 10%);
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .footer {
+                    margin-top: 20px;
+                    width: 100%;
+                    height: 50px;
+                    .btn-join {
+                      display: block;
+                      margin: 0 auto;
+                      float: none;
+                      width: 130px;
+                      height: 34px;
+                      line-height: 34px;
+                      font-size: 14px;
+                      font-weight: 200;
+                      &:hover {
+                        background-color: darken(#0280DF, 10%);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

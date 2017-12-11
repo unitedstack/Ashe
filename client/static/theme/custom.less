@@ -24,17 +24,96 @@ input {
   outline: none;
 }
 
-// input[type="checkbox"] {
-//   width: 14px;
-//   height: 14px;
-//   box-sizing: border-box;
-//   border-radius: @border_radius;
-//   border: 1px solid #ccc;
-//   &:checked {
-//     background-image: url('/static/assets/page-views/login/icon-checkbox@2x.png');
-//     background-size: 100% 100%;
-//   }
-// }
+/*!
+ * common css for shadow title.
+ * @device: device media query code.
+ *
+ * @device === 1 --- max width > pad
+ * @device === 2 --- max width < pad
+ */
+.shadow-title(@device) when (@device = 1) {
+  .shadow-title {
+    text-align: center;
+    &.absolute {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 60px;
+      font-family: MicrosoftYaHei-Bold !important;
+      font-weight: 200;
+      font-size: 80px;
+      color: #F7F8FB;
+      letter-spacing: 2px;
+      line-height: 90px;
+      .foot {
+        color: #fff;
+      }
+      .head {
+        opacity: 0.1;
+      }
+    }
+    .head {
+      font-family: MicrosoftYaHei-Bold !important;
+      font-weight: bold;
+      font-size: 80px;
+      color: #F7F8FB;
+      letter-spacing: 2px;
+      line-height: 90px;
+      text-align: center;
+    }
+    .foot {
+      font-family: MicrosoftYaHeiLight !important;
+      font-weight: 200;
+      font-size: 42px;
+      color: #333333;
+      letter-spacing: 2px;
+      line-height: 55px;
+      margin-top: -50px;
+      span {
+        font-family: MicrosoftYaHeiLight !important;
+        font-weight: 200;
+        font-size: 42px;
+        color: @color_button_blue;
+        letter-spacing: 2px;
+        line-height: 55px;
+      }
+    }
+  }
+}
+
+.shadow-title(@device) when (@device = 2) {
+  .shadow-title {
+    text-align: center;
+    &.absolute {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 40px;
+      .foot {
+        font-family: MicrosoftYaHei;
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 0.5px;
+        line-height: 30px;
+      }
+    }
+    .head {
+      display: none;
+    }
+    .foot {
+      font-weight: 400;
+      margin-top: 0;
+      font-size: 18px;
+      color: #333333;
+      line-height: 55px;
+      span {
+        font-weight: 400;
+        font-size: 18px;
+        color: #333333;
+      }
+    }
+  }
+}
 
 .wangEditor-txt {
   ul {

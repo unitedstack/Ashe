@@ -2,14 +2,11 @@
   "modules": [
     "enterprise",
     "admin-user",
-    "cloud-apply",
     "train-apply",
     "blogs",
     "news",
     "news-list",
     "blog-list",
-    "media",
-    "content",
-    "tech-docs"
+    "content"
   ]
 }
