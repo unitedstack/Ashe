@@ -6,7 +6,8 @@ function pop(details) {
   config.fields = details.map((detail) => ({
     type: 'icon_label',
     is_long_label: true,
-    field: detail.title
+    field: detail.title,
+    text: detail.content
   }));
 
   var props = {
