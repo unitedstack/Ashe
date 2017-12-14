@@ -1,5 +1,4 @@
 'use strict';
-const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
@@ -39,7 +38,6 @@ if (env !== 'development') {
 app.FileHash = hashs;
 //static files
 const maxAge = env === 'development' ? 1 : 365 * 24 * 60 * 60 * 1000;
-const staticPage = require('../client/.routers.json');
 
 app.use(mount('/static', koaStatic(path.resolve(__dirname, '../client/static'), {maxAge})));
 app.use(mount('/admin-static/dist', koaStatic(path.resolve(__dirname, '../admin/dist'), {maxAge})));
