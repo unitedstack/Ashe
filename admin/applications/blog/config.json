@@ -1,12 +1,7 @@
 {
   "modules": [
-    "enterprise",
     "admin-user",
     "train-apply",
-    "blogs",
-    "news",
-    "news-list",
-    "blog-list",
-    "content"
+    "jobs-list"
   ]
 }
