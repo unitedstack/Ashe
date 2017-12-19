@@ -7,7 +7,7 @@
     "start": "pm2 start pm2.json",
     "client_build": "cd client/build && grunt build",
     "client_dev": "cd client/build && grunt watch",
-    "admin_build": "cd admin && rm -rf dist/*.* dist/dll manifest.json && cp -R uskin/dist/css dist/uskin && node build.js --production",
+    "admin_build": "cd admin && rm -rf dist/ && mkdir dist && cp -R uskin/dist/css dist/uskin && node build.js --production",
     "admin_dev": "cd admin && rm -rf dist/*.* dist/dll manifest.json && node build.js --development",
     "build": "npm run client_build && npm run admin_build",
     "release": "npm run client_build && npm run admin_build",

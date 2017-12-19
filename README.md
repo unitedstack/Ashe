@@ -7,6 +7,10 @@ Ashe is a public cloud offical website.
 ## Install
 
 ```bash
+git clone https://github.com/unitedstack/Ashe.git
+
+git submodule update --init --recursive
+
 nvm use 8 && npm install && npm run build
 ```
 
