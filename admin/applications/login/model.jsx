@@ -69,9 +69,9 @@ class Model extends React.Component {
               <div className="captcha-img"><img title="点击刷新" ref="captcha_img" onClick={this.onClick} src="/admin/tool/captcha" /></div>
             </div>
             <div className="tip-wrapper">{state.errorTip}</div>
-            <input className={'submit' + (state.isSubmitting ? ' disabled' : '')} type="submit" value="登录" />
+            <input className={'login' + (state.isSubmitting ? ' disabled' : '')} type="submit" value="登录" />
           </form>
-          <p className="tip">登录如有问题请<a href="#">咨询管理员</a></p>
+          <p className="small-tip">登录如有问题请<a href="#">咨询管理员</a></p>
         </div>
         <div className="footer"></div>
       </div>

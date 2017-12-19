@@ -11,6 +11,7 @@ const template = (data) => {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="renderer" content="webkit">
+  <link href="/admin-static/dist/uskin/${data.uskinCssFile}" rel="stylesheet">
   <link href="/admin-static/dist/${data.mainCssFile}" rel="stylesheet">
   <title>${data.title}</title>
 </head>
@@ -28,6 +29,9 @@ const getTemplateObj = (name) => {
     title: name,
     dllJsFile: glob.sync('dll_ustack_*.js', {
       cwd: 'admin/dist/dll'
+    }),
+    uskinCssFile: glob.sync('*uskin.min.css', {
+      cwd: 'admin/dist/uskin'
     }),
     mainCssFile: glob.sync(`*${name}.min.css`, {
       cwd: 'admin/dist'

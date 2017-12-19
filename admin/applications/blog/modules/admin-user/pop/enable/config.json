@@ -1,9 +1,12 @@
 {
+  "title": "启用",
   "fields": [{
     "type": "text",
-    "field": "text"
+    "field": "enable",
+    "info": ""
   }],
   "btn": {
-    "value": "确认"
+    "value": "确定",
+    "disabled": false
   }
 }

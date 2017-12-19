@@ -1,9 +1,0 @@
-{
-  "fields": [{
-    "type": "text",
-    "field": "text"
-  }],
-  "btn": {
-    "value": "确认"
-  }
-}

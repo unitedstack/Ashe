@@ -7,8 +7,8 @@
     "start": "pm2 start pm2.json",
     "client_build": "cd client/build && grunt build",
     "client_dev": "cd client/build && grunt watch",
-    "admin_build": "cd admin && rm -rf dist/ manifest.json && node build.js --production",
-    "admin_dev": "cd admin && rm -rf dist/ manifest.json && node build.js --development",
+    "admin_build": "cd admin && rm -rf dist/*.* dist/dll manifest.json && cp -R uskin/dist/css dist/uskin && node build.js --production",
+    "admin_dev": "cd admin && rm -rf dist/*.* dist/dll manifest.json && node build.js --development",
     "build": "npm run client_build && npm run admin_build",
     "release": "npm run client_build && npm run admin_build",
     "iconfont": "cd client/build && grunt font",
@@ -71,7 +71,7 @@
     "time-grunt": "^1.4.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.6.2",
-    "webpack": "^3.6.0"
+    "webpack": "^3.9.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -79,6 +79,7 @@
     "bcrypt": "^1.0.3",
     "boom": "^6.0.0",
     "ccap": "^0.6.10",
+    "clipboard-plus": "^1.1.0",
     "co": "^4.6.0",
     "connect-memjs": "^0.2.1",
     "fs-async-await": "0.0.3",
@@ -102,8 +103,8 @@
     "mysql": "^2.15.0",
     "nodemailer": "^4.4.0",
     "normalize.css": "^7.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "rsvp": "^4.7.0",
     "sequelize": "^3.30.4",
     "superagent": "^3.6.3",

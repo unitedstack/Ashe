@@ -1,4 +1,3 @@
-require('normalize.css');
 require('./style/index.less');
 const ReactDOM = require('react-dom');
 const React = require('react');

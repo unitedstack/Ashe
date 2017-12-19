@@ -1,11 +1,17 @@
-var configs = require('../config.json');
-var modules = {};
+/**
+ * @Author: PengJiyuan
+ * @desc:   Load all modules
+ */
 
-configs.modules.forEach((m) => {
-  modules[m] = require('../modules/' + m + '/index');
-});
+let modules = {};
+
+// Shit...
+function importAll (r) {
+  r.keys().forEach(key => modules[key.split('/')[1]] = r(key));
+}
+
+importAll(require.context('../modules', true, /\.jsx$/));
 
 module.exports = {
-  configs: configs,
   modules: modules
 };

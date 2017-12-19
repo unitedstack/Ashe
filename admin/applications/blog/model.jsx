@@ -1,7 +1,8 @@
 const React = require('react');
-let Leftbar = require('./components/leftbar/index');
-let router = require('admin/utils/router');
-let loader = require('./cores/loader');
+const Leftbar = require('admin/components/leftbar/index');
+const router = require('admin/utils/router');
+const loader = require('./cores/loader');
+require('./cores/watchdog');
 
 class Model extends React.Component {
 
@@ -9,29 +10,34 @@ class Model extends React.Component {
     super(props);
 
     this.state = {
-      modules: []
+      modules: [],
+      params: []
     };
+
+    this.onChangeState = this.onChangeState.bind(this);
   }
 
   loadRouter() {
     router.on('changeState', this.onChangeState.bind(this));
 
     var pathList = router.getPathList();
-    if (pathList.length <= 2) {
-      pathList[2] = 'enterprise';
+    if (pathList.length <= 3) {
+      pathList[2] = 'admin-user';
     }
-    router.replaceState('/admin/blog/' + pathList.slice(2).join('/'), null, null, true);
+    router.replaceState('/admin/blog/' + pathList.slice(2, 4).join('/'), null, null, true);
   }
 
   onChangeState(pathList) {
     let currentModule = pathList[2];
     let modules = this.state.modules;
+
     if (modules.indexOf(currentModule) === -1) {
       modules = modules.concat(currentModule);
     }
     this.setState({
       modules: modules,
-      currentModule: currentModule
+      currentModule: currentModule,
+      params: pathList
     });
   }
 
@@ -40,11 +46,11 @@ class Model extends React.Component {
   }
 
   componentWillUpdate() {
-    console.time('blog');
+    console.time('start');
   }
 
   componentDidUpdate() {
-    console.timeEnd('blog');
+    console.timeEnd('end');
   }
 
   render() {
@@ -57,7 +63,7 @@ class Model extends React.Component {
             state.modules.map((m, index) => {
               let M = loader.modules[m];
               if (M) {
-                return <M key={index} style={state.currentModule === m ? {display: state.currentModule === 'enterprise' ? 'block' : 'flex'} : {display: 'none'}} />;
+                return <M key={index} params={state.params} style={state.currentModule === m ? {display: 'flex'} : {display: 'none'}} />;
               }
             })
           }

@@ -1,31 +1,30 @@
-const commonModal = require('admin/applications/blog/components/pop/index');
+const commonModal = require('admin/components/modal_common/index');
 const config = require('./config.json');
 const request = require('../../request');
-const getErrorMessage = require('admin/applications/blog/cores/getErrorMessage');
 
-function pop(accounts, isEnable, callback) {
+function pop(obj, parent, callback) {
+  if(obj.enable) {
+    config.title = '启用';
+    config.fields[0].info = `确认启用账户 ${obj.email} 吗？`;
+  } else {
+    config.title = '禁用';
+    config.fields[0].info = `确认禁用账户 ${obj.email} 吗？`;
+  }
 
-  const ids = accounts.map((ele) => ele.id);
-  const emails = accounts.map((ele) => ele.email).join(', ');
-
-  const text = config.fields[0];
-  config.title = isEnable ? '启用账户' : '禁用账户';
-  text.info = '确认' + config.title + ' ' + emails + ' 账户吗？';
-
-  var props = {
-    __: {},
+  let props = {
+    parent: parent,
     config: config,
     onInitialize: function(refs) {},
     onConfirm: function(refs, cb) {
-
-      request.enableAccount(ids, isEnable).then((res) => {
-        cb && cb(true);
-        callback  && callback(res);
-      }).catch((error) => {
-        cb && cb(false, getErrorMessage(error));
+      let ids = [obj.id];
+      request.enableAccount(ids, obj.enable).then(res => {
+        cb(true);
+        callback && callback();
+      }).catch(err => {
+        cb(true);
       });
     },
-    onAction: function(filed, state, refs) {}
+    onAction: function(field, state, refs) {}
   };
 
   commonModal(props);

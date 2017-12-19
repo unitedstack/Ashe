@@ -33,8 +33,7 @@ module.exports = (env) => {
 
     output: {
       path: path.resolve(__dirname, './dist'),
-      filename: '[chunkhash:6].[name].min.js',
-      publicPath: '/client/dist'
+      filename: '[chunkhash:6].[name].min.js'
     },
 
     module: {
@@ -114,7 +113,8 @@ module.exports = (env) => {
       ],
       alias: {
         'react': 'node_modules/react',
-        'react-dom': 'node_modules/react-dom'
+        'react-dom': 'node_modules/react-dom',
+        'uskin': "admin/uskin/index"
       }
     }
 

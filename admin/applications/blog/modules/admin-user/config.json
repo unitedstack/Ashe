@@ -1,27 +1,51 @@
 {
-  "name": "admin-user",
-  "buttons": [{
-    "key": "add",
-    "title": "添加"
+  "tabs": [{
+    "name": "管理员账号",
+    "key": "admin-user",
+    "default": true
+  }],
+  "btns": [{
+    "value": "创建",
+    "key": "create",
+    "type": "create",
+    "icon": "create"
   }, {
+    "value": "启用",
     "key": "enable",
-    "title": "启用"
+    "icon": "active",
+    "disabled": true
   }, {
+    "value": "禁用",
     "key": "disable",
-    "title": "禁用"
+    "icon": "remove",
+    "disabled": true
+  }, {
+    "key": "refresh",
+    "icon": "refresh",
+    "disabled": true
   }],
   "table": {
-    "key": "id",
     "checkbox": true,
+    "dataKey": "id",
+    "loading": true,
+    "limit": 10,
     "column": [{
+      "title": "邮箱/用户名",
+      "dataIndex": "email",
       "key": "email",
-      "index": "email",
-      "title": "邮箱/用户名"
+      "type": "captain"
     }, {
-      "key": "enable",
-      "index": "enable",
-      "title": "启用状态"
+      "title": "启用状态",
+      "dataIndex": "enable",
+      "key": "enable"
     }],
-    "data": []
+    "data": [],
+    "detail": {
+      "tabs": [{
+        "name": "详细信息",
+        "key": "description",
+        "default": true
+      }]
+    }
   }
 }

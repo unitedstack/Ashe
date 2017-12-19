@@ -26,7 +26,7 @@ require('colors');
 
 let dllCompiler = webpack(dllConfig({production: !dev}));
 
-console.log('\n-- Use webpack dll plugin, might be great, Aha~ --'.green);
+console.log('\n-- Use webpack dll plugin, Aha~ --'.green);
 console.log('\n[ Task dll ]'.grey, 'Building dll...\n');
 
 dllCompiler.apply(new webpack.ProgressPlugin());

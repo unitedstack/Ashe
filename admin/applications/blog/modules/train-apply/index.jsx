@@ -1,10 +1,9 @@
 const React = require('react');
-const Dashboard = require('admin/applications/blog/components/dashboard/index');
 const config = require('./config.json');
 const request = require('./request');
 const moment = require('moment');
 
-class List extends Dashboard {
+class List extends React.Component {
 
   constructor(props) {
     super(props);

@@ -1,0 +1,97 @@
+@import "../../../style/index.less";
+
+@basic-props-title-color: @color_grey_800;
+@loading-color: @color_font_800;
+@edit-name-icon-color: @color_info;
+@edit-name-icon-hover-color: @color_info_700;
+@edit-confirm-icon-color: @color_font_700;
+@edit-confirm-icon-hover-color: @color_info;
+@edit-cancel-icon-hover-color: @color_delete;
+@copyid-color: @color_font_800;
+@copyid-hover-color: @color_info_700;
+
+.halo-com-basic-props {
+  .content-loading {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .icon-loading {
+      font-size: 24px!important;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      margin-left: -18px;
+      width: 36px;
+      color: @loading-color;
+      .loading-ani();
+      font-size: 36px!important;
+    }
+  }
+  table {
+    tr {
+      height: 24px;
+      th {
+        width: 94px;
+        padding: 5px 0;
+        color: @basic-props-title-color;
+        font-weight: normal;
+        vertical-align: top;
+        text-align: right;
+      }
+      td {
+        max-width: 400px;
+        vertical-align: middle;
+        padding: 5px 0 5px 24px;
+        word-wrap: break-word;
+        p {
+          height: 16px;
+          line-height: 16px;
+          text-align: top;
+          margin: 0 0 6px 0;
+        }
+        i.glyphicon {
+          margin-right: 4px;
+          &.remodify {
+            margin-left: 4px;
+            color: @edit-name-icon-color;
+            cursor: pointer;
+            &:hover {
+              color: @edit-name-icon-hover-color;
+            }
+          }
+          &.copyid {
+            font-size: 14px;
+            margin-top: -1px;
+            margin-left: 4px;
+            color: @copyid-color;
+            cursor: pointer;
+            &:hover {
+              color: @copyid-hover-color;
+            }
+          }
+          &.edit-confirm, &.edit-cancel {
+            font-size: 15px;
+            cursor: pointer;
+            color: @edit-confirm-icon-color;
+          }
+          &.edit-confirm {
+            margin-left: 8px;
+            &:hover {
+              color: @edit-confirm-icon-hover-color;
+            }
+          }
+          &.edit-cancel {
+            margin-left: 4px;
+            &:hover {
+              color: @edit-cancel-icon-hover-color;
+            }
+          }
+        }
+
+        i[class^="icon-image-"] {
+          top: -1px;
+        }
+      }
+    }
+  }
+}

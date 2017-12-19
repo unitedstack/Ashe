@@ -1,7 +1,0 @@
-{
-  "modules": [
-    "admin-user",
-    "train-apply",
-    "jobs-list"
-  ]
-}
