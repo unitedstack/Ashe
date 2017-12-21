@@ -7,15 +7,12 @@ const request = require('./request');
 const config = require('./config.json');
 const enablePop = require('./pop/enable');
 const createPop = require('./pop/create');
-const moment = require('moment');
 const router = require('admin/utils/router');
 
 class Model extends React.Component {
 
   constructor(props) {
     super(props);
-
-    moment.locale('zh-CN');
 
     this.state = {
       config: config
@@ -31,7 +28,7 @@ class Model extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (nextProps.style.display === 'none' && this.props.style.display !== 'none') {
+    if (nextProps.style.display !== 'none' && this.props.style.display === 'none') {
       return false;
     }
     return true;

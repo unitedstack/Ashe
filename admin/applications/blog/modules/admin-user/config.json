@@ -22,7 +22,8 @@
   }, {
     "key": "refresh",
     "icon": "refresh",
-    "disabled": true
+    "disabled": true,
+    "type": "status"
   }],
   "table": {
     "checkbox": true,

@@ -4,6 +4,7 @@ require('./style/model.less');
 const React = require('react');
 const {InputSearch, Pagination, Tab, Table} = require('admin/uskin/index');
 const ButtonList = require('./button_list');
+const TableFilter = require('./table_filter');
 const FilterSearch = require('./filter_search');
 const Detail = require('./detail');
 const moment = require('moment');
@@ -395,6 +396,7 @@ class Main extends React.Component {
     let _config = props.config,
       tabs = _config.tabs,
       btns = _config.btns,
+      tableFilter = _config.tableFilter,
       search = _config.search,
       filter = _config.filter,
       table = _config.table,
@@ -448,6 +450,13 @@ class Main extends React.Component {
             : null
           }
         </div>
+        {
+          tableFilter
+            ? <TableFilter
+              filters={tableFilter}
+              onAction={this.onAction.bind(this)} />
+            : null
+        }
         <div className="table-box">
           {!table.loading && !table.data.length ?
             <div className="table-with-no-data">

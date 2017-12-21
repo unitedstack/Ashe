@@ -9,11 +9,11 @@
     "link": "/admin/blog/train-apply"
   }, {
     "title": "招聘列表",
-    "key": "jobs",
+    "key": "jobs-list",
     "link": "/admin/blog/jobs-list"
   }, {
     "title": "发布招聘",
-    "key": "publish-jobs",
+    "key": "jobs-publish",
     "link": "/admin/blog/jobs-publish"
   }]
 }

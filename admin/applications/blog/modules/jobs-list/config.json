@@ -1,16 +1,105 @@
 {
-  "name": "train-apply",
+  "tabs": [{
+    "name": "管理员账号",
+    "key": "admin-user",
+    "default": true
+  }],
+  "btns": [{
+    "value": "编辑",
+    "key": "edit",
+    "type": "create",
+    "icon": "edit"
+  }, {
+    "value": "更改状态",
+    "key": "status",
+    "icon": "status-light",
+    "disabled": true
+  }, {
+    "key": "refresh",
+    "icon": "refresh",
+    "disabled": true
+  }],
+  "tableFilter": {
+    "location": {
+      "title": "工作地点",
+      "key": "location",
+      "value": [{
+        "title": "全部",
+        "key": "all"
+      }, {
+        "title": "北京",
+        "key": "北京"
+      }, {
+        "title": "上海",
+        "key": "上海"
+      }, {
+        "title": "深圳",
+        "key": "深圳"
+      }]
+    },
+    "role": {
+      "title": "职业方向",
+      "key": "role",
+      "value": [{
+        "title": "全部",
+        "key": "all"
+      }, {
+        "title": "技术",
+        "key": "技术"
+      }, {
+        "title": "运维",
+        "key": "运维"
+      }]
+    },
+    "type": {
+      "title": "职业类型",
+      "key": "type",
+      "value": [{
+        "title": "全部",
+        "key": "all"
+      }, {
+        "title": "全职",
+        "key": "全职"
+      }, {
+        "title": "实习",
+        "key": "实习"
+      }]
+    }
+  },
   "table": {
-    "key": "id",
+    "checkbox": true,
+    "dataKey": "id",
+    "loading": true,
+    "limit": 10,
     "column": [{
-      "key": "company",
-      "index": "company",
-      "title": "公司名称"
+      "title": "职位名",
+      "dataIndex": "title",
+      "key": "title",
+      "type": "captain"
     }, {
-      "key": "createdAt",
-      "index": "createdAt",
-      "title": "创建时间"
+      "title": "职位方向",
+      "dataIndex": "role",
+      "key": "role"
+    }, {
+      "title": "职位类型",
+      "dataIndex": "type",
+      "key": "type"
+    }, {
+      "title": "工作地点",
+      "dataIndex": "location",
+      "key": "location"
+    }, {
+      "title": "状态",
+      "dataIndex": "status",
+      "key": "status"
     }],
-    "data": []
+    "data": [],
+    "detail": {
+      "tabs": [{
+        "name": "详细信息",
+        "key": "description",
+        "default": true
+      }]
+    }
   }
 }

@@ -21,7 +21,7 @@ class Model extends React.Component {
     router.on('changeState', this.onChangeState.bind(this));
 
     var pathList = router.getPathList();
-    if (pathList.length <= 3) {
+    if (pathList.length <= 2) {
       pathList[2] = 'admin-user';
     }
     router.replaceState('/admin/blog/' + pathList.slice(2, 4).join('/'), null, null, true);

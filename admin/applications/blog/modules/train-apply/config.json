@@ -1,16 +1,51 @@
 {
-  "name": "train-apply",
+  "tabs": [{
+    "name": "管理员账号",
+    "key": "admin-user",
+    "default": true
+  }],
+  "btns": [{
+    "value": "创建",
+    "key": "create",
+    "type": "create",
+    "icon": "create"
+  }, {
+    "value": "启用",
+    "key": "enable",
+    "icon": "active",
+    "disabled": true
+  }, {
+    "value": "禁用",
+    "key": "disable",
+    "icon": "remove",
+    "disabled": true
+  }, {
+    "key": "refresh",
+    "icon": "refresh",
+    "disabled": true
+  }],
   "table": {
-    "key": "id",
+    "checkbox": true,
+    "dataKey": "id",
+    "loading": true,
+    "limit": 10,
     "column": [{
-      "key": "company",
-      "index": "company",
-      "title": "公司名称"
+      "title": "邮箱/用户名",
+      "dataIndex": "email",
+      "key": "email",
+      "type": "captain"
     }, {
-      "key": "createdAt",
-      "index": "createdAt",
-      "title": "创建时间"
+      "title": "启用状态",
+      "dataIndex": "enable",
+      "key": "enable"
     }],
-    "data": []
+    "data": [],
+    "detail": {
+      "tabs": [{
+        "name": "详细信息",
+        "key": "description",
+        "default": true
+      }]
+    }
   }
 }
