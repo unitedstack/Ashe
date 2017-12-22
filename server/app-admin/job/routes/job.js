@@ -25,4 +25,9 @@ module.exports = (router) => {
     }
   });
 
+  router.delete('/api/job/:id', async (ctx, next) => {
+    await controller.del(ctx.params.id);
+    ctx.status = 204;
+  });
+
 };

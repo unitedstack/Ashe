@@ -119,8 +119,13 @@ const setStatus = async (jobId, status) => {
   return await job.update({status});
 };
 
+const del = (jobId) => {
+  return jobModel.destroy({
+    where: {id: jobId}
+  });
+};
 
 module.exports = {
   create, get, list, update, updateField,
-  setTop, setStatus
+  setTop, setStatus, del
 };
