@@ -10,6 +10,14 @@ const request = require('./request');
 const config = require('./config.json');
 const router = require('admin/utils/router');
 
+/*******************/
+// const jobs = require('./jobs.json');
+// console.log(jobs);
+// jobs.forEach(job => {
+//   request.createJob(job);
+// });
+/*******************/
+
 class Model extends React.Component {
 
   constructor(props) {

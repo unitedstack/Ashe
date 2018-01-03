@@ -66,7 +66,7 @@
           width: 100%;
           height: 100%;
           .header {
-            display: none;
+            display: block;
             padding: 0px 30px;
             border: 1px solid #DAD7E2;
             box-sizing: border-box;
@@ -74,26 +74,31 @@
             min-height: 254px;
             .selected-wrapper {
               width: 100%;
-              height: 64px;
-              line-height: 64px;
+              min-height: 35px;
+              height: auto;
+              line-height: 35px;
               border-bottom: 1px solid #DAD7E2;
               overflow: hidden;
               div.label {
                 float: left;
                 width: 120px;
                 font-size: 22px;
+                line-height: 35px;
                 color: #333333;
                 letter-spacing: 0.61px;
+                padding: 16px 0;
               }
               ul.content {
                 float: right;
                 width: 920px;
-                height: 64px;
+                min-height: 35px;
+                height: auto;
                 padding: 16px 0;
                 li {
                   float: left;
                   position: relative;
                   margin-right: 20px;
+                  margin-bottom: 10px;
                   width: 120px;
                   height: 34px;
                   line-height: 34px;
@@ -204,6 +209,7 @@
                   width: 100%;
                   height: auto;
                   .job-type,
+                  .job-city,
                   .job-responsibility,
                   .job-requirements,
                   .plus,
@@ -321,6 +327,52 @@
         .jobs-wrapper {
           padding: 0;
           .wrapper {
+            .header{
+              padding: 0;
+              border: none;
+              .selected-wrapper{
+                min-height: 30px;
+                line-height: 30px;
+                border: none;
+                div.label{
+                  font-size: 14px;
+                  width: 22%;
+                  max-width: 100px;
+                }
+                ul.content{
+                  padding: 0;
+                  min-height: 20px;
+                  font-size: 12px;
+                  width: 78%;
+                  float: left;
+                  li{
+                    font-size: 12px;
+                    width: 70px;
+                    height: 24px;
+                    margin-top: 5px;
+                    line-height: 24px;
+                    .icon-close::before{
+                      font-size: 11px;
+                      vertical-align: bottom;
+                    }
+                  }
+                }
+              }
+              .row{
+                .label{
+                  font-size: 14px;
+                  width: 22%;
+                  max-width: 100px;
+                }
+                .content{
+                  font-size: 12px;
+                  width: 78%;
+                  li{
+                    margin-bottom: 5px;
+                  }
+                }
+              }
+            }
             .jobs-list-wrapper {
               .title {
                 font-size: 20px;
@@ -350,6 +402,7 @@
                     width: 100%;
                     height: auto;
                     .job-type,
+                    .job-city,
                     .job-responsibility,
                     .job-requirements,
                     .plus,
@@ -405,6 +458,102 @@
                         background-color: darken(#0280DF, 10%);
                       }
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 控制最靠外侧的city、role选项的右边线的显示和隐藏
+
+@media (max-width: 665px) {
+  .jobs{
+    .bg-size{
+      .about{
+        .jobs-wrapper{
+          .wrapper{
+            .header{
+              .row{
+                .content{
+                  li:nth-of-type(7){
+                    border-right: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 588px) {
+  .jobs{
+    .bg-size{
+      .about{
+        .jobs-wrapper{
+          .wrapper{
+            .header{
+              .row{
+                .content{
+                  li:nth-of-type(7){
+                    border-right: 1px solid #DAD7E2;
+                  }
+                  li:nth-of-type(6){
+                    border-right: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 510px) {
+  .jobs{
+    .bg-size{
+      .about{
+        .jobs-wrapper{
+          .wrapper{
+            .header{
+              .row{
+                .content{
+                  li:nth-of-type(6){
+                    border-right: 1px solid #DAD7E2;
+                  }
+                  li:nth-of-type(5){
+                    border-right: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 432px) {
+  .jobs{
+    .bg-size{
+      .about{
+        .jobs-wrapper{
+          .wrapper{
+            .header{
+              .row{
+                .content{
+                  li:nth-of-type(5){
+                    border-right: 1px solid #DAD7E2;
+                  }
+                  li:nth-of-type(4){
+                    border-right: none;
                   }
                 }
               }

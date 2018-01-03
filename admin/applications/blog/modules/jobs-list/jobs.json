@@ -1,0 +1,121 @@
+[{
+  "title": "前端开发工程师",
+  "description": "1. 负责公司云计算dashboard产品开发，设计，优化 SPA 架构。<br>2. 负责公共UI组件库开发。<br>3. 负责公司官网，内部系统界面开发。",
+  "requirement": "1. 精通HTML、CSS、JavaScript等开发语言，并具备相关的开发经验。<br>2. 熟悉React等主流JS框架，并具备相关的开发经验。<br>3. 理解web标准和兼容性，并具备跨浏览器开发经验。<br>4. 对前端工程化与模块化开发有一定了解。<br>5. 对前端技术有持续的热情，善于学习。<br>6. 有良好的团队合作能力，主动性强，执行力强，具备良好的问题定位分析能力。",
+  "role": "技术",
+  "type": "全职",
+  "preferred": "1. 熟悉非前端的语言（如Java/PHP/C/C++/Python/Ruby），并有相关开发经验。<br>2. 关注前端前沿技术，有浓厚的兴趣和深入的见解，并能灵活在工作中进行应用。<br>3. 大型Web应用系统设计与开发经验。<br>4. 了解云计算。",
+  "status": "public",
+  "location": ["北京"]
+},
+{
+  "title": "OpenStack 平台研发工程师",
+  "description": "1. 负责 OpenStack 云平台相关功能功能调研，设计，编码实现，优化。<br>2. 负责 OpenStack 云平台 BUG 修复。<br>3. 参与 Openstack社区工作，跟进社区动态",
+  "requirement": " 1. 熟悉 OpenStack 整体架构，以及基本运作原理。<br>2. 深入理解 OpenStack 中至少一个核心服务的设计原理，代码逻辑，底层实现。<br>3. 熟悉操作系统原理，计算机网络基础，存储基础知识。了解常用的算法与数据结构。<br>4. 熟练使用 Linux 操作系统，并能够使用 Linux 平台进行开发。<br>5. 熟练使用 Python，并理解 Python 中的高级语法和使用方式。<br>6. 熟练使用 Git，Gerrit，Jenkins 等工具进行代码提交与测试。",
+  "role": "运维",
+  "type": "兼职",
+  "preferred": "1. 参与过 OpenStack 社区贡献。<br>2. 熟悉 Mysql，Pacemaker，Redis，Memcached 等基础组件使用的优先。",
+  "status": "public",
+  "location": ["北京", "上海", "深圳"]
+},
+{
+  "title": "资深 OpenStack 平台研发工程师",
+  "description": "1. 负责 OpenStack 云平台相关功能功能调研与架构设计。<br>2. 负责 OpenStack 云平台高压力下的性能优化与稳定性优化。<br>3. 负责 OpenStack 云平台 BUG 修复。<br>4. 负责 OpenStack 相关代码 Review 工作。<br>5. 参与 Openstack社区工作，跟进社区动态。",
+  "requirement": " 1. 熟悉 OpenStack 整体架构，以及基本运作原理。<br>2. 深入理解 OpenStack 中至少一个核心服务的设计原理，代码逻辑，底层实现。<br>3. 熟悉操作系统原理，计算机网络基础，存储基础知识。了解常用的算法与数据结构。<br>4. 熟练使用 Linux 操作系统，并能够使用 Linux 平台进行开发。<br>5. 熟练使用 Python，并理解 Python 中的高级语法和使用方式。<br>6. 熟练使用 Git，Gerrit，Jenkins 等工具进行代码提交与测试。",
+  "role": "销售",
+  "type": "实习",
+  "preferred": "1. 深入理解 OpenStack 整体架构，以及基本运作原理。<br>2. 深入理解 OpenStack 中多个核心服务的设计原理，代码逻辑，底层实现。<br>3. 深入理解操作系统原理，计算机网络，分布式存储相关知识。了解常用的算法与数据结构。<br>4. 深入理解 Mysql，Pacemaker，Redis，Memcached 等基础组件的使用与其原理。<br>5. 熟练使用 Linux 操作系统，并能够使用 Linux 平台进行开发，并且基于代码成面进行设计优化，架构调优，性能优化。<br>6. 熟练使用 Python，并理解 Python 中的高级语法和使用方式。<br>7. 熟练使用 Git，Gerrit，Jenkins 等工具进行代码提交与测试。<br>8. 熟练掌握高效的 Code Review 技巧，以及版本管理流程。<br>9. 有较强的沟通能力，任务管理能力，以及团队组织能力，协调与制定 OpenStack 中跨项目的开发标准。",
+  "status": "public",
+  "location": ["上海"]
+},
+{
+  "title": "QA 研发工程师",
+  "description": "1. 负责 OpenStack 平台 QA 工具（tempest，rally）的维护与扩展。<br>2. 负责 OpenStack 平台 QA 场景的设计扩展与编码实现。<br>3. 负责 OpenStack 各个版本发布前的集成测试工作。<br>4. 参与 Openstack社区 QA 相关工作，跟进社区动态。",
+  "requirement": " 1. 熟悉 OpenStack 整体架构，以及基本运作原理。<br>2. 深入理解 OpenStack 中至少一个核心服务的设计原理，代码逻辑，底层实现。<br>3. 熟悉操作系统原理，计算机网络基础，存储基础知识。了解常用的算法与数据结构。<br>4. 熟练使用 Linux 操作系统，并能够使用 Linux 平台进行开发。<br>5. 熟练使用 Python，并理解 Python 中的高级语法和使用方式。<br>6. 熟练使用 Git，Gerrit，Jenkins 等工具进行代码提交与测试。",
+  "role": "运维",
+  "type": "全职",
+  "preferred": "1. 熟悉 OpenStack 整体架构，以及基本运作原理。<br>2. 深入理解操作系统原理，计算机网络，分布式存储相关知识。<br>3. 熟练使用 Linux 操作系统，并能够使用 Linux 平台进行开发。<br>4. 熟练使用 Python，并且掌握 Python 测试框架的高级用法，如：testr，fixture 等相关知识。<br>5. 熟练使用 Git，Gerrit，Jenkins 等工具进行代码提交与测试。<br>6. 有较强的沟通与协调能力，能够向研发精准的反应与复现失败的测试用例，并参与问题分析。",
+  "status": "public",
+  "location": ["深圳"]
+},
+{
+  "title": "Ceph 研发工程师",
+  "description": "1. 负责 Ceph-OSD，Ceph-Mon，Ceph-MDS 核心模块的功能研发，性能优化，稳定性优化。<br>2. 负责 librados，librbd 等客户端模块的功能研发，性能优化。<br>3. 负责 Ceph 模块的 BUG 分析，定位，与修复。<br>4. 参与并跟进 Ceph 社区，核心模块的相关进展。",
+  "requirement": " 1. 熟悉至少一种分布式系统的设计与其实现原理。<br>2. 精通 Linux/Unix平台上的C/C++开发，熟悉常用算法和数据结构，熟悉网络编程、多线程编程技术。<br>3. 精通 Linux 操作系统，包括文件系统、LVM、Device-mapper、配置管理、性能分析工具等。<br>4. 熟悉块存储，对象存储，文件系统中至少一种的使用与实现原理。<br>5. 熟练掌握 bash、python 等脚本语言的编程。<br>6. 熟练掌握 Git，并能够使用 Git 向 Github 提交代码。",
+  "role": "财务",
+  "type": "兼职",
+  "preferred": "1. 熟悉 Ceph 的设计理念与架构者优先。<br>2. 参与过 Ceph 社区开发，并有向 Ceph 社区提交过代码者优先。<br>3. 参与或从事过 cache 或 tier 性能加速功能开发，熟悉LRU、LFU、ARC 等淘汰算法 以及 热度统计与淘汰算法者优先。<br>4. 参与或从事过文件系统设计与开发者优先。",
+  "status": "public",
+  "location": ["南京", "成都", "广州", "杭州"]
+},
+{
+  "title": "资深 Ceph 核心研发工程师",
+  "description": "1. 负责 Ceph-OSD，Ceph-Mon，Ceph-MDS 核心模块的优化设计与研发。<br>2. 负责 librados，librbd，librgw，iscsi gateway 等客户端模块的优化设计与研发。<br>3. 负责 Ceph 核心模块的 BUG 分析，定位，与修复。<br>4. 负责指导初、中级工程师完成具体任务的开发工作，保证产品质量。<br>5. 参与并跟进 Ceph 社区，核心模块的相关进展。",
+  "requirement": "1. 精通 Ceph 的设计架构与设计理念，并且精通 Ceph 核心模块的代码逻辑。<br>2. 精通 Linux/Unix平台上的C/C++开发，熟悉常用算法和数据结构，熟悉网络编程、多线程编程技术。<br>3. 精通 Linux 操作系统，包括文件系统、LVM、Device-mapper、配置管理、性能分析工具等。<br>4. 精通块存储，对象存储，文件系统中至少一种的使用与实现原理。<br>5. 熟悉 Linux 下的XFS或者Ext4文件系统，理解其实现原理。<br>6. 熟悉 HDD，SSD，阵列控制器实现的基本原理。<br>7. 熟悉 Linux/Unix平台上大型软件的单元测试与集成测试方法。<br>8. 熟练掌握 bash、python 等脚本语言的编程。<br>9. 精通 Git 版本管理工具，及任务管理工具（如：Trello），有较强的任务管理与协调能力。",
+  "role": "运维",
+  "type": "实习",
+  "preferred": "",
+  "status": "public",
+  "location": ["南京"]
+},
+{
+  "title": "Ceph 存储网关研发工程师",
+  "description": "1. 负责其中一种存储网关（包括对象存储网，ISCSI存储网关，文件服务存储网关）的设计，验证，与研发工作。<br>2. 负责存储网关的 BUG 分析，定位与修复。<br>3. 参与社区开发，并跟进 Ceph 社区存储网关的相关进展。",
+  "requirement": "1. 精通 Linux/Unix平台上的C/C++开发，熟悉常用算法和数据结构，熟悉网络编程、多线程编程技术。<br>2. 熟悉对象存储协议（S3，Swift），网络块存储协议（ISCSI，MutiPath），文件服务协议（NFS，CIFS）中的至少一类。<br>3. 熟练使用 Python，并理解 Python 中的高级语法和使用方式。<br>4. 熟练掌握 shell 脚本语言的编程。<br>5. 熟练掌握 Git，并能够使用 Git 向 Github 提交代码。",
+  "role": "人事",
+  "type": "全职",
+  "preferred": "1. 熟悉 Ceph 的设计理念与架构者优先。<br>2. 熟悉 Librbd 库 API 调用者优先。<br>3. 参与过 Ceph 社区开发，并有向 Ceph 社区提交过代码者优先。",
+  "status": "public",
+  "location": ["成都"]
+},
+{
+  "title": "Python 开发",
+  "description": "1. 负责 OpenStack 云平台二次开发需求的编码与实现。<br>2. 负责 OpenStack 云平台应用编排开发。",
+  "requirement": "1. 熟练掌握 Python 编程语言。<br>2. 理解 OpenStack 的基本功能，业务逻辑，搭建与使用。<br>3. 熟练使用 Git 工具进行代码提交。",
+  "role": "运维",
+  "type": "兼职",
+  "preferred": "1. 有 Mysql，Redis，Memcached 等数据库与缓存的使用经验。<br>2. 具备 OpenStack COA 认证。",
+  "status": "public",
+  "location": ["广州"]
+},
+{
+  "title": "Nodejs 开发",
+  "description": "1. 参与搭建后台框架，设计服务器端NodeJS的架构。<br>2. 负责基础服务方面的开发，包括计算，存储，监控服务的中间件的开发。",
+  "requirement": "1. 有NodeJS开发经验，熟悉NodeJS的基本工作原理以及常用的框架（express，koa等）。<br>2. 有良好的JavaScript的编程能力。<br>3. 有良好的英文文档阅读能力。<br>4. 良好的分析解决问题的能力，能独立承担开发任务。<br>5. 优秀的沟通能力，以及自我推进的主观能动性。",
+  "role": "技术",
+  "type": "实习",
+  "preferred": "1. 使用过git和开源社区github。<br>2. 熟练使用jquery，React等前端的类库／框架。<br>3. 有良好的HTML／CSS的书写能力。<br>4. 对开源项目有强烈的兴趣和爱好，曾经向开源项目提交过Patch。",
+  "status": "public",
+  "location": ["杭州"]
+},
+{
+  "title": "市场部—产品市场专员",
+  "description": "1. 基于对云计算及OpenStack业务的梳理，制定公司产品宣传及推广的规划。<br>2. 结合用户需求和销售/售前部门的需求，制定新产品/功能的市场宣传规划并执行。<br>3. 与产品团队/研发团队紧密配合，编写新产品、新功能的市场推广文档及材料。<br>4. 收集整理友商竞品动向、信息等，定期以报告形式提供给内部相关部门。<br>5. 根据销售/售前团队需求，制定线下行业活动规划，并执行。",
+  "requirement": "1. 本科及以上学历，计算机相关专业，在云计算行业有2年以上任职经验，有市场经验者优先。<br>2. 具备良好的文档撰写能力，熟练使用相关文档制作工具，包括产品原型、业务流程图、页面逻辑关系、说明文档等。<br>3. 能独立操作小规模行业活动。<br>4. 沟通能力强，与销售/售前/产品团队保持良好有效沟通。<br>5. 具有良好的团队合作习惯，能适应出差。",
+  "role": "行政",
+  "type": "全职",
+  "preferred": "",
+  "status": "public",
+  "location": ["北京", "杭州"]
+},
+{
+  "title": "市场部—BD",
+  "description": "1. 结合公司优势及自身资源找到合作切入点，帮助公司拓展生态圈系统，提高公司知名度以及催生产单机会。<br>2. 建立有效的市场推广渠道，深入挖掘潜在资源，进行深度合作。<br>3. 给客户及合作伙伴“布道”云计算&OpenStack。",
+  "requirement": "1. 本科以上学历，熟悉IT领域，计算机相关专业有技术祥光岗位经验者优先。<br>2. 熟悉云计算技术产业，对整个云计算行业的技术趋势、市场整体生态等有自己见解。<br>3. 能撰写云计算“布道式”文章。<br>4. 有强烈的沟通意愿，能迅速建立整个生态圈深度联系。<br>5. 有良好的策划、组织能力，能够独立完成全年BD规划。<br>6. 优秀的英文读写能力。",
+  "role": "行政",
+  "type": "兼职",
+  "preferred": "",
+  "status": "public",
+  "location": ["上海", "成都"]
+},
+{
+  "title": "市场部—PR",
+  "description": "1. 洞悉行业、企业及竞争对手的信息及动态，为公司提供长期战略性的公共关系策略和高价值的相关公关建议 。<br>2. 建立和维护深度的媒体关系，有效地挖掘并发挥媒体资源的综合效力，推进企业品牌传播（媒体、网站、自媒体）。<br>3. 文案撰写。<br>4. 公司网站、微博、微信的内容及运营。<br>5. 公关活动的策划执行。",
+  "requirement": "1. 大学本科以上学历，3年以上公关/媒体行业工作经验。<br>2. 对IT行业有很强的知识背景、洞察力，通晓行业媒体的宣传规律和模式。<br>3. 优秀的文案策划、撰写能力。<br>4. 熟悉微信、BBS等社会性媒体平台。<br>5. 优秀的学习能力，能够迅速掌握并传播新知识。<br>6. 优秀的英文听、说、读能力。",
+  "role": "市场",
+  "type": "实习",
+  "preferred": "",
+  "status": "private",
+  "location": ["深圳", "南京"]
+}
+]
