@@ -10,14 +10,6 @@ const request = require('./request');
 const config = require('./config.json');
 const router = require('admin/utils/router');
 
-/*******************/
-// const jobs = require('./jobs.json');
-// console.log(jobs);
-// jobs.forEach(job => {
-//   request.createJob(job);
-// });
-/*******************/
-
 class Model extends React.Component {
 
   constructor(props) {
@@ -327,7 +319,7 @@ class Model extends React.Component {
       content: item.preferred ? item.preferred : '-',
       type: 'html'
     }, {
-      title: '创建事件',
+      title: '创建时间',
       content: item.createdAt,
       type: 'time'
     }];
