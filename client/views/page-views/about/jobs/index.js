@@ -6,6 +6,8 @@ var role = document.getElementById('selectRole');
 var type = document.getElementById('selectType');
 var show = document.getElementById('selectShow');
 var jobList = document.getElementById('jobList');
+var selectBefore = document.getElementById('select-before');
+var selectAfter = document.getElementById('select-after');
 
 var jobs;//保存从ajax获取的数据
 var cityPool = [];//装选中的城市
@@ -64,12 +66,14 @@ function enrollAddEvent(node){
       e.target.setAttribute('class', 'select');
       addItem(e.target);
       hideAll();
+      isShowIntro();
       filter();
       limitPadding();
     }else if(child && !selected && firstChild){
       changeSelectState(node);
       removeAllItem(getKey(e.target));
       e.target.setAttribute('class', 'select');
+      isShowIntro();
       filter();
       limitPadding();
     }
@@ -88,6 +92,7 @@ function enrollDeleteEvent(node){
       chooseField(key, removeItem, value);
       choosePool(key, minusPool, value);
       hideAll();
+      isShowIntro();
       filter();
       limitPadding();
       if(isNone(key)){
@@ -96,6 +101,33 @@ function enrollDeleteEvent(node){
     }
   });
 }
+// 对选择框和结果框进行判断是否显示选择说明
+function isShowIntro(){
+  isIntroBefore(show, selectBefore);
+  showSelect(selectAfter);
+}
+
+
+// 判断是否显示select说明
+function isIntroBefore(ob, sel){
+  if(ob.children.length === 1){
+    showSelect(sel);
+  }else{
+    hideSelect(sel);
+  }
+}
+
+// 隐藏select说明
+function hideSelect(sel){
+  sel.setAttribute('style', 'display: none;');
+}
+
+// 显示selct说明
+function showSelect(sel){
+  sel.setAttribute('style', 'display: block;');
+}
+
+
 
 //删除全部节点的class属性
 function changeSelectState(node){
@@ -271,7 +303,7 @@ function createPart(className, inner1, inner2){
 
 //隐藏所有职位
 function hideAll(){
-  var children = jobList.children;
+  var children = Array.prototype.slice.call(jobList.children, 1);
   Array.prototype.map.call(children, function(cNode){
     cNode.setAttribute('style', 'display: none;');
   });
@@ -279,7 +311,7 @@ function hideAll(){
 
 //显示所有职位
 function displayAll(){
-  var children = jobList.children;
+  var children = Array.prototype.slice.call(jobList.children, 1);
   Array.prototype.map.call(children, function(cNode){
     cNode.setAttribute('style', 'display: block;');
   });
@@ -292,7 +324,7 @@ function displayAJob(job){
 
 //筛选条件
 function filter(){
-  var children = jobList.children;
+  var children = Array.prototype.slice.call(jobList.children, 1);
   var attrCity = 'city';
   var attrRole = 'role';
   var attrType = 'type';
@@ -332,33 +364,41 @@ function isShow(job, cityFlag, roleFlag, typeFlag){
   var tLen = typePool.length;
   if(cLen > 0 && rLen == 0 && tLen == 0){
     if(cityFlag > 0){
+      hideSelect(selectAfter);
       displayAJob(job);
     }
   }else if(cLen > 0 && rLen > 0 && tLen == 0){
     if(cityFlag > 0 && roleFlag > 0){
+      hideSelect(selectAfter);
       displayAJob(job);
     }
   }else if(cLen > 0 && rLen == 0 && tLen > 0){
     if(cityFlag > 0 && typeFlag > 0){
+      hideSelect(selectAfter);
       displayAJob(job);
     }
   }else if(cLen > 0 && rLen > 0 && tLen > 0){
     if(cityFlag > 0 && roleFlag > 0 && typeFlag > 0){
+      hideSelect(selectAfter);
       displayAJob(job);
     }
   }else if(cLen == 0 && rLen > 0 && tLen == 0){
     if(roleFlag > 0){
+      hideSelect(selectAfter);
       displayAJob(job);
     }
   }else if(cLen == 0 && rLen > 0 && tLen > 0){
     if(roleFlag > 0 && typeFlag > 0){
+      hideSelect(selectAfter);
       displayAJob(job);
     }
   }else if(cLen == 0 && rLen == 0 && tLen > 0){
     if(typeFlag > 0){
+      hideSelect(selectAfter);
       displayAJob(job);
     }
   }else{
+    hideSelect(selectAfter);
     displayAll();
   }
 }
