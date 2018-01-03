@@ -1,0 +1,12 @@
+{
+  "title": "状态",
+  "fields": [{
+    "type": "text",
+    "field": "status",
+    "info": ""
+  }],
+  "btn": {
+    "value": "确定",
+    "disabled": false
+  }
+}

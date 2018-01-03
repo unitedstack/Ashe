@@ -1,0 +1,72 @@
+[{
+  "label": "职位名称",
+  "type": "input",
+  "key": "title",
+  "required": true
+}, {
+  "label": "岗位地址",
+  "type": "select_multi",
+  "key": "location",
+  "required": true,
+  "data": [{
+    "key": "北京",
+    "value": "北京"
+  }, {
+    "key": "上海",
+    "value": "上海"
+  }, {
+    "key": "深圳",
+    "value": "深圳"
+  }]
+}, {
+  "label": "职位类别",
+  "type": "select",
+  "key": "role",
+  "required": true,
+  "data": [{
+    "key": "技术",
+    "value": "技术"
+  }, {
+    "key": "运维",
+    "value": "运维"
+  }, {
+    "key": "销售",
+    "value": "销售"
+  }, {
+    "key": "市场",
+    "value": "市场"
+  }, {
+    "key": "人事",
+    "value": "人事"
+  }]
+}, {
+  "label": "求职类型",
+  "type": "select",
+  "key": "type",
+  "required": true,
+  "data": [{
+    "key": "全职",
+    "value": "全职"
+  }, {
+    "key": "兼职",
+    "value": "兼职"
+  }, {
+    "key": "实习",
+    "value": "实习"
+  }]
+}, {
+  "label": "岗位职责",
+  "type": "textarea",
+  "key": "description",
+  "required": true
+}, {
+  "label": "任职要求",
+  "type": "textarea",
+  "key": "requirement",
+  "required": true
+}, {
+  "label": "加分项",
+  "type": "textarea",
+  "key": "preferred",
+  "required": false
+}]

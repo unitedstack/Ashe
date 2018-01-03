@@ -1,7 +1,7 @@
 {
   "tabs": [{
-    "name": "管理员账号",
-    "key": "admin-user",
+    "name": "招聘列表",
+    "key": "jobs-list",
     "default": true
   }],
   "btns": [{
@@ -13,6 +13,12 @@
     "value": "更改状态",
     "key": "status",
     "icon": "status-light",
+    "disabled": true
+  }, {
+    "value": "删除",
+    "key": "delete",
+    "type": "delete",
+    "icon": "remove",
     "disabled": true
   }, {
     "key": "refresh",

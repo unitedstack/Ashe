@@ -2,9 +2,10 @@ const fetch = require('../../../../core/fetch');
 
 module.exports = {
 
-  getList: function() {
-    return fetch.get({
-      url: '/admin/api/apply/train'
+  createJob: function(data) {
+    return fetch.post({
+      url: '/admin/api/job',
+      data: data
     });
   }
 

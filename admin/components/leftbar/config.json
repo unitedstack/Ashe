@@ -4,10 +4,6 @@
     "key": "admin-user",
     "link": "/admin/blog/admin-user"
   }, {
-    "title": "培训申请",
-    "key": "train-apply",
-    "link": "/admin/blog/train-apply"
-  }, {
     "title": "招聘列表",
     "key": "jobs-list",
     "link": "/admin/blog/jobs-list"

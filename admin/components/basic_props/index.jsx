@@ -56,6 +56,8 @@ class BasicProps extends React.Component {
       case 'copy':
         copyId = String(item.content);
         return <div>{item.content}<i title="click to copy id!" className="glyphicon icon-copy copyid" onClick={this.onClick.bind(this, copyId)} /></div>;
+      case 'html':
+        return <span dangerouslySetInnerHTML={{__html: item.content}}></span>;
       default:
         return item.content;
     }

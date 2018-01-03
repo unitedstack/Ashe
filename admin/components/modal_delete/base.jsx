@@ -48,14 +48,14 @@ class ModalBase extends React.Component {
   }
 
   render() {
+    const msgDelete = '此操作将无法撤销，确认要{0}以下{1}<strong>（数量:{2}）</strong>？';
     let props = this.props,
       state = this.state,
-      __ = props.__,
-      action = __[props.action],
-      type = Array.isArray(props.type) ? props.type.map(t => __[t]).join('') : __[props.type],
+      action = props.action,
+      type = Array.isArray(props.type) ? props.type.join('') : props.type,
       num = props.data.length,
-      cancel = __.cancel,
-      content = __.msg_delete.replace('{0}', action).replace('{1}', type).replace('{2}', num);
+      cancel = '取消',
+      content = msgDelete.replace('{0}', action).replace('{1}', type).replace('{2}', num);
 
     let _props = Object.assign({}, props, {
       title: action + type
@@ -72,7 +72,7 @@ class ModalBase extends React.Component {
               props.data.map((item) =>
                 <li key={item.id || item.name}>
                   <i className={'glyphicon icon-' + iconType} />
-                  {item.name || '(' + item.id.substr(0, 8) + ')'}
+                  {item.name || item.title || '(' + item.id.substr(0, 8) + ')'}
                 </li>
               )
             }
