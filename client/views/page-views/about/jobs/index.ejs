@@ -54,49 +54,50 @@
               <div class="header">
                 <div class="selected-wrapper">
                   <div class="label"><%= header_label1 %></div>
-                  <ul class="content">
-                    <li>北京<i class="icon-close"></i></li>
+                  <ul id="selectShow" class="content">
+                    <!-- <li>北京<i class="icon-close"></i></li> -->
                   </ul>
                 </div>
                 <div class="row">
                   <div class="label">工作地点：</div>
-                  <ul class="content">
-                    <li class="select">全部</li>
-                    <li>北京</li>
-                    <li>上海</li>
-                    <li>南京</li>
-                    <li>成都</li>
-                    <li>广州</li>
-                    <li>深圳</li>
+                  <ul id="selectCity" class="content">
+                    <li key="c" class="select">全部</li>
+                    <li key="c" value="北京">北京</li>
+                    <li key="c" value="上海">上海</li>
+                    <li key="c" value="南京">南京</li>
+                    <li key="c" value="成都">成都</li>
+                    <li key="c" value="广州">广州</li>
+                    <li key="c" value="深圳">深圳</li>
+                    <li key="c" value="杭州">杭州</li>
                   </ul>
                 </div>
                 <div class="row">
                   <div class="label">职位类别：</div>
-                  <ul class="content">
-                    <li class="select">全部</li>
-                    <li>技术</li>
-                    <li>运维</li>
-                    <li>销售</li>
-                    <li>财务</li>
-                    <li>商务</li>
-                    <li>人事</li>
-                    <li>行政</li>
-                    <li>市场</li>
+                  <ul id="selectRole" class="content">
+                    <li key="r" class="select">全部</li>
+                    <li key="r" value="技术">技术</li>
+                    <li key="r" value="运维">运维</li>
+                    <li key="r" value="销售">销售</li>
+                    <li key="r" value="财务">财务</li>
+                    <li key="r" value="人事">人事</li>
+                    <li key="r" value="行政">行政</li>
+                    <li key="r" value="市场">市场</li>
                   </ul>
                 </div>
                 <div class="row">
                   <div class="label">求职类型：</div>
-                  <ul class="content">
-                    <li class="select">全职</li>
-                    <li>兼职</li>
-                    <li>实习</li>
+                  <ul id="selectType" class="content">
+                    <li key="t" class="select">全部</li>
+                    <li key="t" value="全职">全职</li>
+                    <li key="t" value="兼职">兼职</li>
+                    <li key="t" value="实习">实习</li>
                   </ul>
                 </div>
               </div>
               <div class="jobs-list-wrapper">
                 <div class="title">招聘职位：</div>
-                <ul class="jobs-list">
-                  <li>
+                <ul id="jobList" class="jobs-list">
+                  <!-- <li>
                     <div class="title">【OpenStack 平台研发工程师】</div>
                     <div class="content">
                       <div class="job-type">
@@ -621,7 +622,7 @@
                     <div class="footer">
                       <a href="mailto:zhaopin@unitedstack.com" class="btn-join">申请加入同方云</a>
                     </div>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
