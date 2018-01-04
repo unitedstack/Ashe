@@ -94,6 +94,10 @@
                 min-height: 35px;
                 height: auto;
                 padding: 16px 0;
+                p#select-before{
+                  display: block;
+                  color: #333333;
+                }
                 li {
                   float: left;
                   position: relative;
@@ -174,6 +178,11 @@
             }
             ul.jobs-list {
               counter-reset: subproject;
+              p#select-after{
+                display: none;
+                margin-top: 10px;
+                color: #333333;
+              }
               li {
                 clear: both;
                 &:not(:first-child) {
