@@ -38,7 +38,7 @@ enrollDeleteEvent(show);
 //ajax获取数据
 $.ajax({
   method: 'GET',
-  url: '/admin/api/job',
+  url: '/api/job',
   dataType: 'json'
 }).done(function (data) {
   jobs = data['jobs'];
