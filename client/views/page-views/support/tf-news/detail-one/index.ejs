@@ -1,0 +1,53 @@
+<%- include('../../../../../components/header.ejs') %>
+  <div class="volcano-news">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="type-area">
+          <div class="banner">
+            <div class="banner-title"><%= banner_title %></div>
+            <div class="banner-brief"><%= banner_brief %></div>
+            <div class="banner-describe"><%= banner_describe %></div>
+            <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+          </div>
+        </div>
+        <div class="banner-img" style="background:url(/static/assets/page-views/support/tf-news/list/banner.png) no-repeat center center;background-size:cover"></div>
+      </section>
+      <div class="breadcrumb">
+        <ul class="breadcrumb-center">
+          <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+          <li class="second"><a class="success" href="/product/environment"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+          <li class="third"><%= breadcrumb_three %></li>
+        </ul>
+      </div>
+      <section class="content-main">
+        <div class="inner">
+          <div class="left-content">
+            <div class="news">
+              <div class="item">
+                <div class="title">同方云平台1月11日安全更新通告</div>
+                <p class="brief">
+                  <span class="author">马嘉骏</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="date">2017-11-16</span>
+                </p>
+                <div class="detail wangEditor-container" style="border: none">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;尊敬的同方云客户：</p>
+                  <p>近日，Intel处理器被爆存在严重芯片级安全问题，为解决该安全问题，同方云将于北京时间2018年1月11日凌晨01:00-05:00通过升级系统内核和虚拟化平台进行后端修复，期间客户业务不会受到影响。我们建议您确保预留联系方式畅通（手机、邮箱），同时提前准备数据备份方案和业务维护预案，详细升级通告请后续关注同方云官方通告，谢谢您的理解和支持！</p>
+                </div>
+              </div>
+              <div class="share">
+                <i class="icon-wechat"></i>
+                <i class="icon-weibo"></i>
+                <i class="icon-facebook"></i>
+              </div>
+              <div class="page-link">
+                  <div class="next"><p>下一篇</p> <a href="/support/tf-news/detail-two">同方有云助力同方发力信息产业2.0</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+<%- include('../../../../../components/footer.ejs') %>
