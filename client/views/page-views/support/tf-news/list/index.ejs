@@ -1,0 +1,57 @@
+<%- include('../../../../../components/header.ejs') %>
+  <div class="volcano-news">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="type-area">
+          <div class="banner">
+            <div class="banner-title"><%= banner_title %></div>
+            <div class="banner-brief"><%= banner_brief %></div>
+            <div class="banner-describe"><%= banner_describe %></div>
+            <div class="banner-describe-mobile"><%= banner_describe_mobile %></div>
+          </div>
+        </div>
+        <div class="banner-img" style="background:url(/static/assets/page-views/support/tf-news/list/banner.png) no-repeat center center;background-size:cover"></div>
+      </section>
+      <div class="breadcrumb">
+        <ul class="breadcrumb-center">
+          <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
+          <li class="second"><a class="success" href="/product/environment"><%= breadcrumb_two %></a>&nbsp;/&nbsp;</li>
+          <li class="third"><%= breadcrumb_three %></li>
+        </ul>
+      </div>
+      <section class="content-main" id="content-main">
+        <div class="inner">
+          <div class="left-content">
+            <div class="news">
+              <div class="item">
+                  <img class="img" src="/static/assets/page-views/support/tf-news/list/news1.png" />
+                <div class="intro">
+                  <a class="title" href="/support/tf-news/detail-one" >同方云平台1月11日安全更新通告</a>
+                  <div class="detail">近日，Intel处理器被爆存在严重芯片级安全问题，为解决该安全问题，同方云将于北京时间2018年1月11日凌晨01:00-05:00通过升级系统内核和虚拟化平台进……</div>
+                  <p class="brief"><span class="author">马嘉骏</span><span class="date">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2018.01.05</span></p>
+                </div>
+              </div>
+              <div class="item">
+                  <img class="img" src="/static/assets/page-views/support/tf-news/list/news2.png" />
+                <div class="intro">
+                  <a class="title" href="/support/tf-news/detail-two" >同方有云助力同方发力信息产业2.0</a>
+                  <div class="detail">2017年11月，中国IT界的“云计算月”，清华同方、美团、滴滴、浪潮……从传统IT厂商到互联网巨头，纷纷走上了云路。践行十九大提出的云计算大数据高科技产业之路……</div>
+                  <p class="brief"><span class="author">马嘉骏</span><span class="date">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2017.11.16</span></p>
+                </div>
+              </div>
+              <div class="item">
+                  <img class="img" src="/static/assets/page-views/support/tf-news/list/news3.png" />
+                <div class="intro">
+                  <a class="title" href="/support/tf-news/detail-three" >悉尼峰会行 | 主题分享：大规模生产环境下Telemetry的使用</a>
+                  <div class="detail">2017年11月06日-08日，第16届OpenStack峰会在悉尼成功举行。UnitedStack同方有云，中国最早的 OpenStack 开源云计算公司，作为黄金会员赞助……</div>
+                  <p class="brief"><span class="author">姚宁</span><span class="date">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2017.11.11</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+<%- include('../../../../../components/footer.ejs') %>

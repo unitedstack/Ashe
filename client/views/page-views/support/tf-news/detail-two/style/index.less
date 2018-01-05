@@ -1,0 +1,242 @@
+@import '../../../../../../components/header.less';
+@import '../../../../../../components/footer.less';
+@bread_color: #0B181D;
+.volcano-news{
+  article{
+    .content-main{
+      .inner{
+        position: relative;
+        max-width: 1170px;
+        margin: 0 auto;
+        overflow: hidden;
+        .left-content{
+          float: left;
+          width: 100%;
+          .srh {
+            margin-top: 20px;
+            font-size: 22px;
+          }
+          .news{
+            width: 100%;
+            .item{
+              overflow: hidden;
+              padding: 24px 0 60px 0;
+              .title{
+                margin-bottom: 10px;
+                font-size: 40px;
+                line-height: 52px;
+                color: #2C2C2C;
+                letter-spacing: 1.2px;
+                text-align: center;
+              }
+              .detail{
+                font-size: 14px;
+                color: #7688AD;
+                letter-spacing: 0.6px;
+                line-height: 24px;
+                margin-top: 40px;
+                p {
+                  padding-bottom: 20px;
+                }
+                div {
+                  padding-bottom: 20px;
+                  text-align: center;
+                  img {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 50%;
+                    height: auto;
+                  }
+                  i {
+                    font-size: 10px;
+                    font-style: italic;
+                    text-align: center;
+                  }
+                }
+              }
+              .brief{
+                margin-top: 30px;
+                margin-bottom: 40px;
+                text-align: center;
+                .author{
+                  font-size: 14px;
+                  line-height: 19px;
+                  color: #0280DF;
+                }
+                .date{
+                  font-size: 14px;
+                  color: #7688AD;
+                  line-height: 19px;
+                }
+              }
+            }
+            .share {
+              display: table;
+              margin-left: auto;
+              margin-bottom: 40px;
+              i {
+                display: inline-block;
+                box-sizing: border-box;
+                width: 30px;
+                height: 30px;
+                padding-left: 6px;
+                margin-left: 2px;
+                background-color: #F0F1F6;
+                color: #7688AD;
+                cursor: pointer;
+                &:hover {
+                  color: #666;
+                }
+                &:first-child{
+                  border-radius: 2px 0 0 2px;
+                }
+                &:last-child{
+                  border-radius: 0 2px 2px 0;
+                }
+              }
+            }
+            .page-link {
+              height: 48px;
+              margin-bottom: 60px;
+              .prev {
+                float: left;
+              }
+              .next {
+                float: right;
+                text-align: right;
+              }
+              .next-mobile {
+                display: none;
+              }
+              .prev, .next {
+                width: 45%;
+                font-size: 14px;
+                color: #666666;
+                letter-spacing: 0.6px;
+                line-height: 24px;
+                a {
+                  font-size: 14px;
+                  color: #0280DF;
+                  letter-spacing: 0.6px;
+                  line-height: 14px;
+                  border-bottom: 1px solid #0280DF;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: @mobile_width) {
+  .volcano-news{
+    height: 100%;
+    article{
+      font-size: 16px;
+      .content-main {
+        margin-top: 0;
+      }
+      .content-main{
+        .inner {
+          .left-content {
+            float: inherit;
+            width: 92%;
+            margin: 0 auto;
+            .srh {
+              margin-top: 20px;
+              font-size: 18px;
+            }
+            .news {
+              .item {
+                position: relative;
+                padding-top: 40px;
+                padding-bottom: 15px;
+                .img {
+                  width: 100%;
+                }
+                .title {
+                  font-size: 18px;
+                  color: #333333;
+                  letter-spacing: 0.5px;
+                  line-height: 30px;
+                }
+                .brief {
+                  margin: 10px 0;
+                }
+                .detail {
+                  margin-top: 0;
+                  div {
+                    img {
+                      max-width: 100%;
+                    }
+                  }
+                }
+              }
+              .share {
+                margin-bottom: 20px;
+              }
+              .page-link {
+                margin-bottom: 30px;
+                height: auto;
+                .next, .prev {
+                  width: 100%;
+                  float: left;
+                  p {
+                    width: 100%;
+                    text-align: left;
+                    line-height: 26px;
+                  }
+                  a {
+                    float: left;
+                    text-align: left;
+                  }
+                }
+                .next {
+                  display: none;
+                }
+                .next-mobile {
+                  display: block;
+                  margin-bottom: 30px;
+                  width: 100%;
+                  color: #666666;
+                  letter-spacing: 0.6px;
+                  line-height: 24px;
+                  p {
+                    font-size: 14px;
+                  }
+                  a {
+                    font-size: 14px;
+                    color: #0280DF;
+                    letter-spacing: 0.6px;
+                    line-height: 14px;
+                    border-bottom: 1px solid #0280DF;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @mobile_width) and (max-width: @pad_width) {
+  .content-main{
+    .inner {
+      width: 90% !important;
+    }
+  }
+}
+.volcano-global-footer {
+  margin-top: 0px;
+}
+.hidden {
+  display: none;
+}
+.checked {
+  border: 1px solid #42B9E5 !important;
+  color: #42B9E5 !important;
+  cursor: pointer;
+}
