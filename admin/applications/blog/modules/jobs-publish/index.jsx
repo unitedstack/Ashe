@@ -15,17 +15,13 @@ class Model extends React.Component {
       disabled: true
     };
 
-    configs.forEach(config => {
-      if(config.type === 'select') {
-        this.state[config.key] = config.data[0].value;
-      } else {
-        this.state[config.key] = '';
-      }
-    });
-
     ['onPublish', 'onAction'].forEach((m) => {
       this[m] = this[m].bind(this);
     });
+  }
+
+  componentWillMount() {
+    this.initState();
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -34,7 +30,23 @@ class Model extends React.Component {
     }
     return true;
   }
- 
+
+  initState() {
+    let newState = this.state;
+    configs.forEach(config => {
+      if(config.type === 'select') {
+        newState[config.key] = config.data[0].value;
+      } else if(config.type === 'select_multi') {
+        newState[config.key] = {};
+      } else {
+        newState[config.key] = '';
+      }
+    });
+    // 发布按钮置灰
+    newState.disabled = true;
+    this.setState(newState);
+  }
+
   onPublish() {
     const refs = this.refs;
     const state = this.state;
@@ -77,7 +89,8 @@ class Model extends React.Component {
             count++;
           }
         } else {
-          if(!this.state[key]) {
+          // 非必填项目不用来做判断
+          if(!this.state[key] && configs.find(c => c.key === key).required) {
             count++;
           }
         }
@@ -91,18 +104,9 @@ class Model extends React.Component {
     });
   }
 
+  // clear state
   clearValues() {
-    const refs = this.refs;
-    for(let key in refs) {
-      if(key === 'location') {
-        refs[key].setState({
-          selected: {}
-        });
-        refs[key] = Object.keys(this.state[key]);
-      } else {
-        refs[key].value = '';
-      }
-    }
+    this.initState();
   }
 
   renderContent() {
@@ -150,7 +154,7 @@ class Model extends React.Component {
                   type={config.key}
                   holder={config.label}
                   data={config.data}
-                  select={state[config.key]}
+                  selected={state[config.key]}
                   onAction={this.onAction} />
               </div>;
             default:

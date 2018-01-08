@@ -64,6 +64,9 @@ typings/
 client/static/dist/*
 client/static/assets/*
 
+# uploads
+static/wp-content/*
+
 # routers list
 client/.routers.json
 

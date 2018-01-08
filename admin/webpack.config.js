@@ -114,7 +114,9 @@ module.exports = (env) => {
       alias: {
         'react': 'node_modules/react',
         'react-dom': 'node_modules/react-dom',
-        'uskin': "admin/uskin/index"
+        'uskin': 'admin/uskin/index',
+        // rich text editor
+        'simditor.css': 'node_modules/simditor/styles/simditor.css'
       }
     }
 

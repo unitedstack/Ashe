@@ -15,6 +15,12 @@ class Model extends React.Component {
     });
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      selected: nextProps.selected
+    });
+  }
+
   toggle() {
     this.setState({
       toggle: !this.state.toggle
