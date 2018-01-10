@@ -241,7 +241,7 @@ ZoomPic.prototype = {
     this.timer = setInterval(function ()
     {
       _this.doNext();
-    }, 2000);   
+    }, 10000);   
     this.wrap.onmouseover = function ()
     {
       clearInterval(_this.timer); 
@@ -251,7 +251,7 @@ ZoomPic.prototype = {
       _this.timer = setInterval(function ()
       {
         _this.doNext();
-      }, 2000); 
+      }, 10000); 
     };
   },
   doPrev : function ()
@@ -448,7 +448,7 @@ if(G.pad) {
     this.timer = setInterval(function ()
     {
       _this.doNext();
-    }, 2000);   
+    }, 10000);   
     this.wrap.onmouseover = function ()
     {
       clearInterval(_this.timer); 
@@ -458,7 +458,7 @@ if(G.pad) {
       _this.timer = setInterval(function ()
       {
         _this.doNext();
-      }, 2000); 
+      }, 10000);
     };
   },
   ZoomPic.prototype.setUp = function() {
