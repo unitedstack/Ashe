@@ -27,13 +27,13 @@ class MemcachedStore {
     const that = this;
     value = JSON.stringify(value);
     return new Promise(function (resolve, reject) {
-      that.client.set(sid, value, function (err) {
+      that.client.set(sid, value, parseInt(expires, 10) / 1000, function (err) {
         if (err) {
           reject(err);
         } else {
           resolve(Array.prototype.slice.call(arguments, 1));
         }
-      }, parseInt(expires, 10) / 1000);
+      });
     });
   }
 
