@@ -6,11 +6,11 @@
   },
   "zh": {
     "banner_brief": "7X24 的贴身保驾护航",
-    "banner_describe": "同方云 Operator 是集监控，日志，告警于一体的综合性运维平台，时刻全方位监控平台的运行情况，及时获悉事件通知，对数据进行深入分析，及时发现问题，维护平台稳定。",
-    "banner_describe_mobile": "同方云Operator是集监控，日志，告警于一体的综合性运营平台",
+    "banner_describe": "同方有云 Operator 是集监控，日志，告警于一体的综合性运维平台，时刻全方位监控平台的运行情况，及时获悉事件通知，对数据进行深入分析，及时发现问题，维护平台稳定。",
+    "banner_describe_mobile": "同方有云Operator是集监控，日志，告警于一体的综合性运营平台",
     "banner_title": "灵活的",
     "breadcrumb_one": "首页",
-    "breadcrumb_three":  "同方云 Operator",
+    "breadcrumb_three":  "同方有云 Operator",
     "breadcrumb_two": "产品",
     "cssFile": "/static/dist/page_product_cloud-platform_operator.min.css",
     "operator_feature_intro_one": "提供从系统层到应用层，从硬件到软件，涵盖计算、网络、存储等核心",
@@ -24,6 +24,6 @@
     "jsFile": "/static/dist/page_product_cloud-platform_operator.min.js",
     "partner_title_one": "解决客户的",
     "partner_title_two": "痛点",
-    "title": "同方云 - Operator"
+    "title": "同方有云 - Operator"
   }
 }

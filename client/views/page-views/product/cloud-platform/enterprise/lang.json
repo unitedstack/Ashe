@@ -6,16 +6,16 @@
   },
   "zh": {
     "banner_brief": "完美的整合平台",
-    "banner_describe": "同方云 不仅支持 OpenStack 核心 IaaS 服务，同时还作为一个整合平台，能够与包含 Hadoop 大数据生态和 Cloud Foundary PaaS 等在内的平台服务做无缝整合。",
-    "banner_describe_mobile": "同方云不仅支持OpenStack核心IAAS服务。 ",
-    "banner_title": "同方云",
+    "banner_describe": "同方有云 不仅支持 OpenStack 核心 IaaS 服务，同时还作为一个整合平台，能够与包含 Hadoop 大数据生态和 Cloud Foundary PaaS 等在内的平台服务做无缝整合。",
+    "banner_describe_mobile": "同方有云不仅支持OpenStack核心IAAS服务。 ",
+    "banner_title": "同方有云",
     "breadcrumb_one": "首页",
-    "breadcrumb_three":  "同方云 Enterprise",
+    "breadcrumb_three":  "同方有云 Enterprise",
     "breadcrumb_two": "产品",
     "cssFile": "/static/dist/page_product_cloud-platform_enterprise.min.css",
     "enterprise_feature_intro_one": "提供高达 6000IOPS 及 170MB/s 带宽，保证您的应用软件流畅运行。先进的Burst功能允许用户短时间内突破QoS的限制，满足业务场景中瞬时IO风暴的要求。10GB的性能型云硬盘也可以有高达10,000~50,000的突发IOPS。",
     "enterprise_feature_intro_three": "从系统层，到应用层，从硬件到软件，涵盖计算，网络，存储等核心服务的监控服务。计算资源，存储资源，网络资源轻松扩展。无需停机，不中断业务，无缝扩展。",
-    "enterprise_feature_intro_two": "全平台HA方案，保障业务连续稳定。同方云对OpenStack、Ceph、KVM相关的高可用性方案进行了全面、深入的规划和设计，为企业级客户提供最优的落地方案，全平台 HA 方案，保障业务连续稳定。",
+    "enterprise_feature_intro_two": "全平台HA方案，保障业务连续稳定。同方有云对OpenStack、Ceph、KVM相关的高可用性方案进行了全面、深入的规划和设计，为企业级客户提供最优的落地方案，全平台 HA 方案，保障业务连续稳定。",
     "enterprise_feature_title_one": "高性能",
     "enterprise_feature_title_three": "高可扩展",
     "enterprise_feature_title_two": "高可用",
@@ -24,6 +24,6 @@
     "jsFile": "/static/dist/page_product_cloud-platform_enterprise.min.js",
     "partner_title_one": "解决客户的",
     "partner_title_two": "痛点",
-    "title": "同方云 - Enterprise"
+    "title": "同方有云 - Enterprise"
   }
 }

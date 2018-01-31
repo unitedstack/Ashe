@@ -6,7 +6,7 @@
   },
   "zh": {
     "banner_brief": "云安全保障未来",
-    "banner_describe": "同方云兄弟公司兰云科技有限公司跨时代产品——兰眼下一代威胁感知系统、兰天智能安全平台、兰盾DDoS云防御系统。",
+    "banner_describe": "同方有云兄弟公司兰云科技有限公司跨时代产品——兰眼下一代威胁感知系统、兰天智能安全平台、兰盾DDoS云防御系统。",
     "banner_describe_mobile": "兰眼下一代威胁感知系统、兰天智能安全平台、兰盾DDoS云防御系统",
     "banner_title": "信息安全面临严峻考验",
     "breadcrumb_one": "首页",
@@ -73,6 +73,6 @@
     "performance_title_one": "入侵检测",
     "performance_title_three": "沙箱检测",
     "performance_title_two": "病毒检测",
-    "title": "同方云 - 云安全"
+    "title": "同方有云 - 云安全"
   }
 }

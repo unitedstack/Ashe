@@ -11,15 +11,15 @@
     "title": "TongFang cloud - News"
   },
   "zh": {
-    "banner_brief": "同方云新闻时事热点",
-    "banner_describe": "同方云新闻是包含海量云计算资讯的新闻服务平台,真实反映每时每刻的新闻热点。您可以搜索新闻事件、热点话题、人物动态、产品资讯等,快速了解它们的中国云市场的最新进展。",
-    "banner_describe_mobile": "同方云新闻是包含海量云计算资讯的新闻服务平台",
+    "banner_brief": "同方有云新闻时事热点",
+    "banner_describe": "同方有云新闻是包含海量云计算资讯的新闻服务平台,真实反映每时每刻的新闻热点。您可以搜索新闻事件、热点话题、人物动态、产品资讯等,快速了解它们的中国云市场的最新进展。",
+    "banner_describe_mobile": "同方有云新闻是包含海量云计算资讯的新闻服务平台",
     "banner_title": "最新的",
     "breadcrumb_one": "首页",
-    "breadcrumb_three": "同方云新闻",
+    "breadcrumb_three": "同方有云新闻",
     "breadcrumb_two": "服务与支持",
     "cssFile": "/static/dist/page_support_tf-news_detail-two.min.css",
     "jsFile": "/static/dist/page_support_tf-news_detail-two.min.js",
-    "title": "同方云 - 新闻"
+    "title": "同方有云 - 新闻"
   }
 }
