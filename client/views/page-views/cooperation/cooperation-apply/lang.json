@@ -1,17 +1,17 @@
 {
     "en": {
-      "application_intro": "请输入你的基本消息，同方云客户经理会及时和您取得联系。",
+      "application_intro": "请输入你的基本消息，同方有云客户经理会及时和您取得联系。",
       "application_title_one": "合作",
       "application_title_two": "申请",
-      "cooperation_intro": "同方云通过对现有用地规划的深入研究，充分尊重客户建议基础上，以新的设计理念创造富有活力的数据中心。为了建设安全、可持续、具有行业聚集效应和国际影响力的数据中心。",
+      "cooperation_intro": "同方有云通过对现有用地规划的深入研究，充分尊重客户建议基础上，以新的设计理念创造富有活力的数据中心。为了建设安全、可持续、具有行业聚集效应和国际影响力的数据中心。",
       "cooperation_title_one": "合作",
       "cooperation_title_two": "流程",
       "partner_title_one": "我们的",
       "partner_title_two": "合作伙伴",
-      "banner_describe": "同方云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域，我们带你走向专业之路。",
+      "banner_describe": "同方有云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域，我们带你走向专业之路。",
       "banner_title": "培训申请",
-      "banner_brief": "同方云培训全系列课件",
-      "banner_describe_mobile": "致力于建设合作伙伴生态体系，帮助合作伙伴及用户构建基于同方云的成功业务实践和结局方案。",
+      "banner_brief": "同方有云培训全系列课件",
+      "banner_describe_mobile": "致力于建设合作伙伴生态体系，帮助合作伙伴及用户构建基于同方有云的成功业务实践和结局方案。",
       "breadcrumb_one": "Homepage",
       "breadcrumb_two":"Technical Training",
       "breadcrumb_three": "Training Application",
@@ -40,18 +40,18 @@
       "title": "TongFang cloud - Train Apply"
     },
     "zh": {
-      "application_intro": "请输入您的基本消息，同方云客户经理会及时和您取得联系。",
+      "application_intro": "请输入您的基本消息，同方有云客户经理会及时和您取得联系。",
       "application_title_one": "合作",
       "application_title_two": "申请",
-      "cooperation_intro": "同方云通过对现有用地规划的深入研究，充分尊重客户建议基础上，以新的设计理念创造富有活力的数据中心。为了建设安全、可持续、具有行业聚集效应和国际影响力的数据中心。",
+      "cooperation_intro": "同方有云通过对现有用地规划的深入研究，充分尊重客户建议基础上，以新的设计理念创造富有活力的数据中心。为了建设安全、可持续、具有行业聚集效应和国际影响力的数据中心。",
       "cooperation_title_one": "合作",
       "cooperation_title_two": "流程",
       "partner_title_one": "我们的",
       "partner_title_two": "合作伙伴",
-      "banner_describe": "致力于建设合作伙伴生态体系，帮助合作伙伴及用户构建基于同方云的成功业务实践和解决方案，迈向命运共同体，必须坚持合作共赢、共同发展。",
+      "banner_describe": "致力于建设合作伙伴生态体系，帮助合作伙伴及用户构建基于同方有云的成功业务实践和解决方案，迈向命运共同体，必须坚持合作共赢、共同发展。",
       "banner_title": "一起共赢未来",
-      "banner_brief": "和同方云合作共赢",
-      "banner_describe_mobile": "致力于建设合作伙伴生态体系，帮助合作伙伴及用户构建基于同方云的成功业务实践和结局方案。",
+      "banner_brief": "和同方有云合作共赢",
+      "banner_describe_mobile": "致力于建设合作伙伴生态体系，帮助合作伙伴及用户构建基于同方有云的成功业务实践和结局方案。",
       "breadcrumb_one": "首页",
       "breadcrumb_two":"合作伙伴",
       "breadcrumb_three": "合作申请",
@@ -77,6 +77,6 @@
       "phone_error_msg": "输入错误，请检查手机号是否正确",
       "phone_title": "电话",
       "submit_btn": "申请成为合作伙伴",
-      "title": "同方云 - 培训申请"
+      "title": "同方有云 - 培训申请"
     }
   }

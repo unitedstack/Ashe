@@ -1,8 +1,8 @@
 {
   "en": {
-    "banner_describe": "同方云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域，我们带你走向专业之路。",
+    "banner_describe": "同方有云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域，我们带你走向专业之路。",
     "banner_title": "立即申请",
-    "banner_brief": "同方云培训全系列课件",
+    "banner_brief": "同方有云培训全系列课件",
     "banner_describe_mobile": "有云，分享创造共赢",
     "breadcrumb_one": "Homepage",
     "breadcrumb_two":"Service and Support",
@@ -37,9 +37,9 @@
     "yes": "Yes"
   },
   "zh": {
-    "banner_describe": "同方云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域，我们带你走向专业之路。",
+    "banner_describe": "同方有云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域，我们带你走向专业之路。",
     "banner_title": "立即申请",
-    "banner_brief": "同方云培训全系列课件",
+    "banner_brief": "同方有云培训全系列课件",
     "banner_describe_mobile": "有云，分享创造共赢",
     "breadcrumb_one": "首页",
     "breadcrumb_two":"服务与支持",
@@ -67,9 +67,9 @@
     "phone_title": "电话",
     "second_evaluation_content": "功能全面",
     "submit_btn": "申请托管云",
-    "survey_title": "是否用过同方云产品",
+    "survey_title": "是否用过同方有云产品",
     "third_evaluation_content": "性能卓越",
-    "title": "同方云 - 立即申请",
+    "title": "同方有云 - 立即申请",
     "used_holder": "还有什么想对我们说的么",
     "yes": "是"
   }

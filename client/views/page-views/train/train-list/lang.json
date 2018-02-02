@@ -72,9 +72,9 @@
     "availability_detail_three": "控制节点的高可用设计",
     "availability_detail_two": "OpenStack 的架构和高可用(HA)设计原则",
     "availability_intro": "理解 OpenStack 高可用性设计与实现",
-    "banner_brief": "同方云培训全系列课件",
-    "banner_describe": "同方云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域，我们带你走向专业之路",
-    "banner_describe_mobile": "同方云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域。",
+    "banner_brief": "同方有云培训全系列课件",
+    "banner_describe": "同方有云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域，我们带你走向专业之路",
+    "banner_describe_mobile": "同方有云培训以讲师面授课程和实验演练为主，涉及云计算和OpenStack领域。",
     "banner_title": "培训列表",
     "breadcrumb_one": "首页",
     "breadcrumb_three": "培训列表",
@@ -119,6 +119,6 @@
     "monitoring_intro": "了解 LMA 工具链给 OpenStack 的稳定性带来什么价值，掌握 UOS LMA 工具链组成、原理和部署知识",
     "open": "已经开课",
     "ops_course": "运维课程",
-    "title": "同方云 - 培训列表"
+    "title": "同方有云 - 培训列表"
   }
 }

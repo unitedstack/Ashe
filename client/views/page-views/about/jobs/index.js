@@ -255,7 +255,7 @@ function createJobItem(job){
   title.innerHTML = job['title'];
   var content = createDiv('content');
   var footer = createDiv('footer');
-  footer.innerHTML= '<a href="mailto:zhaopin@unitedstack.com" class="btn-join">申请加入同方云</a>';
+  footer.innerHTML= '<a href="mailto:zhaopin@unitedstack.com" class="btn-join">申请加入同方有云</a>';
 
   var type = createPart('job-type', '职位类型：', job['type'] );
   var city = createPart('job-city', '工作地点：' ,job['location'].join('，'));

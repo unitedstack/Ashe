@@ -197,7 +197,7 @@ $(function(){
       var tipConfig = {
         tipIconSrc: '/static/assets/page-views/train/train-apply/checked.png',
         tipTitle: '申请成功',
-        tipContent: '同方云已收到您的申请'
+        tipContent: '同方有云已收到您的申请'
       };
       var parent = document.getElementsByClassName('main-content')[0];
 
@@ -206,7 +206,7 @@ $(function(){
       var tipConfig = {
         tipIconSrc: '/static/assets/page-views/train/train-apply/warning.png',
         tipTitle: '申请失败',
-        tipContent: '同方云没有收到您的申请'
+        tipContent: '同方有云没有收到您的申请'
       };
       var parent = document.getElementsByClassName('main-content')[0];
 

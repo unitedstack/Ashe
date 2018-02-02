@@ -56,7 +56,7 @@ module.exports = async (router, globalLang, viewsPath) => {
       const body = ctx.request.body;
       sendEmail(
         contactEmail,
-        '【同方云】有新的培训申请',
+        '【同方有云】有新的培训申请',
         {content: `
         <p>姓名：${body.nickname}</p>
         <p>邮箱：${body.email}</p>
@@ -94,7 +94,7 @@ module.exports = async (router, globalLang, viewsPath) => {
       //todo 发送邮件
       sendEmail(
         contactEmail,
-        '【同方云】有新的合作申请',
+        '【同方有云】有新的合作申请',
         {content: `
         <p>姓名：${body.nickname}</p>
         <p>电话：${body.phone}</p>

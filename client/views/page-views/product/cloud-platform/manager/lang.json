@@ -10,7 +10,7 @@
     "banner_describe_mobile": "",
     "banner_title": "灵活的",
     "breadcrumb_one": "首页",
-    "breadcrumb_three":  "同方云 Manager",
+    "breadcrumb_three":  "同方有云 Manager",
     "breadcrumb_two": "产品",
     "cssFile": "/static/dist/page_product_cloud-platform_manager.min.css",
     "manager_feature_intro_one": "包含了计算、存储、网络、认证、编排、监控等核心功能。",
@@ -24,6 +24,6 @@
     "jsFile": "/static/dist/page_product_cloud-platform_manager.min.js",
     "partner_title_one": "解决客户的",
     "partner_title_two": "痛点",
-    "title": "同方云 - Manager"
+    "title": "同方有云 - Manager"
   }
 }

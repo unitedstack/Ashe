@@ -17,9 +17,9 @@
     "title": "TongFang cloud - Identify"
   },
   "zh": {
-    "banner_brief": "同方云 官方标识",
-    "banner_describe": "同方云公司官方为媒体和博客使用而提供标识和标语，可供下载。",
-    "banner_describe_mobile": "同方云公司官方为媒体和博客使用而提供标识和标语，可供下载。",
+    "banner_brief": "同方有云 官方标识",
+    "banner_describe": "同方有云公司官方为媒体和博客使用而提供标识和标语，可供下载。",
+    "banner_describe_mobile": "同方有云公司官方为媒体和博客使用而提供标识和标语，可供下载。",
     "banner_title": "企业标识",
     "breadcrumb_one": "首页",
     "breadcrumb_three": "企业标识",
@@ -27,11 +27,11 @@
     "cssFile": "/static/dist/page_about_identify.min.css",
     "extendmeta": "源文件（可扩展）",
     "download": "下载",
-    "flag": "同方云企业标识&标语",
-    "flag_content": "为满足媒体和博客的使用需求，在这里，同方云提供官方标识和标语的下载。最新版本标识也将第一时间更新于此。",
+    "flag": "同方有云企业标识&标语",
+    "flag_content": "为满足媒体和博客的使用需求，在这里，同方有云提供官方标识和标语的下载。最新版本标识也将第一时间更新于此。",
     "jsFile": "/static/dist/page_about_identify.min.js",
     "preview": "预览",
     "prompt": "下列版本支持预览或下载：",
-    "title": "同方云 - 企业标识"
+    "title": "同方有云 - 企业标识"
   }
 }
