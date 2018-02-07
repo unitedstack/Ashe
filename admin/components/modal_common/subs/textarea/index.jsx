@@ -54,7 +54,7 @@ class Textarea extends React.Component {
           {props.label}
         </div>
         <div>
-          <textarea className={this.state.error ? 'error' : ''} disabled={this.state.disabled} onChange={this.onChange} value={this.state.value} />
+          <textarea style={{height: props.height}} className={this.state.error ? 'error' : ''} disabled={this.state.disabled} onChange={this.onChange} value={this.state.value} />
           {
             props.tip_info && <ShortTip text={props.tip_info} />
           }
@@ -63,5 +63,9 @@ class Textarea extends React.Component {
     );
   }
 }
+
+Textarea.defaultProps = {
+  height: 100
+};
 
 module.exports = Textarea;

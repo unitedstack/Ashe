@@ -1,18 +1,18 @@
 {
   "tabs": [{
-    "name": "招聘列表",
-    "key": "jobs-list",
+    "name": "公告管理",
+    "key": "notice",
     "default": true
   }],
   "btns": [{
+    "value": "创建",
+    "key": "create",
+    "type": "create",
+    "icon": "create"
+  }, {
     "value": "编辑",
     "key": "edit",
-    "type": "create",
-    "icon": "edit"
-  }, {
-    "value": "更改状态",
-    "key": "status",
-    "icon": "status-light",
+    "icon": "edit",
     "disabled": true
   }, {
     "value": "删除",
@@ -31,26 +31,23 @@
     "loading": true,
     "limit": 10,
     "column": [{
-      "title": "职位名",
+      "title": "标题",
       "dataIndex": "title",
       "key": "title",
       "type": "captain"
     }, {
-      "title": "职位方向",
-      "dataIndex": "role",
-      "key": "role"
+      "title": "公告内容",
+      "dataIndex": "content",
+      "key": "content"
     }, {
-      "title": "职位类型",
-      "dataIndex": "type",
-      "key": "type"
+      "title": "是否置顶",
+      "dataIndex": "top",
+      "key": "top"
     }, {
-      "title": "工作地点",
-      "dataIndex": "location",
-      "key": "location"
-    }, {
-      "title": "状态",
-      "dataIndex": "status",
-      "key": "status"
+      "title": "发布时间",
+      "dataIndex": "createdAt",
+      "key": "createdAt",
+      "type": "time"
     }],
     "data": [],
     "detail": {

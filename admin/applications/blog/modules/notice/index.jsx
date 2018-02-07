@@ -4,8 +4,8 @@ const React = require('react');
 const Main = require('admin/components/main/index');
 const BasicProps = require('admin/components/basic_props/index');
 const deleteModal = require('admin/components/modal_delete/index');
-const {Modal} = require('uskin');
-const changeStatus = require('./pop/status/index');
+const popCreate = require('./pop/create/index');
+const popModify = require('./pop/modify/index');
 const request = require('./request');
 const config = require('./config.json');
 const router = require('admin/utils/router');
@@ -44,9 +44,14 @@ class Model extends React.Component {
   tableColRender(columns) {
     columns.map((column) => {
       switch (column.key) {
-        case 'location':
+        case 'content':
           column.render = (col, item, i) => {
-            return item.location.join(', ');
+            return item.content.replace('<br>', '');
+          };
+          break;
+        case 'top':
+          column.render = (col, item, i) => {
+            return item.top ? '置顶' : '否';
           };
           break;
         default:
@@ -65,7 +70,8 @@ class Model extends React.Component {
     let table = this.state.config.table;
 
     request.getList().then((res) => {
-      table.data = res.jobs;
+      console.log(res);
+      table.data = res.notice;
       this.updateTableData(table, refreshDetail);
     });
   }
@@ -169,17 +175,11 @@ class Model extends React.Component {
       });
     };
     switch(key) {
-      case 'edit':
-        Modal.info({
-          title: '抱歉',
-          content: '暂时没有编辑功能orz...',
-          okText: '好吧，原谅你了'
-        });
+      case 'create':
+        popCreate(null, null, refresh);
         break;
-      case 'status':
-        changeStatus(rows[0], null, () => {
-          refresh();
-        });
+      case 'edit':
+        popModify(rows[0], null, refresh);
         break;
       case 'delete':
         deleteModal({
@@ -187,7 +187,7 @@ class Model extends React.Component {
           type: '职位',
           data: rows,
           onDelete: function(_data, cb) {
-            request.deleteJobs(rows).then((res) => {
+            request.deleteNotices(rows).then((res) => {
               cb(true);
               refresh();
             }).catch(err => {
@@ -223,7 +223,6 @@ class Model extends React.Component {
     for(let key in btns) {
       switch (key) {
         case 'edit':
-        case 'status':
           btns[key].disabled = !(rows.length === 1);
           break;
         case 'delete':
@@ -273,36 +272,22 @@ class Model extends React.Component {
 
   getBasicPropsItems(item) {
     let items = [{
-      title: '职位名',
+      title: '标题',
       content: item.title
     }, {
-      title: '职位方向',
-      content: item.role
+      title: '公告内容',
+      content: item.content,
+      'type': 'html'
     }, {
-      title: '职位类型',
-      content: item.type
+      title: '是否置顶',
+      content: item.top ? '置顶' : '否'
     }, {
-      title: '工作地点',
-      content: item.location.join(', ')
+      title: '发布时间',
+      content: item.createdAt,
+      type: 'time'
     }, {
       title: '状态',
       content: item.status === 'public' ? '公开' : '草稿'
-    }, {
-      title: '岗位职责',
-      content: item.description,
-      type: 'html'
-    }, {
-      title: '任职要求',
-      content: item.requirement,
-      type: 'html'
-    }, {
-      title: '加分项',
-      content: item.preferred ? item.preferred : '-',
-      type: 'html'
-    }, {
-      title: '创建时间',
-      content: item.createdAt,
-      type: 'time'
     }];
 
     return items;
@@ -327,7 +312,7 @@ class Model extends React.Component {
 
   render() {
     return (
-      <div className="ashe-module-jobs-list" style={this.props.style}>
+      <div className="ashe-module-notice" style={this.props.style}>
         <Main
           ref="dashboard"
           visible={this.props.style.display === 'none' ? false : true}

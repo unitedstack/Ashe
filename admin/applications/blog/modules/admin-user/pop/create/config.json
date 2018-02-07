@@ -11,7 +11,7 @@
     "label": "邮箱／用户名",
     "required": true
   }, {
-    "type": "input",
+    "type": "input_pwd",
     "field": "password",
     "label": "密码",
     "required": true

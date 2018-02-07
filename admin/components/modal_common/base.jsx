@@ -143,7 +143,7 @@ class ModalBase extends React.Component {
 
     return (
       <Modal ref="modal" {...props} title={title} visible={state.visible}>
-        <div className="modal-bd halo-com-modal-common">
+        <div style={{maxHeight: props.maxHeight}} className="modal-bd halo-com-modal-common">
           {this.initialize()}
           <div className={state.errorMessage ? 'modal-row tip-row' : 'modal-row tip-row hide'}>
             <UskinTip type="danger" content={state.errorMessage} showIcon={true} width={466} />
@@ -157,5 +157,9 @@ class ModalBase extends React.Component {
     );
   }
 }
+
+ModalBase.defaultProps = {
+  maxHeight: 470
+};
 
 module.exports = ModalBase;

@@ -11,5 +11,9 @@
     "title": "发布招聘",
     "key": "jobs-publish",
     "link": "/admin/blog/jobs-publish"
+  }, {
+    "title": "公告管理",
+    "key": "notice",
+    "link": "/admin/blog/notice"
   }]
 }

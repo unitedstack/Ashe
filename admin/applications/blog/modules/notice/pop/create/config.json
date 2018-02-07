@@ -1,0 +1,24 @@
+{
+  "title": "创建公告",
+  "fields": [{
+    "type": "input",
+    "field": "title",
+    "label": "标题",
+    "required": true
+  }, {
+    "type": "textarea",
+    "field": "content",
+    "label": "公告内容",
+    "height": 320,
+    "required": true
+  }, {
+    "type": "checkbox",
+    "field": "top",
+    "label": "置顶",
+    "has_label": true
+  }],
+  "btn": {
+    "value": "确定",
+    "disabled": true
+  }
+}
