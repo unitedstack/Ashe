@@ -42,17 +42,10 @@ module.exports = (app) => {
   });
 
   //home page
-  const articleCtrl = require('./article/controller/article');
   router.get('/', async (ctx, next) => {
-    let articles = await Promise.all([
-      articleCtrl.listArticle({category: 'news', limit: 5}),
-      articleCtrl.listArticle({category: 'blog', limit: 5})
-    ]);
     const data = Object.assign({
       commonCssFile: `/static/common/style/${ctx.app.FileHash.index}.index.css`,
       commonJsFile: `/static/common/js/${ctx.app.FileHash.g}.g.js`,
-      home_news: articles[0].articles,
-      home_blog: articles[1].articles
     }, globalLang[ctx.session.lang], homeLang[ctx.session.lang],{
       cssFile: `/static/dist/${ctx.app.FileHash.home ? ctx.app.FileHash.home + '.' : ''}home.min.css`,
       jsFile: `/static/dist/${ctx.app.FileHash.home ? ctx.app.FileHash.home + '.' : ''}home.min.js`,

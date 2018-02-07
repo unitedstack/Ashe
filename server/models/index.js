@@ -19,7 +19,7 @@ fs.readdirSync(path.join(__dirname))
       fs.readdirSync(path.join(__dirname, app))
         .filter(file => file.indexOf('.') !== 0)
         .forEach(file => {
-          let model = require(`models/${app}/${file}`).model(sequelize, sequelize.Sequelize);
+          let model = require(`models/${app}/${file}`)(sequelize, sequelize.Sequelize);
           db[model.name] = model;
         });
     }
