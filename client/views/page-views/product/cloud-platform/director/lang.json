@@ -10,7 +10,7 @@
     "banner_describe_mobile": "基于社区的OpenStack TripleO开发，它将复杂的同方有云公有云系统的部署交付，变得简单化",
     "banner_title": "灵活的",
     "breadcrumb_one": "首页",
-    "breadcrumb_three":  "同方有云 Director",
+    "breadcrumb_three":  "Director",
     "breadcrumb_two": "产品",
     "cssFile": "/static/dist/page_product_cloud-platform_director.min.css",
     "director_feature_intro_one": "不重复造轮子同方有云Director充分利用OpenStack现有服务完成同方有云平台部署。",
