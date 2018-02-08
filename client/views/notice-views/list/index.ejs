@@ -1,60 +1,43 @@
 <%- include('../../../components/header.ejs') %>
-  <div class="volcano-news">
+  <div class="notice-views-list">
     <article >
       <!-- banner -->
-      <section class="content-banner">
-        <div class="wraper">
-          <div class="volcano-common-content">
-            <img src="/static/assets/notice-views/list/bannerpic@v2.0.png">
-            <div class="word">
-              <div class="word-title"><%= banner_title %></div>
-              <div class="word-brief"><%= banner_brief %></div>
-              <div class="word-describe"><%= banner_describe %></div>
-            </div>
-            <ul class="breadcrumb">
-              <li class="first"><a class="firstpage" href="/"><%= breadcrumb_one %></a>&nbsp;/&nbsp;</li>
-              <li class="second"><a class="aboutyouyun" href="/about/milestones"><%= breadcrumb_two %></a>&nbsp;/</li>
-              <li class="third">&nbsp;<%= breadcrumb_three %></li>
-            </ul>
+      <section class="content-banner content-banner-notice">
+        <div class="type-area">
+          <div class="banner">
+            <div class="banner-brief">同方云公告</div>
           </div>
         </div>
+        <div class="banner-img" style="background:url(/static/assets/notice-views/list/banner.jpg) no-repeat center center;background-size:cover"></div>
       </section>
-      <!-- main content -->
-      <section class="content-main" id="content-main" count="<%= Math.ceil(count / limit) %>" page="<%= page %>">
+      <div class="breadcrumb">
+        <ul class="breadcrumb-center">
+          <li class="first"><a class="firstpage" href="/">首页</a>&nbsp;/&nbsp;</li>
+          <li class="third"><a class="success" href="/notice">同方云公告</a></li>
+        </ul>
+      </div>
+      <section class="content-main" id="content-main">
         <div class="inner">
           <div class="left-content">
             <div class="news">
               <% for(var i = 0; i < notices.length; i ++) { %>
                 <div class="item">
-                  <% if (notices[i].cover) { %>
-                    <img class="img" src="<%= notices[i].cover %>" />
-                  <% } else { %>
-                    <img class="img" src="/static/assets/blog-views/list/holder.png" />
-                  <% } %>
                   <div class="intro">
                     <a class="title" href="/notice/<%= notices[i].id %>" ><%= notices[i].title %></a>
-                    <div class="detail"><%= notices[i].introduction %></div>
-                    <p class="brief"><span class="author"><%= notices[i].authorName %></span><span class="date">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= new Date(notices[i].createdAt).getFullYear() + '. ' + (new Date(notices[i].createdAt).getMonth() + 1) + '. ' + new Date(notices[i].createdAt).getDate() %></span></p>
+                    <div class="detail">
+                      <% let reg = /^<.*>$/ %>
+                      <% if((notices[i].content).length > 50 && notices[i].content.replace(reg, '')){ %>
+                      <div class="detail"><%- notices[i].content.slice(0,50) %>...</div>
+                      <% } else {  %>
+                        <div class="detail"><%- notices[i].content && notices[i].content.replace(reg, '') %>...</div>
+                      <% } %>
+                    </div>
+                    <p class="brief"><span class="date"><%= new Date(notices[i].createdAt).getFullYear() + '. ' + (new Date(notices[i].createdAt).getMonth() + 1) + '. ' + new Date(notices[i].createdAt).getDate() %></span></p>
                   </div>
                 </div>
               <% } %>
             </div>
             <div class="scroll"></div>
-          </div>
-          <div class="right-content">
-            <div class="down hidden">
-              <i class="icon-arrow-down"></i>
-            </div>
-            <div class="search">
-              <div class="input"><input placeholder="<%= search %>" /></div>
-              <div class="icon_srch"><i class="icon-search"></i></div>
-            </div>
-            <div class="head-line">
-              <div class="title head-title"><%= head_line %></div>
-              <div class="head-content">
-                
-              </div>
-            </div>
           </div>
         </div>
       </section>

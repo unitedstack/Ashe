@@ -1,7 +1,9 @@
 .pagination {
-  width: 60%;
+  width: 1170px;
+  margin: 0 auto;
   .pn {
-    float: right;
+    margin: 0 auto;
+    width: 60%;
   }
   .pn a {
     float: left;
@@ -10,19 +12,23 @@
     border-radius: 2px;
     line-height: 40px;
     text-align: center;
-    margin: 40px 0 110px 10px;
+    margin: 10px 0 110px 10px;
     font-size: 20px;
     color: #666;
     cursor: pointer;
     border: 1px solid #CCCCCC;
-    &:hover, &.cur {
+    &:hover {
       border-radius: 2px;
       color: #fff;
-      background-color: #42B9E5;
-      border: 1px solid #42B9E5;
+      background-color: #095C9B;
+      border: 1px solid #095C9B;
     }
     &.cur {
       cursor: default !important;
+      border-radius: 2px;
+      color: #fff;
+      background-color: #0280DF;
+      border: 1px solid #0280DF;
     }
   }
   .pn a.ellipsis {
@@ -48,6 +54,7 @@
         width: 30px;
         height: 30px;
         line-height: 30px;
+        margin-bottom: 40px;
       }
     }
   }
