@@ -70,7 +70,6 @@ class Model extends React.Component {
     let table = this.state.config.table;
 
     request.getList().then((res) => {
-      console.log(res);
       table.data = res.notice;
       this.updateTableData(table, refreshDetail);
     });
