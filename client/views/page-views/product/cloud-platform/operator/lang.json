@@ -10,7 +10,7 @@
     "banner_describe_mobile": "同方有云Operator是集监控，日志，告警于一体的综合性运营平台",
     "banner_title": "灵活的",
     "breadcrumb_one": "首页",
-    "breadcrumb_three":  "同方有云 Operator",
+    "breadcrumb_three":  "Operator",
     "breadcrumb_two": "产品",
     "cssFile": "/static/dist/page_product_cloud-platform_operator.min.css",
     "operator_feature_intro_one": "提供从系统层到应用层，从硬件到软件，涵盖计算、网络、存储等核心",
