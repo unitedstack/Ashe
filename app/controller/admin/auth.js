@@ -20,11 +20,7 @@ class AuthController extends Controller {
     } else {
       where.username = username;
     }
-    const user = await service.admin.auth.findOne({
-      where,
-      attributes: {exclude: ['createdAt', 'updatedAt']},
-      raw: true
-    });
+    const user = await service.admin.auth.findOne(where);
     const errors = [];
     if (!user) {
       errors.push({message: '账户不存在'});

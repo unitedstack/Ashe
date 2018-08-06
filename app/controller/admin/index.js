@@ -55,7 +55,7 @@ class IndexController extends Controller {
     console.log('render');
     const { ctx } = this;
     if (ctx.session && ctx.session.admin_user && ctx.session.admin_user.token) {
-      ctx.redirect('/admin/login');
+      ctx.redirect('/admin/blog');
     } else {
       ctx.redirect('/admin/login');
     }
@@ -76,8 +76,8 @@ class IndexController extends Controller {
           // console.log('---------callback---------\n' + ctx.query.callback);
           ctx.redirect(encodeURI(ctx.query.callback));
         } else {
-          console.log('---------first--------\n' + firstApp);
-          ctx.redirect('/admin/' + firstApp);
+          // console.log('---------first--------\n' + firstApp);
+          ctx.redirect(firstApp);
         }
       }
 
