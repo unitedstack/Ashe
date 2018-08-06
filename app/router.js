@@ -18,6 +18,9 @@ module.exports = app=>{
   //static pages
   router.get(Object.keys(staticPage),controller.client.view.staticPage);
 
+  /**
+   * 首页
+   */
   router.get('/',controller.client.view.index); 
 
   /**

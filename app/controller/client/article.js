@@ -1,8 +1,19 @@
 'use strict';
 const path = require('path');
+const globalLang = require('../../../client/locale/lang.json');
+const viewsPath = path.join(__dirname, '../../../client/views');
 const _ = require('lodash');
 const themeConfig = require('../../../client/config.json');
 const urls = themeConfig.articleUrl;
+const lang = {
+  blog: { detail: null, list: null },
+  news: { detail: null, list: null }
+};
+lang.blog.detail = require(path.join(viewsPath, 'blog-views/detail/lang.json'));
+lang.blog.list = require(path.join(viewsPath, 'blog-views/list/lang.json'));
+lang.news.detail = require(path.join(viewsPath, 'news-views/detail/lang.json'));
+lang.news.list = require(path.join(viewsPath, 'news-views/list/lang.json'));
+
 _.forEach(urls, (value, key) => {
   if (value && value.type === 'list') {
     urls[key].params = Object.assign({}, { page: 1 }, urls[key].params);

@@ -51,16 +51,16 @@ class ArticleService extends Service {
 
   async getTags(category = 'blog') {
     const {ctx}=this;
-    return await ctx.model.Article_tag.count({
+    return await ctx.model.ArticleTag.count({
       where: {category},
-      attributes: {exclude: ['id', 'articleId', 'createdAt', 'updatedAt']},
+      attributes: {exclude: ['id', 'article_id','created_at', 'updated_at']},
       group: ['tag']
     });
   }
 
   async getTops(category = 'blog') {
     const {ctx}=this;
-    return await ctx.model.article.findAll({
+    return await ctx.model.Article.findAll({
       where: {status: publicStatus, category},
       limit: 10,
       attributes: {exclude: ['content']},

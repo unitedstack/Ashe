@@ -52,7 +52,7 @@ module.exports = app => {
       },
       authorId: {
         type: UUID,
-        allowNull: false
+        allowNull: false,
       },
       authorName: {
         type: STRING,
