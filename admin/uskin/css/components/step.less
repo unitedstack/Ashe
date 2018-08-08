@@ -1,0 +1,61 @@
+@step_item_bg_color: @color_grey_600;
+@step_item_border_color: @color_grey_400;
+@step_item_selected_bg_color: @color_success_600;
+@step_item_selected_border_color: @color_grey;
+@step_line_color: @color_grey_400;
+@step_name_selected_font_color: @color_font;
+
+.steps {
+  .step-item {
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 190px;
+
+    span {
+      display: inline-block;
+      position: relative;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 3px solid @step_item_border_color;
+      background-color: @step_item_bg_color;
+      z-index: 9;
+      cursor: pointer;
+    }
+
+    &.selected {
+      span {
+        border: 3px solid @step_item_selected_border_color;
+        background-color: @step_item_selected_bg_color;
+      }
+    }
+
+    &.disabled {
+      span {
+        cursor: default;
+      }
+    }
+
+    .delimiter {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background-color: @step_line_color;
+      z-index: 8;
+    }
+    &:first-child {
+      .delimiter {
+        width: 50%;
+      }
+    }
+    &:last-child {
+      .delimiter {
+        left: 0;
+        width: 50%;
+      }
+    }
+  }
+}
