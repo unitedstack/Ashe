@@ -59,7 +59,7 @@ class Model extends React.Component {
         <div className="header"></div>
         <div className="content">
           <div className="logo">
-            <img src="/static/assets/login/logo.png" />
+            <img src="/admin-static/assets/login/logo.png" />
           </div>
           <form className="input-wrapper" method="POST" onSubmit={this.onSubmit}>
             <input ref="username" className="username" placeholder="用户名" type="text" autoFocus="autofocus" />
