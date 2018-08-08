@@ -93,3 +93,6 @@ config/index.js
 package-lock.json
 
 nginx_conf/*
+
+#run file
+run/
