@@ -66,7 +66,7 @@ class ApplyController extends Controller{
       };
     } else {
       let body = ctx.request.body;
-      await ctx.service.applyCooperation(body);
+      await ctx.service.client.apply.applyCooperation(body);
       ctx.body = {
         statusCode: 200,
         message: '合作申请成功'
@@ -108,7 +108,7 @@ class ApplyController extends Controller{
     } else {
       let body = ctx.request.body;
       body.evaluation = JSON.stringify(body.evaluation);
-      await controller.applyCloud(body);
+      await ctx.service.client.apply.applyCloud(body);
       ctx.body = {
         statusCode: 200,
         message: '托管云申请成功'
