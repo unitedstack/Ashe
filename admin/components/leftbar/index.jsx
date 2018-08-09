@@ -59,7 +59,7 @@ class Leftbar extends React.Component {
           }
         </ul>
         <div className="img-wrapper">
-          <a href="/admin/login"><img src="/admin-static/assets/login/logo.png" /></a>
+          <a href="/admin/login"><img src="/static/assets/login/logo.png" /></a>
         </div>
       </div>
     );
