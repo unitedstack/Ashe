@@ -52,7 +52,7 @@ const routesRegExp = frontendApps.map(name => {
 });
 class IndexController extends Controller {
   async render() {
-    console.log('render');
+    // console.log('render');
     const { ctx } = this;
     if (ctx.session && ctx.session.admin_user && ctx.session.admin_user.token) {
       ctx.redirect('/admin/blog');

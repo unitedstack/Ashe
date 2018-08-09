@@ -1,8 +1,8 @@
 const Controller = require('egg').Controller;
 const tools=require('../../tools');
-const config = require('../../../config');
-const sendEmail = require('../../drivers').email.sendEmailByTemplateAsync;
-const contactEmail = config('emailAddress').contact;
+// const config = require('../../../config');
+//const ctx.service.drivers.email.sendEmailByTemplateAsync = require('../../drivers').email.ctx.service.drivers.email.sendEmailByTemplateAsyncByTemplateAsync;
+// const ctx.app.config.emailAddress.contact = app.config.emailAddress.contact;
 class ApplyController extends Controller{
   async applyTrain(){
     const { ctx }=this;
@@ -33,8 +33,8 @@ class ApplyController extends Controller{
       };
       //todo 发送邮件
       const body = ctx.request.body;
-      sendEmail(
-        contactEmail,
+      ctx.service.drivers.email.sendEmailByTemplateAsync(
+        ctx.app.config.emailAddress.contact,
         '【同方有云】有新的培训申请',
         {content: `
         <p>姓名：${body.nickname}</p>
@@ -72,8 +72,8 @@ class ApplyController extends Controller{
         message: '合作申请成功'
       };
       //todo 发送邮件
-      sendEmail(
-        contactEmail,
+      ctx.service.drivers.email.sendEmailByTemplateAsync(
+        ctx.app.config.emailAddress.contact,
         '【同方有云】有新的合作申请',
         {content: `
         <p>姓名：${body.nickname}</p>
