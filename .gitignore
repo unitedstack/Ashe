@@ -96,3 +96,6 @@ nginx_conf/*
 
 #run file
 run/
+
+#vscode
+.vscode
