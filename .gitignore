@@ -98,4 +98,4 @@ nginx_conf/*
 run/
 
 #vscode
-.vscode
+.vscode/
