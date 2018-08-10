@@ -72,7 +72,7 @@ class ViewController extends Controller {
     // console.log(themeDir);    
     let relativePath = path.relative(themeDir, filePath);
     // console.log(relativePath);
-    await send(ctx, relativePath ,{root: themeDir})
+    await send(ctx, relativePath ,{root: themeDir});
     // await ctx.redirect(staticPath);
   }
 }

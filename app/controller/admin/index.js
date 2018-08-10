@@ -1,7 +1,7 @@
 'use strict';
 
 const Controller = require('egg').Controller;
-const fs = require('fs');
+// const fs = require('fs');
 const glob = require('glob');
 
 const template = (data) => {
@@ -42,14 +42,14 @@ const getTemplateObj = (name) => {
     })
   };
 };
-const frontendApps = fs.readdirSync('admin/applications').filter(file => file.indexOf('.') === -1);
-let firstApp;
-const routesRegExp = frontendApps.map(name => {
-  if (!firstApp && name !== 'login') {
-    firstApp = '/admin/'+name;
-  }
-  return new RegExp(`(^\/admin\/${name}$)|(^\/admin\/${name}\/(.*))`);
-});
+// const frontendApps = fs.readdirSync('admin/applications').filter(file => file.indexOf('.') === -1);
+let firstApp='/admin/blog';
+// const routesRegExp = frontendApps.map(name => {
+//   if (!firstApp && name !== 'login') {
+//     firstApp = '/admin/'+name;
+//   }
+//   return new RegExp(`(^\/admin\/${name}$)|(^\/admin\/${name}\/(.*))`);
+// });
 class IndexController extends Controller {
   async render() {
     // console.log('render');

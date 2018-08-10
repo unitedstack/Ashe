@@ -1,30 +1,30 @@
-'use strict'
+'use strict';
 // const ctx.model = require('ctx.model').sequelize.ctx.model;
 // const ctx.model.article = ctx.model.article;
 const publicStatus = 'public';
 const Service = require('egg').Service;
 class ArticleService extends Service {
 
-  async getArticle(params){
-    const {ctx}=this;
-    const {category, url} = params;
-    const article = await ctx.model.article.findOne({where: {url: encodeURI(url), category, status: publicStatus}});
+  async getArticle(params) {
+    const { ctx } = this;
+    const { category, url } = params;
+    const article = await ctx.model.article.findOne({ where: { url: encodeURI(url), category, status: publicStatus } });
     if (article) {
       article.increment('view_count');
     }
     return article;
-}
+  }
 
-  async listArticle(params){
+  async listArticle(params) {
 
-    const {ctx}=this;
-    const obj = {where: {status: publicStatus}};
+    const { ctx } = this;
+    const obj = { where: { status: publicStatus } };
     if (params.search) {
-      obj.where.title = {$like: '%' + decodeURI(params.search) + '%'};
+      obj.where.title = { $like: '%' + decodeURI(params.search) + '%' };
     }
 
     if (params.tag) {
-      obj.include = [{model: ctx.model.Article_tag, where: {tag: params.tag}}];
+      obj.include = [{ model: ctx.model.Article_tag, where: { tag: params.tag } }];
     }
     if (params.category) {
       obj.where.category = params.category;
@@ -36,7 +36,7 @@ class ArticleService extends Service {
 
     obj.order = [['top', 'DESC'], ['createdAt', 'DESC']];
 
-    obj.attributes = {exclude: ['content']};
+    obj.attributes = { exclude: ['content'] };
 
     const result = await ctx.model.Article.findAndCount(obj);
     return {
@@ -50,43 +50,43 @@ class ArticleService extends Service {
   }
 
   async getTags(category = 'blog') {
-    const {ctx}=this;
+    const { ctx } = this;
     return await ctx.model.ArticleTag.count({
-      where: {category},
-      attributes: {exclude: ['id', 'article_id','created_at', 'updated_at']},
+      where: { category },
+      attributes: { exclude: ['id', 'article_id', 'created_at', 'updated_at'] },
       group: ['tag']
     });
   }
 
   async getTops(category = 'blog') {
-    const {ctx}=this;
+    const { ctx } = this;
     return await ctx.model.Article.findAll({
-      where: {status: publicStatus, category},
+      where: { status: publicStatus, category },
       limit: 10,
-      attributes: {exclude: ['content']},
+      attributes: { exclude: ['content'] },
       order: [['top', 'DESC'], ['view_count', 'DESC']]
     });
 
   }
-  
-  async getPrevNext(category = 'blog', articleId){
 
-    const {ctx}=this;
+  async getPrevNext(category = 'blog', articleId) {
+
+    const { ctx } = this;
     return await Promise.all([
       ctx.model.article.findOne({
-        where: {status: publicStatus, category, id: {$lt: articleId}},
+        where: { status: publicStatus, category, id: { $lt: articleId } },
         limit: 1,
         attributes: ['url', 'title'],
         order: [['top', 'DESC'], ['createdAt', 'DESC']]
       }),
       ctx.model.article.findOne({
-        where: {status: publicStatus, category, id: {$gt: articleId}},
+        where: { status: publicStatus, category, id: { $gt: articleId } },
         limit: 1,
         attributes: ['url', 'title'],
         order: [['top', 'DESC'], ['createdAt', 'DESC']]
       })
     ]);
-    }
+  }
 
 }
 module.exports = ArticleService;

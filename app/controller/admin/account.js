@@ -64,11 +64,6 @@ class AccountController extends Controller {
   async update() {
     const { ctx, service } = this;
     await service.admin.account.update(ctx.params.id, ctx.request.body);
-    try {
-      
-    } catch (error) {
-      console.log('--------update---------' + error);
-    }
     ctx.body = {
       statusCode: 200,
       message: '账户更新成功'
@@ -83,11 +78,6 @@ class AccountController extends Controller {
     await service.admin.account.enable(accountId, enable);
     if (ctx.session.admin_user.id === accountId) {
       delete ctx.session.admin_user;
-    }
-    try {
-      
-    } catch (error) {
-      console.log('--------enable---------' + error);
     }
     ctx.body = {
       statusCode: 200,

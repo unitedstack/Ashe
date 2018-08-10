@@ -4,7 +4,7 @@ const Service = require('egg').Service;
 
 class CompanyService extends Service {
   async listCompany() {
-    const { ctx, app } = this;
+    const { app } = this;
     return app.model.Company.findAll({
       include: [{
         model: app.model.User,
@@ -17,7 +17,7 @@ class CompanyService extends Service {
   }
 
   async createCompany(company, admin) {
-    const { ctx, app } = this;
+    const { app } = this;
     let user;
     try {
       user = await app.model.User.create(admin);
@@ -34,7 +34,7 @@ class CompanyService extends Service {
   }
 
   async updateCompany(companyId, company, admin) {
-    const { ctx, app } = this;
+    const {  app } = this;
     let cp = await app.model.Company.findById(companyId, {
       include: app.model.User, through: {
         model: app.model.Company_User, where: {
@@ -56,7 +56,7 @@ class CompanyService extends Service {
   }
 
   async enable(companyId, flag) {
-    const { ctx, app } = this;
+    const { app } = this;
     let company = await app.model.Company.findById(companyId);
     if (!company) {
       return Promise.reject({message: '公司不存在'});

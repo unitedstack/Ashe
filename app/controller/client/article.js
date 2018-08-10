@@ -31,7 +31,8 @@ class ArticleController extends Controller{
       matched.some(m => m && m.opts && m.opts.end && (re = m.path));
     }
     if (!re || !urls[re]) {
-      return next();
+      // return next();
+      return;
     }
     const pageConfig = urls[re];
     const params = Object.assign({}, pageConfig.params, ctx.params);

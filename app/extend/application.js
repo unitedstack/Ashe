@@ -22,4 +22,4 @@ if (matchCommonJs[0]) {
 }
 module.exports={
   FileHash:hashs,
-}
+};

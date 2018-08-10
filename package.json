@@ -17,7 +17,7 @@
     "palette": "cd client/build && grunt palette",
     "merge_assets": "cd client/build && grunt copy_assets",
     "html": "cd client/build && grunt html",
-    "eslint": "eslint *.js server/**/ scripts/ client/**/ admin/**/ --ext .js,.jsx --cache",
+    "eslint": "eslint *.js app/**/**/ app/**/ scripts/ client/**/ admin/**/ --ext .js,.jsx --cache",
     "add_eslint": "cd scripts && node checkPreCommit.js",
     "prepare": "cd scripts && node checkPreCommit.js",
     "preinstall": "cd scripts && node checkNodeVersion.js && cd ../admin/uskin && npm install"

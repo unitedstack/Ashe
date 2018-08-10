@@ -1,6 +1,6 @@
 'use strict';
 module.exports = app => {
-  const { STRING, INTEGER, DATE } = app.Sequelize;
+  const { STRING } = app.Sequelize;
 
   const User = app.model.define('article_tag', {
     category: {
