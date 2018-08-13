@@ -6,12 +6,21 @@ const tools=require('../../tools');
 class ApplyController extends Controller{
   async applyTrain(){
     const { ctx }=this;
-    console.log(ctx.checkBody);
-    ctx.checkBody('nickname').notEmpty('用户名不能为空');
-    ctx.checkBody('phone').notEmpty('电话不能为空');
-    ctx.checkBody('email').notEmpty('邮箱不能为空');
-    ctx.checkBody('company').notEmpty('公司不能为空');
-    ctx.checkBody('location').notEmpty('上课地点不能为空');
+    // console.log(ctx.checkBody);
+    // ctx.checkBody('nickname').notEmpty('用户名不能为空');
+    // ctx.checkBody('phone').notEmpty('电话不能为空');
+    // ctx.checkBody('email').notEmpty('邮箱不能为空');
+    // ctx.checkBody('company').notEmpty('公司不能为空');
+    // ctx.checkBody('location').notEmpty('上课地点不能为空');
+    const createRule = {
+      // accesstoken: 'string',
+      nickname: {type:'string',required:true},
+      phone: {type:'string',required:true},
+      email: {type:'string',required:true},
+      company: {type:'string',required:true},
+      location: {type:'string',required:true},
+    };
+    ctx.validate(createRule, ctx.request.body);
     if (ctx.errors) {
       ctx.status = 400;
       ctx.body = {
@@ -49,8 +58,15 @@ class ApplyController extends Controller{
 
   async applyCooperation(){
     const { ctx }=this;
-    ctx.checkBody('nickname').notEmpty('用户名不能为空');
-    ctx.checkBody('phone').notEmpty('电话不能为空');
+    const createRule = {
+      // accesstoken: 'string',
+      nickname: {type:'string',required:true},
+      phone: {type:'string',required:true},
+      // email: {type:'string',required:true},
+      // company: {type:'string',required:true},
+      // location: {type:'string',required:true},
+    };
+    ctx.validate(createRule, ctx.request.body);
     if (ctx.errors) {
       ctx.status = 400;
       ctx.body = {
@@ -88,10 +104,15 @@ class ApplyController extends Controller{
 
   async applyPrivateCloud(){
     const { ctx }=this;
-    ctx.checkBody('nickname').notEmpty('用户名不能为空');
-    ctx.checkBody('phone').notEmpty('电话不能为空');
-    ctx.checkBody('email').notEmpty('邮箱不能为空');
-    ctx.checkBody('company').notEmpty('公司不能为空');
+    const createRule = {
+      // accesstoken: 'string',
+      nickname: {type:'string',required:true},
+      phone: {type:'string',required:true},
+      email: {type:'string',required:true},
+      company: {type:'string',required:true},
+      // location: {type:'string',required:true},
+    };
+    ctx.validate(createRule, ctx.request.body);
     if (ctx.errors) {
       ctx.status = 400;
       ctx.body = {
