@@ -8,3 +8,7 @@
 // }
 
 exports.sequelize = true;
+exports.validate = {
+  enable: true,
+  package: 'egg-validate',
+};

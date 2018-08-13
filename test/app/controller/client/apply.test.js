@@ -11,7 +11,7 @@ describe('test/app/controller/client/apply.test.js',()=>{
       assert(JSON.stringify(res.error).includes('验证码错误'));
     });
 
-    it('should have checkBody prompt',async ()=>{
+    it('should not pass validate',async ()=>{
       const ctx=app.mockContext({
         session: {
           www_captcha: '1234'
@@ -23,8 +23,8 @@ describe('test/app/controller/client/apply.test.js',()=>{
       .send({
         captcha:'1234'
       });
-      assert(JSON.stringify(res.error).includes('用户名不能为空'));
-      assert(true);
+      // assert(JSON.stringify(res.error).includes('用户名不能为空'));
+      assert(res.status==422);
     });
   });
 })
