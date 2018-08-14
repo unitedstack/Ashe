@@ -36,8 +36,15 @@ module.exports = app=>({
       enable:false
     }
   },
-  // middleware: [ 'checkCaptcha' ],
-  // checkCaptcha:{
+  //middleware
+  middleware:['errorHandler','checkCaptcha'],
+  // only takes effect on URL prefix with '/api'
+  errorHandler:{
+    match: /(.*\/api\/.*)|(^admin\/api\/.*)/,
+  },
+  checkCaptcha:{
+    match:'/apply/api/*'
+  },
 
   // }
   env: process.env.NODE_ENV || 'development',

@@ -26,9 +26,9 @@ module.exports = app=>{
   /**
    * apply
    */
-  router.post('/apply/api/train',app.middleware.checkCaptcha(),controller.client.apply.applyTrain);
-  router.post('/apply/api/cooperation',app.middleware.checkCaptcha(),controller.client.apply.applyCooperation);
-  router.post('/apply/api/private-cloud',app.middleware.checkCaptcha(),controller.client.apply.applyPrivateCloud);
+  router.post('/apply/api/train',controller.client.apply.applyTrain);
+  router.post('/apply/api/cooperation',controller.client.apply.applyCooperation);
+  router.post('/apply/api/private-cloud',controller.client.apply.applyPrivateCloud);
 
   /**
    * article
