@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113333628-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+        gtag('config', 'UA-113333628-1');
+  </script>
+  <title>同方有云 - 质量保障</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1, width=device-width">
+  <meta name="keywords" content="云计算,同方云,云平台,私有云,公有云,Openstack,云存储,云硬盘,云主机" />
+  <meta name="description" content="同方云产品与解决方案覆盖IT建设全栈，从基础环境建设（风、火、水、电）、硬件设备、再到云平台操作系统、存储、大数据、云安全产品与方案，甚至到各个行业的行业云和应用，为其提供端到端的公有云、私有云、混合云IT建设一站式服务。" />
+  <meta name="robots" content="all" />
+  <link rel="stylesheet" type="text/css" href="/static/common/style/7e2b52.index.css" />
+  <link rel="stylesheet" type="text/css" href="/static/dist/ab4616.page_support_quality-assurance.min.css" />
+  <link href="/static/assets/favicon.ico" mce_href="/static/assets/favicon.ico" rel="icon" type="image/x-icon" /> 
+</head>
+<body >
+<div id="volcano-global-header" class="volcano-global-header">
+  <div class="header-wrapper">
+    <div class="header-left">
+      <a href="/"></a>
+      <div id="x-open" class="x-wrapper">
+        <div class="x-1"></div>
+        <div class="x-2"></div>
+      </div>
+    </div>
+    <ul id="header-center" class="header-center">
+      <li>
+        <a href="javascript:void(0)" class="public-cloud bottom">
+          公有云
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/public/compute">计算</a></li>
+            <li><a href="/public/network">网络</a></li>
+            <li><a href="/public/storage">存储</a></li>
+            <li><a href="/public/alarm">监控报警</a></li>
+            <li><a href="/public/price">价格预算</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="multi-dropdown">
+        <a href="javascript:void(0)" class="uos-product bottom">
+          产品
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper wide-wrapper">
+          <ul class="dropdown wide">
+            <li><a href="/product/environment">基础环境建设</a></li>
+            <li class="multi">
+              <a class="four" href="javascript:void(0)">硬件设备
+                <i class="icon-arrow-right"></i>
+                <i class="icon-arrow-down"></i>
+              </a>
+              <ul class="child-dropdown">
+                <li class="two"><a href="/product/hardware/rack-server">机架式服务器</a></li>
+                <li class="two"><a href="/product/hardware/tower-server">塔式服务器</a></li>
+                <li class="two"><a href="/product/hardware/blade-server">刀片式服务器</a></li>
+                <li class="two"><a href="/product/hardware/enterprise-storage">企业级存储</a></li>
+              </ul>
+            </li>
+            <li class="multi">
+              <a class="five" href="javascript:void(0)">全栈云平台
+                <i class="icon-arrow-right"></i>
+                <i class="icon-arrow-down"></i>
+              </a>
+              <ul class="child-dropdown">
+                <li class="two"><a href="/product/cloud-platform/product">全栈云平台</a></li>
+                <li class="two"><a href="/product/cloud-platform/enterprise">Enterprise</a></li>
+                <li class="two"><a href="/product/cloud-platform/director">Director</a></li>
+                <li class="two"><a href="/product/cloud-platform/operator">Operator</a></li>
+                <li class="two"><a href="/product/cloud-platform/manager">Manager</a>
+              </ul>
+            </li>
+            <li><a href="/product/storage">存储</a></li>
+            <li><a href="/product/big-data">大数据</a></li>
+            <li><a href="/product/cloud-security">云安全</a></li>
+            <li><a href="/product/om-management">运维管理服务</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          服务与支持
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/support/product-service">产品服务</a></li>
+            <li><a href="/support/technical-support">技术支持</a></li>
+            <li><a href="/support/online-flow">上线流程</a></li>
+            <li><a href="/support/apply-now">立即申请</a></li>
+            <li><a href="/support/tf-news/list">有云新闻</a></li>
+            <li><a href="/support/quality-assurance">质量保障</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          技术培训
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/train/technical-train">技术培训</a></li>
+            <li><a href="/train/train-list">培训列表</a></li>
+            <li><a href="/train/train-apply">培训申请</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          关于我们
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/about/company">关于我们</a></li>
+            <li><a href="/about/contact-us">联系我们</a></li>
+            <li><a href="/about/identify">企业标识</a></li>
+            <li><a href="/about/clients">客户案例</a></li>
+            <li><a href="/about/jobs">人才招聘</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          合作伙伴
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/cooperation/cooperation-apply">合作申请</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mobile-login">
+        <div class="login-wrapper">
+          <a class="login-link" href="javascript:void(0)">
+            控制台
+            <i class="icon-arrow-right"></i>
+          </a>
+          <a class="register-link" href="javascript:void(0)">
+            注册
+            <i class="icon-arrow-right"></i>
+          </a>
+        </div>
+      </li>
+<!--       <li class="mobile-lang">
+        <a href="?lang=zh">中文</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="?lang=en">English</a>
+      </li> -->
+    </ul>
+    <div class="header-right">
+      
+        <div class="login-wrapper">
+          <a class="login-link" href="javascript:void(0)">控制台</a>
+          <a class="signup register-link" href="javascript:void(0)">注册</a>
+        </div>
+      
+<!--       <div class="lang" style="display: inline-block"><a href="?lang=en">EN</a></div>
+      <div class="lang" style="display: none"><a href="?lang=zh">中</a></div> -->
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <article>
+    <section class="content-banner">
+      <div class="type-area">
+        <div class="banner">
+          <div class="banner-title">质量保障</div>
+          <div class="banner-brief">服务概要</div>
+          <div class="banner-describe">同方有云团队将根据您的业务需求，与您现有的IT团队一起，打造最适合您的业务的云计算环境。</div>
+          <div class="banner-describe-mobile">开源重塑世界</div>
+        </div>
+      </div>
+      <div class="banner-img" style="background:url(/static/assets/page-views/support/quality-assurance/banner2.jpg) no-repeat center center;background-size:cover"></div>
+      <!-- <img class="banner-img-mobile" src="/static/assets/page-views/support/quality-assurance/banner-m.png"> -->
+    </section>
+    <div class="breadcrumb">
+      <ul class="breadcrumb-center">
+        <li class="first"><a class="firstpage" href="/">首页</a>&nbsp;/&nbsp;</li>
+        <li class="second"><a class="success" href="/support/product-service">服务与支持</a>&nbsp;/&nbsp;</li>
+        <li class="third">质量保障</li>
+      </ul>
+    </div>
+  </article>
+  <div class="download-pdf">
+    <a href="https://www.tfcloud.com/download/SLA.pdf"><img src="/static/assets/page-views/support/quality-assurance/download-pdf.png" alt="download-pdf" width="130px"></a>
+  </div>
+  <!-- <section class="content">
+    <div class="main-content">
+      <div class="service-agreement">
+        <nav class="agreement-nav">
+          <ul class="clearfix">
+            <li>云主机服务等级协议</li>
+            <li>云硬盘服务等级协议</li>
+            <li>网络服务等级协议</li>
+            <li>服务赔偿条款</li>
+            <li>赔偿方案</li>
+          </ul>
+        </nav>
+        <ul class="agreement-list">
+          <li class="agreement-wrapper">
+            <div class="agreement-title">云主机服务等级协议</div>
+            <ul class="agreement-content-list">
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon1.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    云主机功能
+                  </div>
+                  <div class="agreement-detail">
+                    云主机具有自助管理、数据安全保障、自动故障恢复等高级功能， 同方云云主机适用于社区网站、企业官网、门户网站、电子商务网站、SAAS应用、游戏类应用等。云主机的所有具体功能请详见同方有云官网上提供的详细说明文档、技术文档及帮助文档。
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon2.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    服务可用性
+                  </div>
+                  <div class="agreement-detail">
+                    <section class="detail-sect">
+                      云主机系统磁盘数据持久性：不低于99.9999%。（具体说明，见3.1章节。）
+                    </section>
+                    <section class="detail-sect">
+                      云主机服务可用性：不低于99.95%。
+                    </section>
+                    <section class="detail-sect">
+                      以30天的自然月为例，即用户每月业务可用时间应为30天*24小时*60分钟*99.95%=43178.4 分钟，即存在43200-43178.4=21.6分钟的不可用时间，其中业务不可用的统计单元为用户单业务实例。
+                    </section>
+                    <section class="detail-sect">
+                      说明：
+                    </section>
+                    <section class="detail-sect">
+                      1）云主机可用性按服务周期统计，一个服务周期为一个自然月，如不满一个月不计算为一个服务周期，统计的业务单元为单个云主机实例，时间单位为分钟。
+                    </section>
+                    <section class="detail-sect">
+                      2）不可用时间：云主机所提供的服务在连续的5分钟或更长时间不可使用方计为不可用时间，不可使用的服务时间低于5分钟的，不计入不可用时间。云主机不可用时间不包括日常系统维护时间、计划内维护或停机、由用户原因、第三方原因或不可抗力因素导致的不可用时间。
+                    </section>                  
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon3.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    服务资源调配能力
+                  </div>
+                  <div class="agreement-detail">
+                    云主机提供多种配置并具备弹性扩容能力，用户可根据需要按照同方云托管云配置方案自行在线扩展或缩减所使用的云主机资源。用户可在10分钟内启用或释放100台云主机，或在5分钟内完成停机升级CPU和内存，并支持在线实时升级公网带宽。
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon4.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    故障恢复能力
+                  </div>
+                  <div class="agreement-detail">
+                    同方云托管云为付费用户的云服务提供7×24小时的运行维护，并以在线工单和电话报障等方式提供技术支持，具备完善的故障监控、自动告警、快速定位、快速恢复等一系列故障应急响应机制。
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon5.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    网络接入性能
+                  </div>
+                  <div class="agreement-detail">
+                    用户在创建同方云云主机时，可自主选择每个云主机实例所需的公网出口带宽，公网出口带宽可配置的范围从0Mbps至30Mbps（默认）。
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="agreement-wrapper">
+            <div class="agreement-title">云硬盘服务等级协议</div>
+            <ul class="agreement-content-list">
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon6.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    数据持久性
+                  </div>
+                  <div class="agreement-detail">
+                    <section class="detail-sect">
+                      云硬盘的数据可用性：不低于99.95%。
+                    </section>
+                    <section class="detail-sect">
+                      以30天的自然月为例，即用户每月业务可用时间应为30天 * 24小时 * 60分钟 * 99.95% = 43178.4 分钟，即存在43200 – 43178.4 = 21.6分钟的不可用时间，其中业务不可用的统计单元为用户单业务实例。
+                    </section>
+                    <section class="detail-sect">
+                      说明：
+                    </section>
+                    <section class="detail-sect">
+                      （1）云硬盘可用性按服务周期统计，一个服务周期为一个自然月，如不满一个月不计算为一个服务周期，统计的业务单元为单个云硬盘实例，时间单位为分钟。
+                    </section>
+                    <section class="detail-sect">
+                      （2）不可用时间：云硬盘的磁盘IO为零，所提供的服务在连续的5分钟或更长时间不可使用方计为不可用时间，不可使用的服务时间低于5分钟的，不计入不可用时间。云主机不可用时间不包括日常系统维护时间、计划内维护或停机、由用户原因、第三方原因或不可抗力因素导致的不可用时间。
+                    </section> 
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon7.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    数据可销毁性
+                  </div>
+                  <div class="agreement-detail">
+                    <section class="detail-sect">
+                      （1）在用户主动删除数据或用户服务期满后需要销毁数据的，同方云托管云可以清除磁盘和内存数据，数据将无法恢复。
+                    </section>
+                    <section class="detail-sect">
+                      （2）云服务所用的设备在报废弃置、委外维修或转售前，同方云托管云可对其物理磁盘采用消磁操作，消磁过程全程视频监控并长期保留相关记录。同方云托管云定期审计磁盘擦除记录和视频证据以满足安全合规要求。
+                    </section>
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon8.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    数据可迁移性
+                  </div>
+                  <div class="agreement-detail">
+                    用户启用云主机时，同方云托管云提供镜像复制和快照恢复的方式，以便于用户快速部署环境并迁入数据；用户停止使用云主机时，可以通过网络自行迁出数据。
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon9.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    数据私密性
+                  </div>
+                  <div class="agreement-detail">
+                    同方云托管云使用加密和安全组隔离等手段保证同一资源池用户数据互不可见，其中安全组通过一系列数据链路层、网络层访问控制技术实现对不同用户资源的隔离。
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="agreement-wrapper">
+            <div class="agreement-title">网络服务等级协议</div>
+            <ul class="agreement-content-list">
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon10.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    网络可用性
+                  </div>
+                  <div class="agreement-detail">
+                    <section class="detail-sect">
+                      网络系统可用性：不低于99.9%（百分之九十九点九）的连通性, 即每月不连通时间少于44分钟（四十四分钟）。
+                    </section>
+                     <section class="detail-sect">
+                      说明：
+                    </section>
+                    <section class="detail-sect">
+                      “网络不连通”是指：由乙方负责运维的托管云相关的网络不连通，出现故障；
+                    </section>
+                    <section class="detail-sect">
+                      “网络不连通时间”是指：甲乙双方确认是由乙方负责运维部分造成的托管云网络不连通时间的累计。
+                    </section>
+                    <section class="detail-sect">
+                      由以下原因导致的甲方网络系统不连通，不计入“网络不连通时间”：
+                    </section>
+                    <section class="detail-sect">
+                      （1）由于第三方引起的网络不连通，包括但不限于电信运营商线路故障；
+                    </section>
+                    <section class="detail-sect">
+                      （2）乙方预先通知甲方后进行网络维护所引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （3）任何甲方的电路或设备所引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （4）任何甲方的操作所引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （5）甲方的疏忽或由甲方授权的操作所引起的。
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="agreement-wrapper">
+            <div class="agreement-title">服务赔偿条款</div>
+            <ul class="agreement-content-list">
+              <li class="clearfix">
+                <div class="symbol">
+                  <img src="/static/assets/page-views/support/quality-assurance/icon11.png" alt="">
+                </div>
+                <div class="agreement-content">
+                  <div class="agreement-desc">
+                    赔偿范围
+                  </div>
+                  <div class="agreement-detail">
+                    <section class="detail-sect">
+                      因乙方运维团队所负责运维的设备故障、产品设计缺陷或运维人员操作不当，导致用户所购买的云服务无法正常使用，乙方将进行赔偿。由不可抗力等因素导致的服务不可用，将不在此赔偿范围。包括以下原因所导致的服务不可用时间：
+                    </section>
+                     <section class="detail-sect">
+                      （1）同方云托管云预先通知用户后进行系统维护所引起的，包括调试、维护、升级等；
+                    </section>
+                    <section class="detail-sect">
+                      （2）任何同方云托管云所负责运维以外的网络、设备故障或配置调整引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （3）用户的应用程序或数据信息受到黑客攻击而引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （4）用户维护不当或保密不当致使数据、口令、密码等丢失或泄漏所引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （5）用户自行升级操作系统所引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （6）用户的应用程序或安装活动所引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （7）用户的疏忽或由用户授权的操作所引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （8）不可抗力以及意外事件引起的；
+                    </section>
+                    <section class="detail-sect">
+                      （9）其他非同方云托管云原因所造成的不可用。
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="agreement-wrapper">
+            <div class="agreement-title">赔偿方案</div>
+            <div class="agreement-table-title">
+              赔偿范围
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <td>每月可用时间百分比</td>
+                  <td>赔偿比例（每月运维服务费用）</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>99% ≤ 每月可用时间 &lt; 99.95%</td>
+                  <td>10%</td>
+                </tr>
+                <tr>
+                  <td>每月可用时间 &lt; 99%</td>
+                  <td>30%</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section> -->
+</div>
+<div class="volcano-global-footer">
+  <div class="caller">
+    <div class="center">
+      <span class="reply">我们将及时回复您</span>
+      <span class="time">24×7×365</span>
+      <a href="/"><img class="weixin" src="/static/assets/weixin.png"></a>
+      <a href="/"><img class="weibo" src="/static/assets/weibo.png"></a>
+    </div>
+  </div>
+  <div id="volcano-totop" class="totop">
+    <i class="icon-arrow-up"></i>
+  </div>
+  <div class="first">
+    <div class="inner">
+      <div class="left">
+        <h6 class="title">联系我们</h6>
+        <div class="phone">
+          <i class="icon-phone"></i>方案咨询： 400-898-5401
+        </div>
+        <div class="service-center">
+          <i class="icon-service-center"></i>技术支持： 010-86461598
+        </div>
+        <div class="email">
+          <i class="icon-email"></i>contact@unitedstack.com
+        </div>
+        <div class="copyright">Copyright © 2018</div>
+        <div class="compony">同方有云（北京）科技有限公司</div>
+        <div class="openstack">
+          <img src="/static/assets/openstack-gold-member-badge.png" />
+          <img src="/static/assets/openstack-logo-powered.png" />
+          <img src="/static/assets/openstack-logo-training.png" />
+        </div>
+      </div>
+      <div class="center">
+        <div class="column-1">
+          <div class="item-1">
+            <div class="title">公有云</div>
+            <p><a href="/public/compute">计算</a></p>
+            <p><a href="/public/network">网络</a></p>
+            <p><a href="/public/storage">存储</a></p>
+            <p><a href="/public/alarm">监控报警</a></p>
+            <p><a href="/public/price">价格预算</a></p>
+          </div>
+        </div>
+        <div class="column-2">
+          <div class="item-1">
+            <div class="title">产品</div>
+            <p><a href="/product/environment">基础环境建设</a></p>
+            <p><a href="/product/hardware/rack-server">硬件设备</a></p>
+            <p><a href="/product/cloud-platform/product">全栈云平台</a></p>
+            <p><a href="/product/storage">存储</a></p>
+            <p><a href="/product/big-data">大数据</a></p>
+            <p><a href="/product/cloud-security">云安全</a></p>
+            <p><a href="/product/om-management">运维管理服务</a></p>
+          </div>
+        </div>
+        <div class="column-3">
+          <div class="item-1">
+            <div class="title">服务与支持</div>
+            <p><a href="/support/product-service">产品服务</a></p>
+            <p><a href="/support/technical-support">技术支持</a></p>
+            <p><a href="/support/online-flow">上线流程</a></p>
+            <p><a href="/support/apply-now">立即申请</a></p>
+            <!-- <p><a href="/support/blog">技术社区</a></p> -->
+            <p><a href="/support/tf-news/list">有云新闻</a></p>
+            <p><a href="/support/quality-assurance">质量保障</a></p>
+          </div>
+        </div>
+        <div class="column-4">
+          <div class="item-1">
+            <div class="title">技术培训</div>
+            <p><a href="/train/technical-train">技术培训</a></p>
+            <p><a href="/train/train-list">培训列表</a></p>
+            <p><a href="/train/train-apply">培训申请</a></p>
+          </div>
+        </div>
+        <div class="column-5">
+          <div class="item-1">
+            <div class="title">关于我们</div>
+            <p><a href="/about/company">关于我们</a></p>
+            <p><a href="/about/contact-us">联系我们</a></p>
+            <p><a href="/about/identify">企业标识</a></p>
+            <p><a href="/about/clients">客户案例</a></p>
+          </div>
+        </div>
+        <div class="column-6">
+          <div class="item-1">
+            <div class="title">合作伙伴</div>
+            <p><a href="/cooperation/cooperation-apply">合作申请</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="second">
+<!--     <div class="wrapper">
+      <div class="row-1">
+        ©2017 UnitedStack Inc. All Rights Reserved. <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备13015821号</a>
+      </div>
+      <div class="row-2">
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020347">京公网安备 11010802020347号</a>
+      </div>
+    </div> -->
+  </div>
+  <div class="mobile-footer">
+    <div class="content-wrapper">
+      <div class="header">
+        <a href="javascript:void(0)">公有云</a> &nbsp;|&nbsp;
+        <a href="javascript:void(0)">产品</a> &nbsp;|&nbsp;
+        <a href="javascript:void(0)">服务与支持</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0)">技术培训</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0)">关于我们</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0)">合作伙伴</a>&nbsp;
+      </div>
+      <div class="contact">
+        <div class="title">联系我们</div>
+        <a href="tel:400-898-5401" class="call">
+          <i class="icon-phone"></i>
+          400-898-5401
+        </a>
+      </div>
+      <div class="footer">
+        <img src="/static/assets/openstack-gold-member-badge.png" />
+        <img src="/static/assets/openstack-logo-powered.png" />
+        <img src="/static/assets/openstack-logo-training.png" />
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="/static/third-party/jquery-3.2.1.min.js"></script>
+<script src="/static/common/js/ec768b.g.js"></script>
+<script src="/static/dist/ab4616.page_support_quality-assurance.min.js"></script>
+<!-- Hotjar Tracking Code for https://www.tfcloud.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:843659,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</html>

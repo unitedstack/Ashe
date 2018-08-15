@@ -1,0 +1,72 @@
+@switch_off_color: #fff;
+@switch_off_bg_color: #fff;
+@switch_off_btn_bg_color: @color_grey_700;
+@switch_on_bg_color: @color_info;
+@switch_on_btn_bg_color: @color_info_200;
+@switch_on_font_color: @color_info;
+
+@switch_disabled_font_color: @color_font_400;
+@switch_disabled_bg_color: @color_disabled_400;
+@switch_disabled_btn_bg_color: @color_disabled_700;
+
+.switch {
+  width: 60px;
+  user-select: none;
+
+  input {
+    position: absolute;
+    visibility: hidden;
+    left: -99px;
+  }
+  input + .switch-inner {
+    display: block;
+    position: relative;
+    padding-right: 10px;
+    height: 22px;
+    line-height: 22px;
+    width: 100%;
+    background-color: @switch_off_btn_bg_color;
+    color: @switch_off_color;
+    font-weight: bold;
+    border-radius: 11px;
+    text-align: right;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color .4s;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      top: 3px;
+      left: 5px;
+      background-color: @switch_off_bg_color;
+      border-radius: 50%;
+      transition: all .4s;
+    }
+  }
+
+  input:checked + .switch-inner {
+    padding-left: 10px;
+    background-color: @switch_on_btn_bg_color;
+    color: @switch_on_font_color;
+    text-align: left;
+
+    &::after {
+      left: calc(~"100% - 20px");
+      background-color: @switch_on_bg_color;
+    }
+  }
+
+  &.disabled {
+    input + .switch-inner {
+      cursor: not-allowed;
+      color: @switch_disabled_font_color;
+      background-color: @switch_disabled_bg_color;
+      &::after {
+        background-color: @switch_disabled_btn_bg_color;
+      }
+    }
+  }
+}

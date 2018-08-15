@@ -1,0 +1,107 @@
+{
+  "name": "ashe-www",
+  "version": "0.0.1",
+  "description": "Public cloud official website",
+  "main": "index.js",
+  "scripts": {
+    "start": "egg-bin dev",
+    "test": "egg-bin test",
+    "debug": "egg-bin debug",
+    "client_build": "cd client/build && grunt build",
+    "client_dev": "cd client/build && grunt watch",
+    "admin_build": "cd admin && rm -rf dist/ && mkdir dist && cp -R uskin/dist/css dist/uskin && node build.js --production",
+    "admin_dev": "cd admin && rm -rf dist/*.* dist/dll manifest.json && node build.js --development",
+    "build": "npm run client_build",
+    "release": "npm run client_build && npm run admin_build",
+    "iconfont": "cd client/build && grunt font",
+    "palette": "cd client/build && grunt palette",
+    "merge_assets": "cd client/build && grunt copy_assets",
+    "html": "cd client/build && grunt html",
+    "eslint": "eslint *.js www/app/**/**/ www-admin/app/**/**/ www/scripts/ www/client/**/ www-admin/admin/**/ --ext .js,.jsx --cache",
+    "add_eslint": "cd scripts && node checkPreCommit.js",
+    "prepare": "cd scripts && node checkPreCommit.js",
+    "preinstall": "cd scripts && node checkNodeVersion.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unitedstack/Ashe.git"
+  },
+  "keywords": [
+    "official",
+    "website"
+  ],
+  "authors": [
+    "PengJiyuan <731401082@qq.com>"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/unitedstack/Ashe/issues"
+  },
+  "homepage": "https://github.com/unitedstack/Ashe#readme",
+  "egg": {
+    "framework": "@ustack/halo"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "colors": "^1.1.2",
+    "compression-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.28.7",
+    "egg-mock": "^3.17.3",
+    "ejs": "^2.5.7",
+    "eslint": "^4.8.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "file-loader": "^1.1.6",
+    "glob": "^7.1.2",
+    "grunt": "^1.0.1",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-rev": "^0.1.0",
+    "grunt-webfont": "^1.6.0",
+    "grunt-webpack": "^3.0.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-var-parse": "^1.0.1",
+    "load-grunt-tasks": "^3.5.2",
+    "mocha": "^5.2.0",
+    "postcss-loader": "^2.0.6",
+    "time-grunt": "^1.4.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.9.1"
+  },
+  "dependencies": {
+    "@ustack/halo": "^0.0.10",
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "bcrypt": "^3.0.0",
+    "ccap": "^0.6.10",
+    "clipboard-plus": "^1.1.0",
+    "egg-bin": "^4.8.1",
+    "egg-validate": "^1.1.1",
+    "json-path": "^0.1.3",
+    "koa-send": "^5.0.0",
+    "memjs": "^1.2.0",
+    "nodemailer": "^4.6.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "rsvp": "^4.7.0",
+    "simditor": "^2.3.6",
+    "urlencode": "^1.1.0"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=8"
+  }
+}

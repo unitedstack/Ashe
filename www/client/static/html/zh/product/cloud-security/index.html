@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113333628-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+        gtag('config', 'UA-113333628-1');
+  </script>
+  <title>同方有云 - 云安全</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1, width=device-width">
+  <meta name="keywords" content="云计算,同方云,云平台,私有云,公有云,Openstack,云存储,云硬盘,云主机" />
+  <meta name="description" content="同方云产品与解决方案覆盖IT建设全栈，从基础环境建设（风、火、水、电）、硬件设备、再到云平台操作系统、存储、大数据、云安全产品与方案，甚至到各个行业的行业云和应用，为其提供端到端的公有云、私有云、混合云IT建设一站式服务。" />
+  <meta name="robots" content="all" />
+  <link rel="stylesheet" type="text/css" href="/static/common/style/7e2b52.index.css" />
+  <link rel="stylesheet" type="text/css" href="/static/dist/08ff5a.page_product_cloud-security.min.css" />
+  <link href="/static/assets/favicon.ico" mce_href="/static/assets/favicon.ico" rel="icon" type="image/x-icon" /> 
+</head>
+<body >
+<div id="volcano-global-header" class="volcano-global-header">
+  <div class="header-wrapper">
+    <div class="header-left">
+      <a href="/"></a>
+      <div id="x-open" class="x-wrapper">
+        <div class="x-1"></div>
+        <div class="x-2"></div>
+      </div>
+    </div>
+    <ul id="header-center" class="header-center">
+      <li>
+        <a href="javascript:void(0)" class="public-cloud bottom">
+          公有云
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/public/compute">计算</a></li>
+            <li><a href="/public/network">网络</a></li>
+            <li><a href="/public/storage">存储</a></li>
+            <li><a href="/public/alarm">监控报警</a></li>
+            <li><a href="/public/price">价格预算</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="multi-dropdown">
+        <a href="javascript:void(0)" class="uos-product bottom">
+          产品
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper wide-wrapper">
+          <ul class="dropdown wide">
+            <li><a href="/product/environment">基础环境建设</a></li>
+            <li class="multi">
+              <a class="four" href="javascript:void(0)">硬件设备
+                <i class="icon-arrow-right"></i>
+                <i class="icon-arrow-down"></i>
+              </a>
+              <ul class="child-dropdown">
+                <li class="two"><a href="/product/hardware/rack-server">机架式服务器</a></li>
+                <li class="two"><a href="/product/hardware/tower-server">塔式服务器</a></li>
+                <li class="two"><a href="/product/hardware/blade-server">刀片式服务器</a></li>
+                <li class="two"><a href="/product/hardware/enterprise-storage">企业级存储</a></li>
+              </ul>
+            </li>
+            <li class="multi">
+              <a class="five" href="javascript:void(0)">全栈云平台
+                <i class="icon-arrow-right"></i>
+                <i class="icon-arrow-down"></i>
+              </a>
+              <ul class="child-dropdown">
+                <li class="two"><a href="/product/cloud-platform/product">全栈云平台</a></li>
+                <li class="two"><a href="/product/cloud-platform/enterprise">Enterprise</a></li>
+                <li class="two"><a href="/product/cloud-platform/director">Director</a></li>
+                <li class="two"><a href="/product/cloud-platform/operator">Operator</a></li>
+                <li class="two"><a href="/product/cloud-platform/manager">Manager</a>
+              </ul>
+            </li>
+            <li><a href="/product/storage">存储</a></li>
+            <li><a href="/product/big-data">大数据</a></li>
+            <li><a href="/product/cloud-security">云安全</a></li>
+            <li><a href="/product/om-management">运维管理服务</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          服务与支持
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/support/product-service">产品服务</a></li>
+            <li><a href="/support/technical-support">技术支持</a></li>
+            <li><a href="/support/online-flow">上线流程</a></li>
+            <li><a href="/support/apply-now">立即申请</a></li>
+            <li><a href="/support/tf-news/list">有云新闻</a></li>
+            <li><a href="/support/quality-assurance">质量保障</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          技术培训
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/train/technical-train">技术培训</a></li>
+            <li><a href="/train/train-list">培训列表</a></li>
+            <li><a href="/train/train-apply">培训申请</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          关于我们
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/about/company">关于我们</a></li>
+            <li><a href="/about/contact-us">联系我们</a></li>
+            <li><a href="/about/identify">企业标识</a></li>
+            <li><a href="/about/clients">客户案例</a></li>
+            <li><a href="/about/jobs">人才招聘</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          合作伙伴
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/cooperation/cooperation-apply">合作申请</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mobile-login">
+        <div class="login-wrapper">
+          <a class="login-link" href="javascript:void(0)">
+            控制台
+            <i class="icon-arrow-right"></i>
+          </a>
+          <a class="register-link" href="javascript:void(0)">
+            注册
+            <i class="icon-arrow-right"></i>
+          </a>
+        </div>
+      </li>
+<!--       <li class="mobile-lang">
+        <a href="?lang=zh">中文</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="?lang=en">English</a>
+      </li> -->
+    </ul>
+    <div class="header-right">
+      
+        <div class="login-wrapper">
+          <a class="login-link" href="javascript:void(0)">控制台</a>
+          <a class="signup register-link" href="javascript:void(0)">注册</a>
+        </div>
+      
+<!--       <div class="lang" style="display: inline-block"><a href="?lang=en">EN</a></div>
+      <div class="lang" style="display: none"><a href="?lang=zh">中</a></div> -->
+    </div>
+  </div>
+</div>
+
+  <div class="ashe-cloud-security">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="type-area">
+          <div class="banner">
+            <div class="banner-title">信息安全面临严峻考验</div>
+            <div class="banner-brief">云安全保障未来</div>
+            <div class="banner-describe">同方有云兄弟公司兰云科技有限公司跨时代产品——兰眼下一代威胁感知系统、兰天智能安全平台、兰盾DDoS云防御系统。</div>
+            <div class="banner-describe-mobile">兰眼下一代威胁感知系统、兰天智能安全平台、兰盾DDoS云防御系统</div>
+          </div>
+        </div>
+        <div class="banner-img" style="background:url(/static/assets/page-views/product/cloud-security/banner2.jpg) no-repeat center center;background-size:cover"></div>
+        <!-- <img class="banner-img-mobile" src="/static/assets/page-views/product/cloud-security/banner-m.png"> -->
+      </section>
+      <div class="breadcrumb">
+        <ul class="breadcrumb-center">
+          <li class="first"><a class="firstpage" href="/">首页</a>&nbsp;/&nbsp;</li>
+          <li class="second"><a class="success" href="/product/environment">产品</a>&nbsp;/&nbsp;</li>
+          <li class="third">云安全</li>
+        </ul>
+      </div>
+      <!-- main -->
+      <div class="content-main">
+        <div class="laneye">
+          <p class="shuiyin">LanyEye</p>
+          <p class="title">兰眼——<span>下一代威胁感知系统</span></p>
+          <p class="brief">国内第一款感知和防御APT攻击的BDS（Breach Detection System）产品。采用创新的应用级沙箱和环境感知技术，集成AV和IDS辅助检测模块，引入威胁情报体系，弥补传统的特征检测技术的不足，高效感知和防御APT攻击。</p>
+          <div class="feature">
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-security/feature1.png">
+              <p class="item_title">全面</p>
+              <p class="item_intro">涵盖IDS、AV、沙箱、威胁情报和自定义模块，多个检测模块，实现已知威胁和未知威胁的全面检出。</p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-security/feature2.png">
+              <p class="item_title">灵活</p>
+              <p class="item_intro">模块化架构，灵活组合，采集引擎、分析引擎、管理引擎、呈现引擎，即可以集中式部署，也可以分布式部署。</p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-security/feature3.png">
+              <p class="item_title">精准</p>
+              <p class="item_intro">强大的环境感知技术，通过流量分析识别内网主机现实应用环境参数，近乎真实地模拟内网环境，自适应调整沙箱参数，有效提高APT检出率。</p>
+            </div>
+          </div>
+          <div class="performance">
+            <div class="performance-item">
+              <img src="/static/assets/page-views/product/cloud-security/icon1.png">
+              <p class="performance-title">入侵检测</p>
+              <p class="performance-intro">LanyEye系统的IDS模块可以有效检测溢出攻击、恶意木马、跨站攻击等已知威胁。</p>
+            </div>
+            <div class="performance-item">
+              <img src="/static/assets/page-views/product/cloud-security/icon2.png">
+              <p class="performance-title">病毒检测</p>
+              <p class="performance-intro">AV模块能够检测各类已知病毒样本，且可以提高沙箱检测性能。</p>
+            </div>
+            <div class="performance-item">
+              <img src="/static/assets/page-views/product/cloud-security/icon3.png">
+              <p class="performance-title">沙箱检测</p>
+              <p class="performance-intro">沙箱模块支持各Windows和Android系统，可以追踪样本对系统进程、内存、注册表等各类交互为，是检测未知漏洞的利器。</p>
+            </div>
+            <div class="performance-item">
+              <img src="/static/assets/page-views/product/cloud-security/icon4.png">
+              <p class="performance-title">威胁情报检测</p>
+              <p class="performance-intro">威胁情报模块可以针对恶意IP、恶意URL、恶意域名、恶意Email等提供预检测能力。</p>
+            </div>
+          </div>
+        </div>
+        <div class="lanyan-function">
+          <div class="center">
+            <p class="product">产品<span>功能</span></p>
+            <div class="center-function">
+              <div class="function-item">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature4.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function1-h.png">
+                <p class="line"></p>
+                <p class="function-brief">强大的APT检测</p>
+                <div class="mo-function-intro">近年来，网络空间的安全形势发生了巨大改变，APT攻击增长趋势呈指数级发展，并逐渐演变成了各种社会工程学攻击与各类0day漏洞利用的综合体，成为最具威胁的网络攻击方式。由于APT攻击的高级、隐蔽、持续性的特点，传统安全设备受其检测机制的原因，无法对其进行有效检测和防御。随着APT攻击的发展，其触角已深入到高校、金融、企业、政府等各行各业，信息安全面临严峻考验。</div>
+              </div>
+              <div class="function-intro">近年来，网络空间的安全形势发生了巨大改变，APT攻击增长趋势呈指数级发展，并逐渐演变成了各种社会工程学攻击与各类0day漏洞利用的综合体，成为最具威胁的网络攻击方式。由于APT攻击的高级、隐蔽、持续性的特点，传统安全设备受其检测机制的原因，无法对其进行有效检测和防御。随着APT攻击的发展，其触角已深入到高校、金融、企业、政府等各行各业，信息安全面临严峻考验。</div>
+              <div class="function-item even">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature5.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function2-h.png">
+                <p class="line"></p>
+                <p class="function-brief">完整的威胁情报体系</p>
+                <div class="mo-function-intro">全面：与烽火台、四叶草安全等知名威胁情报平台实现情报及时共享准确：从沙箱检测到的恶意样本中提取威胁情报，形成准确的内部威胁信息及时：本地威胁情报与云端威胁情报最快可以实现分钟级同步</div>
+              </div>
+              <div class="function-intro">全面：与烽火台、四叶草安全等知名威胁情报平台实现情报及时共享准确：从沙箱检测到的恶意样本中提取威胁情报，形成准确的内部威胁信息及时：本地威胁情报与云端威胁情报最快可以实现分钟级同步</div>
+              <div class="function-item">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature6.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function3-h.png">
+                <p class="line"></p>
+                <p class="function-brief">清晰的威胁可视化</p>
+                <div class="mo-function-intro">面向决策者提供简洁、直观的威胁呈现界面，如全网安全态势、攻击路径、威胁趋势等综合统计信息，协助决策者制定下一步安全防御策略。面向分析人员提供专业、详尽的威胁信息展示，基于交互式可视化分析技术，协助安全运维人员快速定位攻击来源、攻击组织、攻击手段以及受损主机等，方便快捷地进行溯源取证和责任判定</div>
+              </div>
+              <div class="function-intro">面向决策者提供简洁、直观的威胁呈现界面，如全网安全态势、攻击路径、威胁趋势等综合统计信息，协助决策者制定下一步安全防御策略。面向分析人员提供专业、详尽的威胁信息展示，基于交互式可视化分析技术，协助安全运维人员快速定位攻击来源、攻击组织、攻击手段以及受损主机等，方便快捷地进行溯源取证和责任判定</div>
+            </div>
+          </div>
+        </div>
+        <div class="lanyan-framework">
+          <img src="/static/assets/page-views/product/cloud-security/framework1.png" alt="下一代威胁感知系统">
+        </div>
+        <div class="strip"></div>
+        <div class="lansky">
+          <p class="shuiyin">LANYSKY</p>
+          <p class="title">兰天——<span>智能安全平台</span></p>
+          <p class="brief">兰天智能安全平台基于大数据技术基础，解决了安全分析中数据持续增长、类型复杂、来源多样等数据特性，同时使用用户及实体行为分析技术，能实现高级持续性恶意攻击以及内部违规行为等企业威胁有效检测。</p>
+          <div class="feature">
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-security/feature7.png">
+              <p class="item_title">业务&amp;攻击</p>
+              <p class="item_intro">基于业务和攻击的双向模型训练，对外部黑客和内部违规人员精准画像。</p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-security/feature8.png">
+              <p class="item_title">关联分析</p>
+              <p class="item_intro">兰天系统会对用户系统进行精准的关联分析，完成精准定位，同时为用户进行用户行为分析，双向模拟训练。</p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-security/feature9.png">
+              <p class="item_title">入侵事件全路径还原</p>
+              <p class="item_intro">强大的兰天系统能对入侵事件全路径进行精准的还原，还原度极高，保证用户对系统的了解一清二楚。</p>
+            </div>
+          </div>
+        </div>
+        <div class="lansky-function">
+          <div class="center">
+            <p class="product">产品<span>功能</span></p>
+            <div class="center-function">
+              <div class="function-item">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature10.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function4-h.png">
+                <p class="line"></p>
+                <p class="function-brief">全方位的数据采集</p>
+                <div class="mo-function-intro">支持对网络流量原始报文或网络流量元数据采集；支持获取网络与安全设备日志、操作系统日志、应用日志、数据库日志。</div>
+              </div>
+              <div class="function-intro">支持对网络流量原始报文或网络流量元数据采集；支持获取网络与安全设备日志、操作系统日志、应用日志、数据库日志。</div>
+              <div class="function-item even">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature11.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function5-h.png">
+                <p class="line"></p>
+                <p class="function-brief">高速多样的分析手段</p>
+                <div class="mo-function-intro">获得专利的本地沙箱技术，实现本地深度分析能力；对本地全量历史数据、威胁情报数据，按照多个维度进行关联分析，能够绘制出完整的攻击链条并形成分析报告。</div>
+              </div>
+              <div class="function-intro">获得专利的本地沙箱技术，实现本地深度分析能力；对本地全量历史数据、威胁情报数据，按照多个维度进行关联分析，能够绘制出完整的攻击链条并形成分析报告。</div>
+              <div class="function-item">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature12.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function6-h.png">
+                <p class="line"></p>
+                <p class="function-brief">分布式实时分析引擎</p>
+                <div class="mo-function-intro">基于国际领先的分布式架构，实现单节点10万EPS级的数据分析，以及PB级数据的秒级检索，满足客户要求的实时威胁分析需求基于业务的正向行为模型训练，提升检测准确；基于攻击的反向行为模型训练，提升检测速度。</div>
+              </div>
+              <div class="function-intro">基于国际领先的分布式架构，实现单节点10万EPS级的数据分析，以及PB级数据的秒级检索，满足客户要求的实时威胁分析需求基于业务的正向行为模型训练，提升检测准确；基于攻击的反向行为模型训练，提升检测速度。</div>
+            </div>
+            <div class="center-function">
+              <div class="function-item even">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature13.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function7-h.png">
+                <p class="line"></p>
+                <p class="function-brief">用户行为分析技术</p>
+                <div class="mo-function-intro">基于业务的正向行为模型训练，提升检测准确；基于攻击的反向行为模型训练，提升检测速度。</div>
+              </div>
+              <div class="function-intro">基于业务的正向行为模型训练，提升检测准确；基于攻击的反向行为模型训练，提升检测速度。</div>
+              <div class="function-item">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature14.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function8-h.png">
+                <p class="line"></p>
+                <p class="function-brief">态势感知展示</p>
+                <div class="mo-function-intro">实现网络攻击行为、恶意代码传播、漏洞分布状态、重要系统风险等多种指标综合评定全网安全态势;支持依据事件属性对大数据进行过滤、归并、钻取等分析操作。</div>
+              </div>
+              <div class="function-intro">实现网络攻击行为、恶意代码传播、漏洞分布状态、重要系统风险等多种指标综合评定全网安全态势;支持依据事件属性对大数据进行过滤、归并、钻取等分析操作。</div>
+              <div class="function-item even">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature15.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function9-h.png">
+                <p class="line"></p>
+                <p class="function-brief">集成威胁情报系统</p>
+                <div class="mo-function-intro">支持多渠道、多层次的威胁情报匹配，一方面原生威胁情报增量更新；另一方面，系统具备开放的外部威胁情报接口，可以从第三方渠道及时获取外部威胁情报</div>
+              </div>
+              <div class="function-intro">支持多渠道、多层次的威胁情报匹配，一方面原生威胁情报增量更新；另一方面，系统具备开放的外部威胁情报接口，可以从第三方渠道及时获取外部威胁情报</div>
+            </div>
+          </div>
+        </div>
+        <div class="lansky-framework">
+          <img src="/static/assets/page-views/product/cloud-security/framework2.png" alt="智能安全平台">
+        </div>
+        <div class="strip"></div>
+
+        <div class="languard">
+          <p class="shuiyin">LANYGUARD</p>
+          <p class="title">兰盾——<span>DDoS云防御系统</span></p>
+          <p class="brief">针对互联网服务器在遭受大流量DDoS攻击导致服务不 可用的问题，推出的SaaS服务，为企业在线业务、云计算平台等提供最优的DDoS云清洗解决方案，有效防御各种类型的大流量DDoS攻击，支持电信、联通、移动三网IP，全力保障业务安全。</p>
+          <div class="feature">
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-security/feature16.png">
+              <p class="item_title">算法精妙</p>
+              <p class="item_intro">兰盾系统向客户保证，绝对保障好的清洗效果不影响正常业务，减少后续麻烦。</p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-security/feature17.png">
+              <p class="item_title">运营商骨干节点</p>
+              <p class="item_intro">兰盾系统在运营商骨干节点处，单节点带宽足够大带宽质量好，延时低。</p>
+            </div>
+            <div class="item">
+              <img src="/static/assets/page-views/product/cloud-security/feature18.png">
+              <p class="item_title">付费方式灵活</p>
+              <p class="item_intro">支持按天结算，支持预付费及后付费，对任何客户提供7*24小时服务购买100G以上清洗能力的客户，提供VIP。</p>
+            </div>
+          </div>
+        </div>
+        <div class="languard-function">
+          <div class="center">
+            <p class="product">产品<span>功能</span></p>
+            <div class="center-function">
+              <div class="function-item">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature19.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function10-h.png">
+                <p class="line"></p>
+                <p class="function-brief">检测清洗</p>
+                <div class="mo-function-intro">全网分布式部署多个云清洗节点，近1T防御能力，对流入的数据包进行多层级多维度的分析检测。一旦发现异常流量，秒级响应，立即对攻击流量进行清洗。采用业界最新防御技术，提供分层防范机制，使用畸形报文检查、特征过滤、源认证、会话分析、行为分析、智能限速、僵木蠕检测多种防范技术对流量进行层层筛选，保证攻击流量能够被相应算法识别并丢弃，可完美防御包括但不限于以下类型的DDoS攻击。</div>
+              </div>
+              <div class="function-intro">全网分布式部署多个云清洗节点，近1T防御能力，对流入的数据包进行多层级多维度的分析检测。一旦发现异常流量，秒级响应，立即对攻击流量进行清洗。采用业界最新防御技术，提供分层防范机制，使用畸形报文检查、特征过滤、源认证、会话分析、行为分析、智能限速、僵木蠕检测多种防范技术对流量进行层层筛选，保证攻击流量能够被相应算法识别并丢弃，可完美防御包括但不限于以下类型的DDoS攻击。</div>
+              <div class="function-item even">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature20.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function11-h.png">
+                <p class="line"></p>
+                <p class="function-brief">自助服务</p>
+                <div class="mo-function-intro">提供用户注册、登录、接入、购买服务、策略配置、报表呈现等功能，为用户提供统一的安全服务和安全事件管理。用户可以在需要时通过自服务页面自主购买防御资源，配置相关的受保护业务信息，开启相应的防御，控制开启、关闭服务时间和服务内容。</div>
+              </div>
+              <div class="function-intro">提供用户注册、登录、接入、购买服务、策略配置、报表呈现等功能，为用户提供统一的安全服务和安全事件管理。用户可以在需要时通过自服务页面自主购买防御资源，配置相关的受保护业务信息，开启相应的防御，控制开启、关闭服务时间和服务内容。</div>
+              <div class="function-item">
+                <img class="normal" src="/static/assets/page-views/product/cloud-security/feature21.png">
+                <img class="hover" src="/static/assets/page-views/product/cloud-security/function12-h.png">
+                <p class="line"></p>
+                <p class="function-brief">智能调度</p>
+                <div class="mo-function-intro">当用户在安全运营平台上启动防御之后，智能调度系统将其全网访问流量调度到就近的各个云清洗节点，并隐藏用户真实IP。同时，智能调度系统实时监测各个云清洗节点的流量大小，如果发现某个节点流量过大，会通过优化资源，自动调度分流到其他清洗节点，确保有效清洗DDoS攻击流量，同时不影响用户正常业务。</div>
+              </div>
+              <div class="function-intro">当用户在安全运营平台上启动防御之后，智能调度系统将其全网访问流量调度到就近的各个云清洗节点，并隐藏用户真实IP。同时，智能调度系统实时监测各个云清洗节点的流量大小，如果发现某个节点流量过大，会通过优化资源，自动调度分流到其他清洗节点，确保有效清洗DDoS攻击流量，同时不影响用户正常业务。</div>
+            </div>
+          </div>
+        </div>
+        <div class="languard-framework">
+          <img src="/static/assets/page-views/product/cloud-security/framework3.png" alt="DDoS云防御系统">
+        </div>
+        <div class="strip"></div>
+      </div>
+    </article>
+  </div>
+<div class="volcano-global-footer">
+  <div class="caller">
+    <div class="center">
+      <span class="reply">我们将及时回复您</span>
+      <span class="time">24×7×365</span>
+      <a href="/"><img class="weixin" src="/static/assets/weixin.png"></a>
+      <a href="/"><img class="weibo" src="/static/assets/weibo.png"></a>
+    </div>
+  </div>
+  <div id="volcano-totop" class="totop">
+    <i class="icon-arrow-up"></i>
+  </div>
+  <div class="first">
+    <div class="inner">
+      <div class="left">
+        <h6 class="title">联系我们</h6>
+        <div class="phone">
+          <i class="icon-phone"></i>方案咨询： 400-898-5401
+        </div>
+        <div class="service-center">
+          <i class="icon-service-center"></i>技术支持： 010-86461598
+        </div>
+        <div class="email">
+          <i class="icon-email"></i>contact@unitedstack.com
+        </div>
+        <div class="copyright">Copyright © 2018</div>
+        <div class="compony">同方有云（北京）科技有限公司</div>
+        <div class="openstack">
+          <img src="/static/assets/openstack-gold-member-badge.png" />
+          <img src="/static/assets/openstack-logo-powered.png" />
+          <img src="/static/assets/openstack-logo-training.png" />
+        </div>
+      </div>
+      <div class="center">
+        <div class="column-1">
+          <div class="item-1">
+            <div class="title">公有云</div>
+            <p><a href="/public/compute">计算</a></p>
+            <p><a href="/public/network">网络</a></p>
+            <p><a href="/public/storage">存储</a></p>
+            <p><a href="/public/alarm">监控报警</a></p>
+            <p><a href="/public/price">价格预算</a></p>
+          </div>
+        </div>
+        <div class="column-2">
+          <div class="item-1">
+            <div class="title">产品</div>
+            <p><a href="/product/environment">基础环境建设</a></p>
+            <p><a href="/product/hardware/rack-server">硬件设备</a></p>
+            <p><a href="/product/cloud-platform/product">全栈云平台</a></p>
+            <p><a href="/product/storage">存储</a></p>
+            <p><a href="/product/big-data">大数据</a></p>
+            <p><a href="/product/cloud-security">云安全</a></p>
+            <p><a href="/product/om-management">运维管理服务</a></p>
+          </div>
+        </div>
+        <div class="column-3">
+          <div class="item-1">
+            <div class="title">服务与支持</div>
+            <p><a href="/support/product-service">产品服务</a></p>
+            <p><a href="/support/technical-support">技术支持</a></p>
+            <p><a href="/support/online-flow">上线流程</a></p>
+            <p><a href="/support/apply-now">立即申请</a></p>
+            <!-- <p><a href="/support/blog">技术社区</a></p> -->
+            <p><a href="/support/tf-news/list">有云新闻</a></p>
+            <p><a href="/support/quality-assurance">质量保障</a></p>
+          </div>
+        </div>
+        <div class="column-4">
+          <div class="item-1">
+            <div class="title">技术培训</div>
+            <p><a href="/train/technical-train">技术培训</a></p>
+            <p><a href="/train/train-list">培训列表</a></p>
+            <p><a href="/train/train-apply">培训申请</a></p>
+          </div>
+        </div>
+        <div class="column-5">
+          <div class="item-1">
+            <div class="title">关于我们</div>
+            <p><a href="/about/company">关于我们</a></p>
+            <p><a href="/about/contact-us">联系我们</a></p>
+            <p><a href="/about/identify">企业标识</a></p>
+            <p><a href="/about/clients">客户案例</a></p>
+          </div>
+        </div>
+        <div class="column-6">
+          <div class="item-1">
+            <div class="title">合作伙伴</div>
+            <p><a href="/cooperation/cooperation-apply">合作申请</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="second">
+<!--     <div class="wrapper">
+      <div class="row-1">
+        ©2017 UnitedStack Inc. All Rights Reserved. <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备13015821号</a>
+      </div>
+      <div class="row-2">
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020347">京公网安备 11010802020347号</a>
+      </div>
+    </div> -->
+  </div>
+  <div class="mobile-footer">
+    <div class="content-wrapper">
+      <div class="header">
+        <a href="javascript:void(0)">公有云</a> &nbsp;|&nbsp;
+        <a href="javascript:void(0)">产品</a> &nbsp;|&nbsp;
+        <a href="javascript:void(0)">服务与支持</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0)">技术培训</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0)">关于我们</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0)">合作伙伴</a>&nbsp;
+      </div>
+      <div class="contact">
+        <div class="title">联系我们</div>
+        <a href="tel:400-898-5401" class="call">
+          <i class="icon-phone"></i>
+          400-898-5401
+        </a>
+      </div>
+      <div class="footer">
+        <img src="/static/assets/openstack-gold-member-badge.png" />
+        <img src="/static/assets/openstack-logo-powered.png" />
+        <img src="/static/assets/openstack-logo-training.png" />
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="/static/third-party/jquery-3.2.1.min.js"></script>
+<script src="/static/common/js/ec768b.g.js"></script>
+<script src="/static/dist/08ff5a.page_product_cloud-security.min.js"></script>
+<!-- Hotjar Tracking Code for https://www.tfcloud.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:843659,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</html>

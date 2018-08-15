@@ -1,28 +1,5 @@
-const { join }= require('path');
-module.exports = app=>({
+module.exports = ({
   keys:'tmoe',
-  static:{
-    prefix: '/static/',
-    dir:[join(app.baseDir, 'client/static'),join(app.baseDir, 'admin')],
-    // support lazy load
-    dynamic: true,
-    preload: false,
-    buffer: false,
-    maxFiles: 1000,
-  },
-  cluster:{
-    listen:{
-      port:3000,
-    }
-  },
-  view:{
-    root: [
-      join(app.baseDir, 'client/views'),
-    ].join(','),
-    defaultViewEngine: 'ejs',
-    defaultExtension: '.ejs',
-    mapping: { '.ejs': 'ejs' }
-  },
   sequelize:{
     dialect: 'mysql', // support: mysql, mariadb, postgres, mssql
     database: 'ashe',
@@ -36,56 +13,6 @@ module.exports = app=>({
       enable:false
     }
   },
-  //middleware
-  middleware:['errorHandler','checkCaptcha'],
-  // only takes effect on URL prefix with '/api'
-  errorHandler:{
-    match: /(.*\/api\/.*)|(^admin\/api\/.*)/,
-  },
-  checkCaptcha:{
-    match:'/apply/api/*'
-  },
-
-  // }
-  env: process.env.NODE_ENV || 'development',
-  log: {
-    'accessLogPath': '/var/log/halo/access.log',
-    'errorLogPath': '/var/log/halo/error.log',
-    'debug': false,          // true | false
-    'format': 'combined',    // 'combined' | 'common' | 'dev' | 'short' | 'tiny'
-    'printAccessLog': true   // true | false
-  },
-  hl95: {
-    host: 'http://q.hl95.com:8061/',
-    username: '',
-    password: '',
-    epid: 0
-  },
-  image_upload: {
-    local: {
-      prefix: '/wp-content/upload/', // '/'或'/static/'或...
-      upload_path: join(__dirname, '../static/wp-content/upload')
-    }
-  },
-  docs: {
-    repoPath: join(__dirname, '../static/repo'),
-    buildPath: join(__dirname, '../static/book'),
-    pdfPath: join(__dirname, '../static/pdf')
-  },
-  sessionEngine: {
-    'type': 'Memcached',        // 'Redis' | 'Memcached' | 'Session' (do not use it in production)
-    'remotes': ['10.0.217.111:11211'],
-    'secret': 'uso_www',
-    'cookie_name': 'ustack_www'
-  },
-  port: 5555,
-  // mysql: {
-  //   host: '127.0.0.1',
-  //   port: 3306,
-  //   user: 'root',
-  //   password: '1234',
-  //   database: 'ashe'
-  // },
   smtp: {
     host: 'smtp.qq.com',
     port: 465,

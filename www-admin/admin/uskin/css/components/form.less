@@ -1,0 +1,157 @@
+// Mixins
+
+
+// Variables
+@input_padding:  4px 10px;
+@input_border: 1px solid @color_grey_600;
+@input_height: 22px;
+@input_radius: 2px;
+@input_hover_border_color: @color_info;
+@input_focus_border_color: @color_info;
+@input_error_border_color: @color_delete;
+
+@input_disabled_font_color: @color_font_400;
+@input_disabled_border_color: @color_disabled_300;
+@input_disabled_bg_color: @color_disabled_200;
+
+@select_width: 125px;
+@select_ff_color: @color_font;
+
+input {
+  padding: @input_padding;
+  border: @input_border;
+  border-radius: @input_radius;
+  height: @input_height;
+  line-height: @input_height;
+  box-sizing: content-box;
+
+  &:hover{
+    border-color: @input_hover_border_color;
+  }
+
+  &:focus {
+    border-color: @input_focus_border_color;
+  }
+
+  &.error {
+    border-color: @input_error_border_color;
+  }
+}
+
+select {
+  padding: @input_padding;
+  width: @select_width;
+  height: @input_height;
+  border: @input_border;
+  border-radius: @input_radius;
+  background-color: transparent;
+  outline: none;
+  appearance: none;
+  box-sizing: content-box;
+  cursor: pointer;
+
+  &:hover {
+    border-color: @input_hover_border_color;
+  }
+
+  &:focus {
+    border-color: @input_focus_border_color;
+  }
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 @select_ff_color;
+  }
+}
+
+
+// Disabled and read-only inputs
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  color: @input_disabled_font_color;
+  border-color: @input_disabled_border_color;
+  background-color: @input_disabled_bg_color;
+  cursor: not-allowed !important;
+  user-select: none;
+}
+// Explicitly reset the colors here
+input[type="radio"],
+input[type="checkbox"],
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+  height: auto;
+  cursor: pointer;
+  border: none;
+  height: 16px;
+  width: 16px;
+  -webkit-appearance: none;
+}
+
+select,
+input[type="radio"],
+input[type="checkbox"],
+input[type="radio"][disabled],
+input[type="checkbox"][disabled] {
+  background: url("../themes/default/img/uskin_input.png") no-repeat -20px 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (-moz-min-device-pixel-ratio: 2),
+screen and (min-device-pixel-ratio: 2) {
+  select,
+  input[type="radio"],
+  input[type="checkbox"],
+  input[type="radio"][disabled],
+  input[type="checkbox"][disabled] {
+    background: url("../themes/default/img/uskin_input@x2.png") no-repeat -20px 0;
+    background-size: 96px 90px;
+  }
+}
+
+select {
+  background-position: right -71px;
+  &:hover {
+    background-position: right -46px;
+    &:disabled {
+      background-position: right -71px;
+    }
+  }
+}
+
+input[type="radio"] {
+  background-position: -20px -21px;
+  &:hover {
+    background-position: -40px -21px;
+  }
+  &:checked {
+    background-position: -60px -21px;
+    &:disabled {
+      background-position: -80px -21px;
+    }
+  }
+  &:disabled {
+    background-position: 0 -21px;
+  }
+}
+
+input[type="checkbox"] {
+  &:hover {
+    background-position: -40px 0;
+  }
+  &:checked {
+    background-position: -60px 0;
+    &:disabled {
+      background-position: -80px 0;
+    }
+  }
+  &:disabled {
+    background-position: 0 0;
+  }
+}

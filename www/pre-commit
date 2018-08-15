@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# CSC, Code Style Checker
+
+cd /home/yjk/Desktop/Ashe-egg-1/www
+npm run eslint

@@ -1,0 +1,73 @@
+@search_border_color: @color_info;
+@search_border_focus_color: @color_info_600;
+@search_icon_bg_color: @color_info;
+@search_icon_bg_hover_color: @color_info_600;
+@search_icon_bg_active_color: @color_info_700;
+
+@search_light_border_color: @color_grey_600;
+@search_light_border_focus_color: @color_info;
+@search_light_icon_color: @color_font_700;
+@search_light_icon_hover_color: @color_info;
+@search_light_icon_active_color: @color_info_600;
+
+.input-search {
+  border: 0;
+  border-radius: 2px;
+  height: 32px;
+  width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  input {
+    outline: 0;
+    padding-right: 36px;
+    border: 1px solid @search_border_color;
+    width: 97px;
+  }
+  .search-icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    background-color: @search_icon_bg_color;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    > i {
+      color: white;
+      font-weight: bold;
+    }
+    &:hover {
+      background-color: @search_icon_bg_hover_color;
+    }
+    &:active {
+      background-color: @search_icon_bg_active_color;
+    }
+  }
+}
+
+.input-search-light {
+  input {
+    border: 1px solid @search_light_border_color;
+    &:hover, &:focus {
+      border-color: @search_light_border_focus_color;
+    }
+  }
+  .search-icon {
+    color: @search_light_icon_color;
+    background-color: transparent;
+    > i {
+      color: @search_light_icon_color;
+      &:hover {
+        color: @search_light_icon_hover_color;
+      }
+    }
+    &:hover {
+      background-color: transparent;
+      color: @search_light_icon_active_color;
+    }
+  }
+}

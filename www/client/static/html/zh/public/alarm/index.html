@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113333628-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+        gtag('config', 'UA-113333628-1');
+  </script>
+  <title>同方有云 - 监控报警</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1, width=device-width">
+  <meta name="keywords" content="云计算,同方云,云平台,私有云,公有云,Openstack,云存储,云硬盘,云主机" />
+  <meta name="description" content="同方云产品与解决方案覆盖IT建设全栈，从基础环境建设（风、火、水、电）、硬件设备、再到云平台操作系统、存储、大数据、云安全产品与方案，甚至到各个行业的行业云和应用，为其提供端到端的公有云、私有云、混合云IT建设一站式服务。" />
+  <meta name="robots" content="all" />
+  <link rel="stylesheet" type="text/css" href="/static/common/style/7e2b52.index.css" />
+  <link rel="stylesheet" type="text/css" href="/static/dist/eb3f08.page_public_alarm.min.css" />
+  <link href="/static/assets/favicon.ico" mce_href="/static/assets/favicon.ico" rel="icon" type="image/x-icon" /> 
+</head>
+<body >
+<div id="volcano-global-header" class="volcano-global-header">
+  <div class="header-wrapper">
+    <div class="header-left">
+      <a href="/"></a>
+      <div id="x-open" class="x-wrapper">
+        <div class="x-1"></div>
+        <div class="x-2"></div>
+      </div>
+    </div>
+    <ul id="header-center" class="header-center">
+      <li>
+        <a href="javascript:void(0)" class="public-cloud bottom">
+          公有云
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/public/compute">计算</a></li>
+            <li><a href="/public/network">网络</a></li>
+            <li><a href="/public/storage">存储</a></li>
+            <li><a href="/public/alarm">监控报警</a></li>
+            <li><a href="/public/price">价格预算</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="multi-dropdown">
+        <a href="javascript:void(0)" class="uos-product bottom">
+          产品
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper wide-wrapper">
+          <ul class="dropdown wide">
+            <li><a href="/product/environment">基础环境建设</a></li>
+            <li class="multi">
+              <a class="four" href="javascript:void(0)">硬件设备
+                <i class="icon-arrow-right"></i>
+                <i class="icon-arrow-down"></i>
+              </a>
+              <ul class="child-dropdown">
+                <li class="two"><a href="/product/hardware/rack-server">机架式服务器</a></li>
+                <li class="two"><a href="/product/hardware/tower-server">塔式服务器</a></li>
+                <li class="two"><a href="/product/hardware/blade-server">刀片式服务器</a></li>
+                <li class="two"><a href="/product/hardware/enterprise-storage">企业级存储</a></li>
+              </ul>
+            </li>
+            <li class="multi">
+              <a class="five" href="javascript:void(0)">全栈云平台
+                <i class="icon-arrow-right"></i>
+                <i class="icon-arrow-down"></i>
+              </a>
+              <ul class="child-dropdown">
+                <li class="two"><a href="/product/cloud-platform/product">全栈云平台</a></li>
+                <li class="two"><a href="/product/cloud-platform/enterprise">Enterprise</a></li>
+                <li class="two"><a href="/product/cloud-platform/director">Director</a></li>
+                <li class="two"><a href="/product/cloud-platform/operator">Operator</a></li>
+                <li class="two"><a href="/product/cloud-platform/manager">Manager</a>
+              </ul>
+            </li>
+            <li><a href="/product/storage">存储</a></li>
+            <li><a href="/product/big-data">大数据</a></li>
+            <li><a href="/product/cloud-security">云安全</a></li>
+            <li><a href="/product/om-management">运维管理服务</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          服务与支持
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/support/product-service">产品服务</a></li>
+            <li><a href="/support/technical-support">技术支持</a></li>
+            <li><a href="/support/online-flow">上线流程</a></li>
+            <li><a href="/support/apply-now">立即申请</a></li>
+            <li><a href="/support/tf-news/list">有云新闻</a></li>
+            <li><a href="/support/quality-assurance">质量保障</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          技术培训
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/train/technical-train">技术培训</a></li>
+            <li><a href="/train/train-list">培训列表</a></li>
+            <li><a href="/train/train-apply">培训申请</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          关于我们
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/about/company">关于我们</a></li>
+            <li><a href="/about/contact-us">联系我们</a></li>
+            <li><a href="/about/identify">企业标识</a></li>
+            <li><a href="/about/clients">客户案例</a></li>
+            <li><a href="/about/jobs">人才招聘</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="bottom">
+          合作伙伴
+          <i class="icon-arrow-down"></i>
+        </a>
+        <div class="dropdown-wrapper">
+          <ul class="dropdown">
+            <li><a href="/cooperation/cooperation-apply">合作申请</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mobile-login">
+        <div class="login-wrapper">
+          <a class="login-link" href="javascript:void(0)">
+            控制台
+            <i class="icon-arrow-right"></i>
+          </a>
+          <a class="register-link" href="javascript:void(0)">
+            注册
+            <i class="icon-arrow-right"></i>
+          </a>
+        </div>
+      </li>
+<!--       <li class="mobile-lang">
+        <a href="?lang=zh">中文</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="?lang=en">English</a>
+      </li> -->
+    </ul>
+    <div class="header-right">
+      
+        <div class="login-wrapper">
+          <a class="login-link" href="javascript:void(0)">控制台</a>
+          <a class="signup register-link" href="javascript:void(0)">注册</a>
+        </div>
+      
+<!--       <div class="lang" style="display: inline-block"><a href="?lang=en">EN</a></div>
+      <div class="lang" style="display: none"><a href="?lang=zh">中</a></div> -->
+    </div>
+  </div>
+</div>
+
+  <div class="ashe-public-alarm">
+    <article >
+      <!-- banner -->
+      <section class="content-banner">
+        <div class="type-area">
+          <div class="banner">
+            <div class="banner-title">安枕无忧</div>
+            <div class="banner-brief">监控报警</div>
+            <div class="banner-describe">同方有云的设计团队的配置面板让用户可以按以往性能表现，针对个性化需求定义报警阙值。</div>
+            <div class="banner-describe-mobile">同方有云的设计团队的配置面板让用户可以按以往性能表现，针对个性化需求定义报警阙值</div>
+          </div>
+        </div>
+        <div class="banner-img" style="background:url(/static/assets/page-views/public/alarm/banner2.jpg) no-repeat center center;background-size:cover"></div>
+        <!-- <img class="banner-img-mobile" src="/static/assets/page-views/public/alarm/banner-m.png"> -->
+      </section>
+      <div class="breadcrumb">
+        <ul class="breadcrumb-center">
+          <li class="first"><a class="firstpage" href="/">首页</a>&nbsp;/&nbsp;</li>
+          <li class="second"><a class="success" href="/public/compute">公有云</a>&nbsp;/&nbsp;</li>
+          <li class="third">监控报警</li>
+        </ul>
+      </div>
+      <!-- end for banner -->
+      <!-- content -->
+      <div class="content-main">
+        <div class="volume-center">
+          <div class="introduction">
+            <img src="/static/assets/page-views/public/alarm/alarm.png">
+            <div class="right">
+              <p class="shuiyin">ALARMS</p>
+              <p class="title">监控<span>报警</span></p>
+              <p class="intro">包括CPU、内存、磁盘、网络等资源都实现了精细到分钟级的监控，每台云主机将产生超过10万条数据。当前同方云公有云中已经保存了数以十亿的云主机监控数据，每台云主机的监控数据可以在2秒钟内进行定位并展现。同时同方有云的设计团队的配置面板让用户可以按以往性能表现，针对个性化需求定义报警阙值，让您安枕无忧。</p>
+              <a class="signup" href="http://console.tfcloud.com">立即使用</a>
+            </div>
+            <div class="description">
+              <div class="description_item">
+                <img src="/static/assets/page-views/public/alarm/1.png">
+                <p class="line"></p>
+                <p class="description_title">多指标任意组合</p>
+                <p class="description_brief">多种指标交叉组合，构建适合自己业务的监控规则，最大限度避免漏报、误报、保证业务可知可控。</p>
+              </div>
+              <div class="description_item">
+                <img src="/static/assets/page-views/public/alarm/2.png">
+                <p class="line"></p>
+                <p class="description_title">细腻精确监控</p>
+                <p class="description_brief">提供最小一分钟，最长一个月的监控记录，提供基于不同颗粒度的可视化显示方式，资源使用情况一目了然。</p>
+              </div>
+              <div class="description_item">
+                <img src="/static/assets/page-views/public/alarm/3.png">
+                <p class="line"></p>
+                <p class="description_title">短信随时服务</p>
+                <p class="description_brief">各项报警均可采用邮箱或短信的形式发送，让您随时随地获取最新信息，对业务情况安心、放心。</p>
+              </div>
+              <div class="description_item">
+                <img src="/static/assets/page-views/public/alarm/4.png">
+                <p class="line"></p>
+                <p class="description_title">快速定位监控指标</p>
+                <p class="description_brief">平台提供了“过滤”和“搜索”两种方式用来快捷定位监控指标，可以方便地在大量监控指标中找到您所关心的指标。</p>
+              </div>
+            </div>
+            <div class="pc-function">
+              <div class="function-item">
+                <img class="function-img" src="/static/assets/page-views/public/alarm/1.png">
+                <p class="line"></p>
+                <p class="function-title">多指标任意组合</p>
+                <p class="function-intro">多种指标交叉组合，构建适合自己业务的监控规则，最大限度避免漏报、误报、保证业务可知可控。</p>
+              </div>
+              <div class="function-item">
+                <img class="function-img" src="/static/assets/page-views/public/alarm/2.png">
+                <p class="line"></p>
+                <p class="function-title">细腻精确监控</p>
+                <p class="function-intro">提供最小一分钟，最长一个月的监控记录，提供基于不同颗粒度的可视化显示方式，资源使用情况一目了然。</p>
+              </div>
+              <div class="function-item">
+                <img class="function-img" src="/static/assets/page-views/public/alarm/3.png">
+                <p class="line"></p>
+                <p class="function-title">短信随时服务</p>
+                <p class="function-intro">各项报警均可采用邮箱或短信的形式发送，让您随时随地获取最新信息，对业务情况安心、放心。</p>
+              </div>
+            </div>
+            <a class="signup-mobile" href="http://console.tfcloud.com">立即使用</a>
+          </div>
+        </div>
+      </div>
+      <div class="content-product">
+        <div class="product-center">
+          <div class="product-title">产品<span>功能</span></div>
+          <div class="feature">
+            <div class="feature-left">
+              <img class="block-one" src="/static/assets/page-views/public/alarm/bg.jpg">
+              <img class="block-two" src="/static/assets/page-views/public/alarm/bg2.jpg">
+            </div>
+            <div class="feature-right">
+              <div class="feature-item feature-item-one">
+                <img src="/static/assets/page-views/public/alarm/al1.png">
+                <p class="item-title">灵活定义报警规则</p>
+                <p class="item-brief">对于每个报警规则，都可以定义对应的阀值、周期和周期数。平均值适用于大多数情况，最大值可以用来对峰值进行监控，最小值反之。</p>
+              </div>
+              <div class="feature-item feature-item-two">
+                <img src="/static/assets/page-views/public/alarm/al2.png">
+                <p class="item-title">三种报警满足不同场景</p>
+                <p class="item-brief">每个报警提供三种状态：正常状态、报警状态、数据不足。覆盖所监控指标的所有情况，方便运维人员及时排查问题。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end for content -->
+    </div>
+    </article>
+<div class="volcano-global-footer">
+  <div class="caller">
+    <div class="center">
+      <span class="reply">我们将及时回复您</span>
+      <span class="time">24×7×365</span>
+      <a href="/"><img class="weixin" src="/static/assets/weixin.png"></a>
+      <a href="/"><img class="weibo" src="/static/assets/weibo.png"></a>
+    </div>
+  </div>
+  <div id="volcano-totop" class="totop">
+    <i class="icon-arrow-up"></i>
+  </div>
+  <div class="first">
+    <div class="inner">
+      <div class="left">
+        <h6 class="title">联系我们</h6>
+        <div class="phone">
+          <i class="icon-phone"></i>方案咨询： 400-898-5401
+        </div>
+        <div class="service-center">
+          <i class="icon-service-center"></i>技术支持： 010-86461598
+        </div>
+        <div class="email">
+          <i class="icon-email"></i>contact@unitedstack.com
+        </div>
+        <div class="copyright">Copyright © 2018</div>
+        <div class="compony">同方有云（北京）科技有限公司</div>
+        <div class="openstack">
+          <img src="/static/assets/openstack-gold-member-badge.png" />
+          <img src="/static/assets/openstack-logo-powered.png" />
+          <img src="/static/assets/openstack-logo-training.png" />
+        </div>
+      </div>
+      <div class="center">
+        <div class="column-1">
+          <div class="item-1">
+            <div class="title">公有云</div>
+            <p><a href="/public/compute">计算</a></p>
+            <p><a href="/public/network">网络</a></p>
+            <p><a href="/public/storage">存储</a></p>
+            <p><a href="/public/alarm">监控报警</a></p>
+            <p><a href="/public/price">价格预算</a></p>
+          </div>
+        </div>
+        <div class="column-2">
+          <div class="item-1">
+            <div class="title">产品</div>
+            <p><a href="/product/environment">基础环境建设</a></p>
+            <p><a href="/product/hardware/rack-server">硬件设备</a></p>
+            <p><a href="/product/cloud-platform/product">全栈云平台</a></p>
+            <p><a href="/product/storage">存储</a></p>
+            <p><a href="/product/big-data">大数据</a></p>
+            <p><a href="/product/cloud-security">云安全</a></p>
+            <p><a href="/product/om-management">运维管理服务</a></p>
+          </div>
+        </div>
+        <div class="column-3">
+          <div class="item-1">
+            <div class="title">服务与支持</div>
+            <p><a href="/support/product-service">产品服务</a></p>
+            <p><a href="/support/technical-support">技术支持</a></p>
+            <p><a href="/support/online-flow">上线流程</a></p>
+            <p><a href="/support/apply-now">立即申请</a></p>
+            <!-- <p><a href="/support/blog">技术社区</a></p> -->
+            <p><a href="/support/tf-news/list">有云新闻</a></p>
+            <p><a href="/support/quality-assurance">质量保障</a></p>
+          </div>
+        </div>
+        <div class="column-4">
+          <div class="item-1">
+            <div class="title">技术培训</div>
+            <p><a href="/train/technical-train">技术培训</a></p>
+            <p><a href="/train/train-list">培训列表</a></p>
+            <p><a href="/train/train-apply">培训申请</a></p>
+          </div>
+        </div>
+        <div class="column-5">
+          <div class="item-1">
+            <div class="title">关于我们</div>
+            <p><a href="/about/company">关于我们</a></p>
+            <p><a href="/about/contact-us">联系我们</a></p>
+            <p><a href="/about/identify">企业标识</a></p>
+            <p><a href="/about/clients">客户案例</a></p>
+          </div>
+        </div>
+        <div class="column-6">
+          <div class="item-1">
+            <div class="title">合作伙伴</div>
+            <p><a href="/cooperation/cooperation-apply">合作申请</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="second">
+<!--     <div class="wrapper">
+      <div class="row-1">
+        ©2017 UnitedStack Inc. All Rights Reserved. <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备13015821号</a>
+      </div>
+      <div class="row-2">
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020347">京公网安备 11010802020347号</a>
+      </div>
+    </div> -->
+  </div>
+  <div class="mobile-footer">
+    <div class="content-wrapper">
+      <div class="header">
+        <a href="javascript:void(0)">公有云</a> &nbsp;|&nbsp;
+        <a href="javascript:void(0)">产品</a> &nbsp;|&nbsp;
+        <a href="javascript:void(0)">服务与支持</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0)">技术培训</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0)">关于我们</a>&nbsp;|&nbsp;
+        <a href="javascript:void(0)">合作伙伴</a>&nbsp;
+      </div>
+      <div class="contact">
+        <div class="title">联系我们</div>
+        <a href="tel:400-898-5401" class="call">
+          <i class="icon-phone"></i>
+          400-898-5401
+        </a>
+      </div>
+      <div class="footer">
+        <img src="/static/assets/openstack-gold-member-badge.png" />
+        <img src="/static/assets/openstack-logo-powered.png" />
+        <img src="/static/assets/openstack-logo-training.png" />
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="/static/third-party/jquery-3.2.1.min.js"></script>
+<script src="/static/common/js/ec768b.g.js"></script>
+<script src="/static/dist/eb3f08.page_public_alarm.min.js"></script>
+<!-- Hotjar Tracking Code for https://www.tfcloud.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:843659,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</html>

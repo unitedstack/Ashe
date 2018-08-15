@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color palette</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .title {
+      width: 500px;
+      margin: 20px auto;
+      background-color: #f2f2f2;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+    .palette-wrapper {
+      padding: 0;
+      width: 500px;
+      height: auto;
+      margin: 40px auto;
+      margin-bottom: 40px;
+      box-shadow: 0 0 10px #b9b9b9;
+    }
+    .palette-wrapper > li {
+      list-style: none;
+      width: 100%;
+      height: 40px;
+    }
+    .palette-wrapper > li > div {
+      padding-left: 10px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      line-height: 40px;
+      font-size: 14px;
+      color: #000;
+      text-shadow: 0 0 20px #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">
+    Theme default
+  </div>
+  <ul id="palette" class="palette-wrapper">
+
+  </ul>
+</body>
+<script>
+  var color = {"@font_family":"\"Helvetica Neue\", Helvetica, arial, \"Microsoft Yahei\", \"微软雅黑\", \"宋体\", sans-serif","@border_radius":"2px","@color_font_400":"#bbbfc5","@color_font_700":"#939ba3","@color_font_800":"#626f7e","@color_font":"#252f3d","@color_success_100":"#def9f6","@color_success":"#1eb9a5","@color_success_600":"#1db09d","@color_success_700":"#1ba795","@color_info_100":"#f5fdfe","@color_info_200":"#b9f1f9","@color_info":"#00afc8","@color_info_600":"#00a6be","@color_info_700":"#009db4","@color_delete_100":"#fff5f5","@color_delete_200":"#fdc4c8","@color_delete":"#e05c69","@color_delete_600":"#de5361","@color_delete_700":"#dd4b59","@color_warning_100":"#fff7ec","@color_warning":"#f2994b","@color_warning_600":"#f78913","@color_warning_700":"#f78913","@color_cancel":"#ecf0f2","@color_cancel_600":"#e6ebee","@color_cancel_700":"#e0e6ea","@color_grey_400":"#f2f3f4","@color_grey":"#ecf0f2","@color_grey_600":"#e3e4e5","@color_grey_700":"#bbbfc5","@color_grey_800":"#626f7e","@color_grey_900":"#2B3538","@color_disabled_200":"#eeeeee","@color_disabled_300":"#cccccc","@color_disabled_400":"#d5dddf","@color_disabled_700":"#bbbfc5"};
+
+  var palette = document.getElementById('palette');
+
+  Object.keys(color).forEach(function(c) {
+    if(/@color/.test(c)) {
+      var li = document.createElement('li');
+      if(!/@color_br/.test(c)) {
+        var font = document.createElement('div');
+        font.innerHTML = c + '   (' + color[c] + ') ';
+        li.appendChild(font);
+        li.style.backgroundColor = color[c];
+      }
+      palette.appendChild(li);
+    }
+  });
+</script>
+</html>

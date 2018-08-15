@@ -1,0 +1,83 @@
+@arrow_box_border_color: @color_grey_600;
+@arrow_color: @color_font_700;
+@arrow_hover_color: @color_font;
+@arrow_bg_color: @color_grey_400;
+@input_number_border_color: @color_info;
+@input_number_error_border_color: @color_delete;
+@input_number_disabled_border_color: @color_disabled_300;
+@input_number_disabled_bg_color: @color_disabled_200;
+
+.input-number {
+  width: 80px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  input {
+    outline: 0;
+    padding-right: 30px;
+    width: 38px;
+  }
+  .arrow:hover + input {
+    border-color: @input_number_border_color;
+    &.error {
+      border-color: @input_number_error_border_color;
+    }
+  }
+  .arrow {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 19px;
+    height: 30px;
+    border-left: 1px solid @arrow_box_border_color;
+    background-color: @arrow_bg_color;
+    .arrow-up, .arrow-down {
+      position: relative;
+      height: 15px;
+      cursor: pointer;
+      &.disabled {
+        cursor: default;
+      }
+      > div {
+        position: absolute;
+        left: 4px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+    }
+    .arrow-up {
+      > div {
+        bottom: 2px;
+        border-bottom: 5px solid @arrow_color;
+      }
+      &:hover > div {
+        border-bottom: 5px solid @arrow_hover_color;
+      }
+      &.disabled > div, &.disabled:hover > div {
+        border-bottom: 5px solid @input_number_disabled_bg_color;
+      }
+    }
+    .arrow-down {
+      > div {
+        top: 2px;
+        border-top: 5px solid @arrow_color;
+      }
+      &:hover > div {
+        border-top: 5px solid @arrow_hover_color;
+      }
+      &.disabled > div, &.diabled:hover > div {
+        border-top: 5px solid @input_number_disabled_bg_color;
+      }
+    }
+  }
+  &.disabled {
+    input {
+      &:hover, &:focus {
+        border: 1px solid @input_number_disabled_border_color!important;
+      }
+    }
+    .arrow {
+      display: none;
+    }
+  }
+}
