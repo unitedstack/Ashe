@@ -1,7 +1,7 @@
 {
-  "name": "ashe",
+  "name": "ashe-admin",
   "version": "0.0.1",
-  "description": "Public cloud official website",
+  "description": "Public cloud official website admin part",
   "main": "index.js",
   "scripts": {
     "start": "egg-bin dev",
