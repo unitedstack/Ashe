@@ -24,6 +24,10 @@
 }
 /* mixin definition end */
 
+body{
+  display: none;
+}
+
 #preload-mask {
   position: fixed;
   left: 0;
@@ -208,7 +212,8 @@
   }
   /* banner section */
   .pc-banner {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     position: relative;
     overflow: hidden;
   }
@@ -254,16 +259,18 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    opacity: 0;
-    transition: all 1s 0.5s;
-    transform: translate(-50%, -50%) translateY(-14.3px) rotateY(9deg);
+    margin-top: -133px;
+    margin-left: -330px;
     width: 660px;
     height: 295px;
+    opacity: 0;
+    transition: all 1s 0.5s;
+    transform: rotateY(9deg);
     color: white;
   }
 
   .banner-wrapper.active .banner-content-wrapper {
-    transform: translate(-50%, -50%) translateY(-14.3px) rotateY(0deg);
+    transform: rotateY(0deg);
     opacity: 1;
   }
 

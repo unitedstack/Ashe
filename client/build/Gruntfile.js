@@ -12,8 +12,10 @@ const childProcess = require('child_process');
 const glob = require('glob');
 const lessVarParse = require('less-var-parse');
 let webpackConfig = require('./webpack.config.js');
+const mozjpeg = require('imagemin-mozjpeg');
 let devConfig = webpackConfig;
 let routers = {};
+let assetsDirs = [];
 require('colors');
 /**
  *
@@ -54,6 +56,19 @@ const renderEjs = function(lang, done) {
   });
 };
 
+const getAssetsFiles = (initDir = '../views/') => {
+  const dir = path.join(__dirname, initDir);
+  if (fs.statSync(dir).isDirectory()) {
+    fs.readdirSync(dir).forEach((r) => {
+      r === 'assets' ?
+        assetsDirs.push(`${dir.split('/views/')[1]}/assets/*.{png,jpg,gif}`) :
+        getAssetsFiles(`${initDir}/${r}`);
+    });
+  }
+};
+
+getAssetsFiles();
+
 module.exports = function(grunt) {
 
   grunt.initConfig({
@@ -82,6 +97,25 @@ module.exports = function(grunt) {
       html: 'client/static/html',
       commonCss: 'client/static/common/style/*.index.css',
       commonJs: 'client/static/common/js/*.g.js'
+    },
+
+    imagemin: {
+      dynamic: {
+        options: {
+          optimizationLevel: 3,
+          svgoPlugins: [{removeViewBox: false}],
+          use: [mozjpeg()]
+        },
+        files: [{
+          expand: true,
+          cwd: 'client/views',
+          src: assetsDirs,
+          dest: assetsFolder,
+          rename: function(dest, matchedSrcPath) {
+            return path.join(dest, matchedSrcPath.replace('/assets', ''));
+          }
+        }]
+      }
     },
 
     webpack: {
@@ -222,7 +256,7 @@ module.exports = function(grunt) {
   grunt.registerTask('font', ['clean:fonts', 'webfont', 'copy:fonts', 'commonCss']);
 
   // copy assets to static/assets
-  grunt.registerTask('copy_assets', 'Copy assets to /static/assets', ['clean:assets', 'copy:assets', 'copy:common']);
+  grunt.registerTask('copy_assets', 'Copy assets to /static/assets', ['clean:assets', 'imagemin:dynamic', 'copy:common']);
 
   // render ejs file to html
   grunt.registerTask('ejs2html', 'Generate html by render ejs file', function(lang) {
