@@ -1,0 +1,65 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "ActiveXObject": false,
+    "$": false,
+    "jQuery": false,
+    "G": false
+  },
+  "plugins": [
+    "react",
+    "babel"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-console": 0,
+    "no-useless-escape": 0,
+    "no-case-declarations": 0,
+    "no-unused-vars": [
+      2,
+      {
+        "vars": "all",
+        "args": "none"
+      }
+    ],
+    "react/no-string-refs": 0,
+    "react/prop-types": 0,
+    "react/display-name": 0,
+    "react/no-direct-mutation-state": 0,
+    "react/no-deprecated": 0
+  }
+}

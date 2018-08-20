@@ -1,3 +1,4 @@
-[submodule "admin/uskin"]
-	path = admin/uskin
+[submodule "www-admin/admin/uskin"]
+	path = www-admin/admin/uskin
 	url = https://github.com/unitedstack/uskin.git
+  
