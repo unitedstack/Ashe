@@ -1,0 +1,5 @@
+client/static/dist/*
+admin/dist/*
+admin/uskin
+client/static/third-party/*
+**/node_modules/**

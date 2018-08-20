@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# CSC, Code Style Checker
+
+cd /home/yjk/ashe222/www-admin
+npm run eslint
