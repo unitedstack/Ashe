@@ -1,5 +1,5 @@
 const { join } = require('path');
-const defaultConfig = require('../../config/config.default');
+const defaultConfig = require('../../config/default');
 module.exports = app=>{
   const config={};
   config.keys='tfcloud',

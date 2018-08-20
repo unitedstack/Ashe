@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "cd www && npm start",
-    "start-admin":"cd www-admin && npm start",
+    "start-admin": "cd www-admin && npm start",
     "test": "cd www && npm test && cd ../www-admin && npm test",
     "debug": "cd www && npm run debug",
-    "debug-admin":"cd www-admin && npm run debug",
+    "debug-admin": "cd www-admin && npm run debug",
     "build": "cd www && npm run build && cd ../www-admin && npm run build",
-    "eslint":"cd www && npm run eslint && cd ../www-admin && npm run eslint",
+    "eslint": "cd www && npm run eslint && cd ../www-admin && npm run eslint",
     "prepare": "cd www/scripts && node checkPreCommit.js",
     "preinstall": "cd www && npm install && cd ../www-admin && npm install"
   },
