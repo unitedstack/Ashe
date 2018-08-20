@@ -2,5 +2,5 @@
 
 # CSC, Code Style Checker
 
-cd /home/yjk/Desktop/Ashe-egg-1/www-admin
+cd /home/yjk/ashe222/www-admin
 npm run eslint
